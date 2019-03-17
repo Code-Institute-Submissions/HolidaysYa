@@ -10,14 +10,6 @@
     <link rel="stylesheet" href="static/css/dc.min.css" type="text/css" />
     <link rel="stylesheet" href="static/css/style.css" type="text/css" />
 
-    <script type="text/javascript" src="static/js/d3.min.js"></script>
-    <script type="text/javascript" src="static/js/crossfilter.min.js"></script>
-    <script type="text/javascript" src="static/js/dc.min.js"></script>
-    <script type="text/javascript" src="static/js/queue.min.js"></script>
-    <script type="text/javascript" src="static/js/graphs.js"></script>
-    <script type="text/javascript" src="static/js/jquery-3.3.1.js"></script>
-
-
 
 </head>
 
@@ -26,32 +18,34 @@
 
         <h2>Please select the month that you want to travel</h2>
         <select id="monthSelector" name="months">
-                  <option value="January">January</option>
-                  <option value="February">February</option>
-                  <option value="March">March</option>
-                  <option value="April">April</option>
-                  <option value="May">May</option>
-                  <option value="June">June</option>
-                  <option value="July">July</option>
-                  <option value="August">August</option>
-                  <option value="September">September</option>
-                  <option value="October">October</option>
-                  <option value="November">November</option>
-                  <option value="December">December</option>
-                </select>
+            <option value="January">January</option>
+            <option value="February">February</option>
+            <option value="March">March</option>
+            <option value="April">April</option>
+            <option value="May">May</option>
+            <option value="June">June</option>
+            <option value="July">July</option>
+            <option value="August">August</option>
+            <option value="September">September</option>
+            <option value="October">October</option>
+            <option value="November">November</option>
+            <option value="December">December</option>
+        </select>
         <div class="buttons">
-            <button class="btn btn-success" onclick=createBudgetCharts()>Choose by weather</button>
-            <button class="btn btn-info"><a href="#budget">Choose by budget</a></button>
-        </div>
+                <button class="btn btn-success" >Choose by weather</button>
+                <button class="btn btn-info"><a href="#budget" onclick=createBudgetCharts()>Choose by budget</a></button>
+            </div>
     </div>
     <section id="budget" class="budgetSection">
+<!--
+        <div class="center-form">
+            <label for="maxBudget">What is your maximun budget?</label>-->
+            <input type="text" id="maxBudget" name="maxBudget" />
+            <button class="btn btn-success" id="resultsBudget">Show me cities</button>
+ <!--           <button class="btn btn-warning" onclick="resetBudget()">Reset</button>
+        </div>
+-->
 
-
-        <form>
-            <h2>What is your maximun budget:
-                <h2>
-                    <input type="text" name="maxBudget" required>
-        </form>
 
         <div id="currency"></div>
         <div id="currency"></div>
@@ -63,7 +57,13 @@
 
     </section>
 
-
+    <!--jQuery has to be the first one-->
+    <script type="text/javascript" src="static/js/jquery-3.3.1.js"></script>
+    <script type="text/javascript" src="static/js/d3.min.js"></script>
+    <script type="text/javascript" src="static/js/crossfilter.min.js"></script>
+    <script type="text/javascript" src="static/js/dc.min.js"></script>
+    <script type="text/javascript" src="static/js/queue.min.js"></script>
+    <script type="text/javascript" src="static/js/graphs.js"></script>
 
 </body>
 
