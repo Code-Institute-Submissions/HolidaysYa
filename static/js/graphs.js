@@ -30,38 +30,70 @@ function filterData(data) {
 
 function filterByBudget(dataMonth) {
     return function () {
-        var maxBudgetValue = parseInt(document.getElementById("maxBudget").value);
-        //var maxBudgetNumber = parseInt(maxBudgetValue);
 
+        var filteredBy = 'Budget';
+
+        console.log("check!" + dataMonth.maxBudget);
+        //get input value
+        var maxBudgetValue = parseInt(document.getElementById("maxBudget").value);
+        //add validation!! not empty and number
+
+        //this will create an Object only containing the cities that fit the budget
         var dataBudget = dataMonth.filter(function (element) {
             return (parseInt(element.maxBudget) < maxBudgetValue);
         });
 
-        //for testing
+        //If there is one or more cities matching the criteria it will call the function createDataForGraphics(dataBudget);
+        if (tooCheap(dataBudget)) {
+            alert('There is nothing that cheap in Europe');  // change it to message in screen
+        }
+        else {
+            createDataForGraphics(dataBudget, filteredBy);
+        }
+
+        //checks if the value object after filtering by budget is empty
+        function tooCheap(dataBudget) {
+            for (var key in dataBudget) {
+                if (dataBudget.hasOwnProperty(key))
+                    return false;
+            }
+            return true;
+        }
+
+        ////////////////////for testing
         console.log(typeof dataBudget);
         console.log(typeof maxBudgetValue);
 
-           
-
-        if (maxBudgetValue<50) {  // update the 50 with the minimun value from the dataset once I know how to
-            alert('Europe is not that cheap, sorry!'); //also remove the charts in the screen
-        } else{
-            createDataForGraphics(dataBudget);
-        }
 
     }
 };
 
 
 
-function createDataForGraphics(data) {
+function createDataForGraphics(data, filteredBy) {
     console.log(data);
     var ndx = crossfilter(data);
-    createBudgetCharts(ndx);
+
+    if (filteredBy = 'Budget') {
+        fiterByCountry(ndx);
+        createBudgetCharts(ndx);
+    }
+
     dc.renderAll();
 }
 
+function fiterByCountry(ndx) {
+    {
+        var dim = ndx.dimension(dc.pluck('country'));
+        var group = dim.group();
 
+        dc.selectMenu('#countrySelector')
+            .multiple(true)
+            .dimension(dim)
+            .group(group);
+
+    }
+}
 
 function createBudgetCharts(ndx) {
 

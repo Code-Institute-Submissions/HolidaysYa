@@ -32,25 +32,29 @@
             <option value="December">December</option>
         </select>
         <div class="buttons">
-                <button class="btn btn-success" >Choose by weather</button>
-                <button class="btn btn-info"><a href="#budget" onclick=createBudgetCharts()>Choose by budget</a></button>
-            </div>
+            <button class="btn btn-success">Choose by weather</button>
+            <button class="btn btn-info"><a href="#budget">Choose by budget</a></button>
+
+        </div>
     </div>
     <section id="budget" class="budgetSection">
-<!--
+        <!--
         <div class="center-form">
             <label for="maxBudget">What is your maximun budget?</label>-->
-            <input type="text" id="maxBudget" name="maxBudget" />
-            <button class="btn btn-success" id="resultsBudget">Show me cities</button>
- <!--           <button class="btn btn-warning" onclick="resetBudget()">Reset</button>
+        <input type="text" id="maxBudget" name="maxBudget" />
+        <button class="btn btn-success" id="resultsBudget">Show me cities</button>
+        <!--           <button class="btn btn-warning" onclick="resetBudget()">Reset</button>
         </div>
 -->
 
+        <div id="countrySelector"></div>
 
         <div id="currency"></div>
-        <div id="currency"></div>
-        <div id="currency"></div>
-        <div id="currency"></div>
+
+
+        <div id="country"></div>
+        <div id="correlation"></div>
+        <div id="table-costs"></div>
 
     </section>
     <section id="weather" class="weatherSection">
