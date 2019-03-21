@@ -29,3 +29,12 @@ select {
     color: black;
     background-color: white;
 }
+
+
+/* how to rotate the labels so they fit well in the screen
+https://github.com/dc-js/dc.js/issues/731
+*/
+#totalDailyBudget .x.axis text {
+    text-anchor: end !important;
+    transform: rotate(-45deg);
+}
