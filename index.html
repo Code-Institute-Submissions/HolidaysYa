@@ -32,32 +32,48 @@
             <option value="December">December</option>
         </select>
         <div class="buttons">
-            <button class="btn btn-success">Choose by weather</button>
+            <button class="btn btn-success"><a href="#weather">Choose by weather</a></button>
             <button class="btn btn-info"><a href="#budget">Choose by budget</a></button>
 
         </div>
     </div>
     <section id="budget" class="budgetSection">
-        <!--
-        <div class="center-form">
-            <label for="maxBudget">What is your maximun budget?</label>-->
+
+        <label for="maxBudget">What is your maximun budget?</label>
         <input type="text" id="maxBudget" name="maxBudget" />
-        <button class="btn btn-success" id="resultsBudget">Show me cities</button>
-        <!--           <button class="btn btn-warning" onclick="resetBudget()">Reset</button>
+        <button class="btn btn-success" id="resultsBudget" onclick="showTitleBudget()">Show me cities</button>
+
+        <div id="infoMessage"></div>
+        <div id="budgetCharts">
+            <div id="BudgetTitle"></div>
+            <div id="countrySelector"></div>
+            <div id="currency"></div>
+            <div id="city"></div>
+            <div id="totalDailyBudget"></div>
+            <div id="correlation"></div>
+            <div id="table-costs"></div>
         </div>
--->
-
-        <div id="countrySelector"></div>
-
-        <div id="currency"></div>
-
-        <div id="totalDailyBudget"></div>
-
-        <div id="correlation"></div>
-        <div id="table-costs"></div>
+        
 
     </section>
+
     <section id="weather" class="weatherSection">
+            <label for="minTemp">Minimun temperature</label>
+            <input type="number" id="minTemp" name="minTemp" />
+            <label for="maxTemp">Maximun temperature</label>
+            <input type="number" id="maxTemp" name="maxTemp" />
+
+            <button class="btn btn-success" id="resultsTemp" onclick="showTitleWeather()">Show me cities</button>
+    
+            <div id="infoMessageWeather"></div>
+            <div id="weatherCharts">
+                    <div id="WeatherTitle"></div>
+
+                <div id="WeatherCities"></div>
+                
+            </div>
+    
+        </section>
 
     </section>
 

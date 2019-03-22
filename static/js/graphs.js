@@ -11,6 +11,18 @@ function getMonth(error, data) {
     });
 }
 
+function showTitleBudget() {
+    document.getElementById("BudgetTitle").innerHTML=`<h2>Results By Budget</h2>`;
+    document.getElementById("resultsBudget").innerHTML=`New Search`;
+}
+
+ function showTitleWeather() {
+     document.getElementById("WeatherTitle").innerHTML=`<h2>Results By Weather</h2>`;
+     document.getElementById("resultsTemp").innerHTML=`New Search`;
+ }
+
+
+
 
 function filterData(data) {
 
@@ -30,11 +42,20 @@ function filterData(data) {
         d.drinks = parseInt(d.drinks);
         d.transport = parseInt(d.transport);
         d.attractions = parseInt(d.attractions);
+        d.visitorsCity = parseInt(d.visitorsCity);
+        d.minTemp = parseInt(d.minTemp);
+        d.maxTemp = parseInt(d.maxTemp);
+
     })
 
     //https://www.jstips.co/en/javascript/passing-arguments-to-callback-functions/
     document.getElementById("resultsBudget").addEventListener("click", filterByBudget(dataMonth));
+    document.getElementById("resultsTemp").addEventListener("click", filterByWeather(dataMonth));
 }
+
+
+
+
 
 function filterByBudget(dataMonth) {
     return function () {
@@ -45,8 +66,6 @@ function filterByBudget(dataMonth) {
         var maxBudgetValue = parseInt(document.getElementById("maxBudget").value);
         //add validation!! not empty and number
 
-
-
         //this will create an Object only containing the cities that fit the budget
         var totalBudget = 0;
         var dataBudget = dataMonth.filter(function (element) {
@@ -55,53 +74,99 @@ function filterByBudget(dataMonth) {
                 element.drinks +
                 element.transport +
                 element.attractions;
-            //return (parseInt(element.maxBudget) < maxBudgetValue);
             return (totalBudget < maxBudgetValue);
         });
 
-
         //If there is one or more cities matching the criteria it will call the function createDataForGraphics(dataBudget);
-        if (tooCheap(dataBudget)) {
-            alert('There is nothing that cheap in Europe');  // change it to message in screen
+        if (checkIfObjectEmpty(dataBudget)) {
+            document.getElementById("infoMessage").innerHTML=`<h2 class="text-danger">We're sorry but Europe is not that cheap!</h2>`;
+            $("#budgetCharts").hide();
+
         }
         else {
+            document.getElementById("infoMessage").innerHTML="";
+            $("#budgetCharts").show();
             createDataForGraphics(dataBudget, filteredBy);
         }
 
-        //checks if the value object after filtering by budget is empty
-        function tooCheap(dataBudget) {
-            for (var key in dataBudget) {
-                if (dataBudget.hasOwnProperty(key))
-                    return false;
-            }
-            return true;
-        }
-
-        ////////////////////for testing
-        //console.log(typeof dataBudget);
-        //console.log(typeof maxBudgetValue);
-
+       
 
     }
 };
 
 
+function filterByWeather(dataMonth) {
+    return function () {
+
+        var filteredBy = 'Weather';
+
+        //get input values
+        var minTemp = document.getElementById("minTemp").value;
+        var maxTemp = document.getElementById("maxTemp").value;
+
+        //add validation!! not empty and number
+
+
+        //this will create an Object only containing the cities that fit the budget
+        
+            var dataWeather = dataMonth.filter(function (element) {
+            return (minTemp >= element.minTemp && maxTemp <= element.maxTemp);
+        });
+
+
+        //If there is one or more cities matching the criteria it will call the function createDataForGraphics(dataBudget);
+        if (checkIfObjectEmpty(dataWeather)) {
+            document.getElementById("infoMessageWeather").innerHTML=`<h2 class="text-danger">We're sorry but we don't cities with that average weather</h2>`;
+            $("#weatherCharts").hide();
+
+        }
+        else {
+            document.getElementById("infoMessageWeather").innerHTML="";
+            $("#weatherCharts").show();
+            createDataForGraphics(dataWeather, filteredBy);
+        }
+
+        //checks if the value object after filtering by budget is empty
+        
+
+    }
+};
+
+//this function will check if there is or there isn't matching results in the data
+//if the object is empty meand that not matches where found
+function checkIfObjectEmpty(data) {
+    for (var key in data) {
+        if (data.hasOwnProperty(key))
+            return false;
+    }
+    return true;
+}
+
+
+
+
+
 
 function createDataForGraphics(data, filteredBy) {
-    //console.log(data);
-
     var ndx = crossfilter(data);
+
 
     if (filteredBy === 'Budget') {
         fiterByCountry(ndx);
-        createCurrencyCharts(ndx);
-        //genderBalance(ndx);
+        createCurrencyChart(ndx);
+        createCityChart(ndx);
         createTotalDailyBudget(ndx);
-        // createCorrelationCharts(ndx)
+        createCorrelationCharts(data, ndx)
     }
+    if (filteredBy === 'Weather') {
+        createTempCityChart(ndx);
+    }
+   
 
     dc.renderAll();
 }
+
+
 
 function fiterByCountry(ndx) {
     {
@@ -116,18 +181,31 @@ function fiterByCountry(ndx) {
     }
 }
 
-function createCurrencyCharts(ndx) {
+
+function createCurrencyChart(ndx) {
 
     var dimCurrency = ndx.dimension(dc.pluck('currencyCode'))
     var groupCurrency = dimCurrency.group();
 
     dc.pieChart("#currency")
-        .height(200) //breading space around pie chart, dont confuse with diameter
-        .radius(90)
+        .height(100)
+        .radius(50)
         .dimension(dimCurrency)
         .group(groupCurrency)
         .transitionDuration(1500);
+}
 
+function createCityChart(ndx) {
+
+    var dimCity = ndx.dimension(dc.pluck('city'))
+    var groupCity = dimCity.group();
+
+    dc.pieChart("#city")
+        .height(100)
+        .radius(50)
+        .dimension(dimCity)
+        .group(groupCity)
+        .transitionDuration(1500);
 }
 
 function createTotalDailyBudget(ndx) {
@@ -140,10 +218,9 @@ function createTotalDailyBudget(ndx) {
     var attractions = cityDim.group().reduceSum(dc.pluck('attractions'));
 
 
-
     dc.barChart('#totalDailyBudget')
-        .width(600)
-        .height(500)
+        .width(400)
+        .height(120)
         .dimension(cityDim)
         .margins({ top: 10, right: 50, bottom: 30, left: 50 })
         .group(hostel, "hostel")
@@ -151,61 +228,74 @@ function createTotalDailyBudget(ndx) {
         .stack(drinks, "drinks")
         .stack(attractions, "attractions")
         .stack(transport, "transport")
-        .title(function(d) {
+        .title(function (d) {
             return 'In ' + d.key + ' the ' + this.layer + ' by day cost: ' + d.value;
         })
         .transitionDuration(1500)
+        .elasticX(true)
+        .elasticY(true)
         .x(d3.scale.ordinal())
         .xUnits(dc.units.ordinal)
         .xAxisLabel('City')
-       .yAxisLabel('Total daily budget')
-        .yAxis().ticks(20);
-      //  .legend(dc.legend().x(320).y(20).itemHeight(15).gap(5))
-       //.margins({ top: 10, right: 100, bottom: 30, left: 30 });
-
+        .yAxisLabel('Total daily budget')
+        .yAxis().ticks(8);
+    //.legend(dc.legend().x(320).y(20).itemHeight(15).gap(5));
+    // .margins({top: 10, right: 50, bottom: 30, left: 40});
 
 }
 
 
 
-/*function createCorrelationCharts(ndx) {
+function createCorrelationCharts(data, ndx) {
 
-    var dimArrivals = ndx.dimension(dc.pluck('arrivals'))
-    var groupBudget = dimArrivals.group().reduce(dc.pluck('meals'));
+    //var dimArrivals = ndx.dimension(dc.pluck('visitorsCity'));
+
+    data.forEach(function (d) {
+        d.column1 = +d.column1;
+    });
+
+    var maxArrivals = d3.max(data, function (d) { return d.visitorsCity; });
+
+    var dimBudget = ndx.dimension(function (d) {
+        var totalBudget = d.hostelNight + d.meals + d.drinks + d.attractions + d.transport;
+        return [d.visitorsCity, totalBudget, d.city];
+        // return [d.hostelNight];
+
+    })
+
+    var budgetGroup = dimBudget.group();
+
+  /*  var cityColours = d3.scale.ordinal()
+        .domain(["Vienna", "Brussels", "Prague", "Copenhagen", "Helsinki", "Paris", "Berlin", "Athens",
+            "Budapest", "Dublin", "Milan", "Rome", "Amsterdam", "Oslo", "Warsaw", "Lisbon",
+            "Barcelona", "Madrid", "Stockholm", "Istanbul", "Edinburgh", "London"])
+        .range(["#FBEC5D", "#F2C649", "#6050DC", "#0BDA51", "#979AAA", "#F37A48", "#FDBE02", "#FF8243",
+            "#74C365", "#880085", "#EAA221", "#C32148", "#800000", "#B03060", "#E0B0FF", "#915F6D", "#EF98AA",
+            "#47ABCC", "#30BFBF", "#ACACE6", "#5E8C31", "#D9E650"]);
+*/
 
     dc.scatterPlot("#correlation")
-        .height(400) //breading space around pie chart, dont confuse with diameter
-        .width(600)
-        .dimension(dimArrivals)
-        .group(groupBudget)
-        .transitionDuration(1500)
-        .x(d3.scaleLinear().domain([1000000,7000000]))
+        .height(120) //breading space around pie chart, dont confuse with diameter
+        .width(400)
+        .x(d3.scale.linear().domain([0, maxArrivals]))
         .brushOn(false)
         .symbolSize(8)
-        .clipPadding(10);
+        .clipPadding(10)
+        .xAxisLabel('Number of country visitor (2017 or 2018)')
+        .yAxisLabel("Budget")
+        .title(function (d) {
+            return "In " + d.key[2] + " you will need a daily bugget of " + d.key[1] + " \nand there was " + d.key[0] + " millions visits in 2017";
+        })
+     /*   .colorAccessor(function (d) {
+            return d.key[0];
+        })
+        .colors(cityColours)*/
+        .dimension(dimBudget)
+        .group(budgetGroup);
+}
+
+function createTempCityChart(ndx){
 
 }
 
 
-function genderBalance(ndx) {
-
-    var dim = ndx.dimension(dc.pluck('city'));
-    var group = dim.group();
-    var hostel = dim.group().reduceSum(dc.pluck('hostelNight'));
-
-
-    dc.barChart('#correlation')
-        .width(800)
-        .height(300)
-        .margins({ top: 10, right: 50, bottom: 30, left: 50 })
-        .dimension(dim)
-        .group(group)
-        .transitionDuration(1500)
-        .x(d3.scale.ordinal())
-        .xUnits(dc.units.ordinal)
-        .xAxisLabel('City')
-        .yAxis().ticks(20);
-
-}
-
-*/
