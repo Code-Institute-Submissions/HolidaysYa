@@ -93,20 +93,59 @@ function filterByWeather(dataMonth) {
         $(".budget").hide();
         $(".common").show();
 
+        var dataWeather;
+
         //get input values
         var minTemp = document.getElementById("minTemp").value;
         var maxTemp = document.getElementById("maxTemp").value;
-       
-        
+
+        if (minTemp == "" && maxTemp == "") {
+            document.getElementById("infoMessage").innerHTML = `<h2 class="text-danger">Please enter a minumun, a maximun temperature or both</h2>`;
+        }
+        else if (minTemp != "" && maxTemp == "") {
             //this will create an Object only containing the cities that have that temperature
-            var dataWeather = dataMonth.filter(function (element) {
-                return (minTemp >= element.minTemp && maxTemp <= element.maxTemp);
+
+
+            dataWeather = dataMonth.filter(function (element) {
+                return (minTemp <= element.minTemp);
             });
             //If there is one or more cities matching the criteria it will call 
             //the function "createDataForGraphics" if not it will display a message;
 
-           citiesMatchingCriteria(dataWeather, filteredBy);
-      
+            citiesMatchingCriteria(dataWeather, filteredBy);
+
+        }
+        else if (minTemp == "" && maxTemp != "") {
+            //this will create an Object only containing the cities that have that temperature
+
+
+            dataWeather = dataMonth.filter(function (element) {
+                return (maxTemp >= element.maxTemp);
+            });
+            //If there is one or more cities matching the criteria it will call 
+            //the function "createDataForGraphics" if not it will display a message;
+
+            citiesMatchingCriteria(dataWeather, filteredBy);
+
+        }
+
+        else if (minTemp != "" && maxTemp != "" && maxTemp>minTemp) {
+            //this will create an Object only containing the cities that have that temperature
+
+
+            dataWeather = dataMonth.filter(function (element) {
+                return (minTemp <= element.minTemp && maxTemp >= element.maxTemp);
+            });
+            //If there is one or more cities matching the criteria it will call 
+            //the function "createDataForGraphics" if not it will display a message;
+
+            citiesMatchingCriteria(dataWeather, filteredBy);
+
+        }
+        // else if(if(minTemp != "" && maxTemp != "" && maxTemp<minTemp)){
+        //     document.getElementById("infoMessage").innerHTML = `<h2 class="text-danger">The maximune temperature must be higher than the minimun</h2>`;
+        // }
+
     }
 };
 
