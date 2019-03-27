@@ -191,6 +191,8 @@ function createDataForGraphics(data, filteredBy) {
         createCityChart(ndx);
         createTotalDailyBudget(ndx);
         createCorrelationCharts(data, ndx)
+        createTable(ndx);
+
     }
 
     //weather graphics
@@ -198,12 +200,11 @@ function createDataForGraphics(data, filteredBy) {
         fiterByCountry(ndx);
         createCurrencyChart(ndx);
         createCityChart(ndx);
-        createTempCityChart(ndx);
+       // createTempCityChart(ndx);
+        createTable(ndx);
+        cityTemp(ndx);
 
-        // createTempCityChart(ndx);
     }
-
-
     dc.renderAll();
 }
 
@@ -325,11 +326,76 @@ function createCorrelationCharts(data, ndx) {
         .group(budgetGroup);
 }
 
-function createTempCityChart(ndx) {
+function createTable(ndx) {
 
+   
+    var allDimension = ndx.dimension(function(d) {
+        return (d);
+    });
+    
+
+   // var dimGroup = allDimension.group().reduceCount();
+
+   var tableChart = dc.dataTable('#table');
+    tableChart
+        .dimension(allDimension)
+        .group(function(data) {
+            return (data);
+        })
+        .size(Infinity)
+        .columns(['city', 'country', 'attractions','hostelNight','drinks','meals','transport','minTemp','maxTemp','precipitation','currency','currencyCode','arrivals','visitorsCity'])
+        .sortBy(function(d) {
+            return d.value;
+        })
+        .order(d3.ascending);
 }
 
 
+function cityTemp(ndx){
+
+    var dim  = ndx.dimension(dc.pluck('city')),
+        
+        //   it works with precipitation and linear scale but not with city and ordinal scale
+        //   var dim  = ndx.dimension(dc.pluck('precipitation')),
+
+
+            grp1 = dim.group().reduceSum(dc.pluck('maxTemp')),
+            grp2 = dim.group().reduceSum(dc.pluck('minTemp'));
+
+         var composite = dc.compositeChart("#cityTemp");
+             composite
+                .width(400)
+               .height(220)
+              .x(d3.scale.ordinal())
+              .xUnits(dc.units.ordinal)
+              .dimension(dim)
+              .group(grp1, "maximun temperature")
+            // .x(d3.scale.linear().domain([20,80]))
+            
+            
+               //.dimension(dim)
+               .yAxisLabel("Temperature")
+               .xAxisLabel("City")
+               .legend(dc.legend().x(80).y(20).itemHeight(13).gap(5))
+               .renderHorizontalGridLines(true)
+               .compose ([
+                  dc.lineChart(composite)
+                     .dimension(dim)
+                     .colors('red')
+                     .group(grp1, "maximun temperature")
+                     .dashStyle([2,2]),
+                  dc.lineChart(composite)
+                     .dimension(dim)
+                     .colors('blue')
+                     .group(grp2, "minimun temperature")
+                    .dashStyle([5,5])
+               ])
+               .brushOn(false);
+
+
+
+
+}
 
 ///////////// other functions
 
