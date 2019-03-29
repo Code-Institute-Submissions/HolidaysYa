@@ -5,17 +5,53 @@ queue()
 
 function getMonth(error, data) {
 
-    if (error) {  /////////// improve this???
+    if (error) { /////////// improve this???
         document.getElementById("error").innerHTML = `<h2 class="text-danger">Error retrieving the data file!</h2>`;
     }
 
-    //Don't show the input fields unless the buttons are pressed
-    $(".budgetSelect").hide();
-    $(".weatherSelect").hide();
+    $('#chooseBudget').click(function() {
+        $('#monthId').slideUp(1000);
+        $('#budgetId').removeClass('hide').slideDown(1000);
+    })
 
+    $('#chooseWeather').click(function() {
+        $('#monthId').slideUp(1000);
+        $('#weatherId').removeClass('hide').slideDown(1000);
+    })
+
+    $(".goback").click(function() {
+        $('#monthId').fadeIn(1000);
+        $('#budgetId').addClass('hide');
+        $('#weatherId').addClass('hide');
+        $('#grafId').addClass('hide');
+    })
+
+    $("#resultsBudget").click(function() {
+        $('#budgetId').slideUp(1000);
+        $('#grafId').removeClass('hide').slideDown(1000);
+        $('.weather').hide();
+        $('.budget').show();
+    })
+
+    $("#resultsWeather").click(function() {
+        $('#weatherId').slideUp(1000);
+        $('#grafId').removeClass('hide').slideDown(1000);
+        $('.budget').hide();
+        $('.weather').show();
+    })
+
+    $('#filterBudget').click(function() {
+        $('#budgetId').slideDown(1000);
+        $('#grafId').addClass('hide');
+    })
+
+    $('#filterWeather').click(function() {
+        $('#weatherId').slideDown(1000);
+        $('#grafId').addClass('hide');
+    })
 
     // only call "filterData" after the dropdown option has been selected
-    $("#monthSelector").change(function () {
+    $("#monthSelector").change(function() {
         filterData(data);
     });
 }
@@ -32,7 +68,7 @@ function filterData(data) {
 
     //////////////////////////////////////////////////////////CHECK WHAT HAPPENS WHEN IS JANUARY!!!
     //this will create an object only containing the data for the month
-    var dataMonth = data.filter(function (element) {
+    var dataMonth = data.filter(function(element) {
         return (element.month === monthSelected);
     });
 
@@ -42,7 +78,7 @@ function filterData(data) {
 
     //https://www.jstips.co/en/javascript/passing-arguments-to-callback-functions/
     document.getElementById("resultsBudget").addEventListener("click", filterByBudget(dataMonth));
-    document.getElementById("resultsTemp").addEventListener("click", filterByWeather(dataMonth));
+    document.getElementById("resultsWeather").addEventListener("click", filterByWeather(dataMonth));
 }
 
 
@@ -50,14 +86,15 @@ function filterData(data) {
 
 
 function filterByBudget(dataMonth) {
-    return function () {
+    return function() {
         //removes the inputs in case we want to seach again by weather
         $('input[name=minTemp').val('');
         $('input[name=maxTemp').val('');
 
         var filteredBy = 'Budget';
-        $(".weather").hide();
-        $(".common").show();
+        // $(".weather").hide();
+        // $(".common").show();
+        // $(".budget").show();
 
 
 
@@ -67,7 +104,7 @@ function filterByBudget(dataMonth) {
 
         //this will create an Object only containing the cities that fit the budget
         var totalBudget = 0;
-        var dataBudget = dataMonth.filter(function (element) {
+        var dataBudget = dataMonth.filter(function(element) {
             totalBudget = element.hostelNight +
                 element.meals +
                 element.drinks +
@@ -75,6 +112,7 @@ function filterByBudget(dataMonth) {
                 element.attractions;
             return (totalBudget < maxBudgetValue);
         });
+
 
         //If there is one or more cities matching the criteria it will call 
         //the function "createDataForGraphics" if not it will display a message;
@@ -85,13 +123,15 @@ function filterByBudget(dataMonth) {
 
 
 function filterByWeather(dataMonth) {
-    return function () {
+    return function() {
         //removes the input in case we want to seach again by weather
         $('input[name=maxBudget').val('');
 
         var filteredBy = 'Weather';
-        $(".budget").hide();
-        $(".common").show();
+        // $(".budget").hide();
+        // $(".common").show();
+        // $(".weather").show();
+
 
         var dataWeather;
 
@@ -106,7 +146,7 @@ function filterByWeather(dataMonth) {
             //this will create an Object only containing the cities that have that temperature
 
 
-            dataWeather = dataMonth.filter(function (element) {
+            dataWeather = dataMonth.filter(function(element) {
                 return (minTemp <= element.minTemp);
             });
             //If there is one or more cities matching the criteria it will call 
@@ -119,7 +159,7 @@ function filterByWeather(dataMonth) {
             //this will create an Object only containing the cities that have that temperature
 
 
-            dataWeather = dataMonth.filter(function (element) {
+            dataWeather = dataMonth.filter(function(element) {
                 return (maxTemp >= element.maxTemp);
             });
             //If there is one or more cities matching the criteria it will call 
@@ -129,11 +169,11 @@ function filterByWeather(dataMonth) {
 
         }
 
-        else if (minTemp != "" && maxTemp != "" && maxTemp>minTemp) {
+        else if (minTemp != "" && maxTemp != "" && maxTemp > minTemp) {
             //this will create an Object only containing the cities that have that temperature
 
 
-            dataWeather = dataMonth.filter(function (element) {
+            dataWeather = dataMonth.filter(function(element) {
                 return (minTemp <= element.minTemp && maxTemp >= element.maxTemp);
             });
             //If there is one or more cities matching the criteria it will call 
@@ -154,13 +194,15 @@ function citiesMatchingCriteria(data, filteredBy) {
     document.getElementById("infoMessage").innerHTML = "";
 
     if (checkIfObjectEmpty(data)) {
-
+        $("#charts").hide();
         if (filteredBy == "Budget") {
             document.getElementById("infoMessage").innerHTML = `<h2 class="text-danger">We're sorry but Europe is not that cheap!</h2>`;
-        } else {
+
+        }
+        else {
             document.getElementById("infoMessage").innerHTML = `<h2 class="text-danger">We're sorry but we don't cities with that average weather</h2>`;
         }
-        $("#charts").hide();
+
     }
     else {
         $("#charts").show();
@@ -182,6 +224,7 @@ function checkIfObjectEmpty(data) {
 
 
 function createDataForGraphics(data, filteredBy) {
+
     var ndx = crossfilter(data);
 
     //Budget graphics
@@ -192,6 +235,14 @@ function createDataForGraphics(data, filteredBy) {
         createTotalDailyBudget(ndx);
         createCorrelationCharts(data, ndx)
         createTable(ndx);
+        // numberdisplay(ndx);
+        show_avg(ndx, "hostel", "#avg_hostel");
+        show_avg(ndx, "meals", "#avg_meals");
+        show_avg(ndx, "drinks", "#avg_drinks");
+        show_avg(ndx, "transport", "#avg_transport");
+        show_avg(ndx, "attractions", "#avg_attractions");
+
+
 
     }
 
@@ -200,7 +251,7 @@ function createDataForGraphics(data, filteredBy) {
         fiterByCountry(ndx);
         createCurrencyChart(ndx);
         createCityChart(ndx);
-       // createTempCityChart(ndx);
+        // createTempCityChart(ndx);
         createTable(ndx);
         cityTemp(ndx);
 
@@ -268,7 +319,7 @@ function createTotalDailyBudget(ndx) {
         .stack(drinks, "drinks")
         .stack(attractions, "attractions")
         .stack(transport, "transport")
-        .title(function (d) {
+        .title(function(d) {
             return 'In ' + d.key + ' the ' + this.layer + ' by day cost: ' + d.value;
         })
         .transitionDuration(1500)
@@ -288,9 +339,9 @@ function createTotalDailyBudget(ndx) {
 
 function createCorrelationCharts(data, ndx) {
 
-    var maxArrivals = d3.max(data, function (d) { return d.visitorsCity; });
+    var maxArrivals = d3.max(data, function(d) { return d.visitorsCity; });
 
-    var dimBudget = ndx.dimension(function (d) {
+    var dimBudget = ndx.dimension(function(d) {
         var totalBudget = d.hostelNight + d.meals + d.drinks + d.attractions + d.transport;
         return [d.visitorsCity, totalBudget, d.city];
     })
@@ -315,7 +366,7 @@ function createCorrelationCharts(data, ndx) {
         .clipPadding(10)
         .xAxisLabel('Number of country visitors (2017 or 2018)')
         .yAxisLabel("Budget")
-        .title(function (d) {
+        .title(function(d) {
             return "In " + d.key[2] + " you will need a daily bugget of " + d.key[1] + " \nand there was " + d.key[0] + " millions visits in 2017";
         })
         // .colorAccessor(function (d) {
@@ -328,22 +379,22 @@ function createCorrelationCharts(data, ndx) {
 
 function createTable(ndx) {
 
-   
+
     var allDimension = ndx.dimension(function(d) {
         return (d);
     });
-    
 
-   // var dimGroup = allDimension.group().reduceCount();
 
-   var tableChart = dc.dataTable('#table');
+    // var dimGroup = allDimension.group().reduceCount();
+
+    var tableChart = dc.dataTable('#table');
     tableChart
         .dimension(allDimension)
         .group(function(data) {
             return (data);
         })
         .size(Infinity)
-        .columns(['city', 'country', 'attractions','hostelNight','drinks','meals','transport','minTemp','maxTemp','precipitation','currency','currencyCode','arrivals','visitorsCity'])
+        .columns(['city', 'country', 'attractions', 'hostelNight', 'drinks', 'meals', 'transport', 'minTemp', 'maxTemp', 'precipitation', 'currency', 'currencyCode', 'arrivals', 'visitorsCity'])
         .sortBy(function(d) {
             return d.value;
         })
@@ -351,57 +402,53 @@ function createTable(ndx) {
 }
 
 
-function cityTemp(ndx){
+function cityTemp(ndx) {
 
-    var dim  = ndx.dimension(dc.pluck('city')),
-        
+    var dim = ndx.dimension(dc.pluck('city')),
+
         //   it works with precipitation and linear scale but not with city and ordinal scale
         //   var dim  = ndx.dimension(dc.pluck('precipitation')),
 
 
-            grp1 = dim.group().reduceSum(dc.pluck('maxTemp')),
-            grp2 = dim.group().reduceSum(dc.pluck('minTemp'));
+        grp1 = dim.group().reduceSum(dc.pluck('maxTemp')),
+        grp2 = dim.group().reduceSum(dc.pluck('minTemp'));
 
-         var composite = dc.compositeChart("#cityTemp");
-             composite
-                .width(400)
-               .height(220)
-              .x(d3.scale.ordinal())
-              .xUnits(dc.units.ordinal)
-              .dimension(dim)
-              .group(grp1, "maximun temperature")
-            // .x(d3.scale.linear().domain([20,80]))
-            
-            
-               //.dimension(dim)
-               .yAxisLabel("Temperature")
-               .xAxisLabel("City")
-               .legend(dc.legend().x(80).y(20).itemHeight(13).gap(5))
-               .renderHorizontalGridLines(true)
-               .compose ([
-                  dc.lineChart(composite)
-                     .dimension(dim)
-                     .colors('red')
-                     .group(grp1, "maximun temperature")
-                     .dashStyle([2,2]),
-                  dc.lineChart(composite)
-                     .dimension(dim)
-                     .colors('blue')
-                     .group(grp2, "minimun temperature")
-                    .dashStyle([5,5])
-               ])
-               .brushOn(false);
+    var composite = dc.compositeChart("#cityTemp");
+    composite
+        .width(400)
+        .height(220)
+        .x(d3.scale.ordinal())
+        .xUnits(dc.units.ordinal)
+        .dimension(dim)
+        .group(grp1, "maximun temperature")
+        // .x(d3.scale.linear().domain([20,80]))
 
 
-
-
+        //.dimension(dim)
+        .yAxisLabel("Temperature")
+        .xAxisLabel("City")
+        .legend(dc.legend().x(80).y(20).itemHeight(13).gap(5))
+        .renderHorizontalGridLines(true)
+        .compose([
+            dc.lineChart(composite)
+            .dimension(dim)
+            .colors('red')
+            .group(grp1, "maximun temperature")
+            .dashStyle([2, 2]),
+            dc.lineChart(composite)
+            .dimension(dim)
+            .colors('blue')
+            .group(grp2, "minimun temperature")
+            .dashStyle([5, 5])
+        ])
+        .brushOn(false);
 }
 
 ///////////// other functions
 
 
 function convertToInteger(dataMonth) {
-    dataMonth.forEach(function (d) {
+    dataMonth.forEach(function(d) {
         d.hostelNight = parseInt(d.hostelNight);
         d.meals = parseInt(d.meals);
         d.drinks = parseInt(d.drinks);
@@ -416,37 +463,133 @@ function convertToInteger(dataMonth) {
 function optionBudget() {
     //remove inforMessage in case it has the previous message
     document.getElementById("infoMessage").innerHTML = "";
-
-    //hide weather input boxes
-    $(".weatherSelect").hide();
-    //show budget input box
-    $(".budgetSelect").show();
-
-    //hide all charts and we will wait until the "search" button is clicked
-    $("#charts").hide();
 }
 
 function optionWeather() {
     //remove inforMessage in case it has the previous message
     document.getElementById("infoMessage").innerHTML = "";
-
-    //hide budget input box
-    $(".budgetSelect").hide();
-
-    //show weather input boxes
-    $(".weatherSelect").show();
-
-    //hide all charts and we will wait until the "search" button is clicked
-    $("#charts").hide();
 }
 
 //Charts Title depend on the button clicked option
 //will be "Budget or Weather"
 function showTitle(option) {
     document.getElementById("Title").innerHTML = `<h2>Results By ${option}</h2>`;
-    if (option == "Budget") {
-        document.getElementById("resultsBudget").innerHTML = `New Search`;
-    } else {
-        document.getElementById("resultsTemp").innerHTML = `New Search`;
-    }
 }
+
+
+
+
+
+
+
+/////// testing
+
+
+function show_avg(ndx, product, element) {
+
+    var average_cost = ndx.groupAll().reduce(
+
+        //Add a data entry
+        //p and v by convention, p will keep track of the changes and v will be input values from the actual values from the dataset that will affect the values of p
+
+        //inline function adder
+        function(p, v) {
+            p.count++;
+            p.totaldrinks += +v.drinks;
+            p.averagedrinks = p.totaldrinks / p.count;
+
+            p.totalmeals += +v.meals;
+            p.averagemeals = p.totalmeals / p.count;
+
+            p.totalattractions += +v.attractions
+            p.averageattractions = p.totalattractions / p.count;
+
+            p.totaltransport += +v.transport
+            p.averagetransport = p.totaltransport / p.count;
+
+            p.totalhostel += +v.hostelNight
+            p.averagehostel = p.totalhostel / p.count;
+
+            return p;
+        },
+
+        //inline function remover
+
+        // Remov ethe data entry
+        function(p, v) {
+            p.count--;
+            if (p.count == 0) {
+                p.totaldrinks = 0;
+                p.averagedrinks = 0;
+
+                p.totalmeals = 0;
+                p.averagemeals = 0;
+
+                p.totalattractions = 0;
+                p.averageattractions = 0;
+
+                p.totaltransport = 0;
+                p.averagetransport = 0;
+
+                p.totalhostel = 0;
+                p.averagehostel = 0;
+            }
+            else {
+                p.totaldrinks -= +v.drinks
+                p.averagedrinks = p.totaldrinks / p.count;
+
+                p.totalmeals -= +v.meals
+                p.averagemeals = p.totalmeals / p.count;
+
+                p.totalattractions -= +v.attractions
+                p.averageattractions = p.totalattractions / p.count;
+
+                p.totaltransport -= +v.transport
+                p.averagetransport = p.totaltransport / p.count;
+
+                p.totalhostel -= +v.hostelNight
+                p.averagehostel = p.totalhostel / p.count;
+            }
+            return p;
+        },
+
+        //inline function initialiser
+
+        //Initialise the Reducer
+        function() {
+            return { count: 0, totaldrinks: 0, averagedrinks: 0, totalmeals: 0, averagemeals: 0, totalattractions: 0, averageattractions: 0, totaltransport: 0, averagetransport: 0, totalhostel: 0, averagehostel: 0 }
+        }
+    );
+
+
+
+    dc.numberDisplay(element)
+        //.formatNumber(d3.format('.2'))
+        .valueAccessor(function(d) {
+            if (d.count == 0) {
+                return 0;
+            }
+            else {
+                if (product == "hostel") {
+                    return d.averagehostel;
+                }
+                else if (product == "meals") {
+                    return d.averagemeals;
+                }
+                else if (product == "drinks") {
+                    return d.averagedrinks;
+                }
+                else if (product == "transport") {
+                    return d.averagetransport;
+                }
+                else if (product == "attractions") {
+                    return d.averageattractions;
+                }
+            }
+        })
+        .group(average_cost);
+}
+
+
+
+

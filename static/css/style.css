@@ -1,41 +1,96 @@
-html,
-body {
+html,body{
     height: 100%;
+    width: 100%;
+    background-color: lightgrey;
 }
 
-.jumbotron {
+#monthId {
+    color:white;
+    height: 100vh;
+    width: 100vw;
+    padding: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: #777777;
+}
+
+#budgetId {
+    padding: 25px;
+
     height: 100vh;
     width: 100vw;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
-
+    background-color: rgb(195, 199, 199);
 }
 
+#weatherId {
+    padding: 25px;
 
-.graphsSection {
     height: 100vh;
     width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: lightblue;
+}
+
+#grafId {
+    height: 100vh;
+    width: 100vw;
+    padding: 25px;
+
     background-color: lightgrey;
+
 }
 
-.monthSelector {
-    display: block;
+
+/*weather, budget and graphics sections are hiden at the beggining*/
+
+.hide {
+    display: none;
 }
 
+
+/* Nav Bar */
+.navbar {
+    margin: 0px;
+}
+
+.navbar-default {
+    background-color: transparent;
+    border-color: transparent;
+}
+
+.navbar-default .navbar-brand {
+    color: #fff;
+    font-size: 26px;
+}
+
+.navbar-default .navbar-nav>li>a {
+    color: #ffffff;
+}
 
 select {
     color: black;
-    background-color: white;
 }
 
 
 /* how to rotate the labels so they fit well in the screen
 https://github.com/dc-js/dc.js/issues/731
 */
-#totalDailyBudget .x.axis text, #tempCityChart .x.axis text {
+#totalDailyBudget .x.axis text, #cityTemp .x.axis text {
     text-anchor: end !important;
     transform: rotate(-45deg);
 }
 
+.numberDisplay{
+    color:black;
+    font-size:26px;
+    margin:15px;
+}
