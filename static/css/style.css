@@ -62,7 +62,7 @@ html,body{
     margin: 0px;
 }
 
-.navbar-default {
+.navbar-default, .navbar-header {
     background-color: transparent;
     border-color: transparent;
 }
@@ -94,3 +94,9 @@ https://github.com/dc-js/dc.js/issues/731
     font-size:26px;
     margin:15px;
 }
+
+.table{
+    font-size: 10px;
+    text-align: center;
+}
+

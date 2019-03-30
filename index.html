@@ -8,44 +8,47 @@
     <title>HolidaysYa</title>
     <link rel="stylesheet" href="static/css/bootstrap.min.css" type="text/css" />
     <link rel="stylesheet" href="static/css/dc.min.css" type="text/css" />
+    <link rel="stylesheet" href="static/css/custom.min.css" type="text/css" />
     <link rel="stylesheet" href="static/css/style.css" type="text/css" />
 
 
 </head>
 
 <body>
-    <!-- navbar bootstrap -->
-    <nav class="navbar navbar-default">
-        <div class="container-fluid">
-            <!-- Brand and toggle get grouped for better mobile display -->
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
-                    data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand" href="#">HolidaysYa</a>
+    <header class="container-fluid">
+        <!-- navbar bootstrap -->
+        <nav class="navbar navbar-default">
+            <div class="container-fluid">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                        data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="#">HolidaysYa</a>
+                </div>
+
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+
+                    <ul class="nav navbar-nav navbar-right hide" id="graphButtons">
+                        <li><button class="btn btn-info" id="reset">Reset</button></li>
+                        <li><button class="btn btn-warning goback">Change month</button></li>
+                        <li><button class="btn btn-success budget" id="filterBudget">Change budget</button></li>
+                        <li><button class="btn btn-success weather" id="filterWeather">Change temperature</button></li>
+                    </ul>
+                </div>
+                <!-- /.navbar-collapse -->
             </div>
+            <!-- /.container-fluid -->
+        </nav>
+        <!-- navbar end -->
+    </header>
 
-            <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-
-                <ul class="nav navbar-nav navbar-right">
-                    <li><a href="#">Link</a></li>
-                    <li><a href="#">Link</a></li>
-                    <li><a href="#">Link</a></li>
-
-                </ul>
-            </div>
-            <!-- /.navbar-collapse -->
-        </div>
-        <!-- /.container-fluid -->
-    </nav>
-    <!-- navbar end -->
-
-    <div id="monthId">
+    <section id="monthId">
         <h2>Please select the month that you want to travel</h2>
         <select id="monthSelector" name="months">
             <option value="January">January</option>
@@ -63,22 +66,22 @@
         </select>
 
         <div class="buttons">
-            <button id="chooseWeather" class="btn btn-success">Choose by weather</button>
+            <button id="chooseWeather" class="btn btn-success">Choose by temperature</button>
             <button id="chooseBudget" class="btn btn-info">Choose by budget</button>
         </div>
         <div id="error"></div>
-    </div>
+    </section>
 
-    <div id="budgetId" class="hide">
+    <section id="budgetId" class="hide">
         <label for="maxBudget">What is your maximun budget?</label>
         <input type="number" id="maxBudget" name="maxBudget" required />
         <div class="buttons">
             <button class="btn btn-danger goback">Change month</button>
             <button class="btn btn-success" id="resultsBudget" onclick="showTitle('Budget')">show cities</button>
         </div>
-    </div>
+    </section>
 
-    <div id="weatherId" class="hide">
+    <section id="weatherId" class="hide">
         <label for="minTemp">Minimun temperature</label>
         <input type="number" id="minTemp" name="minTemp" />
         <label for="maxTemp">Maximun temperature</label>
@@ -87,11 +90,200 @@
             <button class="btn btn-danger goback">Change month</button>
             <button class="btn btn-success" id="resultsWeather" onclick="showTitle('Weather')">show cities</button>
         </div>
-    </div>
+    </section>
+
+    <section class="container-fluid hide" id="grafId">
+
+        <!-- <div class="buttons">
+            <button class="btn btn-info" id="reset">Reset</button>
+            <button class="btn btn-warning goback">Change month</button>
+            <button class="btn btn-success budget" id="filterBudget">Change budget</button>
+            <button class="btn btn-success weather" id="filterWeather">Change temperature</button>
+        </div> -->
+
+        <div id="infoMessage"></div>
+
+        <div class="clearfix"></div>
 
 
-    <div id="grafId" class="hide">
-       
+        <div id="charts">
+
+            <div class="row">
+                <div class="col-md-12 col-sm-12 col-xs-12 common">
+                    <div id="Title"></div>
+                </div>
+            </div>
+
+
+            <div class="row">
+                <div class="col-md-2 col-sm-12 col-xs-12 common">
+                    <h2>Filter by Region</h2>
+                </div>
+                <div class="col-md-2 col-sm-12 col-xs-12 common">
+                    <div id="filterByRegion"></div>
+                </div>
+
+                <div class="col-md-2 col-sm-12 col-xs-12 common">
+                    <h2>Filter by Country</h2>
+                </div>
+                <div class="col-md-2 col-sm-12 col-xs-12 common">
+                    <div id="filterByCountry"></div>
+                </div>
+
+                <div class="col-md-2 col-sm-12 col-xs-12 common">
+                    <h2>Filter by City</h2>
+                </div>
+                <div class="col-md-2 col-sm-12 col-xs-12 common">
+                    <div id="filterByCity"></div>
+                </div>
+            </div>
+
+
+
+
+
+
+
+            <div class="row budget">
+                <div class="col-md-2 col-sm-4 col-xs-6">
+                    <div class="x_panel">
+                        <div class="x_title">
+                            <h2>Plain Page</h2>
+                            <div class="clearfix"></div>
+                        </div>
+                        <div class="x_content common" id="currency">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-2 col-sm-4 col-xs-6">
+                    <div class="x_panel">
+                        <div class="x_title">
+                            <h2>Plain Page</h2>
+                            <div class="clearfix"></div>
+                        </div>
+                        <div class="x_content common numberDisplay" id="avg_hostel">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-2 col-sm-4 col-xs-6">
+                    <div class="x_panel">
+                        <div class="x_title">
+                            <h2>Plain Page</h2>
+                            <div class="clearfix"></div>
+                        </div>
+                        <div class="x_content common numberDisplay" id="avg_meals">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-2 col-sm-4 col-xs-6">
+                    <div class="x_panel">
+                        <div class="x_title">
+                            <h2>Plain Page</h2>
+                            <div class="clearfix"></div>
+                        </div>
+                        <div class="x_content common numberDisplay" id="avg_drinks">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-2 col-sm-4 col-xs-6">
+                    <div class="x_panel">
+                        <div class="x_title">
+                            <h2>Plain Page</h2>
+                            <div class="clearfix"></div>
+                        </div>
+                        <div class="x_content common numberDisplay" id="avg_transport">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-2 col-sm-4 col-xs-6">
+                    <div class="x_panel">
+                        <div class="x_title">
+                            <h2>Plain Page</h2>
+                            <div class="clearfix"></div>
+                        </div>
+                        <div class="x_content common numberDisplay" id="avg_attractions">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+            <div class="row budget">
+                <div class="col-md-4 col-sm-12 col-xs-12">
+                    <div class="x_panel">
+                        <div class="x_title">
+                            <h2>Plain Page</h2>
+                            <div class="clearfix"></div>
+                        </div>
+                        <div class="x_content common" id="test">
+                                
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-8 col-sm-12 col-xs-12">
+                    <div class="row">
+                        <div class="col-md-12 col-sm-12 col-xs-12">
+                            <div class="x_panel">
+                                <div class="x_title">
+                                    <h2>Plain Page</h2>
+                                    <div class="clearfix"></div>
+                                </div>
+                                <div class="x_content common" id="totalDailyBudget">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12 col-sm-12 col-xs-12">
+                            <div class="x_panel">
+                                <div class="x_title">
+                                    <h2>Plain Page</h2>
+                                    <div class="clearfix"></div>
+                                </div>
+                                <div class="x_content common" id="correlation">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="row budget">
+                <div class="col-md-12 col-sm-12 col-xs-12">
+                    <div class="x_panel">
+                        <div class="x_title">
+                            <h2>Plain Page</h2>
+                            <div class="clearfix"></div>
+                        </div>
+                        <div class="x_content common">
+
+                            <table class='table table-hover' id='table'>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+    </section>
+
+
+
+
+
+
+
+
+    <!-- <div id="grafId" class="hide">
+
         <div class="buttons">
             <button class="btn btn-info" id="reset">Reset</button>
             <button class="btn btn-warning goback">Change month</button>
@@ -105,9 +297,9 @@
             <div id="Title"></div>
 
             <div class="common">
-                    <div id="countrySelector"></div>
-                    
-                </div>
+                <div id="countrySelector"></div>
+
+            </div>
             <div class="budget">
                 <div id="totalDailyBudget"></div>
                 <div id="correlation"></div>
@@ -128,10 +320,10 @@
                 <div id="table"></div>
             </div>
 
-            <!-- <div id="table-costs"></div> -->
+            <div id="table-costs"></div>
         </div>
 
-    </div>
+    </div> -->
 
 
 
@@ -141,6 +333,7 @@
     <script type="text/javascript" src="static/js/crossfilter.min.js"></script>
     <script type="text/javascript" src="static/js/dc.min.js"></script>
     <script type="text/javascript" src="static/js/queue.min.js"></script>
+    <script type="text/javascript" src="static/js/custom.min.js"></script>
     <script type="text/javascript" src="static/js/graphs.js"></script>
 
 </body>

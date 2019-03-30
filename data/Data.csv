@@ -1,265 +1,265 @@
-country,city,month,attractions,hostelNight,drinks,meals,transport,minTemp,maxTemp,precipitation,currency,currencyCode,arrivals,visitorsCity
-Austria,Vienna,January,15.36,19.92,11.52,22.39,4.83,-3.7,2.5,35,Euro,EUR,29460000,16.3
-Austria,Vienna,February,15.36,19.92,11.52,22.39,4.83,-2.5,4.8,39,Euro,EUR,29460000,16.3
-Austria,Vienna,March,15.36,19.92,11.52,22.39,4.83,0.2,9.9,41,Euro,EUR,29460000,16.3
-Austria,Vienna,April,15.36,19.92,11.52,22.39,4.83,4.4,15.6,48,Euro,EUR,29460000,16.3
-Austria,Vienna,May,15.36,19.92,11.52,22.39,4.83,8.9,20.7,64,Euro,EUR,29460000,16.3
-Austria,Vienna,June,15.36,19.92,11.52,22.39,4.83,12.4,23.9,75,Euro,EUR,29460000,16.3
-Austria,Vienna,July,15.36,19.92,11.52,22.39,4.83,13.8,26.1,73,Euro,EUR,29460000,16.3
-Austria,Vienna,August,15.36,19.92,11.52,22.39,4.83,13.5,25.5,65,Euro,EUR,29460000,16.3
-Austria,Vienna,September,15.36,19.92,11.52,22.39,4.83,9.6,20.9,48,Euro,EUR,29460000,16.3
-Austria,Vienna,October,15.36,19.92,11.52,22.39,4.83,5,15,42,Euro,EUR,29460000,16.3
-Austria,Vienna,November,15.36,19.92,11.52,22.39,4.83,1.5,8.1,49,Euro,EUR,29460000,16.3
-Austria,Vienna,December,15.36,19.92,11.52,22.39,4.83,-1.8,3.8,44,Euro,EUR,29460000,16.3
-Belgium,Brussels,January,10.97,26.34,13.17,23.7,4.61,-0.5,4.8,68,Euro,EUR,8385000,6.4
-Belgium,Brussels,February,10.97,26.34,13.17,23.7,4.61,0.7,6.7,52,Euro,EUR,8385000,6.4
-Belgium,Brussels,March,10.97,26.34,13.17,23.7,4.61,2.5,10.3,68,Euro,EUR,8385000,6.4
-Belgium,Brussels,April,10.97,26.34,13.17,23.7,4.61,5.1,14.3,52,Euro,EUR,8385000,6.4
-Belgium,Brussels,May,10.97,26.34,13.17,23.7,4.61,8.2,18.5,65,Euro,EUR,8385000,6.4
-Belgium,Brussels,June,10.97,26.34,13.17,23.7,4.61,11.2,22,73,Euro,EUR,8385000,6.4
-Belgium,Brussels,July,10.97,26.34,13.17,23.7,4.61,12.5,22.8,69,Euro,EUR,8385000,6.4
-Belgium,Brussels,August,10.97,26.34,13.17,23.7,4.61,12.6,22.6,61,Euro,EUR,8385000,6.4
-Belgium,Brussels,September,10.97,26.34,13.17,23.7,4.61,10.9,20.7,63,Euro,EUR,8385000,6.4
-Belgium,Brussels,October,10.97,26.34,13.17,23.7,4.61,7.6,15.5,72,Euro,EUR,8385000,6.4
-Belgium,Brussels,November,10.97,26.34,13.17,23.7,4.61,3.6,9.1,71,Euro,EUR,8385000,6.4
-Belgium,Brussels,December,10.97,26.34,13.17,23.7,4.61,0.7,5.8,71,Euro,EUR,8385000,6.4
-Czech Republic,Prague,January,13.01,11.49,4.55,16.13,2.08,-3.8,1.8,21,Czech Krona,CZK,10160000,18.1
-Czech Republic,Prague,February,13.01,11.49,4.55,16.13,2.08,-2.9,3.7,19,Czech Krona,CZK,10160000,18.1
-Czech Republic,Prague,March,13.01,11.49,4.55,16.13,2.08,0,8.8,26,Czech Krona,CZK,10160000,18.1
-Czech Republic,Prague,April,13.01,11.49,4.55,16.13,2.08,3.4,14.2,31,Czech Krona,CZK,10160000,18.1
-Czech Republic,Prague,May,13.01,11.49,4.55,16.13,2.08,8.2,19.7,61,Czech Krona,CZK,10160000,18.1
-Czech Republic,Prague,June,13.01,11.49,4.55,16.13,2.08,11.3,22.5,69,Czech Krona,CZK,10160000,18.1
-Czech Republic,Prague,July,13.01,11.49,4.55,16.13,2.08,12.8,24.6,70,Czech Krona,CZK,10160000,18.1
-Czech Republic,Prague,August,13.01,11.49,4.55,16.13,2.08,12.6,24.4,65,Czech Krona,CZK,10160000,18.1
-Czech Republic,Prague,September,13.01,11.49,4.55,16.13,2.08,9,19.7,42,Czech Krona,CZK,10160000,18.1
-Czech Republic,Prague,October,13.01,11.49,4.55,16.13,2.08,4.8,13.8,30,Czech Krona,CZK,10160000,18.1
-Czech Republic,Prague,November,13.01,11.49,4.55,16.13,2.08,0.7,6.6,29,Czech Krona,CZK,10160000,18.1
-Czech Republic,Prague,December,13.01,11.49,4.55,16.13,2.08,-2,3.2,23,Czech Krona,CZK,10160000,18.1
-Denmark,Copenhagen,January,12.04,25.21,18.05,25.27,7.22,-1.7,2.5,50,Danish Kroner,DKK,11743000,8.1
-Denmark,Copenhagen,February,12.04,25.21,18.05,25.27,7.22,-1.9,2.8,33,Danish Kroner,DKK,11743000,8.1
-Denmark,Copenhagen,March,12.04,25.21,18.05,25.27,7.22,-0.2,5.5,39,Danish Kroner,DKK,11743000,8.1
-Denmark,Copenhagen,April,12.04,25.21,18.05,25.27,7.22,2.9,10.3,40,Danish Kroner,DKK,11743000,8.1
-Denmark,Copenhagen,May,12.04,25.21,18.05,25.27,7.22,7.7,15.9,42,Danish Kroner,DKK,11743000,8.1
-Denmark,Copenhagen,June,12.04,25.21,18.05,25.27,7.22,11.5,19.7,52,Danish Kroner,DKK,11743000,8.1
-Denmark,Copenhagen,July,12.04,25.21,18.05,25.27,7.22,13.3,21.1,67,Danish Kroner,DKK,11743000,8.1
-Denmark,Copenhagen,August,12.04,25.21,18.05,25.27,7.22,13,21,64,Danish Kroner,DKK,11743000,8.1
-Denmark,Copenhagen,September,12.04,25.21,18.05,25.27,7.22,10.4,17,61,Danish Kroner,DKK,11743000,8.1
-Denmark,Copenhagen,October,12.04,25.21,18.05,25.27,7.22,7,12.3,56,Danish Kroner,DKK,11743000,8.1
-Denmark,Copenhagen,November,12.04,25.21,18.05,25.27,7.22,1.6,7.3,60,Danish Kroner,DKK,11743000,8.1
-Denmark,Copenhagen,December,12.04,25.21,18.05,25.27,7.22,0.4,3.9,57,Danish Kroner,DKK,11743000,8.1
-Finland,Helsinki,January,7.68,25.33,19.75,25.02,5.49,-8.2,-2.7,44,Euro,EUR,3180000,5.3
-Finland,Helsinki,February,7.68,25.33,19.75,25.02,5.49,-8.6,-3,33,Euro,EUR,3180000,5.3
-Finland,Helsinki,March,7.68,25.33,19.75,25.02,5.49,-5.4,0.8,33,Euro,EUR,3180000,5.3
-Finland,Helsinki,April,7.68,25.33,19.75,25.02,5.49,-0.1,6.7,37,Euro,EUR,3180000,5.3
-Finland,Helsinki,May,7.68,25.33,19.75,25.02,5.49,5.5,14,36,Euro,EUR,3180000,5.3
-Finland,Helsinki,June,7.68,25.33,19.75,25.02,5.49,10.6,18.9,47,Euro,EUR,3180000,5.3
-Finland,Helsinki,July,7.68,25.33,19.75,25.02,5.49,13.2,20.8,72,Euro,EUR,3180000,5.3
-Finland,Helsinki,August,7.68,25.33,19.75,25.02,5.49,12.3,19.3,78,Euro,EUR,3180000,5.3
-Finland,Helsinki,September,7.68,25.33,19.75,25.02,5.49,7.7,13.8,71,Euro,EUR,3180000,5.3
-Finland,Helsinki,October,7.68,25.33,19.75,25.02,5.49,3.5,8.4,72,Euro,EUR,3180000,5.3
-Finland,Helsinki,November,7.68,25.33,19.75,25.02,5.49,-1.2,3,70,Euro,EUR,3180000,5.3
-Finland,Helsinki,December,7.68,25.33,19.75,25.02,5.49,-5.6,-0.5,57,Euro,EUR,3180000,5.3
-France,Paris,January,13.17,27.89,13.17,22.39,3.95,0.7,6,54,Euro,EUR,86861000,35.2
-France,Paris,February,13.17,27.89,13.17,22.39,3.95,1.2,7.3,46,Euro,EUR,86861000,35.2
-France,Paris,March,13.17,27.89,13.17,22.39,3.95,3.4,12.2,50,Euro,EUR,86861000,35.2
-France,Paris,April,13.17,27.89,13.17,22.39,3.95,5.8,15.9,44,Euro,EUR,86861000,35.2
-France,Paris,May,13.17,27.89,13.17,22.39,3.95,8.9,19.8,58,Euro,EUR,86861000,35.2
-France,Paris,June,13.17,27.89,13.17,22.39,3.95,12.1,22.9,56,Euro,EUR,86861000,35.2
-France,Paris,July,13.17,27.89,13.17,22.39,3.95,14.1,24.8,53,Euro,EUR,86861000,35.2
-France,Paris,August,13.17,27.89,13.17,22.39,3.95,13.9,24.3,51,Euro,EUR,86861000,35.2
-France,Paris,September,13.17,27.89,13.17,22.39,3.95,11.5,21.3,56,Euro,EUR,86861000,35.2
-France,Paris,October,13.17,27.89,13.17,22.39,3.95,7.6,15.7,57,Euro,EUR,86861000,35.2
-France,Paris,November,13.17,27.89,13.17,22.39,3.95,4.3,10.1,58,Euro,EUR,86861000,35.2
-France,Paris,December,13.17,27.89,13.17,22.39,3.95,1.8,6.7,54,Euro,EUR,86861000,35.2
-Germany,Berlin,January,13.17,17.56,9.88,18.44,5.93,-3.4,1.7,43,Euro,EUR,37452000,31.2
-Germany,Berlin,February,13.17,17.56,9.88,18.44,5.93,-2.9,3,34,Euro,EUR,37452000,31.2
-Germany,Berlin,March,13.17,17.56,9.88,18.44,5.93,0,7.9,35,Euro,EUR,37452000,31.2
-Germany,Berlin,April,13.17,17.56,9.88,18.44,5.93,3.8,13.5,41,Euro,EUR,37452000,31.2
-Germany,Berlin,May,13.17,17.56,9.88,18.44,5.93,8,19.1,54,Euro,EUR,37452000,31.2
-Germany,Berlin,June,13.17,17.56,9.88,18.44,5.93,11.3,22.3,70,Euro,EUR,37452000,31.2
-Germany,Berlin,July,13.17,17.56,9.88,18.44,5.93,13.4,23.8,57,Euro,EUR,37452000,31.2
-Germany,Berlin,August,13.17,17.56,9.88,18.44,5.93,12.7,23.3,61,Euro,EUR,37452000,31.2
-Germany,Berlin,September,13.17,17.56,9.88,18.44,5.93,9.5,19.4,44,Euro,EUR,37452000,31.2
-Germany,Berlin,October,13.17,17.56,9.88,18.44,5.93,7.5,13.3,37,Euro,EUR,37452000,31.2
-Germany,Berlin,November,13.17,17.56,9.88,18.44,5.93,1.9,7,45,Euro,EUR,37452000,31.2
-Germany,Berlin,December,13.17,17.56,9.88,18.44,5.93,-1.2,3.2,49,Euro,EUR,37452000,31.2
-Greece,Athens,January,8.78,10.97,8.23,21.07,3.07,6.3,12.8,52,Euro,EUR,27194000,5.5
-Greece,Athens,February,8.78,10.97,8.23,21.07,3.07,6.6,13.7,43,Euro,EUR,27194000,5.5
-Greece,Athens,March,8.78,10.97,8.23,21.07,3.07,7.7,15.4,45,Euro,EUR,27194000,5.5
-Greece,Athens,April,8.78,10.97,8.23,21.07,3.07,11.2,20.2,27,Euro,EUR,27194000,5.5
-Greece,Athens,May,8.78,10.97,8.23,21.07,3.07,15.6,25.2,20,Euro,EUR,27194000,5.5
-Greece,Athens,June,8.78,10.97,8.23,21.07,3.07,19.7,29.9,8,Euro,EUR,27194000,5.5
-Greece,Athens,July,8.78,10.97,8.23,21.07,3.07,22.5,33.3,5,Euro,EUR,27194000,5.5
-Greece,Athens,August,8.78,10.97,8.23,21.07,3.07,22.6,33.1,5,Euro,EUR,27194000,5.5
-Greece,Athens,September,8.78,10.97,8.23,21.07,3.07,19.1,29.1,13,Euro,EUR,27194000,5.5
-Greece,Athens,October,8.78,10.97,8.23,21.07,3.07,15.2,23.6,52,Euro,EUR,27194000,5.5
-Greece,Athens,November,8.78,10.97,8.23,21.07,3.07,11.6,18.5,59,Euro,EUR,27194000,5.5
-Greece,Athens,December,8.78,10.97,8.23,21.07,3.07,8.1,14.5,68,Euro,EUR,27194000,5.5
-Hungary,Budapest,January,6.37,7.91,3.72,11.04,2.48,-3.3,1.6,37,Hungary Forint,HUF,5650000,10
-Hungary,Budapest,February,6.37,7.91,3.72,11.04,2.48,-1.1,4.7,34,Hungary Forint,HUF,5650000,10
-Hungary,Budapest,March,6.37,7.91,3.72,11.04,2.48,2,10.5,32,Hungary Forint,HUF,5650000,10
-Hungary,Budapest,April,6.37,7.91,3.72,11.04,2.48,6.4,16.8,42,Hungary Forint,HUF,5650000,10
-Hungary,Budapest,May,6.37,7.91,3.72,11.04,2.48,10.8,21.9,60,Hungary Forint,HUF,5650000,10
-Hungary,Budapest,June,6.37,7.91,3.72,11.04,2.48,14.1,24.8,69,Hungary Forint,HUF,5650000,10
-Hungary,Budapest,July,6.37,7.91,3.72,11.04,2.48,15.6,26.9,53,Hungary Forint,HUF,5650000,10
-Hungary,Budapest,August,6.37,7.91,3.72,11.04,2.48,15.3,26.4,53,Hungary Forint,HUF,5650000,10
-Hungary,Budapest,September,6.37,7.91,3.72,11.04,2.48,11.8,22.4,41,Hungary Forint,HUF,5650000,10
-Hungary,Budapest,October,6.37,7.91,3.72,11.04,2.48,6.9,16.2,40,Hungary Forint,HUF,5650000,10
-Hungary,Budapest,November,6.37,7.91,3.72,11.04,2.48,2.5,8.3,57,Hungary Forint,HUF,5650000,10
-Hungary,Budapest,December,6.37,7.91,3.72,11.04,2.48,-1.1,3.6,46,Hungary Forint,HUF,5650000,10
-Ireland,Dublin,January,10.97,16.46,16.46,21.07,3.29,2.5,7.9,70,Euro,EUR,10338000,5.9
-Ireland,Dublin,February,10.97,16.46,16.46,21.07,3.29,2.4,7.9,52,Euro,EUR,10338000,5.9
-Ireland,Dublin,March,10.97,16.46,16.46,21.07,3.29,3.1,9.8,53,Euro,EUR,10338000,5.9
-Ireland,Dublin,April,10.97,16.46,16.46,21.07,3.29,4.4,12,50,Euro,EUR,10338000,5.9
-Ireland,Dublin,May,10.97,16.46,16.46,21.07,3.29,6.7,14.8,60,Euro,EUR,10338000,5.9
-Ireland,Dublin,June,10.97,16.46,16.46,21.07,3.29,9.4,17.7,55,Euro,EUR,10338000,5.9
-Ireland,Dublin,July,10.97,16.46,16.46,21.07,3.29,11.3,19.4,53,Euro,EUR,10338000,5.9
-Ireland,Dublin,August,10.97,16.46,16.46,21.07,3.29,11.1,19.2,71,Euro,EUR,10338000,5.9
-Ireland,Dublin,September,10.97,16.46,16.46,21.07,3.29,9.6,17.2,75,Euro,EUR,10338000,5.9
-Ireland,Dublin,October,10.97,16.46,16.46,21.07,3.29,7.5,14.2,76,Euro,EUR,10338000,5.9
-Ireland,Dublin,November,10.97,16.46,16.46,21.07,3.29,4.3,10.2,72,Euro,EUR,10338000,5.9
-Ireland,Dublin,December,10.97,16.46,16.46,21.07,3.29,3.2,8.7,80,Euro,EUR,10338000,5.9
-Italy,Milan,January,10.97,28.97,11.52,19.75,4.39,-0.8,4.7,55,Euro,EUR,58253000,11.3
-Italy,Milan,February,10.97,28.97,11.52,19.75,4.39,0.9,7.8,62,Euro,EUR,58253000,11.3
-Italy,Milan,March,10.97,28.97,11.52,19.75,4.39,4.3,13.1,79,Euro,EUR,58253000,11.3
-Italy,Milan,April,10.97,28.97,11.52,19.75,4.39,7.9,18.2,92,Euro,EUR,58253000,11.3
-Italy,Milan,May,10.97,28.97,11.52,19.75,4.39,12.1,23.1,94,Euro,EUR,58253000,11.3
-Italy,Milan,June,10.97,28.97,11.52,19.75,4.39,15.8,26.5,97,Euro,EUR,58253000,11.3
-Italy,Milan,July,10.97,28.97,11.52,19.75,4.39,18.3,29.3,67,Euro,EUR,58253000,11.3
-Italy,Milan,August,10.97,28.97,11.52,19.75,4.39,17.8,27.8,90,Euro,EUR,58253000,11.3
-Italy,Milan,September,10.97,28.97,11.52,19.75,4.39,14.7,24,78,Euro,EUR,58253000,11.3
-Italy,Milan,October,10.97,28.97,11.52,19.75,4.39,9.5,17.4,118,Euro,EUR,58253000,11.3
-Italy,Milan,November,10.97,28.97,11.52,19.75,4.39,4.6,10.8,110,Euro,EUR,58253000,11.3
-Italy,Milan,December,10.97,28.97,11.52,19.75,4.39,0.6,6,71,Euro,EUR,58253000,11.3
-Italy,Rome,January,13.17,25.84,9.88,21.07,3.29,3.8,11.7,79,Euro,EUR,58253000,26.9
-Italy,Rome,February,13.17,25.84,9.88,21.07,3.29,4.5,13.3,70,Euro,EUR,58253000,26.9
-Italy,Rome,March,13.17,25.84,9.88,21.07,3.29,6.1,15.5,70,Euro,EUR,58253000,26.9
-Italy,Rome,April,13.17,25.84,9.88,21.07,3.29,8.5,18.9,62,Euro,EUR,58253000,26.9
-Italy,Rome,May,13.17,25.84,9.88,21.07,3.29,12.2,23.3,46,Euro,EUR,58253000,26.9
-Italy,Rome,June,13.17,25.84,9.88,21.07,3.29,15.9,27.5,35,Euro,EUR,58253000,26.9
-Italy,Rome,July,13.17,25.84,9.88,21.07,3.29,18.3,30.6,17,Euro,EUR,58253000,26.9
-Italy,Rome,August,13.17,25.84,9.88,21.07,3.29,18.4,30.2,33,Euro,EUR,58253000,26.9
-Italy,Rome,September,13.17,25.84,9.88,21.07,3.29,15.9,26.7,73,Euro,EUR,58253000,26.9
-Italy,Rome,October,13.17,25.84,9.88,21.07,3.29,11.7,21.9,103,Euro,EUR,58253000,26.9
-Italy,Rome,November,13.17,25.84,9.88,21.07,3.29,8,16.7,114,Euro,EUR,58253000,26.9
-Italy,Rome,December,13.17,25.84,9.88,21.07,3.29,5,12.9,96,Euro,EUR,58253000,26.9
-Netherlands,Amsterdam,January,17.56,40.49,13.17,17.12,6.15,-0.1,4.9,70,Euro,EUR,17924000,15.5
-Netherlands,Amsterdam,February,17.56,40.49,13.17,17.12,6.15,-0.1,5.4,47,Euro,EUR,17924000,15.5
-Netherlands,Amsterdam,March,17.56,40.49,13.17,17.12,6.15,1.6,8,64,Euro,EUR,17924000,15.5
-Netherlands,Amsterdam,April,17.56,40.49,13.17,17.12,6.15,4,8.1,44,Euro,EUR,17924000,15.5
-Netherlands,Amsterdam,May,17.56,40.49,13.17,17.12,6.15,7.7,15.8,50,Euro,EUR,17924000,15.5
-Netherlands,Amsterdam,June,17.56,40.49,13.17,17.12,6.15,10.6,18.8,59,Euro,EUR,17924000,15.5
-Netherlands,Amsterdam,July,17.56,40.49,13.17,17.12,6.15,12.6,20.5,75,Euro,EUR,17924000,15.5
-Netherlands,Amsterdam,August,17.56,40.49,13.17,17.12,6.15,12.5,20.6,77,Euro,EUR,17924000,15.5
-Netherlands,Amsterdam,September,17.56,40.49,13.17,17.12,6.15,10.4,18.3,79,Euro,EUR,17924000,15.5
-Netherlands,Amsterdam,October,17.56,40.49,13.17,17.12,6.15,7.5,14.2,87,Euro,EUR,17924000,15.5
-Netherlands,Amsterdam,November,17.56,40.49,13.17,17.12,6.15,3.7,9,79,Euro,EUR,17924000,15.5
-Netherlands,Amsterdam,December,17.56,40.49,13.17,17.12,6.15,1.1,6,74,Euro,EUR,17924000,15.5
-Norway,Oslo,January,8.05,45.9,17.26,26.23,6.9,-6.2,-1.2,49,Norwegian Kroner,NOK,6252000,7.25
-Norway,Oslo,February,8.05,45.9,17.26,26.23,6.9,-6.7,-0.8,36,Norwegian Kroner,NOK,6252000,7.25
-Norway,Oslo,March,8.05,45.9,17.26,26.23,6.9,-2.9,3.5,43,Norwegian Kroner,NOK,6252000,7.25
-Norway,Oslo,April,8.05,45.9,17.26,26.23,6.9,1,9.1,41,Norwegian Kroner,NOK,6252000,7.25
-Norway,Oslo,May,8.05,45.9,17.26,26.23,6.9,6.5,16,50,Norwegian Kroner,NOK,6252000,7.25
-Norway,Oslo,June,8.05,45.9,17.26,26.23,6.9,10.9,20.1,64,Norwegian Kroner,NOK,6252000,7.25
-Norway,Oslo,July,8.05,45.9,17.26,26.23,6.9,12.6,21.6,77,Norwegian Kroner,NOK,6252000,7.25
-Norway,Oslo,August,8.05,45.9,17.26,26.23,6.9,11.8,20.4,89,Norwegian Kroner,NOK,6252000,7.25
-Norway,Oslo,September,8.05,45.9,17.26,26.23,6.9,8,15.2,83,Norwegian Kroner,NOK,6252000,7.25
-Norway,Oslo,October,8.05,45.9,17.26,26.23,6.9,4.2,9.5,81,Norwegian Kroner,NOK,6252000,7.25
-Norway,Oslo,November,8.05,45.9,17.26,26.23,6.9,-0.8,3.6,74,Norwegian Kroner,NOK,6252000,7.25
-Norway,Oslo,December,8.05,45.9,17.26,26.23,6.9,-4.7,0.1,53,Norwegian Kroner,NOK,6252000,7.25
-Poland,Warsaw,January,6.93,9.2,6.16,10.16,1.75,-6.2,-0.8,22,Polish Zlotych,PLN,18258000,9.7
-Poland,Warsaw,February,6.93,9.2,6.16,10.16,1.75,-5.6,0.3,23,Polish Zlotych,PLN,18258000,9.7
-Poland,Warsaw,March,6.93,9.2,6.16,10.16,1.75,-2.2,5.2,25,Polish Zlotych,PLN,18258000,9.7
-Poland,Warsaw,April,6.93,9.2,6.16,10.16,1.75,3,12.9,33,Polish Zlotych,PLN,18258000,9.7
-Poland,Warsaw,May,6.93,9.2,6.16,10.16,1.75,7.9,18.7,53,Polish Zlotych,PLN,18258000,9.7
-Poland,Warsaw,June,6.93,9.2,6.16,10.16,1.75,11.5,22.2,67,Polish Zlotych,PLN,18258000,9.7
-Poland,Warsaw,July,6.93,9.2,6.16,10.16,1.75,12.9,23.5,71,Polish Zlotych,PLN,18258000,9.7
-Poland,Warsaw,August,6.93,9.2,6.16,10.16,1.75,12.1,22.8,58,Polish Zlotych,PLN,18258000,9.7
-Poland,Warsaw,September,6.93,9.2,6.16,10.16,1.75,8.6,18.1,43,Polish Zlotych,PLN,18258000,9.7
-Poland,Warsaw,October,6.93,9.2,6.16,10.16,1.75,4.5,12.5,35,Polish Zlotych,PLN,18258000,9.7
-Poland,Warsaw,November,6.93,9.2,6.16,10.16,1.75,0.6,5.7,39,Polish Zlotych,PLN,18258000,9.7
-Poland,Warsaw,December,6.93,9.2,6.16,10.16,1.75,-3.4,1.2,32,Polish Zlotych,PLN,18258000,9.7
-Portugal,Lisbon,January,8.78,14.11,9.88,18.44,3.07,8.6,14.8,101,Euro,EUR,15432000,10.67
-Portugal,Lisbon,February,8.78,14.11,9.88,18.44,3.07,9.2,15.7,92,Euro,EUR,15432000,10.67
-Portugal,Lisbon,March,8.78,14.11,9.88,18.44,3.07,10.1,17.5,72,Euro,EUR,15432000,10.67
-Portugal,Lisbon,April,8.78,14.11,9.88,18.44,3.07,11.5,19.4,53,Euro,EUR,15432000,10.67
-Portugal,Lisbon,May,8.78,14.11,9.88,18.44,3.07,13.2,21.9,41,Euro,EUR,15432000,10.67
-Portugal,Lisbon,June,8.78,14.11,9.88,18.44,3.07,15.6,24.7,20,Euro,EUR,15432000,10.67
-Portugal,Lisbon,July,8.78,14.11,9.88,18.44,3.07,17.4,27.4,3,Euro,EUR,15432000,10.67
-Portugal,Lisbon,August,8.78,14.11,9.88,18.44,3.07,17.6,27.8,5,Euro,EUR,15432000,10.67
-Portugal,Lisbon,September,8.78,14.11,9.88,18.44,3.07,16.9,26.3,23,Euro,EUR,15432000,10.67
-Portugal,Lisbon,October,8.78,14.11,9.88,18.44,3.07,14.8,22.6,71,Euro,EUR,15432000,10.67
-Portugal,Lisbon,November,8.78,14.11,9.88,18.44,3.07,11.4,17.9,106,Euro,EUR,15432000,10.67
-Portugal,Lisbon,December,8.78,14.11,9.88,18.44,3.07,9.3,15,104,Euro,EUR,15432000,10.67
-Spain,Barcelona,January,14.27,20.96,9.88,21.07,4.72,6.6,13.1,39,Euro,EUR,81786000,20.6
-Spain,Barcelona,February,14.27,20.96,9.88,21.07,4.72,7.4,14.1,36,Euro,EUR,81786000,20.6
-Spain,Barcelona,March,14.27,20.96,9.88,21.07,4.72,9,16.1,45,Euro,EUR,81786000,20.6
-Spain,Barcelona,April,14.27,20.96,9.88,21.07,4.72,10.7,18.6,48,Euro,EUR,81786000,20.6
-Spain,Barcelona,May,14.27,20.96,9.88,21.07,4.72,13.8,21.7,52,Euro,EUR,81786000,20.6
-Spain,Barcelona,June,14.27,20.96,9.88,21.07,4.72,17.5,25.3,42,Euro,EUR,81786000,20.6
-Spain,Barcelona,July,14.27,20.96,9.88,21.07,4.72,20.3,27.9,25,Euro,EUR,81786000,20.6
-Spain,Barcelona,August,14.27,20.96,9.88,21.07,4.72,20.2,27.5,51,Euro,EUR,81786000,20.6
-Spain,Barcelona,September,14.27,20.96,9.88,21.07,4.72,18.3,25.1,73,Euro,EUR,81786000,20.6
-Spain,Barcelona,October,14.27,20.96,9.88,21.07,4.72,14.4,20.9,93,Euro,EUR,81786000,20.6
-Spain,Barcelona,November,14.27,20.96,9.88,21.07,4.72,10.3,16.5,59,Euro,EUR,81786000,20.6
-Spain,Barcelona,December,14.27,20.96,9.88,21.07,4.72,7.7,13.7,49,Euro,EUR,81786000,20.6
-Spain,Madrid,January,10.97,16.46,6.58,21.07,3.29,1.4,8.6,43,Euro,EUR,81786000,19.2
-Spain,Madrid,February,10.97,16.46,6.58,21.07,3.29,1.9,10.9,44,Euro,EUR,81786000,19.2
-Spain,Madrid,March,10.97,16.46,6.58,21.07,3.29,4.6,14.7,35,Euro,EUR,81786000,19.2
-Spain,Madrid,April,10.97,16.46,6.58,21.07,3.29,6.7,17.8,45,Euro,EUR,81786000,19.2
-Spain,Madrid,May,10.97,16.46,6.58,21.07,3.29,10,21.6,44,Euro,EUR,81786000,19.2
-Spain,Madrid,June,10.97,16.46,6.58,21.07,3.29,14.1,26.8,28,Euro,EUR,81786000,19.2
-Spain,Madrid,July,10.97,16.46,6.58,21.07,3.29,17.3,30.8,11,Euro,EUR,81786000,19.2
-Spain,Madrid,August,10.97,16.46,6.58,21.07,3.29,17,29.5,11,Euro,EUR,81786000,19.2
-Spain,Madrid,September,10.97,16.46,6.58,21.07,3.29,14.1,25.2,30,Euro,EUR,81786000,19.2
-Spain,Madrid,October,10.97,16.46,6.58,21.07,3.29,9.4,18.7,51,Euro,EUR,81786000,19.2
-Spain,Madrid,November,10.97,16.46,6.58,21.07,3.29,4.9,12.9,58,Euro,EUR,81786000,19.2
-Spain,Madrid,December,10.97,16.46,6.58,21.07,3.29,2,8.9,50,Euro,EUR,81786000,19.2
-Sweden,Stockholm,January,15.93,21.77,15.93,22.94,7.65,-4.4,-0.1,39,Swedish Kronor,SEK,7054000,9.3
-Sweden,Stockholm,February,15.93,21.77,15.93,22.94,7.65,-4.9,-0.2,28,Swedish Kronor,SEK,7054000,9.3
-Sweden,Stockholm,March,15.93,21.77,15.93,22.94,7.65,-2.3,3.3,25,Swedish Kronor,SEK,7054000,9.3
-Sweden,Stockholm,April,15.93,21.77,15.93,22.94,7.65,1.2,8.9,30,Swedish Kronor,SEK,7054000,9.3
-Sweden,Stockholm,May,15.93,21.77,15.93,22.94,7.65,6.1,15.8,30,Swedish Kronor,SEK,7054000,9.3
-Sweden,Stockholm,June,15.93,21.77,15.93,22.94,7.65,11.2,20.6,45,Swedish Kronor,SEK,7054000,9.3
-Sweden,Stockholm,July,15.93,21.77,15.93,22.94,7.65,13.6,22.2,66,Swedish Kronor,SEK,7054000,9.3
-Sweden,Stockholm,August,15.93,21.77,15.93,22.94,7.65,13,20.8,63,Swedish Kronor,SEK,7054000,9.3
-Sweden,Stockholm,September,15.93,21.77,15.93,22.94,7.65,9.2,15.4,54,Swedish Kronor,SEK,7054000,9.3
-Sweden,Stockholm,October,15.93,21.77,15.93,22.94,7.65,5.3,10,49,Swedish Kronor,SEK,7054000,9.3
-Sweden,Stockholm,November,15.93,21.77,15.93,22.94,7.65,0.8,4.6,52,Swedish Kronor,SEK,7054000,9.3
-Sweden,Stockholm,December,15.93,21.77,15.93,22.94,7.65,-2.6,1.5,46,Swedish Kronor,SEK,7054000,9.3
-Turkey,Istanbul,January,6.64,7,6.64,8.5,1.77,3,8.5,102,Turkish Iira,TRY,37601000,13.4
-Turkey,Istanbul,February,6.64,7,6.64,8.5,1.77,3,8.7,71,Turkish Iira,TRY,37601000,13.4
-Turkey,Istanbul,March,6.64,7,6.64,8.5,1.77,3.9,10.7,70,Turkish Iira,TRY,37601000,13.4
-Turkey,Istanbul,April,6.64,7,6.64,8.5,1.77,7.5,15.9,51,Turkish Iira,TRY,37601000,13.4
-Turkey,Istanbul,May,6.64,7,6.64,8.5,1.77,11.7,20.6,33,Turkish Iira,TRY,37601000,13.4
-Turkey,Istanbul,June,6.64,7,6.64,8.5,1.77,15.9,25.3,30,Turkish Iira,TRY,37601000,13.4
-Turkey,Istanbul,July,6.64,7,6.64,8.5,1.77,18.6,27.6,24,Turkish Iira,TRY,37601000,13.4
-Turkey,Istanbul,August,6.64,7,6.64,8.5,1.77,18.9,27.5,32,Turkish Iira,TRY,37601000,13.4
-Turkey,Istanbul,September,6.64,7,6.64,8.5,1.77,15.6,24.1,46,Turkish Iira,TRY,37601000,13.4
-Turkey,Istanbul,October,6.64,7,6.64,8.5,1.77,12.1,19.4,73,Turkish Iira,TRY,37601000,13.4
-Turkey,Istanbul,November,6.64,7,6.64,8.5,1.77,8.4,14.9,91,Turkish Iira,TRY,37601000,13.4
-Turkey,Istanbul,December,6.64,7,6.64,8.5,1.77,5.4,11,124,Turkish Iira,TRY,37601000,13.4
-United Kingdom,Edinburgh,January,18.85,15.21,11.31,19.6,4.02,0,5.9,61,British Pound,GBP,37651000,4.6
-United Kingdom,Edinburgh,February,18.85,15.21,11.31,19.6,4.02,-0.1,6.1,43,British Pound,GBP,37651000,4.6
-United Kingdom,Edinburgh,March,18.85,15.21,11.31,19.6,4.02,1.5,8.6,51,British Pound,GBP,37651000,4.6
-United Kingdom,Edinburgh,April,18.85,15.21,11.31,19.6,4.02,3.4,11.6,43,British Pound,GBP,37651000,4.6
-United Kingdom,Edinburgh,May,18.85,15.21,11.31,19.6,4.02,5.9,14.5,54,British Pound,GBP,37651000,4.6
-United Kingdom,Edinburgh,June,18.85,15.21,11.31,19.6,4.02,8.8,17.5,52,British Pound,GBP,37651000,4.6
-United Kingdom,Edinburgh,July,18.85,15.21,11.31,19.6,4.02,10.5,19.1,63,British Pound,GBP,37651000,4.6
-United Kingdom,Edinburgh,August,18.85,15.21,11.31,19.6,4.02,10.2,18.6,70,British Pound,GBP,37651000,4.6
-United Kingdom,Edinburgh,September,18.85,15.21,11.31,19.6,4.02,8.4,16.2,70,British Pound,GBP,37651000,4.6
-United Kingdom,Edinburgh,October,18.85,15.21,11.31,19.6,4.02,5.9,13.1,70,British Pound,GBP,37651000,4.6
-United Kingdom,Edinburgh,November,18.85,15.21,11.31,19.6,4.02,2.5,9,68,British Pound,GBP,37651000,4.6
-United Kingdom,Edinburgh,December,18.85,15.21,11.31,19.6,4.02,1.1,7,61,British Pound,GBP,37651000,4.6
-United Kingdom,London,January,18.85,26.26,15.08,26.39,6.03,1.8,8,56,British Pound,GBP,37651000,75.1
-United Kingdom,London,February,18.85,26.26,15.08,26.39,6.03,2,8.1,39,British Pound,GBP,37651000,75.1
-United Kingdom,London,March,18.85,26.26,15.08,26.39,6.03,3.4,11,46,British Pound,GBP,37651000,75.1
-United Kingdom,London,April,18.85,26.26,15.08,26.39,6.03,5.7,13.8,45,British Pound,GBP,37651000,75.1
-United Kingdom,London,May,18.85,26.26,15.08,26.39,6.03,8.6,17.7,49,British Pound,GBP,37651000,75.1
-United Kingdom,London,June,18.85,26.26,15.08,26.39,6.03,11.8,21.4,50,British Pound,GBP,37651000,75.1
-United Kingdom,London,July,18.85,26.26,15.08,26.39,6.03,13.8,23.6,48,British Pound,GBP,37651000,75.1
-United Kingdom,London,August,18.85,26.26,15.08,26.39,6.03,13.3,23.1,53,British Pound,GBP,37651000,75.1
-United Kingdom,London,September,18.85,26.26,15.08,26.39,6.03,10.9,20.1,56,British Pound,GBP,37651000,75.1
-United Kingdom,London,October,18.85,26.26,15.08,26.39,6.03,7.7,15.6,60,British Pound,GBP,37651000,75.1
-United Kingdom,London,November,18.85,26.26,15.08,26.39,6.03,4.5,11,61,British Pound,GBP,37651000,75.1
-United Kingdom,London,December,18.85,26.26,15.08,26.39,6.03,2.7,8.6,58,British Pound,GBP,37651000,75.1
+country,city,month,attractions,hostelNight,drinks,meals,transport,minTemp,maxTemp,precipitation,currency,currencyCode,visitorsCity,region
+Austria,Vienna,January,15.36,19.92,11.52,22.39,4.83,-3.7,2.5,35,Euro,EUR,16.3,Western Europe
+Austria,Vienna,February,15.36,19.92,11.52,22.39,4.83,-2.5,4.8,39,Euro,EUR,16.3,Western Europe
+Austria,Vienna,March,15.36,19.92,11.52,22.39,4.83,0.2,9.9,41,Euro,EUR,16.3,Western Europe
+Austria,Vienna,April,15.36,19.92,11.52,22.39,4.83,4.4,15.6,48,Euro,EUR,16.3,Western Europe
+Austria,Vienna,May,15.36,19.92,11.52,22.39,4.83,8.9,20.7,64,Euro,EUR,16.3,Western Europe
+Austria,Vienna,June,15.36,19.92,11.52,22.39,4.83,12.4,23.9,75,Euro,EUR,16.3,Western Europe
+Austria,Vienna,July,15.36,19.92,11.52,22.39,4.83,13.8,26.1,73,Euro,EUR,16.3,Western Europe
+Austria,Vienna,August,15.36,19.92,11.52,22.39,4.83,13.5,25.5,65,Euro,EUR,16.3,Western Europe
+Austria,Vienna,September,15.36,19.92,11.52,22.39,4.83,9.6,20.9,48,Euro,EUR,16.3,Western Europe
+Austria,Vienna,October,15.36,19.92,11.52,22.39,4.83,5,15,42,Euro,EUR,16.3,Western Europe
+Austria,Vienna,November,15.36,19.92,11.52,22.39,4.83,1.5,8.1,49,Euro,EUR,16.3,Western Europe
+Austria,Vienna,December,15.36,19.92,11.52,22.39,4.83,-1.8,3.8,44,Euro,EUR,16.3,Western Europe
+Belgium,Brussels,January,10.97,26.34,13.17,23.7,4.61,-0.5,4.8,68,Euro,EUR,6.4,Western Europe
+Belgium,Brussels,February,10.97,26.34,13.17,23.7,4.61,0.7,6.7,52,Euro,EUR,6.4,Western Europe
+Belgium,Brussels,March,10.97,26.34,13.17,23.7,4.61,2.5,10.3,68,Euro,EUR,6.4,Western Europe
+Belgium,Brussels,April,10.97,26.34,13.17,23.7,4.61,5.1,14.3,52,Euro,EUR,6.4,Western Europe
+Belgium,Brussels,May,10.97,26.34,13.17,23.7,4.61,8.2,18.5,65,Euro,EUR,6.4,Western Europe
+Belgium,Brussels,June,10.97,26.34,13.17,23.7,4.61,11.2,22,73,Euro,EUR,6.4,Western Europe
+Belgium,Brussels,July,10.97,26.34,13.17,23.7,4.61,12.5,22.8,69,Euro,EUR,6.4,Western Europe
+Belgium,Brussels,August,10.97,26.34,13.17,23.7,4.61,12.6,22.6,61,Euro,EUR,6.4,Western Europe
+Belgium,Brussels,September,10.97,26.34,13.17,23.7,4.61,10.9,20.7,63,Euro,EUR,6.4,Western Europe
+Belgium,Brussels,October,10.97,26.34,13.17,23.7,4.61,7.6,15.5,72,Euro,EUR,6.4,Western Europe
+Belgium,Brussels,November,10.97,26.34,13.17,23.7,4.61,3.6,9.1,71,Euro,EUR,6.4,Western Europe
+Belgium,Brussels,December,10.97,26.34,13.17,23.7,4.61,0.7,5.8,71,Euro,EUR,6.4,Western Europe
+Czech Republic,Prague,January,13.01,11.49,4.55,16.13,2.08,-3.8,1.8,21,Czech Krona,CZK,18.1,Eastern Europe
+Czech Republic,Prague,February,13.01,11.49,4.55,16.13,2.08,-2.9,3.7,19,Czech Krona,CZK,18.1,Eastern Europe
+Czech Republic,Prague,March,13.01,11.49,4.55,16.13,2.08,0,8.8,26,Czech Krona,CZK,18.1,Eastern Europe
+Czech Republic,Prague,April,13.01,11.49,4.55,16.13,2.08,3.4,14.2,31,Czech Krona,CZK,18.1,Eastern Europe
+Czech Republic,Prague,May,13.01,11.49,4.55,16.13,2.08,8.2,19.7,61,Czech Krona,CZK,18.1,Eastern Europe
+Czech Republic,Prague,June,13.01,11.49,4.55,16.13,2.08,11.3,22.5,69,Czech Krona,CZK,18.1,Eastern Europe
+Czech Republic,Prague,July,13.01,11.49,4.55,16.13,2.08,12.8,24.6,70,Czech Krona,CZK,18.1,Eastern Europe
+Czech Republic,Prague,August,13.01,11.49,4.55,16.13,2.08,12.6,24.4,65,Czech Krona,CZK,18.1,Eastern Europe
+Czech Republic,Prague,September,13.01,11.49,4.55,16.13,2.08,9,19.7,42,Czech Krona,CZK,18.1,Eastern Europe
+Czech Republic,Prague,October,13.01,11.49,4.55,16.13,2.08,4.8,13.8,30,Czech Krona,CZK,18.1,Eastern Europe
+Czech Republic,Prague,November,13.01,11.49,4.55,16.13,2.08,0.7,6.6,29,Czech Krona,CZK,18.1,Eastern Europe
+Czech Republic,Prague,December,13.01,11.49,4.55,16.13,2.08,-2,3.2,23,Czech Krona,CZK,18.1,Eastern Europe
+Denmark,Copenhagen,January,12.04,25.21,18.05,25.27,7.22,-1.7,2.5,50,Danish Kroner,DKK,8.1,Northern_Europe
+Denmark,Copenhagen,February,12.04,25.21,18.05,25.27,7.22,-1.9,2.8,33,Danish Kroner,DKK,8.1,Northern_Europe
+Denmark,Copenhagen,March,12.04,25.21,18.05,25.27,7.22,-0.2,5.5,39,Danish Kroner,DKK,8.1,Northern_Europe
+Denmark,Copenhagen,April,12.04,25.21,18.05,25.27,7.22,2.9,10.3,40,Danish Kroner,DKK,8.1,Northern_Europe
+Denmark,Copenhagen,May,12.04,25.21,18.05,25.27,7.22,7.7,15.9,42,Danish Kroner,DKK,8.1,Northern_Europe
+Denmark,Copenhagen,June,12.04,25.21,18.05,25.27,7.22,11.5,19.7,52,Danish Kroner,DKK,8.1,Northern_Europe
+Denmark,Copenhagen,July,12.04,25.21,18.05,25.27,7.22,13.3,21.1,67,Danish Kroner,DKK,8.1,Northern_Europe
+Denmark,Copenhagen,August,12.04,25.21,18.05,25.27,7.22,13,21,64,Danish Kroner,DKK,8.1,Northern_Europe
+Denmark,Copenhagen,September,12.04,25.21,18.05,25.27,7.22,10.4,17,61,Danish Kroner,DKK,8.1,Northern_Europe
+Denmark,Copenhagen,October,12.04,25.21,18.05,25.27,7.22,7,12.3,56,Danish Kroner,DKK,8.1,Northern_Europe
+Denmark,Copenhagen,November,12.04,25.21,18.05,25.27,7.22,1.6,7.3,60,Danish Kroner,DKK,8.1,Northern_Europe
+Denmark,Copenhagen,December,12.04,25.21,18.05,25.27,7.22,0.4,3.9,57,Danish Kroner,DKK,8.1,Northern_Europe
+Finland,Helsinki,January,7.68,25.33,19.75,25.02,5.49,-8.2,-2.7,44,Euro,EUR,5.3,Northern_Europe
+Finland,Helsinki,February,7.68,25.33,19.75,25.02,5.49,-8.6,-3,33,Euro,EUR,5.3,Northern_Europe
+Finland,Helsinki,March,7.68,25.33,19.75,25.02,5.49,-5.4,0.8,33,Euro,EUR,5.3,Northern_Europe
+Finland,Helsinki,April,7.68,25.33,19.75,25.02,5.49,-0.1,6.7,37,Euro,EUR,5.3,Northern_Europe
+Finland,Helsinki,May,7.68,25.33,19.75,25.02,5.49,5.5,14,36,Euro,EUR,5.3,Northern_Europe
+Finland,Helsinki,June,7.68,25.33,19.75,25.02,5.49,10.6,18.9,47,Euro,EUR,5.3,Northern_Europe
+Finland,Helsinki,July,7.68,25.33,19.75,25.02,5.49,13.2,20.8,72,Euro,EUR,5.3,Northern_Europe
+Finland,Helsinki,August,7.68,25.33,19.75,25.02,5.49,12.3,19.3,78,Euro,EUR,5.3,Northern_Europe
+Finland,Helsinki,September,7.68,25.33,19.75,25.02,5.49,7.7,13.8,71,Euro,EUR,5.3,Northern_Europe
+Finland,Helsinki,October,7.68,25.33,19.75,25.02,5.49,3.5,8.4,72,Euro,EUR,5.3,Northern_Europe
+Finland,Helsinki,November,7.68,25.33,19.75,25.02,5.49,-1.2,3,70,Euro,EUR,5.3,Northern_Europe
+Finland,Helsinki,December,7.68,25.33,19.75,25.02,5.49,-5.6,-0.5,57,Euro,EUR,5.3,Northern_Europe
+France,Paris,January,13.17,27.89,13.17,22.39,3.95,0.7,6,54,Euro,EUR,35.2,Western Europe
+France,Paris,February,13.17,27.89,13.17,22.39,3.95,1.2,7.3,46,Euro,EUR,35.2,Western Europe
+France,Paris,March,13.17,27.89,13.17,22.39,3.95,3.4,12.2,50,Euro,EUR,35.2,Western Europe
+France,Paris,April,13.17,27.89,13.17,22.39,3.95,5.8,15.9,44,Euro,EUR,35.2,Western Europe
+France,Paris,May,13.17,27.89,13.17,22.39,3.95,8.9,19.8,58,Euro,EUR,35.2,Western Europe
+France,Paris,June,13.17,27.89,13.17,22.39,3.95,12.1,22.9,56,Euro,EUR,35.2,Western Europe
+France,Paris,July,13.17,27.89,13.17,22.39,3.95,14.1,24.8,53,Euro,EUR,35.2,Western Europe
+France,Paris,August,13.17,27.89,13.17,22.39,3.95,13.9,24.3,51,Euro,EUR,35.2,Western Europe
+France,Paris,September,13.17,27.89,13.17,22.39,3.95,11.5,21.3,56,Euro,EUR,35.2,Western Europe
+France,Paris,October,13.17,27.89,13.17,22.39,3.95,7.6,15.7,57,Euro,EUR,35.2,Western Europe
+France,Paris,November,13.17,27.89,13.17,22.39,3.95,4.3,10.1,58,Euro,EUR,35.2,Western Europe
+France,Paris,December,13.17,27.89,13.17,22.39,3.95,1.8,6.7,54,Euro,EUR,35.2,Western Europe
+Germany,Berlin,January,13.17,17.56,9.88,18.44,5.93,-3.4,1.7,43,Euro,EUR,31.2,Western Europe
+Germany,Berlin,February,13.17,17.56,9.88,18.44,5.93,-2.9,3,34,Euro,EUR,31.2,Western Europe
+Germany,Berlin,March,13.17,17.56,9.88,18.44,5.93,0,7.9,35,Euro,EUR,31.2,Western Europe
+Germany,Berlin,April,13.17,17.56,9.88,18.44,5.93,3.8,13.5,41,Euro,EUR,31.2,Western Europe
+Germany,Berlin,May,13.17,17.56,9.88,18.44,5.93,8,19.1,54,Euro,EUR,31.2,Western Europe
+Germany,Berlin,June,13.17,17.56,9.88,18.44,5.93,11.3,22.3,70,Euro,EUR,31.2,Western Europe
+Germany,Berlin,July,13.17,17.56,9.88,18.44,5.93,13.4,23.8,57,Euro,EUR,31.2,Western Europe
+Germany,Berlin,August,13.17,17.56,9.88,18.44,5.93,12.7,23.3,61,Euro,EUR,31.2,Western Europe
+Germany,Berlin,September,13.17,17.56,9.88,18.44,5.93,9.5,19.4,44,Euro,EUR,31.2,Western Europe
+Germany,Berlin,October,13.17,17.56,9.88,18.44,5.93,7.5,13.3,37,Euro,EUR,31.2,Western Europe
+Germany,Berlin,November,13.17,17.56,9.88,18.44,5.93,1.9,7,45,Euro,EUR,31.2,Western Europe
+Germany,Berlin,December,13.17,17.56,9.88,18.44,5.93,-1.2,3.2,49,Euro,EUR,31.2,Western Europe
+Greece,Athens,January,8.78,10.97,8.23,21.07,3.07,6.3,12.8,52,Euro,EUR,5.5,Southern Europe
+Greece,Athens,February,8.78,10.97,8.23,21.07,3.07,6.6,13.7,43,Euro,EUR,5.5,Southern Europe
+Greece,Athens,March,8.78,10.97,8.23,21.07,3.07,7.7,15.4,45,Euro,EUR,5.5,Southern Europe
+Greece,Athens,April,8.78,10.97,8.23,21.07,3.07,11.2,20.2,27,Euro,EUR,5.5,Southern Europe
+Greece,Athens,May,8.78,10.97,8.23,21.07,3.07,15.6,25.2,20,Euro,EUR,5.5,Southern Europe
+Greece,Athens,June,8.78,10.97,8.23,21.07,3.07,19.7,29.9,8,Euro,EUR,5.5,Southern Europe
+Greece,Athens,July,8.78,10.97,8.23,21.07,3.07,22.5,33.3,5,Euro,EUR,5.5,Southern Europe
+Greece,Athens,August,8.78,10.97,8.23,21.07,3.07,22.6,33.1,5,Euro,EUR,5.5,Southern Europe
+Greece,Athens,September,8.78,10.97,8.23,21.07,3.07,19.1,29.1,13,Euro,EUR,5.5,Southern Europe
+Greece,Athens,October,8.78,10.97,8.23,21.07,3.07,15.2,23.6,52,Euro,EUR,5.5,Southern Europe
+Greece,Athens,November,8.78,10.97,8.23,21.07,3.07,11.6,18.5,59,Euro,EUR,5.5,Southern Europe
+Greece,Athens,December,8.78,10.97,8.23,21.07,3.07,8.1,14.5,68,Euro,EUR,5.5,Southern Europe
+Hungary,Budapest,January,6.37,7.91,3.72,11.04,2.48,-3.3,1.6,37,Hungary Forint,HUF,10,Eastern Europe
+Hungary,Budapest,February,6.37,7.91,3.72,11.04,2.48,-1.1,4.7,34,Hungary Forint,HUF,10,Eastern Europe
+Hungary,Budapest,March,6.37,7.91,3.72,11.04,2.48,2,10.5,32,Hungary Forint,HUF,10,Eastern Europe
+Hungary,Budapest,April,6.37,7.91,3.72,11.04,2.48,6.4,16.8,42,Hungary Forint,HUF,10,Eastern Europe
+Hungary,Budapest,May,6.37,7.91,3.72,11.04,2.48,10.8,21.9,60,Hungary Forint,HUF,10,Eastern Europe
+Hungary,Budapest,June,6.37,7.91,3.72,11.04,2.48,14.1,24.8,69,Hungary Forint,HUF,10,Eastern Europe
+Hungary,Budapest,July,6.37,7.91,3.72,11.04,2.48,15.6,26.9,53,Hungary Forint,HUF,10,Eastern Europe
+Hungary,Budapest,August,6.37,7.91,3.72,11.04,2.48,15.3,26.4,53,Hungary Forint,HUF,10,Eastern Europe
+Hungary,Budapest,September,6.37,7.91,3.72,11.04,2.48,11.8,22.4,41,Hungary Forint,HUF,10,Eastern Europe
+Hungary,Budapest,October,6.37,7.91,3.72,11.04,2.48,6.9,16.2,40,Hungary Forint,HUF,10,Eastern Europe
+Hungary,Budapest,November,6.37,7.91,3.72,11.04,2.48,2.5,8.3,57,Hungary Forint,HUF,10,Eastern Europe
+Hungary,Budapest,December,6.37,7.91,3.72,11.04,2.48,-1.1,3.6,46,Hungary Forint,HUF,10,Eastern Europe
+Ireland,Dublin,January,10.97,16.46,16.46,21.07,3.29,2.5,7.9,70,Euro,EUR,5.9,Northern_Europe
+Ireland,Dublin,February,10.97,16.46,16.46,21.07,3.29,2.4,7.9,52,Euro,EUR,5.9,Northern_Europe
+Ireland,Dublin,March,10.97,16.46,16.46,21.07,3.29,3.1,9.8,53,Euro,EUR,5.9,Northern_Europe
+Ireland,Dublin,April,10.97,16.46,16.46,21.07,3.29,4.4,12,50,Euro,EUR,5.9,Northern_Europe
+Ireland,Dublin,May,10.97,16.46,16.46,21.07,3.29,6.7,14.8,60,Euro,EUR,5.9,Northern_Europe
+Ireland,Dublin,June,10.97,16.46,16.46,21.07,3.29,9.4,17.7,55,Euro,EUR,5.9,Northern_Europe
+Ireland,Dublin,July,10.97,16.46,16.46,21.07,3.29,11.3,19.4,53,Euro,EUR,5.9,Northern_Europe
+Ireland,Dublin,August,10.97,16.46,16.46,21.07,3.29,11.1,19.2,71,Euro,EUR,5.9,Northern_Europe
+Ireland,Dublin,September,10.97,16.46,16.46,21.07,3.29,9.6,17.2,75,Euro,EUR,5.9,Northern_Europe
+Ireland,Dublin,October,10.97,16.46,16.46,21.07,3.29,7.5,14.2,76,Euro,EUR,5.9,Northern_Europe
+Ireland,Dublin,November,10.97,16.46,16.46,21.07,3.29,4.3,10.2,72,Euro,EUR,5.9,Northern_Europe
+Ireland,Dublin,December,10.97,16.46,16.46,21.07,3.29,3.2,8.7,80,Euro,EUR,5.9,Northern_Europe
+Italy,Milan,January,10.97,28.97,11.52,19.75,4.39,-0.8,4.7,55,Euro,EUR,11.3,Southern Europe
+Italy,Milan,February,10.97,28.97,11.52,19.75,4.39,0.9,7.8,62,Euro,EUR,11.3,Southern Europe
+Italy,Milan,March,10.97,28.97,11.52,19.75,4.39,4.3,13.1,79,Euro,EUR,11.3,Southern Europe
+Italy,Milan,April,10.97,28.97,11.52,19.75,4.39,7.9,18.2,92,Euro,EUR,11.3,Southern Europe
+Italy,Milan,May,10.97,28.97,11.52,19.75,4.39,12.1,23.1,94,Euro,EUR,11.3,Southern Europe
+Italy,Milan,June,10.97,28.97,11.52,19.75,4.39,15.8,26.5,97,Euro,EUR,11.3,Southern Europe
+Italy,Milan,July,10.97,28.97,11.52,19.75,4.39,18.3,29.3,67,Euro,EUR,11.3,Southern Europe
+Italy,Milan,August,10.97,28.97,11.52,19.75,4.39,17.8,27.8,90,Euro,EUR,11.3,Southern Europe
+Italy,Milan,September,10.97,28.97,11.52,19.75,4.39,14.7,24,78,Euro,EUR,11.3,Southern Europe
+Italy,Milan,October,10.97,28.97,11.52,19.75,4.39,9.5,17.4,118,Euro,EUR,11.3,Southern Europe
+Italy,Milan,November,10.97,28.97,11.52,19.75,4.39,4.6,10.8,110,Euro,EUR,11.3,Southern Europe
+Italy,Milan,December,10.97,28.97,11.52,19.75,4.39,0.6,6,71,Euro,EUR,11.3,Southern Europe
+Italy,Rome,January,13.17,25.84,9.88,21.07,3.29,3.8,11.7,79,Euro,EUR,26.9,Southern Europe
+Italy,Rome,February,13.17,25.84,9.88,21.07,3.29,4.5,13.3,70,Euro,EUR,26.9,Southern Europe
+Italy,Rome,March,13.17,25.84,9.88,21.07,3.29,6.1,15.5,70,Euro,EUR,26.9,Southern Europe
+Italy,Rome,April,13.17,25.84,9.88,21.07,3.29,8.5,18.9,62,Euro,EUR,26.9,Southern Europe
+Italy,Rome,May,13.17,25.84,9.88,21.07,3.29,12.2,23.3,46,Euro,EUR,26.9,Southern Europe
+Italy,Rome,June,13.17,25.84,9.88,21.07,3.29,15.9,27.5,35,Euro,EUR,26.9,Southern Europe
+Italy,Rome,July,13.17,25.84,9.88,21.07,3.29,18.3,30.6,17,Euro,EUR,26.9,Southern Europe
+Italy,Rome,August,13.17,25.84,9.88,21.07,3.29,18.4,30.2,33,Euro,EUR,26.9,Southern Europe
+Italy,Rome,September,13.17,25.84,9.88,21.07,3.29,15.9,26.7,73,Euro,EUR,26.9,Southern Europe
+Italy,Rome,October,13.17,25.84,9.88,21.07,3.29,11.7,21.9,103,Euro,EUR,26.9,Southern Europe
+Italy,Rome,November,13.17,25.84,9.88,21.07,3.29,8,16.7,114,Euro,EUR,26.9,Southern Europe
+Italy,Rome,December,13.17,25.84,9.88,21.07,3.29,5,12.9,96,Euro,EUR,26.9,Southern Europe
+Netherlands,Amsterdam,January,17.56,40.49,13.17,17.12,6.15,-0.1,4.9,70,Euro,EUR,15.5,Western Europe
+Netherlands,Amsterdam,February,17.56,40.49,13.17,17.12,6.15,-0.1,5.4,47,Euro,EUR,15.5,Western Europe
+Netherlands,Amsterdam,March,17.56,40.49,13.17,17.12,6.15,1.6,8,64,Euro,EUR,15.5,Western Europe
+Netherlands,Amsterdam,April,17.56,40.49,13.17,17.12,6.15,4,8.1,44,Euro,EUR,15.5,Western Europe
+Netherlands,Amsterdam,May,17.56,40.49,13.17,17.12,6.15,7.7,15.8,50,Euro,EUR,15.5,Western Europe
+Netherlands,Amsterdam,June,17.56,40.49,13.17,17.12,6.15,10.6,18.8,59,Euro,EUR,15.5,Western Europe
+Netherlands,Amsterdam,July,17.56,40.49,13.17,17.12,6.15,12.6,20.5,75,Euro,EUR,15.5,Western Europe
+Netherlands,Amsterdam,August,17.56,40.49,13.17,17.12,6.15,12.5,20.6,77,Euro,EUR,15.5,Western Europe
+Netherlands,Amsterdam,September,17.56,40.49,13.17,17.12,6.15,10.4,18.3,79,Euro,EUR,15.5,Western Europe
+Netherlands,Amsterdam,October,17.56,40.49,13.17,17.12,6.15,7.5,14.2,87,Euro,EUR,15.5,Western Europe
+Netherlands,Amsterdam,November,17.56,40.49,13.17,17.12,6.15,3.7,9,79,Euro,EUR,15.5,Western Europe
+Netherlands,Amsterdam,December,17.56,40.49,13.17,17.12,6.15,1.1,6,74,Euro,EUR,15.5,Western Europe
+Norway,Oslo,January,8.05,45.9,17.26,26.23,6.9,-6.2,-1.2,49,Norwegian Kroner,NOK,7.25,Northern_Europe
+Norway,Oslo,February,8.05,45.9,17.26,26.23,6.9,-6.7,-0.8,36,Norwegian Kroner,NOK,7.25,Northern_Europe
+Norway,Oslo,March,8.05,45.9,17.26,26.23,6.9,-2.9,3.5,43,Norwegian Kroner,NOK,7.25,Northern_Europe
+Norway,Oslo,April,8.05,45.9,17.26,26.23,6.9,1,9.1,41,Norwegian Kroner,NOK,7.25,Northern_Europe
+Norway,Oslo,May,8.05,45.9,17.26,26.23,6.9,6.5,16,50,Norwegian Kroner,NOK,7.25,Northern_Europe
+Norway,Oslo,June,8.05,45.9,17.26,26.23,6.9,10.9,20.1,64,Norwegian Kroner,NOK,7.25,Northern_Europe
+Norway,Oslo,July,8.05,45.9,17.26,26.23,6.9,12.6,21.6,77,Norwegian Kroner,NOK,7.25,Northern_Europe
+Norway,Oslo,August,8.05,45.9,17.26,26.23,6.9,11.8,20.4,89,Norwegian Kroner,NOK,7.25,Northern_Europe
+Norway,Oslo,September,8.05,45.9,17.26,26.23,6.9,8,15.2,83,Norwegian Kroner,NOK,7.25,Northern_Europe
+Norway,Oslo,October,8.05,45.9,17.26,26.23,6.9,4.2,9.5,81,Norwegian Kroner,NOK,7.25,Northern_Europe
+Norway,Oslo,November,8.05,45.9,17.26,26.23,6.9,-0.8,3.6,74,Norwegian Kroner,NOK,7.25,Northern_Europe
+Norway,Oslo,December,8.05,45.9,17.26,26.23,6.9,-4.7,0.1,53,Norwegian Kroner,NOK,7.25,Northern_Europe
+Poland,Warsaw,January,6.93,9.2,6.16,10.16,1.75,-6.2,-0.8,22,Polish Zlotych,PLN,9.7,Eastern Europe
+Poland,Warsaw,February,6.93,9.2,6.16,10.16,1.75,-5.6,0.3,23,Polish Zlotych,PLN,9.7,Eastern Europe
+Poland,Warsaw,March,6.93,9.2,6.16,10.16,1.75,-2.2,5.2,25,Polish Zlotych,PLN,9.7,Eastern Europe
+Poland,Warsaw,April,6.93,9.2,6.16,10.16,1.75,3,12.9,33,Polish Zlotych,PLN,9.7,Eastern Europe
+Poland,Warsaw,May,6.93,9.2,6.16,10.16,1.75,7.9,18.7,53,Polish Zlotych,PLN,9.7,Eastern Europe
+Poland,Warsaw,June,6.93,9.2,6.16,10.16,1.75,11.5,22.2,67,Polish Zlotych,PLN,9.7,Eastern Europe
+Poland,Warsaw,July,6.93,9.2,6.16,10.16,1.75,12.9,23.5,71,Polish Zlotych,PLN,9.7,Eastern Europe
+Poland,Warsaw,August,6.93,9.2,6.16,10.16,1.75,12.1,22.8,58,Polish Zlotych,PLN,9.7,Eastern Europe
+Poland,Warsaw,September,6.93,9.2,6.16,10.16,1.75,8.6,18.1,43,Polish Zlotych,PLN,9.7,Eastern Europe
+Poland,Warsaw,October,6.93,9.2,6.16,10.16,1.75,4.5,12.5,35,Polish Zlotych,PLN,9.7,Eastern Europe
+Poland,Warsaw,November,6.93,9.2,6.16,10.16,1.75,0.6,5.7,39,Polish Zlotych,PLN,9.7,Eastern Europe
+Poland,Warsaw,December,6.93,9.2,6.16,10.16,1.75,-3.4,1.2,32,Polish Zlotych,PLN,9.7,Eastern Europe
+Portugal,Lisbon,January,8.78,14.11,9.88,18.44,3.07,8.6,14.8,101,Euro,EUR,10.67,Southern Europe
+Portugal,Lisbon,February,8.78,14.11,9.88,18.44,3.07,9.2,15.7,92,Euro,EUR,10.67,Southern Europe
+Portugal,Lisbon,March,8.78,14.11,9.88,18.44,3.07,10.1,17.5,72,Euro,EUR,10.67,Southern Europe
+Portugal,Lisbon,April,8.78,14.11,9.88,18.44,3.07,11.5,19.4,53,Euro,EUR,10.67,Southern Europe
+Portugal,Lisbon,May,8.78,14.11,9.88,18.44,3.07,13.2,21.9,41,Euro,EUR,10.67,Southern Europe
+Portugal,Lisbon,June,8.78,14.11,9.88,18.44,3.07,15.6,24.7,20,Euro,EUR,10.67,Southern Europe
+Portugal,Lisbon,July,8.78,14.11,9.88,18.44,3.07,17.4,27.4,3,Euro,EUR,10.67,Southern Europe
+Portugal,Lisbon,August,8.78,14.11,9.88,18.44,3.07,17.6,27.8,5,Euro,EUR,10.67,Southern Europe
+Portugal,Lisbon,September,8.78,14.11,9.88,18.44,3.07,16.9,26.3,23,Euro,EUR,10.67,Southern Europe
+Portugal,Lisbon,October,8.78,14.11,9.88,18.44,3.07,14.8,22.6,71,Euro,EUR,10.67,Southern Europe
+Portugal,Lisbon,November,8.78,14.11,9.88,18.44,3.07,11.4,17.9,106,Euro,EUR,10.67,Southern Europe
+Portugal,Lisbon,December,8.78,14.11,9.88,18.44,3.07,9.3,15,104,Euro,EUR,10.67,Southern Europe
+Spain,Barcelona,January,14.27,20.96,9.88,21.07,4.72,6.6,13.1,39,Euro,EUR,20.6,Southern Europe
+Spain,Barcelona,February,14.27,20.96,9.88,21.07,4.72,7.4,14.1,36,Euro,EUR,20.6,Southern Europe
+Spain,Barcelona,March,14.27,20.96,9.88,21.07,4.72,9,16.1,45,Euro,EUR,20.6,Southern Europe
+Spain,Barcelona,April,14.27,20.96,9.88,21.07,4.72,10.7,18.6,48,Euro,EUR,20.6,Southern Europe
+Spain,Barcelona,May,14.27,20.96,9.88,21.07,4.72,13.8,21.7,52,Euro,EUR,20.6,Southern Europe
+Spain,Barcelona,June,14.27,20.96,9.88,21.07,4.72,17.5,25.3,42,Euro,EUR,20.6,Southern Europe
+Spain,Barcelona,July,14.27,20.96,9.88,21.07,4.72,20.3,27.9,25,Euro,EUR,20.6,Southern Europe
+Spain,Barcelona,August,14.27,20.96,9.88,21.07,4.72,20.2,27.5,51,Euro,EUR,20.6,Southern Europe
+Spain,Barcelona,September,14.27,20.96,9.88,21.07,4.72,18.3,25.1,73,Euro,EUR,20.6,Southern Europe
+Spain,Barcelona,October,14.27,20.96,9.88,21.07,4.72,14.4,20.9,93,Euro,EUR,20.6,Southern Europe
+Spain,Barcelona,November,14.27,20.96,9.88,21.07,4.72,10.3,16.5,59,Euro,EUR,20.6,Southern Europe
+Spain,Barcelona,December,14.27,20.96,9.88,21.07,4.72,7.7,13.7,49,Euro,EUR,20.6,Southern Europe
+Spain,Madrid,January,10.97,16.46,6.58,21.07,3.29,1.4,8.6,43,Euro,EUR,19.2,Southern Europe
+Spain,Madrid,February,10.97,16.46,6.58,21.07,3.29,1.9,10.9,44,Euro,EUR,19.2,Southern Europe
+Spain,Madrid,March,10.97,16.46,6.58,21.07,3.29,4.6,14.7,35,Euro,EUR,19.2,Southern Europe
+Spain,Madrid,April,10.97,16.46,6.58,21.07,3.29,6.7,17.8,45,Euro,EUR,19.2,Southern Europe
+Spain,Madrid,May,10.97,16.46,6.58,21.07,3.29,10,21.6,44,Euro,EUR,19.2,Southern Europe
+Spain,Madrid,June,10.97,16.46,6.58,21.07,3.29,14.1,26.8,28,Euro,EUR,19.2,Southern Europe
+Spain,Madrid,July,10.97,16.46,6.58,21.07,3.29,17.3,30.8,11,Euro,EUR,19.2,Southern Europe
+Spain,Madrid,August,10.97,16.46,6.58,21.07,3.29,17,29.5,11,Euro,EUR,19.2,Southern Europe
+Spain,Madrid,September,10.97,16.46,6.58,21.07,3.29,14.1,25.2,30,Euro,EUR,19.2,Southern Europe
+Spain,Madrid,October,10.97,16.46,6.58,21.07,3.29,9.4,18.7,51,Euro,EUR,19.2,Southern Europe
+Spain,Madrid,November,10.97,16.46,6.58,21.07,3.29,4.9,12.9,58,Euro,EUR,19.2,Southern Europe
+Spain,Madrid,December,10.97,16.46,6.58,21.07,3.29,2,8.9,50,Euro,EUR,19.2,Southern Europe
+Sweden,Stockholm,January,15.93,21.77,15.93,22.94,7.65,-4.4,-0.1,39,Swedish Kronor,SEK,9.3,Northern_Europe
+Sweden,Stockholm,February,15.93,21.77,15.93,22.94,7.65,-4.9,-0.2,28,Swedish Kronor,SEK,9.3,Northern_Europe
+Sweden,Stockholm,March,15.93,21.77,15.93,22.94,7.65,-2.3,3.3,25,Swedish Kronor,SEK,9.3,Northern_Europe
+Sweden,Stockholm,April,15.93,21.77,15.93,22.94,7.65,1.2,8.9,30,Swedish Kronor,SEK,9.3,Northern_Europe
+Sweden,Stockholm,May,15.93,21.77,15.93,22.94,7.65,6.1,15.8,30,Swedish Kronor,SEK,9.3,Northern_Europe
+Sweden,Stockholm,June,15.93,21.77,15.93,22.94,7.65,11.2,20.6,45,Swedish Kronor,SEK,9.3,Northern_Europe
+Sweden,Stockholm,July,15.93,21.77,15.93,22.94,7.65,13.6,22.2,66,Swedish Kronor,SEK,9.3,Northern_Europe
+Sweden,Stockholm,August,15.93,21.77,15.93,22.94,7.65,13,20.8,63,Swedish Kronor,SEK,9.3,Northern_Europe
+Sweden,Stockholm,September,15.93,21.77,15.93,22.94,7.65,9.2,15.4,54,Swedish Kronor,SEK,9.3,Northern_Europe
+Sweden,Stockholm,October,15.93,21.77,15.93,22.94,7.65,5.3,10,49,Swedish Kronor,SEK,9.3,Northern_Europe
+Sweden,Stockholm,November,15.93,21.77,15.93,22.94,7.65,0.8,4.6,52,Swedish Kronor,SEK,9.3,Northern_Europe
+Sweden,Stockholm,December,15.93,21.77,15.93,22.94,7.65,-2.6,1.5,46,Swedish Kronor,SEK,9.3,Northern_Europe
+Turkey,Istanbul,January,6.64,7,6.64,8.5,1.77,3,8.5,102,Turkish Iira,TRY,13.4,Southern Europe
+Turkey,Istanbul,February,6.64,7,6.64,8.5,1.77,3,8.7,71,Turkish Iira,TRY,13.4,Southern Europe
+Turkey,Istanbul,March,6.64,7,6.64,8.5,1.77,3.9,10.7,70,Turkish Iira,TRY,13.4,Southern Europe
+Turkey,Istanbul,April,6.64,7,6.64,8.5,1.77,7.5,15.9,51,Turkish Iira,TRY,13.4,Southern Europe
+Turkey,Istanbul,May,6.64,7,6.64,8.5,1.77,11.7,20.6,33,Turkish Iira,TRY,13.4,Southern Europe
+Turkey,Istanbul,June,6.64,7,6.64,8.5,1.77,15.9,25.3,30,Turkish Iira,TRY,13.4,Southern Europe
+Turkey,Istanbul,July,6.64,7,6.64,8.5,1.77,18.6,27.6,24,Turkish Iira,TRY,13.4,Southern Europe
+Turkey,Istanbul,August,6.64,7,6.64,8.5,1.77,18.9,27.5,32,Turkish Iira,TRY,13.4,Southern Europe
+Turkey,Istanbul,September,6.64,7,6.64,8.5,1.77,15.6,24.1,46,Turkish Iira,TRY,13.4,Southern Europe
+Turkey,Istanbul,October,6.64,7,6.64,8.5,1.77,12.1,19.4,73,Turkish Iira,TRY,13.4,Southern Europe
+Turkey,Istanbul,November,6.64,7,6.64,8.5,1.77,8.4,14.9,91,Turkish Iira,TRY,13.4,Southern Europe
+Turkey,Istanbul,December,6.64,7,6.64,8.5,1.77,5.4,11,124,Turkish Iira,TRY,13.4,Southern Europe
+United Kingdom,Edinburgh,January,18.85,15.21,11.31,19.6,4.02,0,5.9,61,British Pound,GBP,4.6,Northern_Europe
+United Kingdom,Edinburgh,February,18.85,15.21,11.31,19.6,4.02,-0.1,6.1,43,British Pound,GBP,4.6,Northern_Europe
+United Kingdom,Edinburgh,March,18.85,15.21,11.31,19.6,4.02,1.5,8.6,51,British Pound,GBP,4.6,Northern_Europe
+United Kingdom,Edinburgh,April,18.85,15.21,11.31,19.6,4.02,3.4,11.6,43,British Pound,GBP,4.6,Northern_Europe
+United Kingdom,Edinburgh,May,18.85,15.21,11.31,19.6,4.02,5.9,14.5,54,British Pound,GBP,4.6,Northern_Europe
+United Kingdom,Edinburgh,June,18.85,15.21,11.31,19.6,4.02,8.8,17.5,52,British Pound,GBP,4.6,Northern_Europe
+United Kingdom,Edinburgh,July,18.85,15.21,11.31,19.6,4.02,10.5,19.1,63,British Pound,GBP,4.6,Northern_Europe
+United Kingdom,Edinburgh,August,18.85,15.21,11.31,19.6,4.02,10.2,18.6,70,British Pound,GBP,4.6,Northern_Europe
+United Kingdom,Edinburgh,September,18.85,15.21,11.31,19.6,4.02,8.4,16.2,70,British Pound,GBP,4.6,Northern_Europe
+United Kingdom,Edinburgh,October,18.85,15.21,11.31,19.6,4.02,5.9,13.1,70,British Pound,GBP,4.6,Northern_Europe
+United Kingdom,Edinburgh,November,18.85,15.21,11.31,19.6,4.02,2.5,9,68,British Pound,GBP,4.6,Northern_Europe
+United Kingdom,Edinburgh,December,18.85,15.21,11.31,19.6,4.02,1.1,7,61,British Pound,GBP,4.6,Northern_Europe
+United Kingdom,London,January,18.85,26.26,15.08,26.39,6.03,1.8,8,56,British Pound,GBP,75.1,Northern_Europe
+United Kingdom,London,February,18.85,26.26,15.08,26.39,6.03,2,8.1,39,British Pound,GBP,75.1,Northern_Europe
+United Kingdom,London,March,18.85,26.26,15.08,26.39,6.03,3.4,11,46,British Pound,GBP,75.1,Northern_Europe
+United Kingdom,London,April,18.85,26.26,15.08,26.39,6.03,5.7,13.8,45,British Pound,GBP,75.1,Northern_Europe
+United Kingdom,London,May,18.85,26.26,15.08,26.39,6.03,8.6,17.7,49,British Pound,GBP,75.1,Northern_Europe
+United Kingdom,London,June,18.85,26.26,15.08,26.39,6.03,11.8,21.4,50,British Pound,GBP,75.1,Northern_Europe
+United Kingdom,London,July,18.85,26.26,15.08,26.39,6.03,13.8,23.6,48,British Pound,GBP,75.1,Northern_Europe
+United Kingdom,London,August,18.85,26.26,15.08,26.39,6.03,13.3,23.1,53,British Pound,GBP,75.1,Northern_Europe
+United Kingdom,London,September,18.85,26.26,15.08,26.39,6.03,10.9,20.1,56,British Pound,GBP,75.1,Northern_Europe
+United Kingdom,London,October,18.85,26.26,15.08,26.39,6.03,7.7,15.6,60,British Pound,GBP,75.1,Northern_Europe
+United Kingdom,London,November,18.85,26.26,15.08,26.39,6.03,4.5,11,61,British Pound,GBP,75.1,Northern_Europe
+United Kingdom,London,December,18.85,26.26,15.08,26.39,6.03,2.7,8.6,58,British Pound,GBP,75.1,Northern_Europe
