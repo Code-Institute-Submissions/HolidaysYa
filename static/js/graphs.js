@@ -8,17 +8,18 @@ function getMonth(error, data) {
     if (error) { /////////// improve this???
         document.getElementById("error").innerHTML = `<h2 class="text-danger">Error retrieving the data file!</h2>`;
     }
-
+    //When choose budget button is pressed, hide month selection page and show budget selection page
     $('#chooseBudget').click(function () {
         $('#monthId').slideUp(1000);
         $('#budgetId').removeClass('hide').slideDown(1000);
     })
-
+    //When choose weather button is pressed, hide month selection page and show weather selection page
     $('#chooseWeather').click(function () {
         $('#monthId').slideUp(1000);
         $('#weatherId').removeClass('hide').slideDown(1000);
     })
 
+    //When change month is pressed, hide current screen and show month selection screen
     $(".goback").click(function () {
         $('#monthId').fadeIn(1000);
         $('#budgetId').addClass('hide');
@@ -34,7 +35,7 @@ function getMonth(error, data) {
         $('.weather').hide();
         $('.budget').show();
     })
-
+    //When show cities is pressed, hide temperature selection screen and show graphics
     $("#resultsWeather").click(function () {
         $('#weatherId').slideUp(1000);
         $('#grafId').removeClass('hide').slideDown(1000);
@@ -43,6 +44,9 @@ function getMonth(error, data) {
         $('.weather').show();
     })
 
+
+
+    //When change budget is pressed, hide graphics screen and show budget selection screen
     $('#filterBudget').click(function () {
         $('#budgetId').slideDown(1000);
         $('#grafId').addClass('hide');
@@ -50,6 +54,7 @@ function getMonth(error, data) {
 
     })
 
+    //When change temperature is pressed, hide graphics screen and show temperature selection screen
     $('#filterWeather').click(function () {
         $('#weatherId').slideDown(1000);
         $('#grafId').addClass('hide');
@@ -57,18 +62,19 @@ function getMonth(error, data) {
 
     })
 
+
     // only call "filterData" after the dropdown option has been selected
     $("#monthSelector").change(function () {
         filterData(data);
     });
-}
 
+}
 
 
 function filterData(data) {
 
-    document.getElementById("chooseBudget").addEventListener("click", optionBudget());
-    document.getElementById("chooseWeather").addEventListener("click", optionWeather());
+    // document.getElementById("chooseBudget").addEventListener("click", optionBudget());
+    // document.getElementById("chooseWeather").addEventListener("click", optionWeather());
 
     //get the text for the option selected
     var monthSelected = $('#monthSelector :selected').text();
@@ -78,6 +84,7 @@ function filterData(data) {
     var dataMonth = data.filter(function (element) {
         return (element.month === monthSelected);
     });
+
 
     //convert to number the number fields
     convertToInteger(dataMonth);
@@ -99,13 +106,8 @@ function filterByBudget(dataMonth) {
         $('input[name=maxTemp').val('');
 
         var filteredBy = 'Budget';
-        // $(".weather").hide();
-        // $(".common").show();
-        // $(".budget").show();
 
-
-
-        //get input value and converte it to number
+        //get input value and convert it to number
         var maxBudgetValue = parseInt(document.getElementById("maxBudget").value);
         /////////////////add validation!! not empty and number
 
@@ -123,7 +125,6 @@ function filterByBudget(dataMonth) {
 
         //If there is one or more cities matching the criteria it will call 
         //the function "createDataForGraphics" if not it will display a message;
-
         citiesMatchingCriteria(dataBudget, filteredBy);
     }
 };
@@ -135,10 +136,6 @@ function filterByWeather(dataMonth) {
         $('input[name=maxBudget').val('');
 
         var filteredBy = 'Weather';
-        // $(".budget").hide();
-        // $(".common").show();
-        // $(".weather").show();
-
 
         var dataWeather;
 
@@ -147,51 +144,46 @@ function filterByWeather(dataMonth) {
         var maxTemp = document.getElementById("maxTemp").value;
 
         if (minTemp == "" && maxTemp == "") {
+            //alert("Please enter a minumun, a maximun temperature or both");
             document.getElementById("infoMessage").innerHTML = `<h2 class="text-danger">Please enter a minumun, a maximun temperature or both</h2>`;
+
         }
         else if (minTemp != "" && maxTemp == "") {
+
             //this will create an Object only containing the cities that have that temperature
-
-
             dataWeather = dataMonth.filter(function (element) {
                 return (minTemp <= element.minTemp);
             });
             //If there is one or more cities matching the criteria it will call 
-            //the function "createDataForGraphics" if not it will display a message;
+            //the function "createDataForGraphics" if not it show an alert message;
 
             citiesMatchingCriteria(dataWeather, filteredBy);
 
         }
         else if (minTemp == "" && maxTemp != "") {
             //this will create an Object only containing the cities that have that temperature
-
-
             dataWeather = dataMonth.filter(function (element) {
                 return (maxTemp >= element.maxTemp);
             });
             //If there is one or more cities matching the criteria it will call 
-            //the function "createDataForGraphics" if not it will display a message;
-
+            //the function "createDataForGraphics" if not it show an alert message;
             citiesMatchingCriteria(dataWeather, filteredBy);
 
         }
 
         else if (minTemp != "" && maxTemp != "" && maxTemp > minTemp) {
             //this will create an Object only containing the cities that have that temperature
-
-
             dataWeather = dataMonth.filter(function (element) {
                 return (minTemp <= element.minTemp && maxTemp >= element.maxTemp);
             });
             //If there is one or more cities matching the criteria it will call 
-            //the function "createDataForGraphics" if not it will display a message;
-
+            //the function "createDataForGraphics" if not it show an alert message;
             citiesMatchingCriteria(dataWeather, filteredBy);
 
         }
-        // else if(if(minTemp != "" && maxTemp != "" && maxTemp<minTemp)){
-        //     document.getElementById("infoMessage").innerHTML = `<h2 class="text-danger">The maximune temperature must be higher than the minimun</h2>`;
-        // }
+        else if (minTemp != "" && maxTemp != "" && maxTemp < minTemp) {
+            document.getElementById("infoMessage").innerHTML = `<h2 class="text-danger">The maximune temperature must be higher than the minimun</h2>`;
+        }
 
     }
 };
@@ -205,13 +197,16 @@ function citiesMatchingCriteria(data, filteredBy) {
         if (filteredBy == "Budget") {
             document.getElementById("infoMessage").innerHTML = `<h2 class="text-danger">We're sorry but Europe is not that cheap!</h2>`;
 
+            // alert("We're sorry but Europe is not that cheap!");
         }
         else {
             document.getElementById("infoMessage").innerHTML = `<h2 class="text-danger">We're sorry but we don't cities with that average weather</h2>`;
-        }
 
+            //alert("We're sorry but we don't cities with that average weather");
+        }
     }
     else {
+
         $("#charts").show();
         createDataForGraphics(data, filteredBy);
     }
@@ -292,8 +287,9 @@ function createCurrencyChart(ndx) {
     var groupCurrency = dimCurrency.group();
 
     dc.pieChart("#currency")
-        .height(80)
-        .radius(40)
+        .useViewBoxResizing(true) // allows chart to be responsive
+       // .height(80)
+       // .radius(40)
         .dimension(dimCurrency)
         .group(groupCurrency)
         .transitionDuration(1500);
@@ -311,8 +307,9 @@ function createTotalDailyBudget(ndx) {
 
 
     dc.barChart('#dailyBudget_Temp')
-        .width(null)
-        .height(null)
+        .useViewBoxResizing(true) // allows chart to be responsive
+        //.width(null)
+        //.height(null)
         .dimension(cityDim)
         .margins({ top: 10, right: 50, bottom: 30, left: 50 })
         .group(hostel, "hostel")
@@ -344,8 +341,9 @@ function createRowChart(ndx) {
     var budgetGroup = dimCity.group().reduceSum(dc.pluck('meals'));
 
     dc.rowChart("#test")
-        .width(300)
-        .height(500)
+        .useViewBoxResizing(true) // allows chart to be responsive
+        //.width(null)
+        //.height(null)
         .x(d3.scale.linear().domain([0, 200]))
         .elasticX(true)
         .dimension(dimCity)
@@ -375,8 +373,7 @@ function createCorrelationCharts(data, ndx) {
 
 
     dc.scatterPlot("#correlation")
-        .height(200)
-        .width(600)
+        .useViewBoxResizing(true) // allows chart to be responsive
         .x(d3.scale.linear().domain([0, maxArrivals]))
         .brushOn(false)
         .symbolSize(8)
@@ -402,6 +399,7 @@ function createTable(ndx) {
 
     var tableChart = dc.dataTable('#table');
     tableChart
+        .useViewBoxResizing(true) // allows chart to be responsive
         .dimension(allDimension)
         .group(function (data) {
             return (data);
@@ -470,8 +468,8 @@ function cityTemp(ndx) {
 
     var composite = dc.compositeChart("#dailyBudget_Temp");
     composite
-        .width(400)
-        .height(220)
+    
+    .useViewBoxResizing(true) // allows chart to be responsive
         .x(d3.scale.ordinal())
         .xUnits(dc.units.ordinal)
         .dimension(dim)
@@ -511,15 +509,15 @@ function convertToInteger(dataMonth) {
     })
 }
 
-function optionBudget() {
-    //remove inforMessage in case it has the previous message
-    document.getElementById("infoMessage").innerHTML = "";
-}
+// function optionBudget() {
+//     //remove inforMessage in case it has the previous message
+//     document.getElementById("infoMessage").innerHTML = "";
+// }
 
-function optionWeather() {
-    //remove inforMessage in case it has the previous message
-    document.getElementById("infoMessage").innerHTML = "";
-}
+// function optionWeather() {
+//     //remove inforMessage in case it has the previous message
+//     document.getElementById("infoMessage").innerHTML = "";
+// }
 
 //Charts Title depend on the button clicked option
 //will be "Budget or Weather"
