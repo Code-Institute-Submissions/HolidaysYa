@@ -84,7 +84,7 @@ select {
 /* how to rotate the labels so they fit well in the screen
 https://github.com/dc-js/dc.js/issues/731
 */
-#totalDailyBudget .x.axis text, #cityTemp .x.axis text {
+#dailyBudget_Temp .x.axis text{
     text-anchor: end !important;
     transform: rotate(-45deg);
 }

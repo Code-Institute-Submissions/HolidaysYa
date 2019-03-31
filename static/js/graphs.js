@@ -24,7 +24,7 @@ function getMonth(error, data) {
         $('#budgetId').addClass('hide');
         $('#weatherId').addClass('hide');
         $('#grafId').addClass('hide');
-        $('#graphButtons').addClass('hide'); 
+        $('#graphButtons').addClass('hide');
     })
 
     $("#resultsBudget").click(function () {
@@ -234,17 +234,18 @@ function createDataForGraphics(data, filteredBy) {
 
     var ndx = crossfilter(data);
 
+    fiterBy(ndx, "#filterByRegion");
+    fiterBy(ndx, "#filterByCountry");
+    fiterBy(ndx, "#filterByCity");
+    createCurrencyChart(ndx);
+    createRowChart(ndx);
+    createTable(ndx);
+
+
     //Budget graphics
     if (filteredBy === 'Budget') {
-        fiterBy(ndx, "#filterByRegion");
-        fiterBy(ndx, "#filterByCountry");
-        fiterBy(ndx, "#filterByCity");
-        createCurrencyChart(ndx);
-        //createCityChart(ndx);
-        createRowChart(ndx);
         createTotalDailyBudget(ndx);
         createCorrelationCharts(data, ndx)
-        createTable(ndx);
         show_avg(ndx, "hostel", "#avg_hostel");
         show_avg(ndx, "meals", "#avg_meals");
         show_avg(ndx, "drinks", "#avg_drinks");
@@ -254,39 +255,22 @@ function createDataForGraphics(data, filteredBy) {
 
     //weather graphics
     if (filteredBy === 'Weather') {
-        fiterByCountry(ndx);
-        createCurrencyChart(ndx);
-        createCityChart(ndx);
-        // createTempCityChart(ndx);
-        createTable(ndx);
         cityTemp(ndx);
+
 
     }
     dc.renderAll();
 }
 
 
-
-// function fiterByCountry(ndx) {
-
-//     var dim = ndx.dimension(dc.pluck('country'));
-//     var group = dim.group();
-
-//     dc.selectMenu('#countrySelector')
-//         .multiple(true)
-//         .dimension(dim)
-//         .group(group);
-// };
-
-
-function fiterBy(ndx,element) {
+function fiterBy(ndx, element) {
 
     var dim;
-    if (element=="#filterByRegion"){
+    if (element == "#filterByRegion") {
         dim = ndx.dimension(dc.pluck('region'));
-    }else if(element=="#filterByCountry"){
+    } else if (element == "#filterByCountry") {
         dim = ndx.dimension(dc.pluck('country'));
-    }else if(element=="#filterByCity"){
+    } else if (element == "#filterByCity") {
         dim = ndx.dimension(dc.pluck('city'));
     }
 
@@ -315,18 +299,6 @@ function createCurrencyChart(ndx) {
         .transitionDuration(1500);
 };
 
-function createCityChart(ndx) {
-
-    var dimCity = ndx.dimension(dc.pluck('city'))
-    var groupCity = dimCity.group();
-
-    dc.pieChart("#city")
-        .height(100)
-        .radius(50)
-        .dimension(dimCity)
-        .group(groupCity)
-        .transitionDuration(1500);
-};
 
 function createTotalDailyBudget(ndx) {
 
@@ -338,9 +310,9 @@ function createTotalDailyBudget(ndx) {
     var attractions = cityDim.group().reduceSum(dc.pluck('attractions'));
 
 
-    dc.barChart('#totalDailyBudget')
-        .width(600)
-        .height(200)
+    dc.barChart('#dailyBudget_Temp')
+        .width(null)
+        .height(null)
         .dimension(cityDim)
         .margins({ top: 10, right: 50, bottom: 30, left: 50 })
         .group(hostel, "hostel")
@@ -366,21 +338,20 @@ function createTotalDailyBudget(ndx) {
 
 
 //at the moment this is showing meals but I need to update it to show total!!
-function createRowChart(ndx){
+function createRowChart(ndx) {
     var dimCity = ndx.dimension(dc.pluck('city'));
- 
+
     var budgetGroup = dimCity.group().reduceSum(dc.pluck('meals'));
 
-
     dc.rowChart("#test")
-    .width(300)
-    .height(500)
-    .x(d3.scale.linear().domain([0, 200]))
-    .elasticX(true)
-    .dimension(dimCity)
-    .group(budgetGroup);
-   
-    
+        .width(300)
+        .height(500)
+        .x(d3.scale.linear().domain([0, 200]))
+        .elasticX(true)
+        .dimension(dimCity)
+        .group(budgetGroup);
+
+
 }
 
 function createCorrelationCharts(data, ndx) {
@@ -425,13 +396,9 @@ function createCorrelationCharts(data, ndx) {
 
 function createTable(ndx) {
 
-
     var allDimension = ndx.dimension(function (d) {
         return (d);
     });
-
-
-    // var dimGroup = allDimension.group().reduceCount();
 
     var tableChart = dc.dataTable('#table');
     tableChart
@@ -440,58 +407,57 @@ function createTable(ndx) {
             return (data);
         })
         .size(Infinity)
-        //.columns(['city', 'country', 'attractions', 'hostelNight', 'drinks', 'meals', 'transport', 'minTemp', 'maxTemp', 'precipitation', 'currency', 'visitorsCity'])
-        .columns([  
-                {
-                    label: "City",
-                    format: function (d) { return d.city }
-                },
-                {
-                    label: "Country",
-                    format: function (d) { return d.country }
-                },
-                {
-                    label: "Hostel",
-                    format: function (d) { return d.hostelNight }
-                },
-                {
-                    label: "Meals",
-                    format: function (d) { return d.meals }
-                },
-                {
-                    label: "Drinks",
-                    format: function (d) { return d.drinks }
-                },
-                {
-                    label: "Transport",
-                    format: function (d) { return d.transport }
-                },
-                {
-                    label: "min.Temperature(C)",
-                    format: function (d) { return d.minTemp }
-                },
-                {
-                    label: "max.Temperature(C)",
-                    format: function (d) { return d.maxTemp }
-                },
-                {
-                    label: "Precipitation",
-                    format: function (d) { return d.recipitation }
-                },
-                {
-                    label: "Currency",
-                    format: function (d) { return d.currency }
-                },
-                {
-                    label: "Visitors per year\n (Millions)",
-                    format: function (d) { return d.visitorsCity }
-                }
-])
-        
+        .columns([
+            {
+                label: "City",
+                format: function (d) { return d.city }
+            },
+            {
+                label: "Country",
+                format: function (d) { return d.country }
+            },
+            {
+                label: "Hostel",
+                format: function (d) { return d.hostelNight }
+            },
+            {
+                label: "Meals",
+                format: function (d) { return d.meals }
+            },
+            {
+                label: "Drinks",
+                format: function (d) { return d.drinks }
+            },
+            {
+                label: "Transport",
+                format: function (d) { return d.transport }
+            },
+            {
+                label: "min.Temperature(C)",
+                format: function (d) { return d.minTemp }
+            },
+            {
+                label: "max.Temperature(C)",
+                format: function (d) { return d.maxTemp }
+            },
+            {
+                label: "Precipitation",
+                format: function (d) { return d.recipitation }
+            },
+            {
+                label: "Currency",
+                format: function (d) { return d.currency }
+            },
+            {
+                label: "Visitors per year\n (Millions)",
+                format: function (d) { return d.visitorsCity }
+            }
+        ])
+
         .sortBy(function (d) {
-                return d.value;
-            })
-    .order(d3.ascending);
+            return d.value;
+        })
+        .order(d3.ascending);
 }
 
 
@@ -499,14 +465,10 @@ function cityTemp(ndx) {
 
     var dim = ndx.dimension(dc.pluck('city')),
 
-        //   it works with precipitation and linear scale but not with city and ordinal scale
-        //   var dim  = ndx.dimension(dc.pluck('precipitation')),
-
-
         grp1 = dim.group().reduceSum(dc.pluck('maxTemp')),
         grp2 = dim.group().reduceSum(dc.pluck('minTemp'));
 
-    var composite = dc.compositeChart("#cityTemp");
+    var composite = dc.compositeChart("#dailyBudget_Temp");
     composite
         .width(400)
         .height(220)
@@ -514,10 +476,6 @@ function cityTemp(ndx) {
         .xUnits(dc.units.ordinal)
         .dimension(dim)
         .group(grp1, "maximun temperature")
-        // .x(d3.scale.linear().domain([20,80]))
-
-
-        //.dimension(dim)
         .yAxisLabel("Temperature")
         .xAxisLabel("City")
         .legend(dc.legend().x(80).y(20).itemHeight(13).gap(5))
@@ -568,11 +526,6 @@ function optionWeather() {
 function showTitle(option) {
     document.getElementById("Title").innerHTML = `<h2>Results By ${option}</h2>`;
 }
-
-
-
-
-
 
 
 /////// testing
