@@ -8,6 +8,16 @@ function getMonth(error, data) {
     if (error) { /////////// improve this???
         document.getElementById("error").innerHTML = `<h2 class="text-danger">Error retrieving the data file!</h2>`;
     }
+
+    //if the logo is clicked go to the main page
+    $(".navbar-brand").click(function() {
+        $('#monthId').fadeIn(1000);
+        $('#budgetId').addClass('hide');
+        $('#weatherId').addClass('hide');
+        $('#grafId').addClass('hide');
+        $('#graphButtons').addClass('hide');
+    })
+
     //When choose budget button is pressed, hide month selection page and show budget selection page
     $('#chooseBudget').click(function () {
         $('#monthId').slideUp(1000);
@@ -27,6 +37,9 @@ function getMonth(error, data) {
         $('#grafId').addClass('hide');
         $('#graphButtons').addClass('hide');
     })
+
+
+
 
     $("#resultsBudget").click(function () {
         $('#budgetId').slideUp(1000);
@@ -95,10 +108,6 @@ function filterData(data) {
     document.getElementById("resultsWeather").addEventListener("click", filterByWeather(dataMonth));
 }
 
-
-
-
-
 function filterByBudget(dataMonth) {
     return function () {
         //removes the inputs in case we want to seach again by weather
@@ -108,7 +117,7 @@ function filterByBudget(dataMonth) {
         var filteredBy = 'Budget';
 
         //get input value and convert it to number
-        var maxBudgetValue = parseInt(document.getElementById("maxBudget").value);
+        var maxBudgetValue = document.getElementById("maxBudget").value;
         /////////////////add validation!! not empty and number
 
         //this will create an Object only containing the cities that fit the budget
@@ -123,12 +132,18 @@ function filterByBudget(dataMonth) {
         });
 
 
-        //If there is one or more cities matching the criteria it will call 
-        //the function "createDataForGraphics" if not it will display a message;
-        citiesMatchingCriteria(dataBudget, filteredBy);
+        if (maxBudgetValue=="") {
+            document.getElementById("infoMessage").innerHTML = `<h2 class="text-danger">Please enter the budget</h2>`;
+
+        }
+        else {
+
+            //If there is one or more cities matching the criteria it will call 
+            //the function "createDataForGraphics" if not it will display a message;
+            citiesMatchingCriteria(dataBudget, filteredBy);
+        }
     }
 };
-
 
 function filterByWeather(dataMonth) {
     return function () {
@@ -183,11 +198,11 @@ function filterByWeather(dataMonth) {
         }
         else if (minTemp != "" && maxTemp != "" && maxTemp < minTemp) {
             document.getElementById("infoMessage").innerHTML = `<h2 class="text-danger">The maximune temperature must be higher than the minimun</h2>`;
+
         }
 
     }
 };
-
 
 function citiesMatchingCriteria(data, filteredBy) {
     document.getElementById("infoMessage").innerHTML = "";
@@ -223,8 +238,6 @@ function checkIfObjectEmpty(data) {
     return true;
 }
 
-
-
 function createDataForGraphics(data, filteredBy) {
 
     var ndx = crossfilter(data);
@@ -241,22 +254,26 @@ function createDataForGraphics(data, filteredBy) {
     if (filteredBy === 'Budget') {
         createTotalDailyBudget(ndx);
         createCorrelationCharts(data, ndx)
-        show_avg(ndx, "hostel", "#avg_hostel");
-        show_avg(ndx, "meals", "#avg_meals");
-        show_avg(ndx, "drinks", "#avg_drinks");
-        show_avg(ndx, "transport", "#avg_transport");
-        show_avg(ndx, "attractions", "#avg_attractions");
+        show_avg(ndx, "hostel", "#hostel_maxtem");
+        show_avg(ndx, "meals", "#meals_mintem");
+        show_avg(ndx, "drinks", "#drinks_avgtemp");
+        show_avg(ndx, "transport", "#transport_maxpreci");
+        show_avg(ndx, "attractions", "#attractions_mintemp");
     }
 
     //weather graphics
     if (filteredBy === 'Weather') {
+        // show_avg_weather(ndx, "drinks", "#hostel_maxtem");
+        // show_avg_weather(ndx, "mintem", "#meals_mintem");
+        // show_avg_weather(ndx, "avgtemp", "#drinks_avgtemp");
+        // show_avg_weather(ndx, "maxpreci", "#transport_maxpreci");
+        // show_avg_weather(ndx, "mintemp", "#attractions_mintemp");
         cityTemp(ndx);
 
 
     }
     dc.renderAll();
 }
-
 
 function fiterBy(ndx, element) {
 
@@ -277,10 +294,6 @@ function fiterBy(ndx, element) {
         .group(group);
 };
 
-
-
-
-
 function createCurrencyChart(ndx) {
 
     var dimCurrency = ndx.dimension(dc.pluck('currencyCode'))
@@ -288,8 +301,8 @@ function createCurrencyChart(ndx) {
 
     dc.pieChart("#currency")
         .useViewBoxResizing(true) // allows chart to be responsive
-       // .height(80)
-       // .radius(40)
+        // .height(80)
+        // .radius(40)
         .dimension(dimCurrency)
         .group(groupCurrency)
         .transitionDuration(1500);
@@ -308,8 +321,6 @@ function createTotalDailyBudget(ndx) {
 
     dc.barChart('#dailyBudget_Temp')
         .useViewBoxResizing(true) // allows chart to be responsive
-        //.width(null)
-        //.height(null)
         .dimension(cityDim)
         .margins({ top: 10, right: 50, bottom: 30, left: 50 })
         .group(hostel, "hostel")
@@ -338,12 +349,13 @@ function createTotalDailyBudget(ndx) {
 function createRowChart(ndx) {
     var dimCity = ndx.dimension(dc.pluck('city'));
 
-    var budgetGroup = dimCity.group().reduceSum(dc.pluck('meals'));
+    var budgetGroup = dimCity.group().reduceSum(function (d) {
+        var totalBudget = d.hostelNight + d.meals + d.drinks + d.attractions + d.transport;
+        return [totalBudget];
+    });
 
-    dc.rowChart("#test")
+    dc.rowChart("#rowChart")
         .useViewBoxResizing(true) // allows chart to be responsive
-        //.width(null)
-        //.height(null)
         .x(d3.scale.linear().domain([0, 200]))
         .elasticX(true)
         .dimension(dimCity)
@@ -440,7 +452,7 @@ function createTable(ndx) {
             },
             {
                 label: "Precipitation",
-                format: function (d) { return d.recipitation }
+                format: function (d) { return d.precipitation }
             },
             {
                 label: "Currency",
@@ -468,8 +480,8 @@ function cityTemp(ndx) {
 
     var composite = dc.compositeChart("#dailyBudget_Temp");
     composite
-    
-    .useViewBoxResizing(true) // allows chart to be responsive
+
+        .useViewBoxResizing(true) // allows chart to be responsive
         .x(d3.scale.ordinal())
         .xUnits(dc.units.ordinal)
         .dimension(dim)
@@ -636,4 +648,142 @@ function show_avg(ndx, product, element) {
 
 
 
+// function show_avg_weather(ndx, product, element) {
+
+//     var average_weather = ndx.groupAll().reduce(
+
+//         //Add a data entry
+//         //p and v by convention, p will keep track of the changes and v will be input values from the actual values from the dataset that will affect the values of p
+
+//         //inline function adder
+//         function (p, v) {
+//             p.count++;
+
+//             p.total += +v.maxTemp;
+//             p.averagetemp = p.total / p.count;
+
+//             return p;
+//         },
+
+//         //inline function remover
+
+//         // Remov ethe data entry
+//         function (p, v) {
+//             p.count--;
+//             if (p.count == 0) {
+//                 p.total = 0;
+//                 p.averagetemp = 0;
+//             }
+//             else {
+
+//                 p.count--;
+//                 p.total -= +v.maxTem;
+//                 p.averagetemp = p.total / p.count;
+//             }
+//             return p;
+//         },
+
+//         //inline function initialiser
+
+//         //Initialise the Reducer
+//         function () {
+//             return { count: 0, total: 0, averagetemp: 0 }
+//         }
+//     );
+
+//     dc.numberDisplay(element)
+//         //.formatNumber(d3.format('.2'))
+//         .valueAccessor(function (d) {
+//             if (d.count == 0) {
+//                 return 0;
+//             }
+//             else {
+//                 return d.total;
+
+//             }
+//         })
+//         .group(average_weather);
+// }
+
+
+
+
+
+// function show_avg_weather(ndx, product, element) {
+
+//     var average_cost = ndx.groupAll().reduce(
+
+//         //Add a data entry
+//         //p and v by convention, p will keep track of the changes and v will be input values from the actual values from the dataset that will affect the values of p
+
+//         //inline function adder
+//         function (p, v) {
+//             p.count++;
+
+//             if(p.totaldrinks<v.maxTemp){
+//                 p.totaldrinks=v.maxTemp;
+//             }else{
+//                 p.totaldrinks=p.totaldrinks;  
+//             }
+
+//             // p.totaldrinks += +v.maxTemp;
+//             // p.averagedrinks = p.totaldrinks / p.count;
+
+           
+
+//             return p;
+//         },
+
+//         //inline function remover
+
+//         // Remov ethe data entry
+//         function (p, v) {
+//             p.count--;
+//             if (p.count == 0) {
+//                 p.totaldrinks = 0;
+//                 p.averagedrinks = 0;
+
+                          
+//             }
+//             else {
+//                 if(p.totaldrinks<v.maxTemp){
+//                     p.totaldrinks=v.maxTemp;
+//                 }else{
+//                     p.totaldrinks=p.totaldrinks;  
+//                 }
+
+//                 // p.totaldrinks -= +v.maxTemp
+//                 // p.averagedrinks = p.totaldrinks / p.count;
+
+              
+//             }
+//             return p;
+//         },
+
+//         //inline function initialiser
+
+//         //Initialise the Reducer
+//         function () {
+//             return { count: 0, totaldrinks: 0, averagedrinks: 0 }
+//         }
+//     );
+
+
+
+//     dc.numberDisplay(element)
+//         //.formatNumber(d3.format('.2'))
+//         .valueAccessor(function (d) {
+//             if (d.count == 0) {
+//                 return 0;
+//             }
+//             else {
+//                 if (product == "drinks") {
+                 
+//                     return d.averagedrinks;
+//                 }
+               
+//             }
+//         })
+//         .group(average_cost);
+// }
 
