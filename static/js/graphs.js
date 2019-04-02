@@ -411,37 +411,102 @@ function createCorrelationTemp(data, ndx) {
    
     var dimTemp = ndx.dimension(function (d) {
         var avgTemp = (d.maxTemp + d.minTemp) / 2;
-        return [d.visitorsCity, avgTemp, d.city, d.precipitation];
+        return [d.visitorsCity, avgTemp, d.city];
     });
 
     var temperatureGroup = dimTemp.group();
 
+    var dimPreci = ndx.dimension(function (d) {
+         return [d.visitorsCity, d.precipitation, d.city];
+    });
+
+    var precipitationGroup = dimPreci.group();
+
    // console.log(precipitationGroup.all());
 
-    dc.scatterPlot("#correlation")
+    var composite = dc.compositeChart("#correlation")
+    composite
         .useViewBoxResizing(true) // allows chart to be responsive
-        .x(d3.scale.linear().domain([0, maxArrivals]))
-        .brushOn(false)
-        .symbolSize(8)
-        .clipPadding(10)
+        .x(d3.scale.linear().domain([0, 150]).range(0,200))
+
+        
+        
         .xAxisLabel('Number of country visitors (2017 or 2018)')
         .yAxisLabel("Avg. Temperature")
-        .title(function (d) {
-            return "In " + d.key[2] + " the average temperature is "+ d.key[1] + ",\nthe average precipitation is " + d.key[1] + " mm \nand there was " + d.key[0] + " millions visits in 2017";
-        })
+        .rightYAxisLabel("Avg. Precipitation")
+        .shareTitle(false)
         .dimension(dimTemp)
-        .group(temperatureGroup)
+        .group(temperatureGroup,"temperature")
         .renderHorizontalGridLines(true)
-        
         .brushOn(false)
-        // .colorAccessor(function (d) {
-        //     return d.key[0];
-        // })
-        // .colors(cityColours)
+       
+        .compose([
+            dc.scatterPlot(composite)
+                .dimension(dimTemp)
+                 .symbolSize(8)
+                 .colors('red')
+                 .clipPadding(10)
+                 .title(function (d) {
+                    return d.key[2] + " the average temperature is "+d.key[1] + " degrees\nand there was " + d.key[0] + " millions visits in 2017";
+                        })
+                         .group(temperatureGroup,"temperature"),
+            dc.scatterPlot(composite)
+                   .dimension(dimPreci)
+                    .symbolSize(8)        
+                   .colors('green')
+                   .clipPadding(10)
+                   .title(function (d) {
+                    return d.key[2] + " the average precipitation is "+d.key[1] + " mm\nand there was " + d.key[0] + " millions visits in 2017";
+                        })
+                  .group(precipitationGroup,"precipitation")
+                  .useRightYAxis(true)
+
+        ])
         .elasticX(true)
         .elasticY(true);
 
 }
+
+
+// function createCorrelationTemp(data, ndx) {
+
+//     var maxArrivals = d3.max(data, function (d) { return d.visitorsCity; });
+   
+//     var dimTemp = ndx.dimension(function (d) {
+//         var avgTemp = (d.maxTemp + d.minTemp) / 2;
+//         return [d.visitorsCity, avgTemp, d.city, d.precipitation];
+//     });
+
+//     var temperatureGroup = dimTemp.group();
+
+//    // console.log(precipitationGroup.all());
+
+//     dc.scatterPlot("#correlation")
+//         .useViewBoxResizing(true) // allows chart to be responsive
+//         .x(d3.scale.linear().domain([0, maxArrivals]))
+//         .brushOn(false)
+//         .symbolSize(8)
+//         .clipPadding(10)
+//         .xAxisLabel('Number of country visitors (2017 or 2018)')
+//         .yAxisLabel("Avg. Temperature")
+//         .title(function (d) {
+//             return "In " + d.key[2] + " the average temperature is "+ d.key[1] + ",\nthe average precipitation is " + d.key[1] + " mm \nand there was " + d.key[0] + " millions visits in 2017";
+//         })
+//         .dimension(dimTemp)
+//         .group(temperatureGroup)
+//         .renderHorizontalGridLines(true)
+        
+//         .brushOn(false)
+//         // .colorAccessor(function (d) {
+//         //     return d.key[0];
+//         // })
+//         // .colors(cityColours)
+//         .elasticX(true)
+//         .elasticY(true);
+
+// }
+
+
 
 
 function createTable(ndx) {
@@ -562,6 +627,8 @@ function convertToInteger(dataMonth) {
         d.visitorsCity = parseInt(d.visitorsCity);
         d.minTemp = parseInt(d.minTemp);
         d.maxTemp = parseInt(d.maxTemp);
+        d.precipitation = parseInt(d.precipitation);
+
     })
 }
 
