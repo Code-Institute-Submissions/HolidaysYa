@@ -514,6 +514,8 @@ function createTable(ndx) {
 
 function cityTemp(ndx) {
 
+    //initial issue with the alignment of the chart was fixed after reading the following link
+    //https://github.com/dc-js/dc.js/issues/662
     var dim = ndx.dimension(dc.pluck('city')),
 
         grp1 = dim.group().reduceSum(dc.pluck('maxTemp')),
@@ -531,6 +533,7 @@ function cityTemp(ndx) {
         .xAxisLabel("City")
         .legend(dc.legend().x(80).y(20).itemHeight(13).gap(5))
         .renderHorizontalGridLines(true)
+        ._rangeBandPadding(1)
         .compose([
             dc.lineChart(composite)
                 .dimension(dim)
