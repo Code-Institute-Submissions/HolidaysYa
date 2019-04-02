@@ -269,6 +269,7 @@ function createDataForGraphics(data, filteredBy) {
         // show_avg_weather(ndx, "maxpreci", "#transport_maxpreci");
         // show_avg_weather(ndx, "mintemp", "#attractions_mintemp");
         cityTemp(ndx);
+        createCorrelationTemp(data, ndx);
 
 
     }
@@ -402,6 +403,46 @@ function createCorrelationCharts(data, ndx) {
         .dimension(dimBudget)
         .group(budgetGroup);
 }
+
+
+function createCorrelationTemp(data, ndx) {
+
+    var maxArrivals = d3.max(data, function (d) { return d.visitorsCity; });
+   
+    var dimTemp = ndx.dimension(function (d) {
+        var avgTemp = (d.maxTemp + d.minTemp) / 2;
+        return [d.visitorsCity, avgTemp, d.city, d.precipitation];
+    });
+
+    var temperatureGroup = dimTemp.group();
+
+   // console.log(precipitationGroup.all());
+
+    dc.scatterPlot("#correlation")
+        .useViewBoxResizing(true) // allows chart to be responsive
+        .x(d3.scale.linear().domain([0, maxArrivals]))
+        .brushOn(false)
+        .symbolSize(8)
+        .clipPadding(10)
+        .xAxisLabel('Number of country visitors (2017 or 2018)')
+        .yAxisLabel("Avg. Temperature")
+        .title(function (d) {
+            return "In " + d.key[2] + " the average temperature is "+ d.key[1] + ",\nthe average precipitation is " + d.key[1] + " mm \nand there was " + d.key[0] + " millions visits in 2017";
+        })
+        .dimension(dimTemp)
+        .group(temperatureGroup)
+        .renderHorizontalGridLines(true)
+        
+        .brushOn(false)
+        // .colorAccessor(function (d) {
+        //     return d.key[0];
+        // })
+        // .colors(cityColours)
+        .elasticX(true)
+        .elasticY(true);
+
+}
+
 
 function createTable(ndx) {
 
