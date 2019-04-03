@@ -38,9 +38,6 @@ function getMonth(error, data) {
         $('#graphButtons').addClass('hide');
     })
 
-
-
-
     $("#resultsBudget").click(function () {
         $('#budgetId').slideUp(1000);
         $('#grafId').removeClass('hide').slideDown(1000);
@@ -75,20 +72,31 @@ function getMonth(error, data) {
 
     })
 
+//call function to filter data by month
+    filterData(data);
 
-    // only call "filterData" after the dropdown option has been selected
-    $("#monthSelector").change(function () {
-        filterData(data);
-    });
+
+    // // only call "filterData" after the dropdown option has been selected
+    // $("#monthSelector").change(function () {
+    //     filterData(data);
+    // });
 
 }
 
 
 function filterData(data) {
 
-    // document.getElementById("chooseBudget").addEventListener("click", optionBudget());
-    // document.getElementById("chooseWeather").addEventListener("click", optionWeather());
-
+    var monthSelected;
+   
+   //if one option is selected
+    if ($('#monthSelector option:selected').length > 0) {
+        monthSelected = $('#monthSelector :selected').text();
+        }
+    //if not options are selected will take January that is the default option
+    if ($('#monthSelector option:selected').length == 0) {
+        monthSelected = "January";
+        }
+    
     //get the text for the option selected
     var monthSelected = $('#monthSelector :selected').text();
 
@@ -897,4 +905,3 @@ function show_avg(ndx, product, element) {
 //         })
 //         .group(average_cost);
 // }
-
