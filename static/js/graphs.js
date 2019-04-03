@@ -523,6 +523,8 @@ function createTable(ndx) {
         return (d);
     });
 
+    
+
     var tableChart = dc.dataTable('#table');
     tableChart
         .useViewBoxResizing(true) // allows chart to be responsive
@@ -581,6 +583,7 @@ function createTable(ndx) {
         .sortBy(function (d) {
             return d.value;
         })
+       .showGroups(false)// this will remove the [object][object] at the top of the rows
         .order(d3.ascending);
 }
 
