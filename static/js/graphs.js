@@ -10,7 +10,7 @@ function getMonth(error, data) {
     }
 
     //if the logo is clicked go to the main page
-    $(".navbar-brand").click(function() {
+    $(".navbar-brand").click(function () {
         $('#monthId').fadeIn(1000);
         $('#budgetId').addClass('hide');
         $('#weatherId').addClass('hide');
@@ -72,7 +72,7 @@ function getMonth(error, data) {
 
     })
 
-//call function to filter data by month
+    //call function to filter data by month
     filterData(data);
 
 
@@ -87,16 +87,16 @@ function getMonth(error, data) {
 function filterData(data) {
 
     var monthSelected;
-   
-   //if one option is selected
+
+    //if one option is selected
     if ($('#monthSelector option:selected').length > 0) {
         monthSelected = $('#monthSelector :selected').text();
-        }
+    }
     //if not options are selected will take January that is the default option
     if ($('#monthSelector option:selected').length == 0) {
         monthSelected = "January";
-        }
-    
+    }
+
     //get the text for the option selected
     var monthSelected = $('#monthSelector :selected').text();
 
@@ -140,7 +140,7 @@ function filterByBudget(dataMonth) {
         });
 
 
-        if (maxBudgetValue=="") {
+        if (maxBudgetValue == "") {
             document.getElementById("infoMessage").innerHTML = `<h2 class="text-danger">Please enter the budget</h2>`;
 
         }
@@ -266,16 +266,19 @@ function createDataForGraphics(data, filteredBy) {
         show_avg(ndx, "meals", "#meals_mintem");
         show_avg(ndx, "drinks", "#drinks_avgtemp");
         show_avg(ndx, "transport", "#transport_maxpreci");
-        show_avg(ndx, "attractions", "#attractions_mintemp");
+        show_avg(ndx, "attractions", "#attractions_minpreci");
     }
 
     //weather graphics
     if (filteredBy === 'Weather') {
-        // show_avg_weather(ndx, "drinks", "#hostel_maxtem");
-        // show_avg_weather(ndx, "mintem", "#meals_mintem");
-        // show_avg_weather(ndx, "avgtemp", "#drinks_avgtemp");
-        // show_avg_weather(ndx, "maxpreci", "#transport_maxpreci");
-        // show_avg_weather(ndx, "mintemp", "#attractions_mintemp");
+        show_max_weather(ndx, 'maxTemp', "#hostel_maxtem");
+        show_min_weather(ndx, 'minTemp', "#meals_mintem");
+        show_avg_temp(ndx, 'maxTemp', 'minTemp', "#drinks_avgtemp");
+
+        show_max_weather(ndx, 'precipitation', "#transport_maxpreci");
+        show_min_weather(ndx, 'precipitation', "#attractions_minpreci");
+
+
         cityTemp(ndx);
         createCorrelationTemp(data, ndx);
 
@@ -416,7 +419,7 @@ function createCorrelationCharts(data, ndx) {
 function createCorrelationTemp(data, ndx) {
 
     var maxArrivals = d3.max(data, function (d) { return d.visitorsCity; });
-   
+
     var dimTemp = ndx.dimension(function (d) {
         var avgTemp = (d.maxTemp + d.minTemp) / 2;
         return [d.visitorsCity, avgTemp, d.city];
@@ -425,95 +428,54 @@ function createCorrelationTemp(data, ndx) {
     var temperatureGroup = dimTemp.group();
 
     var dimPreci = ndx.dimension(function (d) {
-         return [d.visitorsCity, d.precipitation, d.city];
+        return [d.visitorsCity, d.precipitation, d.city];
     });
 
     var precipitationGroup = dimPreci.group();
 
-   // console.log(precipitationGroup.all());
+    // console.log(precipitationGroup.all());
 
     var composite = dc.compositeChart("#correlation")
     composite
         .useViewBoxResizing(true) // allows chart to be responsive
-        .x(d3.scale.linear().domain([0, 150]).range(0,200))
+        .x(d3.scale.linear().domain([0, maxArrivals]))
 
-        
-        
+
         .xAxisLabel('Number of country visitors (2017 or 2018)')
         .yAxisLabel("Avg. Temperature")
         .rightYAxisLabel("Avg. Precipitation")
         .shareTitle(false)
         .dimension(dimTemp)
-        .group(temperatureGroup,"temperature")
+        .group(temperatureGroup, "temperature")
         .renderHorizontalGridLines(true)
         .brushOn(false)
-       
+
         .compose([
             dc.scatterPlot(composite)
                 .dimension(dimTemp)
-                 .symbolSize(8)
-                 .colors('red')
-                 .clipPadding(10)
-                 .title(function (d) {
-                    return d.key[2] + " the average temperature is "+d.key[1] + " degrees\nand there was " + d.key[0] + " millions visits in 2017";
-                        })
-                         .group(temperatureGroup,"temperature"),
+                .symbolSize(8)
+                .colors('red')
+                .clipPadding(10)
+                .title(function (d) {
+                    return d.key[2] + " the average temperature is " + d.key[1] + " degrees\nand there was " + d.key[0] + " millions visits in 2017";
+                })
+                .group(temperatureGroup, "temperature"),
             dc.scatterPlot(composite)
-                   .dimension(dimPreci)
-                    .symbolSize(8)        
-                   .colors('green')
-                   .clipPadding(10)
-                   .title(function (d) {
-                    return d.key[2] + " the average precipitation is "+d.key[1] + " mm\nand there was " + d.key[0] + " millions visits in 2017";
-                        })
-                  .group(precipitationGroup,"precipitation")
-                  .useRightYAxis(true)
+                .dimension(dimPreci)
+                .symbolSize(8)
+                .colors('green')
+                .clipPadding(10)
+                .title(function (d) {
+                    return d.key[2] + " the average precipitation is " + d.key[1] + " mm\nand there was " + d.key[0] + " millions visits in 2017";
+                })
+                .group(precipitationGroup, "precipitation")
+                .useRightYAxis(true)
 
         ])
         .elasticX(true)
         .elasticY(true);
 
 }
-
-
-// function createCorrelationTemp(data, ndx) {
-
-//     var maxArrivals = d3.max(data, function (d) { return d.visitorsCity; });
-   
-//     var dimTemp = ndx.dimension(function (d) {
-//         var avgTemp = (d.maxTemp + d.minTemp) / 2;
-//         return [d.visitorsCity, avgTemp, d.city, d.precipitation];
-//     });
-
-//     var temperatureGroup = dimTemp.group();
-
-//    // console.log(precipitationGroup.all());
-
-//     dc.scatterPlot("#correlation")
-//         .useViewBoxResizing(true) // allows chart to be responsive
-//         .x(d3.scale.linear().domain([0, maxArrivals]))
-//         .brushOn(false)
-//         .symbolSize(8)
-//         .clipPadding(10)
-//         .xAxisLabel('Number of country visitors (2017 or 2018)')
-//         .yAxisLabel("Avg. Temperature")
-//         .title(function (d) {
-//             return "In " + d.key[2] + " the average temperature is "+ d.key[1] + ",\nthe average precipitation is " + d.key[1] + " mm \nand there was " + d.key[0] + " millions visits in 2017";
-//         })
-//         .dimension(dimTemp)
-//         .group(temperatureGroup)
-//         .renderHorizontalGridLines(true)
-        
-//         .brushOn(false)
-//         // .colorAccessor(function (d) {
-//         //     return d.key[0];
-//         // })
-//         // .colors(cityColours)
-//         .elasticX(true)
-//         .elasticY(true);
-
-// }
-
 
 
 
@@ -523,7 +485,7 @@ function createTable(ndx) {
         return (d);
     });
 
-    
+
 
     var tableChart = dc.dataTable('#table');
     tableChart
@@ -559,6 +521,10 @@ function createTable(ndx) {
                 format: function (d) { return d.transport }
             },
             {
+                label: "Attractions",
+                format: function (d) { return d.attractions }
+            },
+            {
                 label: "min.Temperature(C)",
                 format: function (d) { return d.minTemp }
             },
@@ -583,7 +549,7 @@ function createTable(ndx) {
         .sortBy(function (d) {
             return d.value;
         })
-       .showGroups(false)// this will remove the [object][object] at the top of the rows
+        .showGroups(false)// this will remove the [object][object] at the top of the rows
         .order(d3.ascending);
 }
 
@@ -643,24 +609,12 @@ function convertToInteger(dataMonth) {
     })
 }
 
-// function optionBudget() {
-//     //remove inforMessage in case it has the previous message
-//     document.getElementById("infoMessage").innerHTML = "";
-// }
 
-// function optionWeather() {
-//     //remove inforMessage in case it has the previous message
-//     document.getElementById("infoMessage").innerHTML = "";
-// }
-
-//Charts Title depend on the button clicked option
-//will be "Budget or Weather"
 function showTitle(option) {
     document.getElementById("Title").innerHTML = `<h2>Results By ${option}</h2>`;
 }
 
 
-/////// testing
 
 
 function show_avg(ndx, product, element) {
@@ -769,142 +723,94 @@ function show_avg(ndx, product, element) {
 }
 
 
+function show_max_weather(ndx, column, element) {
 
-// function show_avg_weather(ndx, product, element) {
+    // in order to calculate the maximun temperature I used Stackoverflow for help and they suggest to use the following code
+    var maxDim = ndx.dimension(dc.pluck(column));
 
-//     var average_weather = ndx.groupAll().reduce(
+    dc.numberDisplay(element)
+        .group(dim_max_groupAll(maxDim, column))
+        .valueAccessor(x => x)
+        .formatNumber(d3.format('.2'))
+        .render();
 
-//         //Add a data entry
-//         //p and v by convention, p will keep track of the changes and v will be input values from the actual values from the dataset that will affect the values of p
-
-//         //inline function adder
-//         function (p, v) {
-//             p.count++;
-
-//             p.total += +v.maxTemp;
-//             p.averagetemp = p.total / p.count;
-
-//             return p;
-//         },
-
-//         //inline function remover
-
-//         // Remov ethe data entry
-//         function (p, v) {
-//             p.count--;
-//             if (p.count == 0) {
-//                 p.total = 0;
-//                 p.averagetemp = 0;
-//             }
-//             else {
-
-//                 p.count--;
-//                 p.total -= +v.maxTem;
-//                 p.averagetemp = p.total / p.count;
-//             }
-//             return p;
-//         },
-
-//         //inline function initialiser
-
-//         //Initialise the Reducer
-//         function () {
-//             return { count: 0, total: 0, averagetemp: 0 }
-//         }
-//     );
-
-//     dc.numberDisplay(element)
-//         //.formatNumber(d3.format('.2'))
-//         .valueAccessor(function (d) {
-//             if (d.count == 0) {
-//                 return 0;
-//             }
-//             else {
-//                 return d.total;
-
-//             }
-//         })
-//         .group(average_weather);
-// }
+}
 
 
+function show_min_weather(ndx, column, element) {
+
+    // in order to calculate the maximun temperature I used Stackoverflow for help and they suggest to use the following code
+    var minDim = ndx.dimension(dc.pluck(column));
+
+    dc.numberDisplay(element)
+        .group(dim_min_groupAll(minDim, column))
+        .valueAccessor(x => x)
+        .formatNumber(d3.format('.2'))
+        .render();
+
+}
+
+function show_avg_temp(ndx, max, min, element) {
+
+    // in order to calculate the maximun temperature I used Stackoverflow for help and they suggest to use the following code
+    var maxDim = ndx.dimension(dc.pluck(max));
+    var minDim = ndx.dimension(dc.pluck(min));
+
+    dc.numberDisplay(element)
+        .group(dim_avg_groupAll(maxDim, minDim))
+        .valueAccessor(x => x)
+        .formatNumber(d3.format('.2'))
+        .render();
+
+}
 
 
+function dim_max_groupAll(maxDim, column) {
 
-// function show_avg_weather(ndx, product, element) {
+    if (column === "maxTemp") {
+        return {
+            value: function () {
+                return maxDim.top(1)[0].maxTemp;
+            }
+        };
+    }
 
-//     var average_cost = ndx.groupAll().reduce(
+    if (column === "precipitation") {
+        return {
+            value: function () {
+                return maxDim.top(1)[0].precipitation;
+            }
+        };
+    }
 
-//         //Add a data entry
-//         //p and v by convention, p will keep track of the changes and v will be input values from the actual values from the dataset that will affect the values of p
+}
 
-//         //inline function adder
-//         function (p, v) {
-//             p.count++;
+function dim_min_groupAll(minDim, column) {
 
-//             if(p.totaldrinks<v.maxTemp){
-//                 p.totaldrinks=v.maxTemp;
-//             }else{
-//                 p.totaldrinks=p.totaldrinks;  
-//             }
+    if (column === "minTemp") {
+        return {
+            value: function () {
+                return minDim.bottom(1)[0].minTemp;
+            }
+        };
+    }
 
-//             // p.totaldrinks += +v.maxTemp;
-//             // p.averagedrinks = p.totaldrinks / p.count;
+    if (column === "precipitation") {
+        return {
+            value: function () {
+                return minDim.bottom(1)[0].precipitation;
+            }
+        };
+    }
 
-           
+}
 
-//             return p;
-//         },
+function dim_avg_groupAll(maxDim, minDim) {
 
-//         //inline function remover
+    return {
+        value: function () {
+            return (maxDim.top(1)[0].maxTemp + minDim.bottom(1)[0].minTemp) / 2;
+        }
 
-//         // Remov ethe data entry
-//         function (p, v) {
-//             p.count--;
-//             if (p.count == 0) {
-//                 p.totaldrinks = 0;
-//                 p.averagedrinks = 0;
-
-                          
-//             }
-//             else {
-//                 if(p.totaldrinks<v.maxTemp){
-//                     p.totaldrinks=v.maxTemp;
-//                 }else{
-//                     p.totaldrinks=p.totaldrinks;  
-//                 }
-
-//                 // p.totaldrinks -= +v.maxTemp
-//                 // p.averagedrinks = p.totaldrinks / p.count;
-
-              
-//             }
-//             return p;
-//         },
-
-//         //inline function initialiser
-
-//         //Initialise the Reducer
-//         function () {
-//             return { count: 0, totaldrinks: 0, averagedrinks: 0 }
-//         }
-//     );
-
-
-
-//     dc.numberDisplay(element)
-//         //.formatNumber(d3.format('.2'))
-//         .valueAccessor(function (d) {
-//             if (d.count == 0) {
-//                 return 0;
-//             }
-//             else {
-//                 if (product == "drinks") {
-                 
-//                     return d.averagedrinks;
-//                 }
-               
-//             }
-//         })
-//         .group(average_cost);
-// }
+    }
+}
