@@ -54,8 +54,6 @@ function getMonth(error, data) {
         $('.weather').show();
     })
 
-
-
     //When change budget is pressed, hide graphics screen and show budget selection screen
     $('#filterBudget').click(function () {
         $('#budgetId').slideDown(1000);
@@ -72,35 +70,21 @@ function getMonth(error, data) {
 
     })
 
-    //call function to filter data by month
-    filterData(data);
-
-
-    // // only call "filterData" after the dropdown option has been selected
-    // $("#monthSelector").change(function () {
-    //     filterData(data);
-    // });
+    // only call "filterData" after the dropdown option has been selected
+    $("#monthSelector").change(function () {
+        filterData(data);
+    }).change();
+    // we add .change() to trigger change() for the default option (January) 
 
 }
 
 
 function filterData(data) {
 
-    var monthSelected;
-
-    //if one option is selected
-    if ($('#monthSelector option:selected').length > 0) {
-        monthSelected = $('#monthSelector :selected').text();
-    }
-    //if not options are selected will take January that is the default option
-    if ($('#monthSelector option:selected').length == 0) {
-        monthSelected = "January";
-    }
 
     //get the text for the option selected
     var monthSelected = $('#monthSelector :selected').text();
 
-    //////////////////////////////////////////////////////////CHECK WHAT HAPPENS WHEN IS JANUARY!!!
     //this will create an object only containing the data for the month
     var dataMonth = data.filter(function (element) {
         return (element.month === monthSelected);
@@ -271,6 +255,7 @@ function createDataForGraphics(data, filteredBy) {
 
     //weather graphics
     if (filteredBy === 'Weather') {
+        createPrecipitationChart(ndx);
         show_max_weather(ndx, 'maxTemp', "#hostel_maxtem");
         show_min_weather(ndx, 'minTemp', "#meals_mintem");
         show_avg_temp(ndx, 'maxTemp', 'minTemp', "#drinks_avgtemp");
@@ -321,6 +306,38 @@ function createCurrencyChart(ndx) {
 };
 
 
+function createPrecipitationChart(ndx) {
+
+    var dimPrecipitation = ndx.dimension(function (d) {
+        if (d.precipitation >= 85) {
+            return "Hight";
+        }
+        if (d.precipitation < 85 && d.precipitation >= 40) {
+            return "Medium";
+        }
+        else {
+            return "Low";
+        }
+    });
+
+    var groupPrecipitation = dimPrecipitation.group();  // or groupAll()??
+
+    //console.log(groupPrecipitation.groupAll());
+
+    dc.pieChart("#currency")
+        .useViewBoxResizing(true) // allows chart to be responsive
+        // .height(80)
+        // .radius(40)
+        .dimension(dimPrecipitation)
+        .group(groupPrecipitation)
+        .transitionDuration(1500);
+};
+
+
+
+
+
+
 function createTotalDailyBudget(ndx) {
 
     var cityDim = ndx.dimension(dc.pluck('city'));
@@ -348,6 +365,7 @@ function createTotalDailyBudget(ndx) {
         .elasticY(true)
         .x(d3.scale.ordinal())
         .xUnits(dc.units.ordinal)
+        .barPadding(0.3)
         .xAxisLabel('City')
         .yAxisLabel('Total daily budget')
         .yAxis().ticks(8);
@@ -433,8 +451,6 @@ function createCorrelationTemp(data, ndx) {
 
     var precipitationGroup = dimPreci.group();
 
-    // console.log(precipitationGroup.all());
-
     var composite = dc.compositeChart("#correlation")
     composite
         .useViewBoxResizing(true) // allows chart to be responsive
@@ -497,6 +513,10 @@ function createTable(ndx) {
         .size(Infinity)
         .columns([
             {
+                label: "Month",
+                format: function (d) { return d.month }
+            },
+            {
                 label: "City",
                 format: function (d) { return d.city }
             },
@@ -543,6 +563,10 @@ function createTable(ndx) {
             {
                 label: "Visitors per year\n (Millions)",
                 format: function (d) { return d.visitorsCity }
+            },
+            {
+                label: "Find out more...",
+                format: function (d) { return d.wikiLink }
             }
         ])
 
@@ -759,30 +783,30 @@ function show_avg_temp(ndx, max, min, element) {
     dc.numberDisplay(element)
         .group(dim_avg_groupAll(maxDim, minDim))
         .valueAccessor(x => x)
-        .formatNumber(d3.format('.2'))
+        .formatNumber(d3.format('.1f'))
         .render();
 
 }
 
 
 function dim_max_groupAll(maxDim, column) {
-    
-        return {
-            value: function () {
-                return maxDim.top(1)[0][column];
-            }
-        };
-  
+
+    return {
+        value: function () {
+            return maxDim.top(1)[0][column];
+        }
+    };
+
 
 }
 
 function dim_min_groupAll(minDim, column) {
-   
-        return {
-            value: function () {
-                return minDim.bottom(1)[0][column];
-            }
-        }; 
+
+    return {
+        value: function () {
+            return minDim.bottom(1)[0][column];
+        }
+    };
 
 }
 
