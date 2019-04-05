@@ -766,42 +766,23 @@ function show_avg_temp(ndx, max, min, element) {
 
 
 function dim_max_groupAll(maxDim, column) {
-
-    if (column === "maxTemp") {
+    
         return {
             value: function () {
-                return maxDim.top(1)[0].maxTemp;
+                return maxDim.top(1)[0][column];
             }
         };
-    }
-
-    if (column === "precipitation") {
-        return {
-            value: function () {
-                return maxDim.top(1)[0].precipitation;
-            }
-        };
-    }
+  
 
 }
 
 function dim_min_groupAll(minDim, column) {
-
-    if (column === "minTemp") {
+   
         return {
             value: function () {
-                return minDim.bottom(1)[0].minTemp;
+                return minDim.bottom(1)[0][column];
             }
-        };
-    }
-
-    if (column === "precipitation") {
-        return {
-            value: function () {
-                return minDim.bottom(1)[0].precipitation;
-            }
-        };
-    }
+        }; 
 
 }
 
