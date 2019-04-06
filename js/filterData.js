@@ -15,7 +15,10 @@ function getMonth(error, data) {
         $('#budgetId').addClass('hide');
         $('#weatherId').addClass('hide');
         $('#grafId').addClass('hide');
-        $('#graphButtons').addClass('hide');
+        $('#sidebar-collapse').addClass('hide');
+
+
+        //  $('#graphButtons').addClass('hide');
     })
 
     //When choose budget button is pressed, hide month selection page and show budget selection page
@@ -35,13 +38,16 @@ function getMonth(error, data) {
         $('#budgetId').addClass('hide');
         $('#weatherId').addClass('hide');
         $('#grafId').addClass('hide');
-        $('#graphButtons').addClass('hide');
+        $('#sidebar-collapse').addClass('hide');
+
+        //  $('#graphButtons').addClass('hide');
     })
 
     $("#resultsBudget").click(function () {
         $('#budgetId').slideUp(1000);
         $('#grafId').removeClass('hide').slideDown(1000);
-        $('#graphButtons').removeClass('hide').show(1000);
+        $('#sidebar-collapse').removeClass('hide').show(1000);
+        //   $('#graphButtons').removeClass('hide').show(1000);
         $('.weather').hide();
         $('.budget').show();
     })
@@ -49,7 +55,8 @@ function getMonth(error, data) {
     $("#resultsWeather").click(function () {
         $('#weatherId').slideUp(1000);
         $('#grafId').removeClass('hide').slideDown(1000);
-        $('#graphButtons').removeClass('hide').show(1000);
+        $('#sidebar-collapse').removeClass('hide').show(1000);
+        //$('#graphButtons').removeClass('hide').show(1000);
         $('.budget').hide();
         $('.weather').show();
     })
@@ -58,7 +65,9 @@ function getMonth(error, data) {
     $('#filterBudget').click(function () {
         $('#budgetId').slideDown(1000);
         $('#grafId').addClass('hide');
-        $('#graphButtons').addClass('hide');
+        $('#sidebar-collapse').addClass('hide');
+
+        // $('#graphButtons').addClass('hide');
 
     })
 
@@ -66,7 +75,9 @@ function getMonth(error, data) {
     $('#filterWeather').click(function () {
         $('#weatherId').slideDown(1000);
         $('#grafId').addClass('hide');
-        $('#graphButtons').addClass('hide');
+        $('#sidebar-collapse').addClass('hide');
+
+        //  $('#graphButtons').addClass('hide');
 
     })
 
@@ -125,8 +136,8 @@ function filterByBudget(dataMonth) {
 
 
         if (maxBudgetValue == "") {
-            document.getElementById("infoMessage").innerHTML = `<h2 class="text-danger">Please enter the budget</h2>`;
-
+            //  document.getElementById("infoMessage").innerHTML = `<h2 class="text-danger">Please enter the budget</h2>`;
+            alert('Please enter the budget')
         }
         else {
 
@@ -151,8 +162,8 @@ function filterByWeather(dataMonth) {
         var maxTemp = document.getElementById("maxTemp").value;
 
         if (minTemp == "" && maxTemp == "") {
-            //alert("Please enter a minumun, a maximun temperature or both");
-            document.getElementById("infoMessage").innerHTML = `<h2 class="text-danger">Please enter a minumun, a maximun temperature or both</h2>`;
+            alert("Please enter a minumun, a maximun temperature or both");
+            // document.getElementById("infoMessage").innerHTML = `<h2 class="text-danger">Please enter a minumun, a maximun temperature or both</h2>`;
 
         }
         else if (minTemp != "" && maxTemp == "") {
@@ -189,7 +200,8 @@ function filterByWeather(dataMonth) {
 
         }
         else if (minTemp != "" && maxTemp != "" && maxTemp < minTemp) {
-            document.getElementById("infoMessage").innerHTML = `<h2 class="text-danger">The maximune temperature must be higher than the minimun</h2>`;
+            alert("The maximune temperature must be higher than the minimun");
+            //   document.getElementById("infoMessage").innerHTML = `<h2 class="text-danger">The maximune temperature must be higher than the minimun</h2>`;
 
         }
 
@@ -197,19 +209,18 @@ function filterByWeather(dataMonth) {
 };
 
 function citiesMatchingCriteria(data, filteredBy) {
-    document.getElementById("infoMessage").innerHTML = "";
+    //document.getElementById("infoMessage").innerHTML = "";
 
     if (checkIfObjectEmpty(data)) {
         $("#charts").hide();
         if (filteredBy == "Budget") {
-            document.getElementById("infoMessage").innerHTML = `<h2 class="text-danger">We're sorry but Europe is not that cheap!</h2>`;
-
-            // alert("We're sorry but Europe is not that cheap!");
+            //document.getElementById("infoMessage").innerHTML = `<h2 class="text-danger">We're sorry but Europe is not that cheap!</h2>`;
+            alert("We're sorry but Europe is not that cheap!");
         }
         else {
-            document.getElementById("infoMessage").innerHTML = `<h2 class="text-danger">We're sorry but we don't cities with that average weather</h2>`;
+            //document.getElementById("infoMessage").innerHTML = `<h2 class="text-danger">We're sorry but we don't cities with that average weather</h2>`;
 
-            //alert("We're sorry but we don't cities with that average weather");
+            alert("We're sorry but we don't cities with that average weather");
         }
     }
     else {
@@ -246,3 +257,63 @@ function convertToInteger(dataMonth) {
 }
 
 
+function createDataForGraphics(data, filteredBy) {
+
+    var ndx = crossfilter(data);
+
+    fiterBy(ndx, "#filterByRegion");
+    fiterBy(ndx, "#filterByCountry");
+    fiterBy(ndx, "#filterByCity");
+    createCurrencyChart(ndx);
+    createRowChart(ndx);
+    createTable(ndx);
+
+
+    //Budget graphics
+    if (filteredBy === 'Budget') {
+        createTotalDailyBudget(ndx);
+        createCorrelationCharts(data, ndx)
+        show_avg(ndx, "hostel", "#hostel_maxtem");
+        show_avg(ndx, "meals", "#meals_mintem");
+        show_avg(ndx, "drinks", "#drinks_avgtemp");
+        show_avg(ndx, "transport", "#transport_maxpreci");
+        show_avg(ndx, "attractions", "#attractions_minpreci");
+    }
+
+    //weather graphics
+    if (filteredBy === 'Weather') {
+        createPrecipitationChart(ndx);
+        show_max_weather(ndx, 'maxTemp', "#hostel_maxtem");
+        show_min_weather(ndx, 'minTemp', "#meals_mintem");
+        show_avg_temp(ndx, 'maxTemp', 'minTemp', "#drinks_avgtemp");
+
+        show_max_weather(ndx, 'precipitation', "#transport_maxpreci");
+        show_min_weather(ndx, 'precipitation', "#attractions_minpreci");
+
+
+        cityTemp(ndx);
+        createCorrelationTemp(data, ndx);
+
+
+    }
+    dc.renderAll();
+}
+
+function fiterBy(ndx, element) {
+
+    var dim;
+    if (element == "#filterByRegion") {
+        dim = ndx.dimension(dc.pluck('region'));
+    } else if (element == "#filterByCountry") {
+        dim = ndx.dimension(dc.pluck('country'));
+    } else if (element == "#filterByCity") {
+        dim = ndx.dimension(dc.pluck('city'));
+    }
+
+    var group = dim.group();
+
+    dc.selectMenu(element)
+        .multiple(true)
+        .dimension(dim)
+        .group(group);
+};

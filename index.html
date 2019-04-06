@@ -1,296 +1,388 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>HolidaysYa</title>
-    <link rel="stylesheet" href="static/css/bootstrap.min.css" type="text/css" />
-    <link rel="stylesheet" href="static/css/dc.min.css" type="text/css" />
-    <link rel="stylesheet" href="static/css/custom.min.css" type="text/css" />
-    <link rel="stylesheet" href="static/css/style.css" type="text/css" />
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Eurotrip - Dashboard</title>
+	<link href="css/bootstrap.min.css" rel="stylesheet">
+	<link href="css/font-awesome.min.css" rel="stylesheet">
+	<link href="css/styles.css" rel="stylesheet">
+	<!-- my stylesheet -->
+	<link href="css/style.css" rel="stylesheet">
 
+
+	<!--Custom Font-->
+	<link href="https://fonts.googleapis.com/css?family=Montserrat:300,300i,400,400i,500,500i,600,600i,700,700i"
+		rel="stylesheet">
 
 </head>
 
 <body>
-    <header class="container-fluid">
-        <!-- navbar bootstrap -->
-        <nav class="navbar navbar-default">
-            <div class="container-fluid">
-                <!-- Brand and toggle get grouped for better mobile display -->
-                <div class="navbar-header">
-                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
-                        data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-                        <span class="sr-only">Toggle navigation</span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-                    <a class="navbar-brand" href="#">HolidaysYa</a>
-                </div>
+	<nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+					data-target="#sidebar-collapse"><span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span></button>
+				<a class="navbar-brand" href="#"><span>Eurotrip</span>Dashboard</a>
+				<ul class="nav navbar-top-links navbar-right">
+					<li class="dropdown"><a class="dropdown-toggle" href="#">
+							<em class="fa fa-facebook"></em>
+						</a>
 
-                <!-- Collect the nav links, forms, and other content for toggling -->
-                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+					</li>
+					<li class="dropdown"><a class="dropdown-toggle" href="#">
+							<em class="fa fa-twitter"></em>
+						</a>
 
-                    <ul class="nav navbar-nav navbar-right hide" id="graphButtons">
+					</li>
+					<li class="dropdown"><a class="dropdown-toggle" href="#">
+							<em class="fa fa-linkedin"></em>
+						</a>
 
-                        <!-- http://bl.ocks.org/d3noob/6584483 here I lear about the resetAll-->
+					</li>
+
+
+
+				</ul>
+			</div>
+		</div><!-- /.container-fluid -->
+	</nav>
+
+	<section id="monthId">
+		<h3>Welcome!</h3>
+		<p>We have gather data from the main cities in Europe to help you deciding which is the best place for
+			your next holidays in Europe.</p>
+		<hr>
+		<h2>Please select the month that you want to travel</h2>
+		<select id="monthSelector" name="months">
+			<option value="January">January</option>
+			<option value="February">February</option>
+			<option value="March">March</option>
+			<option value="April">April</option>
+			<option value="May">May</option>
+			<option value="June">June</option>
+			<option value="July">July</option>
+			<option value="August">August</option>
+			<option value="September">September</option>
+			<option value="October">October</option>
+			<option value="November">November</option>
+			<option value="December">December</option>
+		</select>
+
+		<div class="buttons">
+			<button id="chooseWeather" class="btn btn-success">Choose by temperature</button>
+			<button id="chooseBudget" class="btn btn-info">Choose by budget</button>
+		</div>
+		<div id="error"></div>
+	</section>
+
+	<section id="budgetId" class="hide">
+		<label for="maxBudget">What is your maximun budget?</label>
+		<input type="number" id="maxBudget" name="maxBudget" required />
+		<div class="buttons">
+			<!-- <button class="btn btn-danger goback">Change month</button> -->
+			<button class="btn btn-success" id="resultsBudget" onclick="showTitle('Budget')">show cities</button>
+		</div>
+	</section>
+
+	<section id="weatherId" class="hide">
+		<label for="minTemp">Minimun temperature</label>
+		<input type="number" id="minTemp" name="minTemp" />
+		<label for="maxTemp">Maximun temperature</label>
+		<input type="number" id="maxTemp" name="maxTemp" />
+		<div class="buttons">
+			<!-- <button class="btn btn-danger goback">Change month</button> -->
+			<button class="btn btn-success" id="resultsWeather" onclick="showTitle('Weather')">show cities</button>
+		</div>
+	</section>
+
+	
+
+	
+	</section>
+
+	<div id="sidebar-collapse" class="col-sm-2 sidebar hide">
+
+
+		<ul class="nav menu">
+			<li><a class="goback"><em class="fa fa-calendar">&nbsp;</em> Change month</a></li>
+			<!-- <li><a href="charts.html"><em class="fa fa-bar-chart">&nbsp;</em> Charts</a></li> -->
+			<li class="parent "><a data-toggle="collapse" href="#sub-item-1">
+					<em class="fa fa-filter">&nbsp;</em>Update filter<span data-toggle="collapse" href="#sub-item-1"
+						class="icon pull-right"><em class="fa fa-plus"></em></span>
+				</a>
+				<ul class="children collapse" id="sub-item-1">
+					<li class="budget">
+						<form role="search">
+							<div class="form-group">
+								<label for="maxBudget">What is your maximun budget?</label>
+								<input type="number" class="form-control" name="maxBudget2" required />
+								<div class="buttons">
+									<button class="btn btn-success" id="filterBudget">show cities</button>
+								</div>
+							</div>
+						</form>
+					</li>
+
+					<li class="weather">
+						<form role="search">
+							<div class="form-group">
+								<label for="minTemp">Minimun temperature</label>
+								<input type="number" class="form-control" name="minTemp2" />
+								<label for="maxTemp">Maximun temperature</label>
+								<input type="number" class="form-control" name="maxTemp2" />
+								<div class="buttons">
+									<button class="btn btn-success" id="filterWeather">show cities</button>
+
+								</div>
+							</div>
+						</form>
+					</li>
+
+				</ul>
+			</li>
+			<li><a href="#"><em class="fa fa-envelope">&nbsp;</em>Contact us</a></li>
+
+		</ul>
+	</div>
+	<!--/.sidebar-->
+
+
+
+
+
+	<!-- this section is hidden at the beggining -->
+
+	<section class="container-fluid hide" id="grafId" class="hide">
+		<div class="col-sm-10 col-sm-offset-2 main">
+
+
+			<!-- Should I use the infor message for title and error??? -->
+
+			<!-- title -->
+
+
+			<div class="row">
+				<div class="col-md-6">
+					<h2 id="Title"></h2>
+				</div>
+				<div class="col-md-6 reset">
+					<!-- http://bl.ocks.org/d3noob/6584483 here I lear about the resetAll-->
                         <!-- https://www.w3docs.com/snippets/html/how-to-create-an-html-button-that-acts-like-a-link.html here I learnt how to made a button behave as a link-->
-
 
                         <button class="btn btn-info"
                             onclick="window.location.href = 'javascript:dc.filterAll(); dc.renderAll();';">Reset
                             All</button>
+					</div>
+			</div>
+			<!--/.row-->
 
-                        <!-- Button trigger modal
-                        <button class="btn btn-warning" data-toggle="modal" data-target="#myModal">Change month</button> -->
-
-
-
-
-                        <li><button class="btn btn-warning goback">Change month</button></li>
-                        <li><button class="btn btn-success budget" id="filterBudget">Change budget</button></li>
-                        <li><button class="btn btn-success weather" id="filterWeather">Change temperature</button></li>
-                    </ul>
-                </div>
-                <!-- /.navbar-collapse -->
-            </div>
-            <!-- /.container-fluid -->
-        </nav>
-        <!-- navbar end -->
-    </header>
-
-    <section id="monthId">
-        <h2>Please select the month that you want to travel</h2>
-        <select id="monthSelector" name="months">
-            <option value="January">January</option>
-            <option value="February">February</option>
-            <option value="March">March</option>
-            <option value="April">April</option>
-            <option value="May">May</option>
-            <option value="June">June</option>
-            <option value="July">July</option>
-            <option value="August">August</option>
-            <option value="September">September</option>
-            <option value="October">October</option>
-            <option value="November">November</option>
-            <option value="December">December</option>
-        </select>
-
-        <div class="buttons">
-            <button id="chooseWeather" class="btn btn-success">Choose by temperature</button>
-            <button id="chooseBudget" class="btn btn-info">Choose by budget</button>
-        </div>
-        <div id="error"></div>
-    </section>
-
-    <section id="budgetId" class="hide">
-        <label for="maxBudget">What is your maximun budget?</label>
-        <input type="number" id="maxBudget" name="maxBudget" required />
-        <div class="buttons">
-            <button class="btn btn-danger goback">Change month</button>
-            <button class="btn btn-success" id="resultsBudget" onclick="showTitle('Budget')">show cities</button>
-        </div>
-    </section>
-
-    <section id="weatherId" class="hide">
-        <label for="minTemp">Minimun temperature</label>
-        <input type="number" id="minTemp" name="minTemp" />
-        <label for="maxTemp">Maximun temperature</label>
-        <input type="number" id="maxTemp" name="maxTemp" />
-        <div class="buttons">
-            <button class="btn btn-danger goback">Change month</button>
-            <button class="btn btn-success" id="resultsWeather" onclick="showTitle('Weather')">show cities</button>
-        </div>
-    </section>
-
-    <section class="container-fluid hide" id="grafId">
+			<hr>
 
 
-        <div id="infoMessage"></div>
+			<!-- SelectCharts -->
+			<div class="row">
+				<div class="col-md-4 no-padding text-center filters">
+					<h3>Filter by Region</h3>
+					<div id="filterByRegion"></div>
 
-        <div class="clearfix"></div>
+				</div>
+				<div class="col-md-4 no-padding text-center filters">
+					<h3>Filter by Country</h3>
+					<div id="filterByCountry"></div>
 
-
-        <div id="charts">
-
-            <div class="row">
-                <div class="col-md-12 col-sm-12 col-xs-12">
-                    <div id="Title"></div>
-                </div>
-            </div>
-
-
-            <div class="row">
-                <div class="col-md-2 col-sm-12 col-xs-12">
-                    <h2>Filter by Region</h2>
-                </div>
-                <div class="col-md-2 col-sm-12 col-xs-12">
-                    <div id="filterByRegion"></div>
-                </div>
-
-                <div class="col-md-2 col-sm-12 col-xs-12">
-                    <h2>Filter by Country</h2>
-                </div>
-                <div class="col-md-2 col-sm-12 col-xs-12">
-                    <div id="filterByCountry"></div>
-                </div>
-
-                <div class="col-md-2 col-sm-12 col-xs-12">
-                    <h2>Filter by City</h2>
-                </div>
-                <div class="col-md-2 col-sm-12 col-xs-12">
-                    <div id="filterByCity"></div>
-                </div>
-            </div>
+				</div>
+				<div class="col-md-4 no-padding text-center filters">
+					<h3>Filter by City</h3>
+					<div id="filterByCity"></div>
+				</div>
 
 
-            <div class="row">
-                <div class="col-md-offset-1 col-md-2 col-sm-4 col-xs-6">
-                    <div class="x_panel">
-                        <div class="x_title">
-                            <h2>Hostel</h2>
-                            <div class="clearfix"></div>
-                        </div>
-                        <div class="x_content numberDisplay" id="hostel_maxtem">
-                        </div>
-                    </div>
-                </div>
+			</div>
+			<!--/.row-->
 
-                <div class="col-md-2 col-sm-4 col-xs-6">
-                    <div class="x_panel">
-                        <div class="x_title">
-                            <h2>Meals</h2>
-                            <div class="clearfix"></div>
-                        </div>
-                        <div class="x_content numberDisplay" id="meals_mintem">
-                        </div>
-                    </div>
-                </div>
+			<hr>
 
-                <div class="col-md-2 col-sm-4 col-xs-6">
-                    <div class="x_panel">
-                        <div class="x_title">
-                            <h2>Drinks</h2>
-                            <div class="clearfix"></div>
-                        </div>
-                        <div class="x_content numberDisplay" id="drinks_avgtemp">
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-2 col-sm-4 col-xs-6">
-                    <div class="x_panel">
-                        <div class="x_title">
-                            <h2>Transport</h2>
-                            <div class="clearfix"></div>
-                        </div>
-                        <div class="x_content numberDisplay" id="transport_maxpreci">
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-2 col-sm-4 col-xs-6">
-                    <div class="x_panel">
-                        <div class="x_title">
-                            <h2>Attractions</h2>
-                            <div class="clearfix"></div>
-                        </div>
-                        <div class="x_content numberDisplay" id="attractions_minpreci">
-                        </div>
-                    </div>
-                </div>
-            </div>
+			<!-- NumberDisplays -->
+			<div class="panel panel-container">
+				<div class="row">
+					<div class="col-xs-12 col-sm-6 col-md-2 no-padding">
+						<div class="panel panel-teal panel-widget border-right">
+							<div class="row no-padding"><em class="budget fa fa-xl fa-thumbs-o-up color-blue"></em>
+								<div class="large"></div>
+								<div class="text-muted">Number of matches</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-xs-12 col-sm-6 col-md-2 no-padding">
+						<div class="panel panel-teal panel-widget border-right">
+							<div class="row no-padding"><em class="budget fa fa-xl fa-hotel color-blue"></em><em
+									class="weather fa fa-xl fa fa-thermometer color-blue"></em>
+								<div class="large" id="hostel_maxtem"></div>
+								<div class="text-muted">Hostel/MaxTemp</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-xs-12 col-sm-6 col-md-2 no-padding">
+						<div class="panel panel-teal panel-widget border-right">
+							<div class="row no-padding"><em class="budget fa fa-xl fa-cutlery color-blue"></em><em
+									class="weather fa fa-xl fa fa-thermometer-0 color-blue"></em>
+								<div class="large" id="meals_mintem"></div>
+								<div class="text-muted">Meals/MinTemp</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-xs-12 col-sm-6 col-md-2 no-padding">
+						<div class="panel panel-blue panel-widget border-right">
+							<div class="row no-padding"><em class="budget fa fa-xl fa-glass color-orange"></em><em
+									class="weather fa fa-xl fa fa-thermometer-2 color-blue"></em>
+								<div class="large" id="drinks_avgtemp"></div>
+								<div class="text-muted">Drinks/Avg.Temp</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-xs-12 col-sm-6 col-md-2 no-padding">
+						<div class="panel panel-orange panel-widget border-right">
+							<div class="row no-padding"><em class="budget fa fa-xl fa-train color-teal"></em><em
+									class="weather fa fa-xl fa fa-umbrella color-blue"></em>
+								<div class="large" id="transport_maxpreci"></div>
+								<div class="text-muted">Transport/Max. Precipitation</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-xs-12 col-sm-6 col-md-2 no-padding">
+						<div class="panel panel-red panel-widget ">
+							<div class="row no-padding"><em class="budget fa fa-xl fa-institution color-red"></em><em
+									class="weather fa fa-xl fa fa-umbrella color-blue"></em>
+								<div class="large" id="attractions_minpreci"></div>
+								<div class="text-muted">Attractions/Min. Precipitation</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!--/.row-->
+			</div>
+
+			<!-- charts -->
+			<div class="row">
+				<div class="col-md-3">
+
+					<div class="panel panel-default">
+						<div class="panel-heading">
+							Site Traffic Overview
+
+							<span class="pull-right clickable panel-toggle panel-button-tab-left"><em
+									class="fa fa-toggle-up"></em></span></div>
+						<div class="panel-body">
+							<div class="canvas-wrapper">
+								<div class="main-chart" id="rowChart"></div>
+							</div>
+						</div>
+					</div>
+
+				</div>
+
+				<div class="col-md-9">
+
+					<div class=row>
+						<div class="col-md-12">
+							<div class="panel panel-default">
+								<div class="panel-heading">
+									Site Traffic Overview
+
+									<span class="pull-right clickable panel-toggle panel-button-tab-left"><em
+											class="fa fa-toggle-up"></em></span></div>
+								<div class="panel-body">
+									<div class="canvas-wrapper">
+										<div class="main-chart" id="dailyBudget_Temp"></div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class=row>
+						<div class="col-md-12">
+							<div class=row>
+
+								<div class="col-md-4">
+									<div class="panel panel-default">
+										<div class="panel-heading">
+											Site Traffic Overview
+
+											<span class="pull-right clickable panel-toggle panel-button-tab-left"><em
+													class="fa fa-toggle-up"></em></span></div>
+										<div class="panel-body">
+											<div class="canvas-wrapper">
+												<div class="main-chart" id="currency_precipitation"></div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="col-md-8">
+									<div class="panel panel-default">
+										<div class="panel-heading">
+											Site Traffic Overview
+
+											<span class="pull-right clickable panel-toggle panel-button-tab-left"><em
+													class="fa fa-toggle-up"></em></span></div>
+										<div class="panel-body">
+											<div class="canvas-wrapper">
+												<div class="main-chart" id="correlation"></div>
+											</div>
+										</div>
+									</div>
+								</div>
+
+							</div>
+						</div>
+					</div>
+
+				</div>
 
 
+			</div>
+			<!--/.row-->
 
-            <div class="row">
-                <div class="col-md-4 col-sm-12 col-xs-12">
-                    <div class="x_panel">
-                        <div class="x_title">
-                            <h2>Plain Page</h2>
-                            <div class="clearfix"></div>
-                        </div>
-                        <div class="x_content" id="rowChart">
+			<!-- table -->
+			<div class="row">
+				<div class="col-md-12">
+					<div class="panel panel-default">
+						<div class="panel-heading">
+							Table
+							<span class="pull-right clickable panel-toggle panel-button-tab-left"><em
+									class="fa fa-toggle-up"></em></span></div>
+						<div class="panel-body">
+							<div class="canvas-wrapper">
+								<div class="main-chart table-hover" id="table" height="200" width="600"></div>
+							</div>
+						</div>
+					</div>
 
-                        </div>
-                    </div>
-                </div>
+				</div>
 
-                <div class="col-md-8 col-sm-12 col-xs-12">
-                    <div class="row">
-                        <div class="col-md-12 col-sm-12 col-xs-12">
-                            <div class="x_panel">
-                                <div class="x_title">
-                                    <h2>Plain Page</h2>
-                                    <div class="clearfix"></div>
-                                </div>
-                                <div class="x_content" id="dailyBudget_Temp">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                   
-                    <div class="row">
-                        <div class="col-md-4 col-sm-4 col-xs-6">
-                            <div class="x_panel">
-                                <div class="x_title">
-                                    <h2>Plain Page</h2>
-                                    <div class="clearfix"></div>
-                                </div>
-                                <div class="x_content" id="currency_precipitation">
-                                </div>
-                            </div>
-                        </div>
+			</div>
 
-                        <div class="col-md-8 col-sm-12 col-xs-12">
-                            <div class="x_panel">
-                                <div class="x_title">
-                                    <h2>Plain Page</h2>
-                                    <div class="clearfix"></div>
-                                </div>
-                                <div class="x_content" id="correlation">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+		</div>
+	</section>
+	<!--/.main-->
 
+	<script src="js/jquery-3.3.1.js"></script>
+	<script type="text/javascript" src="js/d3.min.js"></script>
+	<script type="text/javascript" src="js/crossfilter.min.js"></script>
+	<script type="text/javascript" src="js/dc.min.js"></script>
+	<script type="text/javascript" src="js/queue.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/custom.js"></script>
+	<script type="text/javascript" src="js/filterData.js"></script>
+	<script type="text/javascript" src="js/common.js"></script>
+	<script type="text/javascript" src="js/createChartsBudget.js"></script>
+	<script type="text/javascript" src="js/createChartsWeather.js"></script>
 
-            <div class="row">
-                <div class="col-md-12 col-sm-12 col-xs-12">
-                    <div class="x_panel">
-                        <div class="x_title">
-                            <h2>Plain Page</h2>
-                            <div class="clearfix"></div>
-                        </div>
-                        <div class="x_content">
-
-                            <table class='table table-hover' id='table'>
-                            </table>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-
-
-
-    </section>
-
-
-
-    <!--jQuery has to be the first one-->
-    <script type="text/javascript" src="static/js/jquery-3.3.1.js"></script>
-    <script type="text/javascript" src="static/js/d3.min.js"></script>
-    <script type="text/javascript" src="static/js/crossfilter.min.js"></script>
-    <script type="text/javascript" src="static/js/dc.min.js"></script>
-    <script type="text/javascript" src="static/js/queue.min.js"></script>
-    <script type="text/javascript" src="static/js/bootstrap.min.js"></script>
-    <script type="text/javascript" src="static/js/filterData.js"></script>
-    <script type="text/javascript" src="static/js/createCharts.js"></script>
 
 </body>
 

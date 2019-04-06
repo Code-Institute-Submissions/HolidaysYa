@@ -1,43 +1,43 @@
 html,body{
     height: 100%;
     width: 100%;
-    background-color: lightgrey;
+    /* background-color: lightgrey; */
 }
 
 #monthId {
     color:white;
-    height: 100vh;
+    height: 80vh;
     width: 100vw;
     padding: 25px;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    background-color: #777777;
+    /* background-color: #777777; */
 }
 
 #budgetId {
     padding: 25px;
 
-    height: 100vh;
+    height: 80vh;
     width: 100vw;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    background-color: rgb(195, 199, 199);
+    /* background-color: rgb(195, 199, 199); */
 }
 
 #weatherId {
     padding: 25px;
 
-    height: 100vh;
+    height: 80vh;
     width: 100vw;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    background-color: lightblue;
+    /* background-color: lightblue; */
 }
 
 #grafId {
@@ -45,7 +45,7 @@ html,body{
     width: 100vw;
     padding: 25px;
 
-    background-color: lightgrey;
+    /* background-color: lightgrey; */
 
 }
 
@@ -57,7 +57,7 @@ html,body{
 }
 
 
-/* Nav Bar */
+/* Nav Bar
 .navbar {
     margin: 0px;
 }
@@ -74,7 +74,7 @@ html,body{
 
 .navbar-default .navbar-nav>li>a {
     color: #ffffff;
-}
+} */
 
 select {
     color: black;
@@ -100,3 +100,22 @@ https://github.com/dc-js/dc.js/issues/731
     text-align: center;
 }
 
+.number-display{
+    font-size: 25px;
+}
+
+.dc-select-menu {
+    width: 100%;
+    height:200px;
+    border: none;
+    overflow: auto;
+    background: white;
+    /* display: inline-block; */
+    text-align: center;
+    font-size: 15px;
+}
+
+.reset{
+   margin-top: 50px;
+    text-align: right;
+}
