@@ -296,7 +296,7 @@ function createCurrencyChart(ndx) {
     var dimCurrency = ndx.dimension(dc.pluck('currencyCode'))
     var groupCurrency = dimCurrency.group();
 
-    dc.pieChart("#currency")
+    dc.pieChart("#currency_precipitation")
         .useViewBoxResizing(true) // allows chart to be responsive
         // .height(80)
         // .radius(40)
@@ -324,7 +324,7 @@ function createPrecipitationChart(ndx) {
 
     //console.log(groupPrecipitation.groupAll());
 
-    dc.pieChart("#currency")
+    dc.pieChart("#currency_precipitation")
         .useViewBoxResizing(true) // allows chart to be responsive
         // .height(80)
         // .radius(40)
@@ -720,7 +720,15 @@ function show_avg(ndx, product, element) {
 
 
     dc.numberDisplay(element)
-        //.formatNumber(d3.format('.2'))
+        .formatNumber(function (d) {
+            if (product != "transport") {
+                return "€" + d3.format(".2s")(d);
+            }
+            else {
+                return "€" + d3.format(".0s")(d);
+            }
+
+        })
         .valueAccessor(function (d) {
             if (d.count == 0) {
                 return 0;
@@ -755,7 +763,7 @@ function show_max_weather(ndx, column, element) {
     dc.numberDisplay(element)
         .group(dim_max_groupAll(maxDim, column))
         .valueAccessor(x => x)
-        .formatNumber(d3.format('.2'))
+        .formatNumber(d3.format('.2s'))
         .render();
 
 }
@@ -769,7 +777,7 @@ function show_min_weather(ndx, column, element) {
     dc.numberDisplay(element)
         .group(dim_min_groupAll(minDim, column))
         .valueAccessor(x => x)
-        .formatNumber(d3.format('.2'))
+        .formatNumber(d3.format('.2s'))
         .render();
 
 }
@@ -783,7 +791,7 @@ function show_avg_temp(ndx, max, min, element) {
     dc.numberDisplay(element)
         .group(dim_avg_groupAll(maxDim, minDim))
         .valueAccessor(x => x)
-        .formatNumber(d3.format('.1f'))
+        .formatNumber(d3.format('.2s'))
         .render();
 
 }
