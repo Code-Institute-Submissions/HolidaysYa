@@ -235,6 +235,7 @@ function createDataForGraphics(data, filteredBy) {
     createCurrencyChart(ndx);
     createRowChart(ndx);
     createTable(ndx);
+    countCities(ndx);
 
 
     //Budget graphics
@@ -278,5 +279,6 @@ function fiterBy(ndx, element) {
     dc.selectMenu(element)
         .multiple(true)
         .dimension(dim)
+        .title(function(d){return d.key;})
         .group(group);
 };

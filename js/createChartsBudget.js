@@ -221,3 +221,4 @@ function show_avg(ndx, product, element) {
 }
 
 
+

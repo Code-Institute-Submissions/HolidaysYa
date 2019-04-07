@@ -84,3 +84,54 @@ function createTable(ndx) {
 function showTitle(option) {
     document.getElementById("Title").innerHTML = `<h2>Results By ${option}</h2>`;
 }
+
+
+// function countCities(ndx){
+
+//     var countChart = dc.dataCount("#mystats");
+//     countChart
+//     .dimension(ndx)
+//     .group(ndx.groupAll());
+
+
+// }
+
+function countCities(ndx) {
+
+    var total = ndx.groupAll().reduce(
+
+        //Add a data entry
+        //p and v by convention, p will keep track of the changes and v will be input values from the actual values from the dataset that will affect the values of p
+
+        //inline function adder
+        function (p, v) {
+            p.count++;
+            return p;
+        },
+
+        //inline function remover
+
+        // Remov ethe data entry
+        function (p, v) {
+            p.count--;          
+            return p;
+        },
+
+        //inline function initialiser
+
+        //Initialise the Reducer
+        function () {
+            return { count: 0 }
+        }
+    );
+
+
+
+    dc.numberDisplay('#totalCities')
+        .formatNumber(d3.format(".1s"))
+        .valueAccessor(function (d) {
+                return d.count;
+                })
+        .group(total);
+}
+
