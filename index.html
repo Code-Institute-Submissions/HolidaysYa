@@ -48,8 +48,8 @@
 
 	<section id="monthId">
 		<div class="overlay1">
-			<h2>Welcome!</h2>
-			<p>We have gather data from the main cities in Europe to help you deciding which is the best place for
+			<h1>Welcome!</h1>
+			<p>We have gather data from the most visited cities in Europe to help you deciding which is the best place for
 				your next holidays in Europe.</p>
 
 			<!-- <hr> -->
@@ -71,8 +71,8 @@
 			</select>
 
 			<div class="buttons">
-				<button id="chooseWeather" class="btn btn-info">Choose by temperature</button>
-				<button id="chooseBudget" class="btn btn-info">Choose by budget</button>
+				<button id="chooseWeather" class="btn btn-info button">Choose by temperature</button>
+				<button id="chooseBudget" class="btn btn-info button">Choose by budget</button>
 			</div>
 		</div>
 	</section>
@@ -83,7 +83,7 @@
 			<input type="number" id="maxBudget" name="maxBudget" required />
 			<div class="buttons">
 				<!-- <button class="btn btn-danger goback">Change month</button> -->
-				<button class="btn btn-info" id="resultsBudget" onclick="showTitle('Budget')">show cities</button>
+				<button class="btn btn-info button" id="resultsBudget" onclick="showTitle('Budget')">show cities</button>
 			</div>
 		</div>
 	</section>
@@ -102,7 +102,7 @@
 
 		<div class="buttons">
 			<!-- <button class="btn btn-danger goback">Change month</button> -->
-			<button class="btn btn-info" id="resultsWeather" onclick="showTitle('Weather')">show cities</button>
+			<button class="btn btn-info button" id="resultsWeather" onclick="showTitle('Weather')">show cities</button>
 		</div>
 		</div>
 	</section>
@@ -190,19 +190,19 @@
 
 
 			<!-- SelectCharts -->
-			<div class="row">
+			<div class="row filters">
 				<div class="col-md-4 no-padding text-center filters">
-					<h3>Filter by Region</h3>
+					<h3 class="filterTitles">Filter by Region</h3>
 					<div id="filterByRegion"></div>
 
 				</div>
 				<div class="col-md-4 no-padding text-center filters">
-					<h3>Filter by Country</h3>
+					<h3 class="filterTitles">Filter by Country</h3>
 					<div id="filterByCountry"></div>
 
 				</div>
 				<div class="col-md-4 no-padding text-center filters">
-					<h3>Filter by City</h3>
+					<h3 class="filterTitles">Filter by City</h3>
 					<div id="filterByCity"></div>
 				</div>
 
@@ -210,11 +210,9 @@
 			</div>
 			<!--/.row-->
 
-			<hr>
-
 
 			<!-- NumberDisplays -->
-			<div class="panel panel-container">
+			<div class="panel panel-container NumberDisplays">
 				<div class="row">
 					<div class="col-xs-12 col-sm-6 col-md-2 no-padding">
 						<div class="panel panel-teal panel-widget border-right">
@@ -289,8 +287,7 @@
 
 					<div class="panel panel-default">
 						<div class="panel-heading">
-							Site Traffic Overview
-
+							<div  id="titleRowChart"></div>
 							<span class="pull-right clickable panel-toggle panel-button-tab-left"><em
 									class="fa fa-toggle-up"></em></span></div>
 						<div class="panel-body">
@@ -308,8 +305,7 @@
 						<div class="col-md-12">
 							<div class="panel panel-default">
 								<div class="panel-heading">
-									Site Traffic Overview
-
+										<div  id="stackedComposite"></div>
 									<span class="pull-right clickable panel-toggle panel-button-tab-left"><em
 											class="fa fa-toggle-up"></em></span></div>
 								<div class="panel-body">
@@ -328,8 +324,7 @@
 								<div class="col-md-4">
 									<div class="panel panel-default">
 										<div class="panel-heading">
-											Site Traffic Overview
-
+												<div  id="pieChart"></div>
 											<span class="pull-right clickable panel-toggle panel-button-tab-left"><em
 													class="fa fa-toggle-up"></em></span></div>
 										<div class="panel-body">
@@ -342,8 +337,7 @@
 								<div class="col-md-8">
 									<div class="panel panel-default">
 										<div class="panel-heading">
-											Site Traffic Overview
-
+												<div  id="scatterChart"></div>
 											<span class="pull-right clickable panel-toggle panel-button-tab-left"><em
 													class="fa fa-toggle-up"></em></span></div>
 										<div class="panel-body">
@@ -369,7 +363,7 @@
 				<div class="col-md-12">
 					<div class="panel panel-default">
 						<div class="panel-heading">
-							Table
+							Summary table
 							<span class="pull-right clickable panel-toggle panel-button-tab-left"><em
 									class="fa fa-toggle-up"></em></span></div>
 						<div class="panel-body">

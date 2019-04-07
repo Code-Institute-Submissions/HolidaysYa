@@ -4,18 +4,19 @@ html,body{
     height: 100%;
     width: 100%;
     /* background-color: lightgrey; */
-   
 }
+
 h1,h2,h3,.navbar,p{
     margin: 0px;
     padding: 0px;
 }
 
+/* background section month selection, budget selection and weather selection */
+
 #monthId, #budgetId,#weatherId{
     /* color:white; */
     /* so it doesn't hide under the navbar */
-    paddings-top: 60px;  
-
+    /* padding-top: 60px;   */
     height: 100vh;
     width: 100vw;
   
@@ -34,92 +35,6 @@ h1,h2,h3,.navbar,p{
     background-size: cover;
 }
 
-.overlay1{
-    width: 100%;
-    height: 100%;
-    background-image: linear-gradient(to bottom, rgba(0,0,0,1), rgba(0,0,0,0));
-    /* background-color: rgba(0,0,0,0.4); */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column; 
-    text-align: center;
-    
-}
-.overlay{
-    width: 100%;
-    height: 100%;
-    background-image: linear-gradient(to bottom, rgba(0,0,0,0.5), rgba(0,0,0,0));
-    /* background-color: rgba(0,0,0,0.4); */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column; 
-    text-align: center;
-}
-
-#monthId h2{
-    color:white;
-    font-size: 60px;
-    font-weight: 400;
-    width: 60%;
-
-   }
-
-.titleInput{
-    margin-bottom: 20px;
-    color:white;
-    font-size: 20px;
-    font-weight: 600;
-    width: 60%;
-
-}
-
-#monthId p{
-    color:white;
-    font-size: 20px;
-    font-weight: 400;
-    width:60%;
-    background-color: rgba(0,0,0,0.5);
-    padding: 5px;
-    margin: 15px;
-    box-sizing: border-box;
-    
-}
-
-.inputBlock{
-display: flex;
-}
-
-
-/* month section */
-#monthSelector, #maxBudget, #maxTemp, #minTemp {
-    width: 300px;
-    font-size: 18px;
-    height: 40px;
-    border: none;
-}
-
-#monthSelector option{
-    text-align: center;
-}
-
-.buttons .btn{
-    border-radius: 25px;
-    width: 250px;
-    font-size: 15px;
-    font-weight:800;
-    height: 60px;
-    margin:20px 30px 0px 30px;
-    box-sizing: border-box;
-/* margin-left:40px;
-margin-right:40px; */
-
-
-
-}
-
-
 #budgetId{
     background: url("../images/budget.jpg") no-repeat center center fixed;
     -webkit-background-size: cover;
@@ -136,6 +51,87 @@ margin-right:40px; */
     -o-background-size: cover;
     background-size: cover;
 }
+
+/* I added an overlay to make the text more readeble */
+.overlay1, .overlay{
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(to bottom, rgba(0,0,0,1), rgba(0,0,0,0));
+    /* background-color: rgba(0,0,0,0.4); */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column; 
+    text-align: center;
+}
+
+.overlay{
+    background-image: linear-gradient(to bottom, rgba(0,0,0,0.5), rgba(0,0,0,0));
+}
+
+.overlay1{
+    background-image: linear-gradient(to bottom, rgba(0,0,0,1), rgba(0,0,0,0));    
+}
+
+/*common to the three sections*/
+
+.titleInput{
+    margin-bottom: 20px;
+    color:white;
+    font-size: 20px;
+    font-weight: 600;
+    width: 60%;
+}
+
+#monthSelector, #maxBudget, #maxTemp, #minTemp {
+    width: 300px;
+    font-size: 18px;
+    height: 40px;
+    border: none;
+}
+
+
+.button{
+    border-radius: 25px;
+    width: 250px;
+    font-size: 15px;
+    font-weight:800;
+    height: 60px;
+    margin:20px 30px 0px 30px;
+    box-sizing: border-box;
+}
+
+/* month section */
+#monthId h1{
+    color:white;
+    font-size: 60px;
+    font-weight: 400;
+    width: 60%;
+   }
+
+#monthId p{
+    color:white;
+    font-size: 20px;
+    font-weight: 400;
+    width:60%;
+    background-color: rgba(0,0,0,0.5);
+    padding: 5px;
+    margin: 15px;
+    box-sizing: border-box; 
+}
+
+#monthSelector option{
+    text-align: center;
+}
+
+/* weather section */
+.inputBlock{
+display: flex;
+}
+
+
+
+
 
 
 
@@ -183,20 +179,58 @@ https://github.com/dc-js/dc.js/issues/731
     font-size: 25px;
 }
 
+
+
+.reset{
+    text-align: right;
+}
+ .filters{
+     margin-bottom: 10px;
+ }
+
+.filterTitles{
+    color:#006abc;
+    font-size: medium;
+    font-weight: 500;
+    padding-bottom:10px; 
+}
+
+
+
+.panel-widget {
+    padding: 0px;
+}
+
+.panel-widget .large {
+    font-size: 2em;
+}
+.panel-widget .text-muted {
+        margin-top: 0px; 
+}
+
+.text-muted {
+    color: #a7a1a1;
+}
+
+.NumberDisplays{
+    background-color: transparent;
+    margin-bottom: 0px;
+    padding:0px;
+}
+.border-right {
+    border:none;
+}
+
+.row:before {
+display: none;
+}
+
+
 .dc-select-menu {
-    width: 100%;
-    height:200px;
+    width: 90%;
     border: none;
     overflow: auto;
     background: white;
-    /* display: inline-block; */
     text-align: center;
-    font-size: 15px;
+    font-size: 12px;
 }
-
-.reset{
-   margin-top: 50px;
-    text-align: right;
-}
-
-

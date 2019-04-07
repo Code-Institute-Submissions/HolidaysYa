@@ -83,7 +83,23 @@ function createTable(ndx) {
 
 function showTitle(option) {
     document.getElementById("Title").innerHTML = `<h2>Results By ${option}</h2>`;
-}
+
+     if(option==="Budget"){
+         document.getElementById("titleRowChart").innerHTML = "Euros needed per day";
+         document.getElementById("stackedComposite").innerHTML = "Budget distribution";
+         document.getElementById("pieChart").innerHTML = "Currency";
+         document.getElementById("scatterChart").innerHTML = "Correlation between total budget needed and number of visitor per year";
+
+    
+        }else{
+        document.getElementById("titleRowChart").innerHTML = "Precipitation per month (mm)";
+        document.getElementById("stackedComposite").innerHTML = "Maximun and Minimun temperatures";
+        document.getElementById("pieChart").innerHTML = "Chances of precipitation";
+        document.getElementById("scatterChart").innerHTML = "Correlation between av.temperature and precipitation and number of visitor per year";
+
+    }
+
+    }
 
 
 // function countCities(ndx){
