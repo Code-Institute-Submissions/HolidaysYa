@@ -32,21 +32,15 @@
 					<li class="dropdown"><a class="dropdown-toggle" href="#">
 							<em class="fa fa-facebook"></em>
 						</a>
-
 					</li>
 					<li class="dropdown"><a class="dropdown-toggle" href="#">
 							<em class="fa fa-twitter"></em>
 						</a>
-
 					</li>
 					<li class="dropdown"><a class="dropdown-toggle" href="#">
 							<em class="fa fa-linkedin"></em>
 						</a>
-
 					</li>
-
-
-
 				</ul>
 			</div>
 		</div><!-- /.container-fluid -->
@@ -77,7 +71,6 @@
 			<button id="chooseWeather" class="btn btn-success">Choose by temperature</button>
 			<button id="chooseBudget" class="btn btn-info">Choose by budget</button>
 		</div>
-		<div id="error"></div>
 	</section>
 
 	<section id="budgetId" class="hide">
@@ -116,11 +109,15 @@
 						class="icon pull-right"><em class="fa fa-plus"></em></span>
 				</a>
 				<ul class="children collapse" id="sub-item-1">
+					
+					
+								
+					
 					<li class="budget">
-						<form role="search">
+						<form>
 							<div class="form-group">
-								<label for="maxBudget">What is your maximun budget?</label>
-								<input type="number" class="form-control" name="maxBudget2" required />
+								<label for="maxBudget2">What is your maximun budget?</label>
+								<input type="number" class="form-control" id="maxBudget2" name="maxBudget2" required />
 								<div class="buttons">
 									<button class="btn btn-success" id="filterBudget">show cities</button>
 								</div>
@@ -129,12 +126,12 @@
 					</li>
 
 					<li class="weather">
-						<form role="search">
+						<form>
 							<div class="form-group">
-								<label for="minTemp">Minimun temperature</label>
-								<input type="number" class="form-control" name="minTemp2" />
-								<label for="maxTemp">Maximun temperature</label>
-								<input type="number" class="form-control" name="maxTemp2" />
+								<label for="minTemp2">Minimun temperature</label>
+								<input type="number" class="form-control" id="minTemp2" name="minTemp2" />
+								<label for="maxTemp2">Maximun temperature</label>
+								<input type="number" class="form-control" id="maxTemp2" name="maxTemp2" />
 								<div class="buttons">
 									<button class="btn btn-success" id="filterWeather">show cities</button>
 
@@ -150,10 +147,6 @@
 		</ul>
 	</div>
 	<!--/.sidebar-->
-
-
-
-
 
 	<!-- this section is hidden at the beggining -->
 
