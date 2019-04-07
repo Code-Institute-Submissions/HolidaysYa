@@ -47,57 +47,69 @@
 	</nav>
 
 	<section id="monthId">
-		
-		<h3>Welcome!</h3>
-		<p>We have gather data from the main cities in Europe to help you deciding which is the best place for
-			your next holidays in Europe.</p>
-	
-		<hr>
-		<h2>Please select the month that you want to travel</h2>
-		<select id="monthSelector" name="months">
-			<option value="January">January</option>
-			<option value="February">February</option>
-			<option value="March">March</option>
-			<option value="April">April</option>
-			<option value="May">May</option>
-			<option value="June">June</option>
-			<option value="July">July</option>
-			<option value="August">August</option>
-			<option value="September">September</option>
-			<option value="October">October</option>
-			<option value="November">November</option>
-			<option value="December">December</option>
-		</select>
+		<div class="overlay1">
+			<h2>Welcome!</h2>
+			<p>We have gather data from the main cities in Europe to help you deciding which is the best place for
+				your next holidays in Europe.</p>
 
-		<div class="buttons">
-			<button id="chooseWeather" class="btn btn-success">Choose by temperature</button>
-			<button id="chooseBudget" class="btn btn-info">Choose by budget</button>
+			<!-- <hr> -->
+			<h3 class="titleInput">Please select the month that you want to travel</h3>
+
+			<select id="monthSelector" name="months">
+				<option value="January">January</option>
+				<option value="February">February</option>
+				<option value="March">March</option>
+				<option value="April">April</option>
+				<option value="May">May</option>
+				<option value="June">June</option>
+				<option value="July">July</option>
+				<option value="August">August</option>
+				<option value="September">September</option>
+				<option value="October">October</option>
+				<option value="November">November</option>
+				<option value="December">December</option>
+			</select>
+
+			<div class="buttons">
+				<button id="chooseWeather" class="btn btn-info">Choose by temperature</button>
+				<button id="chooseBudget" class="btn btn-info">Choose by budget</button>
+			</div>
 		</div>
 	</section>
 
 	<section id="budgetId" class="hide">
-		<label for="maxBudget">What is your maximun budget?</label>
-		<input type="number" id="maxBudget" name="maxBudget" required />
-		<div class="buttons">
-			<!-- <button class="btn btn-danger goback">Change month</button> -->
-			<button class="btn btn-success" id="resultsBudget" onclick="showTitle('Budget')">show cities</button>
+		<div class="overlay">
+			<label for="maxBudget" class="titleInput">What is your maximun budget?</label>
+			<input type="number" id="maxBudget" name="maxBudget" required />
+			<div class="buttons">
+				<!-- <button class="btn btn-danger goback">Change month</button> -->
+				<button class="btn btn-info" id="resultsBudget" onclick="showTitle('Budget')">show cities</button>
+			</div>
 		</div>
 	</section>
 
 	<section id="weatherId" class="hide">
-		<label for="minTemp">Minimun temperature</label>
-		<input type="number" id="minTemp" name="minTemp" />
-		<label for="maxTemp">Maximun temperature</label>
-		<input type="number" id="maxTemp" name="maxTemp" />
+			<div class="overlay">
+		<div class="inputBlock">
+			<label for="minTemp" class="titleInput">Minimun temperature</label>
+			<input type="number" id="minTemp" name="minTemp" />
+		</div>
+		<div class="inputBlock">
+
+			<label for="maxTemp" class="titleInput">Maximun temperature</label>
+			<input type="number" id="maxTemp" name="maxTemp" />
+		</div>
+
 		<div class="buttons">
 			<!-- <button class="btn btn-danger goback">Change month</button> -->
-			<button class="btn btn-success" id="resultsWeather" onclick="showTitle('Weather')">show cities</button>
+			<button class="btn btn-info" id="resultsWeather" onclick="showTitle('Weather')">show cities</button>
+		</div>
 		</div>
 	</section>
 
-	
 
-	
+
+
 	</section>
 
 	<div id="sidebar-collapse" class="col-sm-2 sidebar hide">
@@ -111,10 +123,10 @@
 						class="icon pull-right"><em class="fa fa-plus"></em></span>
 				</a>
 				<ul class="children collapse" id="sub-item-1">
-					
-					
-								
-					
+
+
+
+
 					<li class="budget">
 						<form>
 							<div class="form-group">
@@ -165,12 +177,12 @@
 				</div>
 				<div class="col-md-6 reset">
 					<!-- http://bl.ocks.org/d3noob/6584483 here I lear about the resetAll-->
-                        <!-- https://www.w3docs.com/snippets/html/how-to-create-an-html-button-that-acts-like-a-link.html here I learnt how to made a button behave as a link-->
+					<!-- https://www.w3docs.com/snippets/html/how-to-create-an-html-button-that-acts-like-a-link.html here I learnt how to made a button behave as a link-->
 
-                        <button class="btn btn-info"
-                            onclick="window.location.href = 'javascript:dc.filterAll(); dc.renderAll();';">Reset
-                            All</button>
-					</div>
+					<button class="btn btn-info"
+						onclick="window.location.href = 'javascript:dc.filterAll(); dc.renderAll();';">Reset
+						All</button>
+				</div>
 			</div>
 			<!--/.row-->
 
@@ -207,7 +219,7 @@
 					<div class="col-xs-12 col-sm-6 col-md-2 no-padding">
 						<div class="panel panel-teal panel-widget border-right">
 							<div class="row no-padding"><em class="fa fa-xl fa-thumbs-o-up color-blue"></em>
-								<div class="large" id ="totalCities"></div>
+								<div class="large" id="totalCities"></div>
 								<div class="text-muted">Cities</div>
 							</div>
 						</div>

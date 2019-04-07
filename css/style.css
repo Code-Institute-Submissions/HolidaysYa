@@ -1,79 +1,149 @@
 html,body{
+    margin:0px;
+    padding: 0px;
     height: 100%;
     width: 100%;
     /* background-color: lightgrey; */
+   
+}
+h1,h2,h3,.navbar,p{
+    margin: 0px;
+    padding: 0px;
 }
 
-#monthId{
+#monthId, #budgetId,#weatherId{
     /* color:white; */
+    /* so it doesn't hide under the navbar */
+    paddings-top: 60px;  
 
     height: 100vh;
     width: 100vw;
-    background: url("../images/amsterdam2.jpg") no-repeat center center fixed;
+  
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+    justify-content: center;
+    /* background-color: #777777; */
+}
+
+#monthId{
+    background: url("../images/amsterdam.jpg") no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
+}
 
+.overlay1{
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(to bottom, rgba(0,0,0,1), rgba(0,0,0,0));
+    /* background-color: rgba(0,0,0,0.4); */
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column; 
-    /* background-color: #777777; */
+    text-align: center;
+    
 }
-
-
-
-#monthId h3{
-    color:white;
-    font-size: 40px;
-    font-weight: 900;
+.overlay{
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(to bottom, rgba(0,0,0,0.5), rgba(0,0,0,0));
+    /* background-color: rgba(0,0,0,0.4); */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column; 
+    text-align: center;
 }
 
 #monthId h2{
     color:white;
- font-size: 30px;
- font-weight: 400;
+    font-size: 60px;
+    font-weight: 400;
+    width: 60%;
+
+   }
+
+.titleInput{
+    margin-bottom: 20px;
+    color:white;
+    font-size: 20px;
+    font-weight: 600;
+    width: 60%;
+
 }
 
 #monthId p{
     color:white;
     font-size: 20px;
-    font-weight: 700;
-width:60%;
-text-align: center;
+    font-weight: 400;
+    width:60%;
+    background-color: rgba(0,0,0,0.5);
+    padding: 5px;
+    margin: 15px;
+    box-sizing: border-box;
+    
+}
+
+.inputBlock{
+display: flex;
 }
 
 
-
-#budgetId {
-    padding: 25px;
-
-    height: 80vh;
-    width: 100vw;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    /* background-color: rgb(195, 199, 199); */
+/* month section */
+#monthSelector, #maxBudget, #maxTemp, #minTemp {
+    width: 300px;
+    font-size: 18px;
+    height: 40px;
+    border: none;
 }
 
-#weatherId {
-    padding: 25px;
-
-    height: 80vh;
-    width: 100vw;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    /* background-color: lightblue; */
+#monthSelector option{
+    text-align: center;
 }
+
+.buttons .btn{
+    border-radius: 25px;
+    width: 250px;
+    font-size: 15px;
+    font-weight:800;
+    height: 60px;
+    margin:20px 30px 0px 30px;
+    box-sizing: border-box;
+/* margin-left:40px;
+margin-right:40px; */
+
+
+
+}
+
+
+#budgetId{
+    background: url("../images/budget.jpg") no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+
+#weatherId{
+    background: url("../images/weather.jpg") no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+
 
 #grafId {
+    /* so it doesnt hide under the navBar */
+    margin-top: 70px;  
     height: 100vh;
     width: 100vw;
-    padding: 25px;
 
     /* background-color: lightgrey; */
 
@@ -88,9 +158,6 @@ text-align: center;
 
 
 
-select {
-    color: black;
-}
 
 
 /* how to rotate the labels so they fit well in the screen
@@ -131,3 +198,5 @@ https://github.com/dc-js/dc.js/issues/731
    margin-top: 50px;
     text-align: right;
 }
+
+
