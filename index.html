@@ -49,7 +49,8 @@
 	<section id="monthId">
 		<div class="overlay1">
 			<h1>Welcome!</h1>
-			<p>We have gather data from the most visited cities in Europe to help you deciding which is the best place for
+			<p>We have gather data from the most visited cities in Europe to help you deciding which is the best place
+				for
 				your next holidays in Europe.</p>
 
 			<!-- <hr> -->
@@ -83,44 +84,45 @@
 			<input type="number" id="maxBudget" name="maxBudget" required />
 			<div class="buttons">
 				<!-- <button class="btn btn-danger goback">Change month</button> -->
-				<button class="btn btn-info button" id="resultsBudget" onclick="showTitle('Budget')">show cities</button>
+				<button class="btn btn-info button" id="resultsBudget" onclick="showTitle('Budget')">show
+					cities</button>
 			</div>
 		</div>
 	</section>
 
 	<section id="weatherId" class="hide">
-			<div class="overlay">
-		<div class="inputBlock">
-			<label for="minTemp" class="titleInput">Minimun temperature</label>
-			<input type="number" id="minTemp" name="minTemp" />
-		</div>
-		<div class="inputBlock">
+		<div class="overlay">
+			<div class="inputBlock">
+				<label for="minTemp" class="titleInput">Minimun temperature</label>
+				<input type="number" id="minTemp" name="minTemp" />
+			</div>
+			<div class="inputBlock">
 
-			<label for="maxTemp" class="titleInput">Maximun temperature</label>
-			<input type="number" id="maxTemp" name="maxTemp" />
-		</div>
+				<label for="maxTemp" class="titleInput">Maximun temperature</label>
+				<input type="number" id="maxTemp" name="maxTemp" />
+			</div>
 
-		<div class="buttons">
-			<!-- <button class="btn btn-danger goback">Change month</button> -->
-			<button class="btn btn-info button" id="resultsWeather" onclick="showTitle('Weather')">show cities</button>
-		</div>
+			<div class="buttons">
+				<!-- <button class="btn btn-danger goback">Change month</button> -->
+				<button class="btn btn-info button" id="resultsWeather" onclick="showTitle('Weather')">show
+					cities</button>
+			</div>
 		</div>
 	</section>
 
 
 
 
-	</section>
+	<!-- </section> -->
 
-	<div id="sidebar-collapse" class="col-sm-2 sidebar hide">
+	<div id="sidebar-collapse" class="col-sm-1 sidebar hide">
 
 
 		<ul class="nav menu">
-			<li><a class="goback"><em class="fa fa-calendar">&nbsp;</em> Change month</a></li>
+			<li><a class="goback"><em class="fa fa-calendar faSide">&nbsp;</em></a></li>
 			<!-- <li><a href="charts.html"><em class="fa fa-bar-chart">&nbsp;</em> Charts</a></li> -->
 			<li class="parent "><a data-toggle="collapse" href="#sub-item-1">
-					<em class="fa fa-filter">&nbsp;</em>Update filter<span data-toggle="collapse" href="#sub-item-1"
-						class="icon pull-right"><em class="fa fa-plus"></em></span>
+					<em data-toggle="collapse" href="#sub-item-1" class="fa fa-filter faSide">&nbsp;</em>
 				</a>
 				<ul class="children collapse" id="sub-item-1">
 
@@ -130,10 +132,10 @@
 					<li class="budget">
 						<form>
 							<div class="form-group">
-								<label for="maxBudget2">What is your maximun budget?</label>
+								<label for="maxBudget2">Try with a different budget</label>
 								<input type="number" class="form-control" id="maxBudget2" name="maxBudget2" required />
 								<div class="buttons">
-									<button class="btn btn-success" id="filterBudget">show cities</button>
+									<button class="btn btn-success filterSideBar" id="filterBudget">show cities</button>
 								</div>
 							</div>
 						</form>
@@ -146,7 +148,7 @@
 								<input type="number" class="form-control" id="minTemp2" name="minTemp2" />
 								<label for="maxTemp2">Maximun temperature</label>
 								<input type="number" class="form-control" id="maxTemp2" name="maxTemp2" />
-								<div class="buttons">
+								<div class="buttonsSide">
 									<button class="btn btn-success" id="filterWeather">show cities</button>
 
 								</div>
@@ -156,7 +158,7 @@
 
 				</ul>
 			</li>
-			<li><a href="#"><em class="fa fa-envelope">&nbsp;</em>Contact us</a></li>
+			<li><a href="#"><em class="fa fa-envelope faSide">&nbsp;</em></a></li>
 
 		</ul>
 	</div>
@@ -165,17 +167,17 @@
 	<!-- this section is hidden at the beggining -->
 
 	<section class="container-fluid hide" id="grafId" class="hide">
-		<div class="col-sm-10 col-sm-offset-2 main">
+		<div class="col-sm-11 col-sm-offset-1 main">
 
 
 			<!-- Should I use the infor message for title and error??? -->
 
 			<!-- title -->
 			<div class="row">
-				<div class="col-md-6">
-					<h2 id="Title"></h2>
+				<div class="col-sm-6">
+					<h2 id="title"></h2>
 				</div>
-				<div class="col-md-6 reset">
+				<div class="col-sm-6 reset">
 					<!-- http://bl.ocks.org/d3noob/6584483 here I lear about the resetAll-->
 					<!-- https://www.w3docs.com/snippets/html/how-to-create-an-html-button-that-acts-like-a-link.html here I learnt how to made a button behave as a link-->
 
@@ -205,8 +207,6 @@
 					<h3 class="filterTitles">Filter by City</h3>
 					<div id="filterByCity"></div>
 				</div>
-
-
 			</div>
 			<!--/.row-->
 
@@ -214,18 +214,18 @@
 			<!-- NumberDisplays -->
 			<div class="panel panel-container NumberDisplays">
 				<div class="row">
-					<div class="col-xs-12 col-sm-6 col-md-2 no-padding">
+					<div class="col-xs-4 col-sm-2 col-md-2 no-padding">
 						<div class="panel panel-teal panel-widget border-right">
-							<div class="row no-padding"><em class="fa fa-xl fa-thumbs-o-up color-blue"></em>
+							<div class="row no-padding"><em class="fa fa-xl fa-thumbs-o-up color-purple"></em>
 								<div class="large" id="totalCities"></div>
 								<div class="text-muted">Cities</div>
 							</div>
 						</div>
 					</div>
-					<div class="col-xs-12 col-sm-6 col-md-2 no-padding">
+					<div class="col-xs-4 col-sm-2 col-md-2 no-padding">
 						<div class="panel panel-teal panel-widget border-right">
-							<div class="row no-padding"><em class="budget fa fa-xl fa-hotel color-blue"></em><em
-									class="weather fa fa-xl fa fa-thermometer color-blue"></em>
+							<div class="row no-padding"><em class="budget fa fa-xl fa-hotel color-red"></em><em
+									class="weather fa fa-xl fa fa-thermometer color-red"></em>
 								<div class="large" id="hostel_maxtem"></div>
 								<div class="text-muted budget">Hostel</div>
 								<div class="text-muted weather">MaxTemp</div>
@@ -233,7 +233,7 @@
 							</div>
 						</div>
 					</div>
-					<div class="col-xs-12 col-sm-6 col-md-2 no-padding">
+					<div class="col-xs-4 col-sm-2 col-md-2 no-padding">
 						<div class="panel panel-teal panel-widget border-right">
 							<div class="row no-padding"><em class="budget fa fa-xl fa-cutlery color-blue"></em><em
 									class="weather fa fa-xl fa fa-thermometer-0 color-blue"></em>
@@ -244,10 +244,10 @@
 							</div>
 						</div>
 					</div>
-					<div class="col-xs-12 col-sm-6 col-md-2 no-padding">
+					<div class="col-xs-4 col-sm-2 col-md-2 no-padding">
 						<div class="panel panel-blue panel-widget border-right">
 							<div class="row no-padding"><em class="budget fa fa-xl fa-glass color-orange"></em><em
-									class="weather fa fa-xl fa fa-thermometer-2 color-blue"></em>
+									class="weather fa fa-xl fa fa-thermometer-2 color-orange"></em>
 								<div class="large" id="drinks_avgtemp"></div>
 								<div class="text-muted budget">Drinks</div>
 								<div class="text-muted weather">Avg.Temp</div>
@@ -255,10 +255,10 @@
 							</div>
 						</div>
 					</div>
-					<div class="col-xs-12 col-sm-6 col-md-2 no-padding">
+					<div class="col-xs-4 col-sm-2 col-md-2 no-padding">
 						<div class="panel panel-orange panel-widget border-right">
 							<div class="row no-padding"><em class="budget fa fa-xl fa-train color-teal"></em><em
-									class="weather fa fa-xl fa fa-umbrella color-blue"></em>
+									class="weather fa fa-xl fa fa-umbrella color-teal"></em>
 								<div class="large" id="transport_maxpreci"></div>
 								<div class="text-muted budget">Transport</div>
 								<div class="text-muted weather">Max. Precipitation</div>
@@ -266,10 +266,10 @@
 							</div>
 						</div>
 					</div>
-					<div class="col-xs-12 col-sm-6 col-md-2 no-padding">
+					<div class="col-xs-4 col-sm-2 col-md-2 no-padding">
 						<div class="panel panel-red panel-widget ">
-							<div class="row no-padding"><em class="budget fa fa-xl fa-institution color-red"></em><em
-									class="weather fa fa-xl fa fa-umbrella color-blue"></em>
+							<div class="row no-padding"><em class="budget fa fa-xl fa-institution color-pink"></em><em
+									class="weather fa fa-xl fa fa-umbrella color-pink"></em>
 								<div class="large" id="attractions_minpreci"></div>
 								<div class="text-muted budget">Attractions</div>
 								<div class="text-muted weather">Min. Precipitation</div>
@@ -286,10 +286,13 @@
 				<div class="col-md-3">
 
 					<div class="panel panel-default">
-						<div class="panel-heading">
-							<div  id="titleRowChart"></div>
-							<span class="pull-right clickable panel-toggle panel-button-tab-left"><em
-									class="fa fa-toggle-up"></em></span></div>
+						<div class="panel-heading row">
+							<div class="col-xs-10" id="titleRowChart"></div>
+							<div class="col-xs-2">
+								<span class="pull-right clickable panel-toggle panel-button-tab-left"><em
+										class="fa fa-toggle-up"></em></span>
+							</div>
+						</div>
 						<div class="panel-body">
 							<div class="canvas-wrapper">
 								<div class="main-chart" id="rowChart"></div>
@@ -304,10 +307,13 @@
 					<div class=row>
 						<div class="col-md-12">
 							<div class="panel panel-default">
-								<div class="panel-heading">
-										<div  id="stackedComposite"></div>
-									<span class="pull-right clickable panel-toggle panel-button-tab-left"><em
-											class="fa fa-toggle-up"></em></span></div>
+								<div class="panel-heading row">
+									<div class="col-xs-10" id="stackedComposite"></div>
+									<div class="col-xs-2">
+										<span class="pull-right clickable panel-toggle panel-button-tab-left"><em
+												class="fa fa-toggle-up"></em></span>
+									</div>
+								</div>
 								<div class="panel-body">
 									<div class="canvas-wrapper">
 										<div class="main-chart" id="dailyBudget_Temp"></div>
@@ -323,10 +329,14 @@
 
 								<div class="col-md-4">
 									<div class="panel panel-default">
-										<div class="panel-heading">
-												<div  id="pieChart"></div>
-											<span class="pull-right clickable panel-toggle panel-button-tab-left"><em
-													class="fa fa-toggle-up"></em></span></div>
+										<div class="panel-heading row">
+											<div class="col-xs-10" id="pieChart"></div>
+											<div class="col-xs-2">
+												<span
+													class="pull-right clickable panel-toggle panel-button-tab-left"><em
+														class="fa fa-toggle-up"></em></span>
+											</div>
+										</div>
 										<div class="panel-body">
 											<div class="canvas-wrapper">
 												<div class="main-chart" id="currency_precipitation"></div>
@@ -336,10 +346,14 @@
 								</div>
 								<div class="col-md-8">
 									<div class="panel panel-default">
-										<div class="panel-heading">
-												<div  id="scatterChart"></div>
-											<span class="pull-right clickable panel-toggle panel-button-tab-left"><em
-													class="fa fa-toggle-up"></em></span></div>
+										<div class="panel-heading row">
+											<div class="col-xs-10" id="scatterChart"></div>
+											<div class="col-xs-2">
+												<span
+													class="pull-right clickable panel-toggle panel-button-tab-left"><em
+														class="fa fa-toggle-up"></em></span>
+											</div>
+										</div>
 										<div class="panel-body">
 											<div class="canvas-wrapper">
 												<div class="main-chart" id="correlation"></div>

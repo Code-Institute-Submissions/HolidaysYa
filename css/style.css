@@ -1,3 +1,8 @@
+* {
+    box-sizing: border-box;
+  }
+  
+
 html,body{
     margin:0px;
     padding: 0px;
@@ -6,7 +11,7 @@ html,body{
     /* background-color: lightgrey; */
 }
 
-h1,h2,h3,.navbar,p{
+h1,h2,h3,.navbar,p,row,col-xs-6,div{
     margin: 0px;
     padding: 0px;
 }
@@ -137,7 +142,7 @@ display: flex;
 
 #grafId {
     /* so it doesnt hide under the navBar */
-    margin-top: 70px;  
+    margin-top: 80px;  
     height: 100vh;
     width: 100vw;
 
@@ -181,17 +186,27 @@ https://github.com/dc-js/dc.js/issues/731
 
 
 
+/* title and reset button */
 .reset{
     text-align: right;
+    margin-top:25px;
 }
- .filters{
+
+@media (min-width: 768px){   
+    .reset{
+        margin-top:0px;
+    }   
+} 
+
+
+.filters{
      margin-bottom: 10px;
  }
 
 .filterTitles{
-    color:#006abc;
-    font-size: medium;
-    font-weight: 500;
+    color:#808589;
+    font-size: 16px;
+    font-weight: 400;
     padding-bottom:10px; 
 }
 
@@ -207,6 +222,12 @@ https://github.com/dc-js/dc.js/issues/731
 .panel-widget .text-muted {
         margin-top: 0px; 
 }
+.color-pink{
+color: rgb(221, 15, 125)
+}
+.color-purple{
+    color: rgb(131, 27, 150)
+    }
 
 .text-muted {
     color: #a7a1a1;
@@ -226,6 +247,19 @@ display: none;
 }
 
 
+.panel-heading {
+    font-size: 15px;
+    line-height: 20px;
+    display: flex;
+    margin: 0px;
+}
+
+.pull-right{
+text-align: right;
+}
+
+
+
 .dc-select-menu {
     width: 90%;
     border: none;
@@ -233,4 +267,87 @@ display: none;
     background: white;
     text-align: center;
     font-size: 12px;
+}
+
+
+.panel-toggle {
+    border: none;
+    color: #30a5ff;
+}
+
+
+.panel-toggle:hover {
+    background: transparent;
+    color: #52a9ec;
+}
+
+
+.sidebar ul.nav li a {
+    height: 80px;
+}
+
+
+
+
+
+.buttonsSide{
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+    justify-content: center;
+}
+
+.form-group input{
+    margin: 10px 0px;
+}
+
+.filterSideBar{
+    margin:20px 0px;
+    
+}
+
+.nav>li {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+
+.sidebar ul.nav a:hover, .sidebar ul.nav li.parent ul li a:hover {
+    background-color:transparent;
+}
+
+
+
+.nav>li>a{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+.faSide{
+    font-size:36px;
+    color:grey;
+    transition: all .3s ease-in-out;
+    -webkit-transition: all .3s ease-in-out;
+    -moz-transition: all .3s ease-in-out;
+    -o-transition: all .3s ease-in-out;
+}
+
+.faSide:hover{
+    color:#52a9ec;
+}
+
+.navbar-header .navbar-brand {
+    color: #fff;
+    font-size: 20px;
+    text-transform: capitalize;
+    font-weight: 500;
+    height: 60px;
+    padding-top: 18px;
 }

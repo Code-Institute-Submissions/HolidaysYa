@@ -82,7 +82,7 @@ function createTable(ndx) {
 
 
 function showTitle(option) {
-    document.getElementById("Title").innerHTML = `<h2>Results By ${option}</h2>`;
+    document.getElementById("title").innerHTML = `<h2>Results By ${option}</h2>`;
 
      if(option==="Budget"){
          document.getElementById("titleRowChart").innerHTML = "Euros needed per day";
