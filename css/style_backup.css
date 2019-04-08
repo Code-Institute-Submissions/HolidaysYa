@@ -1,40 +1,30 @@
 * {
     box-sizing: border-box;
-    margin:0px;
-    padding: 0px;
-  
   }
   
 
 html,body{
+    margin:0px;
+    padding: 0px;
     height: 100%;
     width: 100%;
-    
     /* background-color: lightgrey; */
 }
 
-/* logo */
-.navbar-header .navbar-brand {
-    color: #fff;
-    font-size: 20px;
-    text-transform: capitalize;
-    font-weight: 500;
-    height: 60px;
-    padding-top: 18px;
-}
-
-/* h1,h2,h3,.navbar,p,row,col-xs-6,div{
+h1,h2,h3,.navbar,p,row,col-xs-6,div{
     margin: 0px;
     padding: 0px;
-} */
+}
 
 /* background section month selection, budget selection and weather selection */
 
 #monthId, #budgetId,#weatherId{
+    /* color:white; */
     /* so it doesn't hide under the navbar */
     /* padding-top: 60px;   */
     height: 100vh;
     width: 100vw;
+  
     display: flex;
     flex-direction: column; 
     align-items: center;
@@ -116,9 +106,7 @@ html,body{
     box-sizing: border-box;
 }
 
-
 /* month section */
-
 #monthId h1{
     color:white;
     font-size: 60px;
@@ -145,19 +133,160 @@ html,body{
     text-align: center;
 }
 
-
 /* weather section */
-
 .inputBlock{
 display: flex;
 }
 
 
 
-/* sidebar */
+
+
+
+
+#grafId {
+    /* so it doesnt hide under the navBar */
+    margin-top: 80px;  
+    height: 100vh;
+    width: 100vw;
+
+    /* background-color: lightgrey; */
+
+}
+
+
+/*weather, budget and graphics sections are hiden at the beggining*/
+
+.hide {
+    display: none;
+}
+
+
+
+
+
+
+
+.numberDisplay{
+    color:black;
+    font-size:26px;
+    margin:15px;
+}
+
+.table{
+    font-size: 10px;
+    text-align: center;
+}
+
+.number-display{
+    font-size: 25px;
+}
+
+
+
+/* title and reset button */
+.reset{
+    text-align: right;
+    margin-top:25px;
+}
+
+@media (min-width: 768px){   
+    .reset{
+        margin-top:0px;
+    }   
+} 
+
+
+.filters{
+     margin-bottom: 10px;
+ }
+
+.filterTitles{
+    color:#808589;
+    font-size: 16px;
+    font-weight: 400;
+    padding-bottom:10px; 
+}
+
+
+
+.panel-widget {
+    padding: 0px;
+}
+
+.panel-widget .large {
+    font-size: 2em;
+}
+.panel-widget .text-muted {
+        margin-top: 0px; 
+}
+.color-pink{
+color: rgb(221, 15, 125)
+}
+.color-purple{
+    color: rgb(131, 27, 150)
+    }
+
+.text-muted {
+    color: #a7a1a1;
+}
+
+.NumberDisplays{
+    background-color: transparent;
+    margin-bottom: 0px;
+    padding:0px;
+}
+.border-right {
+    border:none;
+}
+
+.row:before {
+display: none;
+}
+
+
+.panel-heading {
+    font-size: 15px;
+    line-height: 20px;
+    display: flex;
+    margin: 0px;
+}
+
+.pull-right{
+text-align: right;
+}
+
+
+
+.dc-select-menu {
+    width: 90%;
+    border: none;
+    overflow: auto;
+    background: white;
+    text-align: center;
+    font-size: 12px;
+}
+
+
+.panel-toggle {
+    border: none;
+    color: #30a5ff;
+}
+
+
+.panel-toggle:hover {
+    background: transparent;
+    color: #52a9ec;
+}
+
+
 .sidebar ul.nav li a {
     height: 80px;
 }
+
+
+
+
 
 .buttonsSide{
     display: flex;
@@ -183,9 +312,13 @@ display: flex;
 }
 
 
+
+
 .sidebar ul.nav a:hover, .sidebar ul.nav li.parent ul li a:hover {
     background-color:transparent;
 }
+
+
 
 .nav>li>a{
     display: flex;
@@ -208,136 +341,22 @@ display: flex;
     color:#52a9ec;
 }
 
-
-
-
-
-/* charts section */
-
-#grafId {
-    /* so it doesnt hide under the navBar */
-    /* margin-top: 80px;   */
-    height: 100vh;
-    width: 100vw;
+.navbar-header .navbar-brand {
+    color: #fff;
+    font-size: 20px;
+    text-transform: capitalize;
+    font-weight: 500;
+    height: 60px;
+    padding-top: 18px;
 }
 
-/* title and reset button */
-.reset{
-    text-align: right;
-    margin-top: 20px;
-}
-
-/* filters */
-
-.dc-select-menu {
-    width: 90%;
-    border: none;
-    overflow: auto;
-    background: white;
-    text-align: center;
-    font-size: 12px;
-}
-
-.filters{
-    margin-bottom: 10px;
-}
-
-.filterTitles{
-   color:#808589;
-   font-size: 16px;
-   font-weight: 400;
-   padding-bottom:10px; 
-}
-
-
-/* numberDisplays */
-
-.numberDisplay{
-    color:black;
-    font-size:26px;
-    margin:15px;
-}
-
-
-.number-display{
-    font-size: 25px;
-}
-
-.color-pink{
-    color: rgb(221, 15, 125)
-}
-   
-.color-purple{ 
-    color: rgb(131, 27, 150) 
-}
-    
-   
-   
-.text-muted {
-     color: #a7a1a1;
-}
-    
-.NumberDisplays{
-     background-color: transparent;
-     margin-bottom: 0px;
-     padding:0px;
-}
-
-.border-right {
-     border:none;
-}
-    
-.row:before {
-    display: none;
-}
-
-
-
-/*chart panels*/
+/* charts */
 
 .canvas-wrapper{
     width:100%;
     height: 100%;
     padding: 25px;
 }
-
-.panel-widget {
-    padding: 0px;
-}
-
-.panel-widget .large {
-    font-size: 2em;
-}
-.panel-widget .text-muted {
-        margin-top: 0px; 
-}
-
-.panel-heading {
-    font-size: 15px;
-    line-height: 20px;
-    display: flex;
-    margin: 0px;
-}
-
-.pull-right{
-text-align: right;
-}
-
-.panel-toggle {
-    border: none;
-    color: #30a5ff;
-}
-
-.panel-toggle:hover {
-    background: transparent;
-    color: #52a9ec;
-}
-
-
-
-
-
-
 
 
 
@@ -350,41 +369,5 @@ https://github.com/dc-js/dc.js/issues/731
 #dailyBudget_Temp .x.axis text, #rowChart .x.axis text{
     text-anchor: end !important;
     transform: rotate(-45deg);
-    /* font-size: 1em; */
-}
-
-#dailyBudget_Temp .y.axis text{
-    /* font-size: 1em; */
-}
-
-
-
-/* table */
-
-.table{
-    font-size: 10px;
-    text-align: center;
-}
-
-
-/*jquery classes*/
-/*weather, budget and graphics sections are hiden at the beggining*/
-
-.hide {
-    display: none;
-}
-
-/*********************************** FIX THIS!!!!!******************/
-/*after adding this the charts overflow the parent div */
-panel-body
-
-
-#rowChart{
-    height:60vh;
-
-}
-
-#dailyBudget_Temp, #currency_precipitation,#correlation{
-    height:23vh;
-
+    font-size: 0.8em;
 }

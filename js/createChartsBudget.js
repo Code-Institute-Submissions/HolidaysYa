@@ -5,8 +5,7 @@ function createCurrencyChart(ndx) {
 
     dc.pieChart("#currency_precipitation")
         .useViewBoxResizing(true) // allows chart to be responsive
-        // .height(80)
-        // .radius(40)
+        .innerRadius(60)
         .dimension(dimCurrency)
         .group(groupCurrency)
         .transitionDuration(1500);
@@ -25,7 +24,7 @@ function createTotalDailyBudget(ndx) {
     dc.barChart('#dailyBudget_Temp')
         .useViewBoxResizing(true) // allows chart to be responsive
         .dimension(cityDim)
-        .margins({ top: 10, right: 50, bottom: 30, left: 50 })
+        .margins({top: 15, right: 10, bottom: 80, left: 50})
         .group(hostel, "hostel")
         .stack(meals, "meals")
         .stack(drinks, "drinks")
@@ -35,8 +34,6 @@ function createTotalDailyBudget(ndx) {
             return 'In ' + d.key + ' the ' + this.layer + ' by day cost: ' + d.value;
         })
         .transitionDuration(1500)
-        .elasticX(true)
-        .elasticY(true)
         .x(d3.scale.ordinal())
         .xUnits(dc.units.ordinal)
         .barPadding(0.3)
@@ -44,7 +41,6 @@ function createTotalDailyBudget(ndx) {
         .yAxisLabel('Total daily budget')
         .yAxis().ticks(8);
     //??????.legend(dc.legend().x(320).y(20).itemHeight(15).gap(5));
-    //?????? .margins({top: 10, right: 50, bottom: 30, left: 40});
 
 };
 
@@ -58,14 +54,14 @@ function createRowChart(ndx) {
     });
 
     dc.rowChart("#rowChart")
-        .useViewBoxResizing(true) 
-        .height(500)// allows chart to be responsive
+        .useViewBoxResizing(true)
+       // .width(200)
+        //.height(700) 
         .x(d3.scale.linear().domain([0, 200]))
         .elasticX(true)
+        .transitionDuration(1500)
         .dimension(dimCity)
         .group(budgetGroup);
-
-
 }
 
 function createCorrelationCharts(data, ndx) {
@@ -90,12 +86,15 @@ function createCorrelationCharts(data, ndx) {
 
     dc.scatterPlot("#correlation")
         .useViewBoxResizing(true) // allows chart to be responsive
+        //.width(300)
+       // .height(200)
         .x(d3.scale.linear().domain([0, maxArrivals]))
         .brushOn(false)
         .symbolSize(8)
         .clipPadding(10)
         .xAxisLabel('Number of country visitors (2017 or 2018)')
         .yAxisLabel("Budget")
+        .transitionDuration(1500)
         .title(function (d) {
             return "In " + d.key[2] + " you will need a daily bugget of " + d.key[1] + " \nand there was " + d.key[0] + " millions visits in 2017";
         })

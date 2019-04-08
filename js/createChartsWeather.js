@@ -12,14 +12,10 @@ function createPrecipitationChart(ndx) {
         }
     });
 
-    var groupPrecipitation = dimPrecipitation.group();  // or groupAll()??
-
-    //console.log(groupPrecipitation.groupAll());
-
+    var groupPrecipitation = dimPrecipitation.group();
+    
     dc.pieChart("#currency_precipitation")
         .useViewBoxResizing(true) // allows chart to be responsive
-        // .height(80)
-        // .radius(40)
         .dimension(dimPrecipitation)
         .group(groupPrecipitation)
         .transitionDuration(1500);
@@ -48,7 +44,6 @@ function createCorrelationTemp(data, ndx) {
         .useViewBoxResizing(true) // allows chart to be responsive
         .x(d3.scale.linear().domain([0, maxArrivals]))
         .clipPadding(10)
-
         .xAxisLabel('Number of country visitors (2017 or 2018)')
         .yAxisLabel("Avg. Temperature")
         .rightYAxisLabel("Avg. Precipitation")
@@ -79,9 +74,7 @@ function createCorrelationTemp(data, ndx) {
                 .group(precipitationGroup, "precipitation")
                 .useRightYAxis(true)
 
-        ])
-        .elasticX(true)
-        .elasticY(true);
+        ]);
 
 }
 
@@ -104,22 +97,26 @@ function cityTemp(ndx) {
         .group(grp1, "maximun temperature")
         .yAxisLabel("Temperature")
         .xAxisLabel("City")
-        .legend(dc.legend().x(80).y(20).itemHeight(13).gap(5))
+        //.legend(dc.legend().x(600).y(0).itemHeight(13).gap(5))
+        .margins({top: 10, right: 50, bottom: 80, left: 50})
         .renderHorizontalGridLines(true)
         ._rangeBandPadding(1)
         .compose([
             dc.lineChart(composite)
                 .dimension(dim)
                 .colors('red')
+                .renderArea(false)
                 .group(grp1, "maximun temperature")
                 .dashStyle([2, 2]),
             dc.lineChart(composite)
                 .dimension(dim)
                 .colors('blue')
+                .renderArea(false)
                 .group(grp2, "minimun temperature")
                 .dashStyle([5, 5])
         ])
-        .brushOn(false);
+        .brushOn(false)
+        .transitionDuration(1500);
 }
 
 
