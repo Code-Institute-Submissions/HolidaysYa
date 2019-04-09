@@ -376,10 +376,10 @@ https://github.com/dc-js/dc.js/issues/731
 
 /*********************************** FIX THIS!!!!!******************/
 /*after adding this the charts overflow the parent div */
-panel-body
 
 
-#rowChart{
+
+/* #rowChart{
     height:60vh;
 
 }
@@ -387,4 +387,6 @@ panel-body
 #dailyBudget_Temp, #currency_precipitation,#correlation{
     height:23vh;
 
-}
+} */
+
+

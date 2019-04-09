@@ -4,7 +4,8 @@ function createCurrencyChart(ndx) {
     var groupCurrency = dimCurrency.group();
 
     dc.pieChart("#currency_precipitation")
-        .useViewBoxResizing(true) // allows chart to be responsive
+    .height(200)    
+    .useViewBoxResizing(true) // allows chart to be responsive
         .innerRadius(60)
         .dimension(dimCurrency)
         .group(groupCurrency)
@@ -22,6 +23,7 @@ function createTotalDailyBudget(ndx) {
 
 
     dc.barChart('#dailyBudget_Temp')
+    .height(250)
         .useViewBoxResizing(true) // allows chart to be responsive
         .dimension(cityDim)
         .margins({top: 15, right: 10, bottom: 80, left: 50})
@@ -33,6 +35,9 @@ function createTotalDailyBudget(ndx) {
         .title(function (d) {
             return 'In ' + d.key + ' the ' + this.layer + ' by day cost: ' + d.value;
         })
+
+        //https://www.codeproject.com/Articles/709735/Making-Dashboards-with-Dc-js-Part-4-Style
+       //.renderlet(function (chart) {chart.selectAll("g.x path.domain").attr('d', 'M1,2H118')})
         .transitionDuration(1500)
         .x(d3.scale.ordinal())
         .xUnits(dc.units.ordinal)
@@ -54,9 +59,10 @@ function createRowChart(ndx) {
     });
 
     dc.rowChart("#rowChart")
-        .useViewBoxResizing(true)
+    .height(600)     
+    .useViewBoxResizing(true)
        // .width(200)
-        //.height(700) 
+        
         .x(d3.scale.linear().domain([0, 200]))
         .elasticX(true)
         .transitionDuration(1500)
@@ -85,6 +91,7 @@ function createCorrelationCharts(data, ndx) {
 
 
     dc.scatterPlot("#correlation")
+    .height(200)
         .useViewBoxResizing(true) // allows chart to be responsive
         //.width(300)
        // .height(200)
@@ -218,6 +225,5 @@ function show_avg(ndx, product, element) {
         })
         .group(average_cost);
 }
-
 
 

@@ -13,8 +13,10 @@ function createPrecipitationChart(ndx) {
     });
 
     var groupPrecipitation = dimPrecipitation.group();
-    
+
     dc.pieChart("#currency_precipitation")
+        .height(200)
+
         .useViewBoxResizing(true) // allows chart to be responsive
         .dimension(dimPrecipitation)
         .group(groupPrecipitation)
@@ -41,6 +43,8 @@ function createCorrelationTemp(data, ndx) {
 
     var composite = dc.compositeChart("#correlation")
     composite
+        .height(600)
+
         .useViewBoxResizing(true) // allows chart to be responsive
         .x(d3.scale.linear().domain([0, maxArrivals]))
         .clipPadding(10)
@@ -88,8 +92,9 @@ function cityTemp(ndx) {
         grp2 = dim.group().reduceSum(dc.pluck('minTemp'));
 
     var composite = dc.compositeChart("#dailyBudget_Temp");
+   
     composite
-
+        .height(250)
         .useViewBoxResizing(true) // allows chart to be responsive
         .x(d3.scale.ordinal())
         .xUnits(dc.units.ordinal)
@@ -97,8 +102,9 @@ function cityTemp(ndx) {
         .group(grp1, "maximun temperature")
         .yAxisLabel("Temperature")
         .xAxisLabel("City")
+        .renderArea(false)
         //.legend(dc.legend().x(600).y(0).itemHeight(13).gap(5))
-        .margins({top: 10, right: 50, bottom: 80, left: 50})
+        .margins({ top: 10, right: 50, bottom: 80, left: 50 })
         .renderHorizontalGridLines(true)
         ._rangeBandPadding(1)
         .compose([
