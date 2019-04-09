@@ -1,16 +1,24 @@
-function createCurrencyChart(ndx) {
+function createRowChart(ndx) {
+    
+    var dimCity = ndx.dimension(dc.pluck('city'));
 
-    var dimCurrency = ndx.dimension(dc.pluck('currencyCode'))
-    var groupCurrency = dimCurrency.group();
+    var budgetGroup = dimCity.group().reduceSum(function (d) {
+        var totalBudget = d.hostelNight + d.meals + d.drinks + d.attractions + d.transport;
+        return [totalBudget];
+    });
 
-    dc.pieChart("#currency_precipitation")
-    .height(200)    
-    .useViewBoxResizing(true) // allows chart to be responsive
-        .innerRadius(60)
-        .dimension(dimCurrency)
-        .group(groupCurrency)
-        .transitionDuration(1500);
-};
+    dc.rowChart("#rowChart")
+        .height(600)
+        .useViewBoxResizing(true)
+        .x(d3.scale.linear().domain([0, 200]))
+        //Why this doesn't work
+        //.xAxis().tickValues([0, 50, 100, 150])  
+        .elasticX(true)
+        .transitionDuration(1500)
+        .dimension(dimCity)
+        .group(budgetGroup);
+}
+
 
 function createTotalDailyBudget(ndx) {
 
@@ -23,10 +31,10 @@ function createTotalDailyBudget(ndx) {
 
 
     dc.barChart('#dailyBudget_Temp')
-    .height(250)
-        .useViewBoxResizing(true) // allows chart to be responsive
+        .height(300)
+        .useViewBoxResizing(true) // allows chart to be responsive        
+        .margins({ top: 15, right: 10, bottom: 80, left: 50 })
         .dimension(cityDim)
-        .margins({top: 15, right: 10, bottom: 80, left: 50})
         .group(hostel, "hostel")
         .stack(meals, "meals")
         .stack(drinks, "drinks")
@@ -35,40 +43,36 @@ function createTotalDailyBudget(ndx) {
         .title(function (d) {
             return 'In ' + d.key + ' the ' + this.layer + ' by day cost: ' + d.value;
         })
-
-        //https://www.codeproject.com/Articles/709735/Making-Dashboards-with-Dc-js-Part-4-Style
-       //.renderlet(function (chart) {chart.selectAll("g.x path.domain").attr('d', 'M1,2H118')})
         .transitionDuration(1500)
         .x(d3.scale.ordinal())
         .xUnits(dc.units.ordinal)
         .barPadding(0.3)
         .xAxisLabel('City')
         .yAxisLabel('Total daily budget')
-        .yAxis().ticks(8);
+        .yAxis().ticks(6);
     //??????.legend(dc.legend().x(320).y(20).itemHeight(15).gap(5));
 
 };
 
-//at the moment this is showing meals but I need to update it to show total!!
-function createRowChart(ndx) {
-    var dimCity = ndx.dimension(dc.pluck('city'));
 
-    var budgetGroup = dimCity.group().reduceSum(function (d) {
-        var totalBudget = d.hostelNight + d.meals + d.drinks + d.attractions + d.transport;
-        return [totalBudget];
-    });
 
-    dc.rowChart("#rowChart")
-    .height(600)     
-    .useViewBoxResizing(true)
-       // .width(200)
-        
-        .x(d3.scale.linear().domain([0, 200]))
-        .elasticX(true)
-        .transitionDuration(1500)
-        .dimension(dimCity)
-        .group(budgetGroup);
-}
+
+
+function createCurrencyChart(ndx) {
+
+    var dimCurrency = ndx.dimension(dc.pluck('currencyCode'))
+    var groupCurrency = dimCurrency.group();
+
+    dc.pieChart("#currency_precipitation")
+        .height(200)
+        .useViewBoxResizing(true) // allows chart to be responsive
+        .innerRadius(60)
+        .dimension(dimCurrency)
+        .group(groupCurrency)
+        .transitionDuration(1500);
+};
+
+
 
 function createCorrelationCharts(data, ndx) {
 
@@ -91,10 +95,8 @@ function createCorrelationCharts(data, ndx) {
 
 
     dc.scatterPlot("#correlation")
-    .height(200)
+        .height(200)
         .useViewBoxResizing(true) // allows chart to be responsive
-        //.width(300)
-       // .height(200)
         .x(d3.scale.linear().domain([0, maxArrivals]))
         .brushOn(false)
         .symbolSize(8)

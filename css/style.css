@@ -294,12 +294,6 @@ display: flex;
 
 /*chart panels*/
 
-.canvas-wrapper{
-    width:100%;
-    height: 100%;
-    padding: 25px;
-}
-
 .panel-widget {
     padding: 0px;
 }
@@ -333,8 +327,28 @@ text-align: right;
 }
 
 
+/* row chart */
 
 
+/*for small screens*/
+#rowChart .axis{
+    font-size: 0.8em;    
+
+}
+
+/*chart axis style*/
+path.domain{
+    stroke:black;
+    fill:none;
+    }
+#dailyBudget_Temp path{
+    fill:none;
+    }
+ 
+#dailyBudget_Temp .axis{
+    font-size: 0.8em;    
+
+} 
 
 
 
