@@ -226,4 +226,3 @@ function show_avg(ndx, product, element) {
         .group(average_cost);
 }
 
-

@@ -1,3 +1,24 @@
+function createRowChart(ndx) {
+    var dimCity = ndx.dimension(dc.pluck('city'));
+
+    var precipitationGroup = dimCity.group().reduceSum(dc.pluck('precipitation'));
+
+    dc.rowChart("#rowChart")
+    .height(600)     
+    .useViewBoxResizing(true)
+       // .width(200)
+        
+        .x(d3.scale.linear().domain([0, 200]))
+       // .yAxisLabel("Precipitation")
+        .elasticX(true)
+        .transitionDuration(1500)
+        .dimension(dimCity)
+        .group(precipitationGroup);
+}
+
+
+
+
 function createPrecipitationChart(ndx) {
 
     var dimPrecipitation = ndx.dimension(function (d) {
@@ -44,7 +65,6 @@ function createCorrelationTemp(data, ndx) {
     var composite = dc.compositeChart("#correlation")
     composite
         .height(600)
-
         .useViewBoxResizing(true) // allows chart to be responsive
         .x(d3.scale.linear().domain([0, maxArrivals]))
         .clipPadding(10)
@@ -99,10 +119,10 @@ function cityTemp(ndx) {
         .x(d3.scale.ordinal())
         .xUnits(dc.units.ordinal)
         .dimension(dim)
-        .group(grp1, "maximun temperature")
+        .group(grp1, "maxTemp")
         .yAxisLabel("Temperature")
         .xAxisLabel("City")
-        .renderArea(false)
+        //.renderArea(false)
         //.legend(dc.legend().x(600).y(0).itemHeight(13).gap(5))
         .margins({ top: 10, right: 50, bottom: 80, left: 50 })
         .renderHorizontalGridLines(true)
@@ -111,14 +131,14 @@ function cityTemp(ndx) {
             dc.lineChart(composite)
                 .dimension(dim)
                 .colors('red')
-                .renderArea(false)
-                .group(grp1, "maximun temperature")
+               // .renderArea(false)
+                .group(grp1, "maxTemp")
                 .dashStyle([2, 2]),
             dc.lineChart(composite)
                 .dimension(dim)
                 .colors('blue')
-                .renderArea(false)
-                .group(grp2, "minimun temperature")
+                //.renderArea(false)
+                .group(grp2, "minTemp")
                 .dashStyle([5, 5])
         ])
         .brushOn(false)

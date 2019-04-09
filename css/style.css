@@ -2,7 +2,6 @@
     box-sizing: border-box;
     margin:0px;
     padding: 0px;
-  
   }
   
 
@@ -353,9 +352,6 @@ https://github.com/dc-js/dc.js/issues/731
     /* font-size: 1em; */
 }
 
-#dailyBudget_Temp .y.axis text{
-    /* font-size: 1em; */
-}
 
 
 
