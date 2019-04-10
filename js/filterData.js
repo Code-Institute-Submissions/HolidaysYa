@@ -16,6 +16,7 @@ function getMonth(error, data) {
         $('#weatherId').addClass('hide');
         $('#grafId').addClass('hide');
         $('#sidebar-collapse').addClass('hide');
+        $('#navbar-button').addClass('hide');
     })
 
     //When choose budget button is pressed, hide month selection page and show budget selection page
@@ -45,6 +46,7 @@ function getMonth(error, data) {
     $("#resultsBudget").click(function () {
         $('#budgetId').slideUp(1000);
         $('#grafId').removeClass('hide').slideDown(1000);
+        $('#navbar-button').removeClass('hide');
         $('#sidebar-collapse').removeClass('hide').show(1000);
         $('.weather').hide();
         $('.budget').show();
@@ -53,6 +55,7 @@ function getMonth(error, data) {
     $("#resultsWeather").click(function () {
         $('#weatherId').slideUp(1000);
         $('#grafId').removeClass('hide').slideDown(1000);
+        $('#navbar-button').removeClass('hide');
         $('#sidebar-collapse').removeClass('hide').show(1000);
         $('.budget').hide();
         $('.weather').show();

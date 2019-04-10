@@ -8,6 +8,8 @@ function createTable(ndx) {
 
     var tableChart = dc.dataTable('#table');
     tableChart
+        .height(300)
+        .width(400)
         .useViewBoxResizing(true) // allows chart to be responsive
         .dimension(allDimension)
         .group(function (data) {
@@ -101,16 +103,6 @@ function showTitle(option) {
 
     }
 
-
-// function countCities(ndx){
-
-//     var countChart = dc.dataCount("#mystats");
-//     countChart
-//     .dimension(ndx)
-//     .group(ndx.groupAll());
-
-
-// }
 
 function countCities(ndx) {
 

@@ -29,6 +29,46 @@ html,body{
 
 /* background section month selection, budget selection and weather selection */
 
+  .navbar{
+    margin: 0px;
+    
+ } 
+
+ .navbar ul {
+    position:absolute;
+    right:10px;
+    }
+
+
+
+.navbar-right{
+    float:right;
+}
+
+
+.borderSocial {
+    background: rgba(255, 255, 255, 0.1);
+    float: left;
+    margin: 10px 8px;
+    padding: 0px;
+    border-radius: 4px;
+}
+
+
+.social{
+    color: #fff;
+    height: 40px;
+    width: 40px;
+    padding-top: 11px;
+    padding-left: 9px;
+}
+
+
+
+
+
+
+
 #monthId, #budgetId,#weatherId{
     /* so it doesn't hide under the navbar */
     /* padding-top: 60px;   */
@@ -442,3 +482,37 @@ https://github.com/dc-js/dc.js/issues/731
 } */
 
 
+
+
+.table-hover{
+font-size:.6em;
+text-align: center;
+}
+
+.email-button{
+background-color: transparent;
+border:none;
+color:grey;
+}
+
+/* .email-button, .email-button:hover, .email-button:focus, .email-button:active, .email-button:active:focus{
+    background-color: transparent;
+    border:none;
+    border-color: transparent;
+    box-shadow:none;
+    } */
+
+    .email-button:hover{
+        color: #52a9ec;
+    }
+    .email-button:focus{
+        text-decoration: none;
+    }
+
+
+}
+.btn-primary, .btn-primary:hover, .btn-primary:focus, .btn-primary:active, .btn-primary.active, .open > .dropdown-toggle.btn-primary, .btn-primary.disabled, .btn-primary[disabled], fieldset[disabled] .btn-primary, .btn-primary.disabled:hover, .btn-primary[disabled]:hover, fieldset[disabled] .btn-primary:hover, .btn-primary.disabled:focus, .btn-primary[disabled]:focus, fieldset[disabled] .btn-primary:focus, .btn-primary.disabled:active, .btn-primary[disabled]:active, fieldset[disabled] .btn-primary:active, .btn-primary.disabled.active, .btn-primary[disabled].active, fieldset[disabled] .btn-primary.active {
+        color: #fff;
+        background-color:transparent;
+        border-color:transparent;
+    }

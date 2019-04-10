@@ -22,22 +22,28 @@
 	<nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
 		<div class="container-fluid">
 			<div class="navbar-header">
-				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+				<button type="button" id="navbar-button" class="navbar-toggle collapsed hide" data-toggle="collapse"
 					data-target="#sidebar-collapse"><span class="sr-only">Toggle navigation</span>
 					<span class="icon-bar"></span>
 					<span class="icon-bar"></span>
-					<span class="icon-bar"></span></button>
+					<span class="icon-bar"></span>
+				</button>
+
+
+
+
 				<a class="navbar-brand" href="#"><span>Eurotrip</span>Dashboard</a>
-				<ul class="nav navbar-top-links navbar-right">
-					<li class="dropdown"><a class="dropdown-toggle" href="#">
+
+				<ul class="nav navbar-top-links navbar-right hidden-xs">
+					<li class="borderSocial"><a class="social" href="#">
 							<em class="fa fa-facebook"></em>
 						</a>
 					</li>
-					<li class="dropdown"><a class="dropdown-toggle" href="#">
+					<li class="borderSocial"><a class="social" href="#">
 							<em class="fa fa-twitter"></em>
 						</a>
 					</li>
-					<li class="dropdown"><a class="dropdown-toggle" href="#">
+					<li class="borderSocial"><a class="social" href="#">
 							<em class="fa fa-linkedin"></em>
 						</a>
 					</li>
@@ -45,6 +51,73 @@
 			</div>
 		</div><!-- /.container-fluid -->
 	</nav>
+
+
+
+
+	<!-- </section> -->
+
+	<div id="sidebar-collapse" class="col-sm-1 sidebar hide">
+
+
+		<ul class="nav menu">
+			<li><a class="goback"><em class="fa fa-calendar faSide">&nbsp;</em></a></li>
+			<!-- <li><a href="charts.html"><em class="fa fa-bar-chart">&nbsp;</em> Charts</a></li> -->
+			<li class="parent "><a data-toggle="collapse" href="#sub-item-1">
+					<em data-toggle="collapse" href="#sub-item-1" class="fa fa-filter faSide">&nbsp;</em>
+				</a>
+				<ul class="children collapse" id="sub-item-1">
+					<li class="budget">
+						<form>
+							<div class="form-group">
+								<label for="maxBudget2">Try with a different budget</label>
+								<input type="number" class="form-control" id="maxBudget2" name="maxBudget2" required />
+								<div class="buttons">
+									<button class="btn btn-success filterSideBar" id="filterBudget">show cities</button>
+								</div>
+							</div>
+						</form>
+					</li>
+
+					<li class="weather">
+						<form>
+							<div class="form-group">
+								<label for="minTemp2">Minimun temperature</label>
+								<input type="number" class="form-control" id="minTemp2" name="minTemp2" />
+								<label for="maxTemp2">Maximun temperature</label>
+								<input type="number" class="form-control" id="maxTemp2" name="maxTemp2" />
+								<div class="buttonsSide">
+									<button class="btn btn-success" id="filterWeather">show cities</button>
+
+								</div>
+							</div>
+						</form>
+					</li>
+
+				</ul>
+			</li>
+			<li>
+				<button type="button" class="btn btn-primary btn-lg email-button" data-toggle="modal" data-target="#myModal">
+					<em class="fa fa-envelope faSide">&nbsp;</em>
+				</button>
+			</li>
+
+			<li><a href="#"><em class="fa fa-facebook faSide hidden-sm hidden-md hidden-lg">&nbsp;</em></a></li>
+			<li><a href="#"><em class="fa fa-twitter faSide hidden-sm hidden-md hidden-lg">&nbsp;</em></a></li>
+			<li><a href="#"><em class="fa fa-linkedin faSide hidden-sm hidden-md hidden-lg">&nbsp;</em></a></li>
+
+
+		</ul>
+		</li>
+
+
+
+
+
+		</ul>
+	</div>
+	<!--/.sidebar-->
+
 
 	<section id="monthId">
 		<div class="overlay1">
@@ -110,59 +183,6 @@
 		</div>
 	</section>
 
-
-
-
-	<!-- </section> -->
-
-	<div id="sidebar-collapse" class="col-sm-1 sidebar hide">
-
-
-		<ul class="nav menu">
-			<li><a class="goback"><em class="fa fa-calendar faSide">&nbsp;</em></a></li>
-			<!-- <li><a href="charts.html"><em class="fa fa-bar-chart">&nbsp;</em> Charts</a></li> -->
-			<li class="parent "><a data-toggle="collapse" href="#sub-item-1">
-					<em data-toggle="collapse" href="#sub-item-1" class="fa fa-filter faSide">&nbsp;</em>
-				</a>
-				<ul class="children collapse" id="sub-item-1">
-
-
-
-
-					<li class="budget">
-						<form>
-							<div class="form-group">
-								<label for="maxBudget2">Try with a different budget</label>
-								<input type="number" class="form-control" id="maxBudget2" name="maxBudget2" required />
-								<div class="buttons">
-									<button class="btn btn-success filterSideBar" id="filterBudget">show cities</button>
-								</div>
-							</div>
-						</form>
-					</li>
-
-					<li class="weather">
-						<form>
-							<div class="form-group">
-								<label for="minTemp2">Minimun temperature</label>
-								<input type="number" class="form-control" id="minTemp2" name="minTemp2" />
-								<label for="maxTemp2">Maximun temperature</label>
-								<input type="number" class="form-control" id="maxTemp2" name="maxTemp2" />
-								<div class="buttonsSide">
-									<button class="btn btn-success" id="filterWeather">show cities</button>
-
-								</div>
-							</div>
-						</form>
-					</li>
-
-				</ul>
-			</li>
-			<li><a href="#"><em class="fa fa-envelope faSide">&nbsp;</em></a></li>
-
-		</ul>
-	</div>
-	<!--/.sidebar-->
 
 	<!-- this section is hidden at the beggining -->
 
@@ -294,7 +314,7 @@
 							</div>
 						</div>
 						<div class="panel-body">
-								<div class="main-chart" id="rowChart"></div>
+							<div class="main-chart" id="rowChart"></div>
 						</div>
 					</div>
 
@@ -313,7 +333,7 @@
 									</div>
 								</div>
 								<div class="panel-body">
-										<div class="main-chart" id="dailyBudget_Temp"></div>
+									<div class="main-chart" id="dailyBudget_Temp"></div>
 								</div>
 							</div>
 						</div>
@@ -334,7 +354,7 @@
 											</div>
 										</div>
 										<div class="panel-body">
-												<div class="main-chart" id="currency_precipitation"></div>
+											<div class="main-chart" id="currency_precipitation"></div>
 										</div>
 									</div>
 								</div>
@@ -349,7 +369,7 @@
 											</div>
 										</div>
 										<div class="panel-body">
-												<div class="main-chart" id="correlation"></div>
+											<div class="main-chart" id="correlation"></div>
 										</div>
 									</div>
 								</div>
@@ -364,26 +384,74 @@
 			</div>
 			<!--/.row-->
 
-			<!-- table -->
-			<div class="row">
+
+
+			<div class=row>
 				<div class="col-md-12">
 					<div class="panel panel-default">
 						<div class="panel-heading">
 							Summary table
-							<span class="pull-right clickable panel-toggle panel-button-tab-left"><em
-									class="fa fa-toggle-up"></em></span></div>
+							<span class="pull-right clickable panel-toggle panel-button-tab-left">
+								<em class="fa fa-toggle-up"></em>
+							</span>
+						</div>
 						<div class="panel-body">
-								<div class="main-chart table-hover" id="table" height="200" width="600"></div>
+							<div class="container-table">
+								<div class="main-chart table-hover" id="table"></div>
+							</div>
 						</div>
 					</div>
-
 				</div>
-
 			</div>
+
+
 
 		</div>
 	</section>
 	<!--/.main-->
+
+
+
+	<!-- Modal from bootstrap-->
+	<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+							aria-hidden="true">&times;</span></button>
+					<h4 class="modal-title text-center" id="myModalLabel">Do you need more information?</h4>
+				</div>
+				<div class="modal-body">
+
+					<form>
+						<div class="form-group">
+							<input type="text" name="name" class="form-control" id="InputName"
+								placeholder="Enter your name" required>
+						</div>
+						<div class="form-group">
+							<input type="email" name="email" class="form-control" id="InputEmail"
+								placeholder="Enter your email" required>
+						</div>
+						<textarea class="form-control" rows="3"></textarea>
+						<div class="modal-footer">
+								<button type="submit" class="btn btn-default btn-reset" data-dismiss="modal">Cancel</button>
+								<button type="submit" class="btn btn-signin">Submit</button>
+							</div>
+					</form>
+
+				</div>
+
+			</div>
+		</div>
+	</div>
+
+
+
+
+
+
+
+
 
 	<script src="js/jquery-3.3.1.js"></script>
 	<script type="text/javascript" src="js/d3.min.js"></script>
