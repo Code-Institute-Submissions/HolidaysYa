@@ -102,32 +102,32 @@ function cityTemp(ndx) {
     var composite = dc.compositeChart("#dailyBudget_Temp");
 
     composite
-        .height(300)
+        .height(250)
         .useViewBoxResizing(true) // allows chart to be responsive
-        .margins({ top: 10, right: 50, bottom: 80, left: 50 })
+        .margins({ top: 60, right: 20, bottom: 60, left: 35 })
         .x(d3.scale.ordinal())
         .xUnits(dc.units.ordinal)
        .dimension(dim)
        .group(grp1, "max. Temperature")
         .yAxisLabel("Temperature")
         .xAxisLabel("City")
-        //.renderArea(false)
-        .legend(dc.legend().x(600).y(0).itemHeight(13).gap(5))
+        .clipPadding(10)
+        .legend(dc.legend().x(30).y(0).itemHeight(13).gap(5))
         .renderHorizontalGridLines(true)
         ._rangeBandPadding(1)
         .compose([
             dc.lineChart(composite)
                 .dimension(dim)
                 .group(grp1, "max. Temperature")
-                .colors('red')
-                // .renderArea(false)
-                .dashStyle([2, 2]),
+                .clipPadding(10)
+                .colors('#f70826')
+               .dashStyle([3,3]),
             dc.lineChart(composite)
                 .dimension(dim)
                 .group(grp2, "min. Temperature")
-                .colors('blue')
-                //.renderArea(false)
-                .dashStyle([5, 5])
+                .clipPadding(10)
+                .colors('#1f98f5')
+                .dashStyle([8,3])
         ])
         .brushOn(false)
         .transitionDuration(1500);
@@ -155,24 +155,25 @@ function createCorrelationTemp(data, ndx) {
 
     var composite = dc.compositeChart("#correlation")
     composite
-        .height(200)
+        .height(250)
         .useViewBoxResizing(true) // allows chart to be responsive
+        .margins({ top: 55, right: 50, bottom: 40, left: 30 })
+        .legend(dc.legend().x(40).y(0).itemHeight(13).gap(5))
         .x(d3.scale.linear().domain([0, maxArrivals]))
-        .clipPadding(10)
         .xAxisLabel('Number of country visitors (2017 or 2018)')
         .yAxisLabel("Avg. Temperature")
         .rightYAxisLabel("Avg. Precipitation")
+        .clipPadding(10)
         .shareTitle(false)
         .dimension(dimTemp)
         .group(temperatureGroup, "temperature")
         .renderHorizontalGridLines(true)
         .brushOn(false)
-
         .compose([
             dc.scatterPlot(composite)
                 .dimension(dimTemp)
-                .symbolSize(8)
-                .colors('red')
+                .symbolSize(7)
+                .colors('#e6770d')
                 .clipPadding(10)
                 .title(function (d) {
                     return d.key[2] + " the average temperature is " + d.key[1] + " degrees\nand there was " + d.key[0] + " millions visits in 2017";
@@ -180,8 +181,8 @@ function createCorrelationTemp(data, ndx) {
                 .group(temperatureGroup, "temperature"),
             dc.scatterPlot(composite)
                 .dimension(dimPreci)
-                .symbolSize(8)
-                .colors('green')
+                .symbolSize(7)
+                .colors('#1ebfae')
                 .clipPadding(10)
                 .title(function (d) {
                     return d.key[2] + " the average precipitation is " + d.key[1] + " mm\nand there was " + d.key[0] + " millions visits in 2017";
@@ -212,10 +213,15 @@ function createPrecipitationChart(ndx) {
     var groupPrecipitation = dimPrecipitation.group();
 
     dc.pieChart("#currency_precipitation")
-        .height(200)
+        .height(250)
+        .innerRadius(40)
+        .legend(dc.legend().x(0).y(0).itemHeight(13).gap(5))
         .useViewBoxResizing(true) // allows chart to be responsive
+        .externalRadiusPadding(20)
         .dimension(dimPrecipitation)
         .group(groupPrecipitation)
+        .renderLabel(false)
+        .ordinalColors(["#30a5f1","#ffb53e","#098275"])
         .transitionDuration(1500);
 };
 

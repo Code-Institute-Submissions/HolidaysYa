@@ -108,7 +108,7 @@ html,body{
 .button{
     border-radius: 25px;
     width: 250px;
-    font-size: 15px;
+    font-size: 1.1em;
     font-weight:800;
     height: 60px;
     margin:20px 30px 0px 30px;
@@ -331,26 +331,45 @@ text-align: right;
 
 
 /*for small screens*/
-#rowChart .axis{
-    font-size: 0.8em;    
 
-}
 
 /*chart axis style*/
 path.domain{
-    stroke:black;
+    stroke:rgb(0, 0, 0);
     fill:none;
+    stroke-width: 0.8;
     }
+
+    
 #dailyBudget_Temp path{
     fill:none;
     }
  
-#dailyBudget_Temp .axis{
+    /*styles temp chart*/
+.stack-list .line{
+stroke-width: 2;
+stroke-linecap:round;
+        }
+     
+ #dailyBudget_Temp .axis{
     font-size: 0.8em;    
 
 } 
 
+.dc-legend-item{
+    font-size: 0.8em; 
+}
 
+
+.x-axis-label, .y-axis-label{
+ font-weight: bold;
+ font-size: 0.9em; 
+
+}
+.axis{
+    font-size: 0.8em;    
+
+}
 
 
 

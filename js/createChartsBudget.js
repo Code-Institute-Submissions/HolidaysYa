@@ -43,6 +43,7 @@ function createTotalDailyBudget(ndx) {
         .title(function (d) {
             return 'In ' + d.key + ' the ' + this.layer + ' by day cost: ' + d.value;
         })
+        .ordinalColors(["#30a5ff","#1ebfae","#ffb53e","#f9243f","#dd0f7d"]) 
         .transitionDuration(1500)
         .x(d3.scale.ordinal())
         .xUnits(dc.units.ordinal)
@@ -65,10 +66,14 @@ function createCurrencyChart(ndx) {
 
     dc.pieChart("#currency_precipitation")
         .height(200)
+        .innerRadius(25)
+        .legend(dc.legend().x(0).y(10).itemHeight(13).gap(5))
         .useViewBoxResizing(true) // allows chart to be responsive
-        .innerRadius(60)
+        .externalRadiusPadding(40)
         .dimension(dimCurrency)
         .group(groupCurrency)
+        .ordinalColors(["#30a5ff","#137715","#6eb10f","#8e8318","#efaf0d","#eb793b","#eb3b3b","#d636d4","#6936d6"])
+        .renderLabel(false)
         .transitionDuration(1500);
 };
 
@@ -99,11 +104,12 @@ function createCorrelationCharts(data, ndx) {
         .useViewBoxResizing(true) // allows chart to be responsive
         .x(d3.scale.linear().domain([0, maxArrivals]))
         .brushOn(false)
-        .symbolSize(8)
+        .symbolSize(10)
         .clipPadding(10)
         .xAxisLabel('Number of country visitors (2017 or 2018)')
         .yAxisLabel("Budget")
         .transitionDuration(1500)
+        .colors('#30a5ff')
         .title(function (d) {
             return "In " + d.key[2] + " you will need a daily bugget of " + d.key[1] + " \nand there was " + d.key[0] + " millions visits in 2017";
         })
