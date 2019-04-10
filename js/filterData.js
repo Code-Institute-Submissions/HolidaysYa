@@ -232,25 +232,26 @@ function createDataForGraphics(data, filteredBy) {
     fiterBy(ndx, "#filterByRegion");
     fiterBy(ndx, "#filterByCountry");
     fiterBy(ndx, "#filterByCity");
-    createCurrencyChart(ndx);
-    createRowChart(ndx);
     createTable(ndx);
     countCities(ndx);
 
 
     //Budget graphics
     if (filteredBy === 'Budget') {
-        createTotalDailyBudget(ndx);
-        createCorrelationCharts(data, ndx)
         show_avg(ndx, "hostel", "#hostel_maxtem");
         show_avg(ndx, "meals", "#meals_mintem");
         show_avg(ndx, "drinks", "#drinks_avgtemp");
         show_avg(ndx, "transport", "#transport_maxpreci");
         show_avg(ndx, "attractions", "#attractions_minpreci");
-    }
+        createRowChart(ndx);
+        createTotalDailyBudget(ndx);
+        createCurrencyChart(ndx);
+        createCorrelationCharts(data, ndx)
+     }
 
     //weather graphics
     if (filteredBy === 'Weather') {
+        createRowChartWeather(ndx);
         createPrecipitationChart(ndx);
         show_max_weather(ndx, 'maxTemp', "#hostel_maxtem");
         show_min_weather(ndx, 'minTemp', "#meals_mintem");

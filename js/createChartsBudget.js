@@ -15,6 +15,7 @@ function createRowChart(ndx) {
         //.xAxis().tickValues([0, 50, 100, 150])  
         .elasticX(true)
         .transitionDuration(1500)
+        .ordinalColors(["#006B99","#2E85AB","#5CA0BE","#8BBBD0","#B9D6E3","#0E9E8D","#39AFA1","#65C1B6","#91D2CB","#BDE4DF","#F2C44F","#ECC970","#F0D590","#F6E6BD","#F4994E","#F6AB6E","#F9C9A2","#FAD5B7","#E86443","#EA7254","#EC8065","#F3B3A3","#F6C6BA","#F9D9D1"])
         .dimension(dimCity)
         .group(budgetGroup);
 }
@@ -43,7 +44,7 @@ function createTotalDailyBudget(ndx) {
         .title(function (d) {
             return 'In ' + d.key + ' the ' + this.layer + ' by day cost: ' + d.value;
         })
-        .ordinalColors(["#30a5ff","#1ebfae","#ffb53e","#f9243f","#dd0f7d"]) 
+        .ordinalColors(["#006B99","#0E9E8D","#F2C44F","#F4994E","#E86443"]) 
         .transitionDuration(1500)
         .x(d3.scale.ordinal())
         .xUnits(dc.units.ordinal)
@@ -54,8 +55,6 @@ function createTotalDailyBudget(ndx) {
     //??????.legend(dc.legend().x(320).y(20).itemHeight(15).gap(5));
 
 };
-
-
 
 
 
@@ -72,7 +71,7 @@ function createCurrencyChart(ndx) {
         .externalRadiusPadding(40)
         .dimension(dimCurrency)
         .group(groupCurrency)
-        .ordinalColors(["#30a5ff","#137715","#6eb10f","#8e8318","#efaf0d","#eb793b","#eb3b3b","#d636d4","#6936d6"])
+        .ordinalColors(["#006B99","#4593B4","#0E9E8D","#65C1B6","#F2C44F","#F0D590","#F4994E","#F8BE8E","#E86443"])
         .renderLabel(false)
         .transitionDuration(1500);
 };
@@ -109,7 +108,7 @@ function createCorrelationCharts(data, ndx) {
         .xAxisLabel('Number of country visitors (2017 or 2018)')
         .yAxisLabel("Budget")
         .transitionDuration(1500)
-        .colors('#30a5ff')
+        .colors('#E76F51')
         .title(function (d) {
             return "In " + d.key[2] + " you will need a daily bugget of " + d.key[1] + " \nand there was " + d.key[0] + " millions visits in 2017";
         })

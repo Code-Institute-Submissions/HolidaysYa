@@ -262,10 +262,33 @@ display: flex;
     font-size: 25px;
 }
 
-.color-pink{
-    color: rgb(221, 15, 125)
+.color-lightblue{
+    color:#30a5ff;
 }
-   
+
+
+.color-blue{
+    color:#006B99;
+}
+
+.color-green{
+    color:#0E9E8D;
+}
+
+
+.color-yellow{
+    color:#F2C44F;
+}
+
+.color-orange{
+    color:#F4994E;
+}
+
+.color-red{
+    color:#E86443;
+}
+
+
 .color-purple{ 
     color: rgb(131, 27, 150) 
 }

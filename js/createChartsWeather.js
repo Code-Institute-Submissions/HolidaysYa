@@ -71,7 +71,7 @@ function dim_avg_groupAll(maxDim, minDim) {
 
 
 
-function createRowChart(ndx) {
+function createRowChartWeather(ndx) {
     var dimCity = ndx.dimension(dc.pluck('city'));
 
     var precipitationGroup = dimCity.group().reduceSum(dc.pluck('precipitation'));
@@ -84,6 +84,7 @@ function createRowChart(ndx) {
         //.xAxis().tickValues([0, 50, 100, 150])  
         .elasticX(true)
         .transitionDuration(1500)
+        .ordinalColors(["#006B99","#2E85AB","#5CA0BE","#8BBBD0","#B9D6E3","#0E9E8D","#39AFA1","#65C1B6","#91D2CB","#BDE4DF","#F2C44F","#ECC970","#F0D590","#F6E6BD","#F4994E","#F6AB6E","#F9C9A2","#FAD5B7","#E86443","#EA7254","#EC8065","#F3B3A3","#F6C6BA","#F9D9D1"])
         .dimension(dimCity)
         .group(precipitationGroup);
 }
@@ -120,13 +121,13 @@ function cityTemp(ndx) {
                 .dimension(dim)
                 .group(grp1, "max. Temperature")
                 .clipPadding(10)
-                .colors('#f70826')
+                .colors('#E86443')
                .dashStyle([3,3]),
             dc.lineChart(composite)
                 .dimension(dim)
                 .group(grp2, "min. Temperature")
                 .clipPadding(10)
-                .colors('#1f98f5')
+                .colors('#006B99')
                 .dashStyle([8,3])
         ])
         .brushOn(false)
@@ -173,7 +174,7 @@ function createCorrelationTemp(data, ndx) {
             dc.scatterPlot(composite)
                 .dimension(dimTemp)
                 .symbolSize(7)
-                .colors('#e6770d')
+                .colors('#F2C44F')
                 .clipPadding(10)
                 .title(function (d) {
                     return d.key[2] + " the average temperature is " + d.key[1] + " degrees\nand there was " + d.key[0] + " millions visits in 2017";
@@ -182,7 +183,7 @@ function createCorrelationTemp(data, ndx) {
             dc.scatterPlot(composite)
                 .dimension(dimPreci)
                 .symbolSize(7)
-                .colors('#1ebfae')
+                .colors('#0E9E8D')
                 .clipPadding(10)
                 .title(function (d) {
                     return d.key[2] + " the average precipitation is " + d.key[1] + " mm\nand there was " + d.key[0] + " millions visits in 2017";
@@ -221,7 +222,7 @@ function createPrecipitationChart(ndx) {
         .dimension(dimPrecipitation)
         .group(groupPrecipitation)
         .renderLabel(false)
-        .ordinalColors(["#30a5f1","#ffb53e","#098275"])
+        .ordinalColors(["#E86443","#F2C44F","#0E9E8D"]) 
         .transitionDuration(1500);
 };
 
