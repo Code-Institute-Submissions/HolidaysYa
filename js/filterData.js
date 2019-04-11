@@ -10,7 +10,7 @@ function getMonth(error, data) {
     }
 
     //if the logo is clicked go to the main page
-    $(".navbar-brand").click(function () {
+    $(".navbar-brand").removeClass('hide').click(function () {
         $('#monthId').fadeIn(1000);
         $('#budgetId').addClass('hide');
         $('#weatherId').addClass('hide');
@@ -20,7 +20,7 @@ function getMonth(error, data) {
     })
 
     //When choose budget button is pressed, hide month selection page and show budget selection page
-    $('#chooseBudget').click(function (){
+    $('#chooseBudget').click(function () {
         $('#monthId').slideUp(1000);
         $('#budgetId').removeClass('hide').slideDown(1000);
     })
@@ -32,7 +32,7 @@ function getMonth(error, data) {
 
     //When change month is pressed, hide current screen and show month selection screen
     $(".goback").click(function () {
-      //everytime we start a new search we clear the input fields
+        //everytime we start a new search we clear the input fields
         $('input[name=minTemp]').val('');
         $('input[name=maxTemp]').val('');
         $('input[name=maxBudget]').val('');
@@ -43,29 +43,29 @@ function getMonth(error, data) {
         $('#sidebar-collapse').addClass('hide');
     })
 
-    $("#resultsBudget").click(function () {
-        $('#budgetId').slideUp(1000);
-        $('#grafId').removeClass('hide').slideDown(1000);
-        $('#navbar-button').removeClass('hide');
-        $('#sidebar-collapse').removeClass('hide').show(1000);
-        $('.weather').hide();
-        $('.budget').show();
-    })
+    // $("#resultsBudget").click(function () {
+    //     $('#budgetId').slideUp(1000);
+    //     $('#grafId').removeClass('hide').slideDown(1000);
+    //     $('#navbar-button').removeClass('hide');
+    //     $('#sidebar-collapse').removeClass('hide').show(1000);
+    //     $('.weather').hide();
+    //     $('.budget').show();
+    // })
     //When show cities is pressed, hide temperature selection screen and show graphics
-    $("#resultsWeather").click(function () {
-        $('#weatherId').slideUp(1000);
-        $('#grafId').removeClass('hide').slideDown(1000);
-        $('#navbar-button').removeClass('hide');
-        $('#sidebar-collapse').removeClass('hide').show(1000);
-        $('.budget').hide();
-        $('.weather').show();
-    })
+    // $("#resultsWeather").click(function () {
+    //     $('#weatherId').slideUp(1000);
+    //     $('#grafId').removeClass('hide').slideDown(1000);
+    //     $('#navbar-button').removeClass('hide');
+    //     $('#sidebar-collapse').removeClass('hide').show(1000);
+    //     $('.budget').hide();
+    //     $('.weather').show();
+    // })
 
-    
+
     // only call "filterData" after the dropdown option has been selected
     $("#monthSelector").change(function () {
         filterData(data);
-    }).change();  
+    }).change();
 
     // we add .change() to trigger change() for the default option (January) 
 
@@ -98,7 +98,7 @@ function filterByBudget(dataMonth) {
 
         //get input value and convert it to number
         var maxBudgetValue = parseInt(document.getElementById("maxBudget").value);
-     
+
         console.log(maxBudgetValue);
 
         //this will create an Object only containing the cities that fit the selected budget
@@ -112,15 +112,13 @@ function filterByBudget(dataMonth) {
             return (totalBudget < maxBudgetValue);
         });
 
-
         if (isNaN(maxBudgetValue)) {
             alert('Please enter the budget')
         }
         else {
-            //If there is one or more cities matching the criteria it will call 
-            //the function "createDataForGraphics" if not it will display a message;
             citiesMatchingCriteria(dataBudget, filteredBy);
         }
+
     }
 };
 
@@ -187,7 +185,7 @@ function citiesMatchingCriteria(data, filteredBy) {
     //document.getElementById("infoMessage").innerHTML = "";
 
     if (checkIfObjectEmpty(data)) {
-       console.log('not matches')
+        console.log('not matches')
         if (filteredBy == "Budget") {
             alert("We're sorry but Europe is not that cheap!");
         }
@@ -197,6 +195,23 @@ function citiesMatchingCriteria(data, filteredBy) {
     }
     else {
         console.log('matches')
+        if (filteredBy == "Budget") {
+            $('#budgetId').slideUp(1000);
+            $('#grafId').removeClass('hide').slideDown(1000);
+            $('#navbar-button').removeClass('hide');
+            $('#sidebar-collapse').removeClass('hide').show(1000);
+            $('.weather').hide();
+            $('.budget').show();
+        } else {
+            $('#weatherId').slideUp(1000);
+            $('#grafId').removeClass('hide').slideDown(1000);
+            $('#navbar-button').removeClass('hide');
+            $('#sidebar-collapse').removeClass('hide').show(1000);
+            $('.budget').hide();
+            $('.weather').show();
+        }
+
+
         createDataForGraphics(data, filteredBy);
     }
 }
@@ -250,7 +265,7 @@ function createDataForGraphics(data, filteredBy) {
         createTotalDailyBudget(ndx);
         createCurrencyChart(ndx);
         createCorrelationCharts(data, ndx)
-     }
+    }
 
     //weather graphics
     if (filteredBy === 'Weather') {
@@ -283,6 +298,6 @@ function fiterBy(ndx, element) {
     dc.selectMenu(element)
         .multiple(true)
         .dimension(dim)
-        .title(function(d){return d.key;})
+        .title(function (d) { return d.key; })
         .group(group);
 };
