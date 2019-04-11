@@ -6,9 +6,12 @@ queue()
 function getMonth(error, data) {
 
     if (error) { /////////// improve this???
-        document.getElementById("error").innerHTML = `<h2 class="text-danger">Error retrieving the data file!</h2>`;
+        alert("error with data");
     }
 
+    dataParser(data);
+    //key, value store data in the element dataset of the document
+    $(document).data('data', data);
     //if the logo is clicked go to the main page
     $(".navbar-brand").removeClass('hide').click(function () {
         $('#monthId').fadeIn(1000);
@@ -43,132 +46,110 @@ function getMonth(error, data) {
         $('#sidebar-collapse').addClass('hide');
     })
 
-    
-
-
-    // only call "filterData" after the dropdown option has been selected
-    $("#monthSelector").change(function () {
-        filterData(data);
-    }).change();
-
-    // we add .change() to trigger change() for the default option (January) 
-
+     
+     $("#resultsBudget").click(onClickFilterByBudget);
+     $("#resultsWeather").click(onClickFilterByWeather);
 }
 
-
-function filterData(data) {
-
-
+function filterData(monthSelected) {
     //get the text for the option selected
-    var monthSelected = $('#monthSelector :selected').text();
 
     //this will create an object only containing the data for the month
+    // 'data' is the key
+    var data = $(document).data('data');
     var dataMonth = data.filter(function (element) {
         return (element.month === monthSelected);
     });
 
-console.log(monthSelected);
+    console.log(monthSelected);
 
     //convert to number the number fields
-    convertToInteger(dataMonth);
-
-    //https://www.jstips.co/en/javascript/passing-arguments-to-callback-functions/
-    document.getElementById("resultsBudget").addEventListener("click", filterByBudget(dataMonth));
-    document.getElementById("resultsWeather").addEventListener("click", filterByWeather(dataMonth));
+    return dataMonth; 
 }
 
+function onClickFilterByBudget() {
+    var filteredBy = 'Budget';
 
-function filterByBudget(dataMonth) {
-    return function () {
-        var filteredBy = 'Budget';
+    var monthSelected = $('#monthSelector :selected').val();
+    var dataMonth = filterData(monthSelected);
 
-        //get input value and convert it to number
-        var maxBudgetValue = parseInt(document.getElementById("maxBudget").value);
+    //get input value and convert it to number
+    var maxBudgetValue = parseInt(document.getElementById("maxBudget").value);
 
+    //this will create an Object only containing the cities that fit the selected budget
+    var totalBudget = 0;
+    var dataBudget = dataMonth.filter(function (element) {
+        totalBudget = element.hostelNight +
+            element.meals +
+            element.drinks +
+            element.transport +
+            element.attractions;
+        return (totalBudget < maxBudgetValue);
+    });
 
-        //this will create an Object only containing the cities that fit the selected budget
-        var totalBudget = 0;
-        var dataBudget = dataMonth.filter(function (element) {
-            totalBudget = element.hostelNight +
-                element.meals +
-                element.drinks +
-                element.transport +
-                element.attractions;
-            return (totalBudget < maxBudgetValue);
+    if (isNaN(maxBudgetValue)) {
+        console.log(maxBudgetValue);
+        alert('Please enter the budget')
+    }
+    else {
+        console.log(maxBudgetValue);
+        citiesMatchingCriteria(dataBudget, filteredBy);
+    }   
+}
+
+function onClickFilterByWeather() {
+    var filteredBy = 'Weather';
+    var monthSelected = $('#monthSelector :selected').val();
+    var dataMonth = filterData(monthSelected);
+    var dataWeather;
+
+    //get input values
+    var minTemp = document.getElementById("minTemp").value;
+    var maxTemp = document.getElementById("maxTemp").value;
+
+    if (minTemp == "" && maxTemp == "") {
+        alert("Please enter a minumun, a maximun temperature or both");
+        console.log('empty');
+    }
+    else if (minTemp != "" && maxTemp == "") {
+
+        //this will create an Object only containing the cities that have that temperature
+        dataWeather = dataMonth.filter(function (element) {
+            return (minTemp <= element.minTemp);
         });
+        //If there is one or more cities matching the criteria it will call 
+        //the function "createDataForGraphics" if not it will show an alert message;
+        console.log('min only');
 
-        if (isNaN(maxBudgetValue)) {
-            console.log(maxBudgetValue);
-
-            alert('Please enter the budget')
-        }
-        else {
-            console.log(maxBudgetValue);
-
-            citiesMatchingCriteria(dataBudget, filteredBy);
-        }
-
+        citiesMatchingCriteria(dataWeather, filteredBy);
     }
-};
+    else if (minTemp == "" && maxTemp != "") {
+        //this will create an Object only containing the cities that have that temperature
+        dataWeather = dataMonth.filter(function (element) {
+            return (maxTemp >= element.maxTemp);
+        });
+        //If there is one or more cities matching the criteria it will call 
+        //the function "createDataForGraphics" if not it will show an alert message;
+        console.log('max only');
 
-function filterByWeather(dataMonth) {
-    return function () {
-
-        var filteredBy = 'Weather';
-
-        var dataWeather;
-
-        //get input values
-        var minTemp = document.getElementById("minTemp").value;
-        var maxTemp = document.getElementById("maxTemp").value;
-
-        if (minTemp == "" && maxTemp == "") {
-            alert("Please enter a minumun, a maximun temperature or both");
-            console.log('empty');
-        }
-        else if (minTemp != "" && maxTemp == "") {
-
-            //this will create an Object only containing the cities that have that temperature
-            dataWeather = dataMonth.filter(function (element) {
-                return (minTemp <= element.minTemp);
-            });
-            //If there is one or more cities matching the criteria it will call 
-            //the function "createDataForGraphics" if not it will show an alert message;
-            console.log('min only');
-
-            citiesMatchingCriteria(dataWeather, filteredBy);
-
-
-        }
-        else if (minTemp == "" && maxTemp != "") {
-            //this will create an Object only containing the cities that have that temperature
-            dataWeather = dataMonth.filter(function (element) {
-                return (maxTemp >= element.maxTemp);
-            });
-            //If there is one or more cities matching the criteria it will call 
-            //the function "createDataForGraphics" if not it will show an alert message;
-            console.log('max only');
-
-            citiesMatchingCriteria(dataWeather, filteredBy);
-
-        }
-        else if (minTemp != "" && maxTemp != "" && maxTemp > minTemp) {
-            //this will create an Object only containing the cities that have that temperature
-            dataWeather = dataMonth.filter(function (element) {
-                return (minTemp <= element.minTemp && maxTemp >= element.maxTemp);
-            });
-            //If there is one or more cities matching the criteria it will call 
-            //the function "createDataForGraphics" if not it show an alert message;
-            console.log('both');
-
-            citiesMatchingCriteria(dataWeather, filteredBy);
-        }
-        else if (minTemp != "" && maxTemp != "" && maxTemp < minTemp) {
-            alert("The maximune temperature must be higher than the minimun");
-        }
-
+        citiesMatchingCriteria(dataWeather, filteredBy);
     }
-};
+    else if (minTemp != "" && maxTemp != "" && maxTemp > minTemp) {
+        //this will create an Object only containing the cities that have that temperature
+        dataWeather = dataMonth.filter(function (element) {
+            return (minTemp <= element.minTemp && maxTemp >= element.maxTemp);
+        });
+        //If there is one or more cities matching the criteria it will call 
+        //the function "createDataForGraphics" if not it show an alert message;
+        console.log('both');
+
+        citiesMatchingCriteria(dataWeather, filteredBy);
+    }
+    else if (minTemp != "" && maxTemp != "" && maxTemp < minTemp) {
+        alert("The maximune temperature must be higher than the minimun");
+    }
+}
+
 
 function citiesMatchingCriteria(data, filteredBy) {
     //document.getElementById("infoMessage").innerHTML = "";
@@ -216,8 +197,8 @@ function checkIfObjectEmpty(data) {
     return true;
 }
 
-function convertToInteger(dataMonth) {
-    dataMonth.forEach(function (d) {
+function dataParser(data) {
+    data.forEach(function (d) {
         d.hostelNight = parseInt(d.hostelNight);
         d.meals = parseInt(d.meals);
         d.drinks = parseInt(d.drinks);

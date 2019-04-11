@@ -116,7 +116,7 @@ function countCities(ndx) {
 
         //inline function remover
 
-        // Remov ethe data entry
+        // Remove the data entry
         function (p, v) {
             p.count--;          
             return p;
