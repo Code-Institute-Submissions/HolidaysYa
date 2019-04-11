@@ -43,23 +43,7 @@ function getMonth(error, data) {
         $('#sidebar-collapse').addClass('hide');
     })
 
-    // $("#resultsBudget").click(function () {
-    //     $('#budgetId').slideUp(1000);
-    //     $('#grafId').removeClass('hide').slideDown(1000);
-    //     $('#navbar-button').removeClass('hide');
-    //     $('#sidebar-collapse').removeClass('hide').show(1000);
-    //     $('.weather').hide();
-    //     $('.budget').show();
-    // })
-    //When show cities is pressed, hide temperature selection screen and show graphics
-    // $("#resultsWeather").click(function () {
-    //     $('#weatherId').slideUp(1000);
-    //     $('#grafId').removeClass('hide').slideDown(1000);
-    //     $('#navbar-button').removeClass('hide');
-    //     $('#sidebar-collapse').removeClass('hide').show(1000);
-    //     $('.budget').hide();
-    //     $('.weather').show();
-    // })
+    
 
 
     // only call "filterData" after the dropdown option has been selected
@@ -83,6 +67,8 @@ function filterData(data) {
         return (element.month === monthSelected);
     });
 
+console.log(monthSelected);
+
     //convert to number the number fields
     convertToInteger(dataMonth);
 
@@ -99,7 +85,6 @@ function filterByBudget(dataMonth) {
         //get input value and convert it to number
         var maxBudgetValue = parseInt(document.getElementById("maxBudget").value);
 
-        console.log(maxBudgetValue);
 
         //this will create an Object only containing the cities that fit the selected budget
         var totalBudget = 0;
@@ -113,9 +98,13 @@ function filterByBudget(dataMonth) {
         });
 
         if (isNaN(maxBudgetValue)) {
+            console.log(maxBudgetValue);
+
             alert('Please enter the budget')
         }
         else {
+            console.log(maxBudgetValue);
+
             citiesMatchingCriteria(dataBudget, filteredBy);
         }
 

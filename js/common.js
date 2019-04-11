@@ -17,10 +17,7 @@ function createTable(ndx) {
         })
         .size(Infinity)
         .columns([
-            {
-                label: "Month",
-                format: function (d) { return d.month }
-            },
+            
             {
                 label: "City",
                 format: function (d) { return d.city }

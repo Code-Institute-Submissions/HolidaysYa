@@ -483,10 +483,7 @@ https://github.com/dc-js/dc.js/issues/731
 
 
 
-.table-hover{
-font-size:.6em;
-text-align: center;
-}
+
 
 .email-button{
 background-color: transparent;
@@ -498,20 +495,48 @@ color:grey;
     background-color: transparent;
     border:none;
     border-color: transparent;
-    box-shadow:none;
+    
     } */
 
-    .email-button:hover{
+    /* .email-button:hover{
         color: #52a9ec;
-    }
-    .email-button:focus{
-        text-decoration: none;
-    }
-
-
+    } */
+    
+    .email-button.active.focus,
+    .email-button:focus,
+    .email-button.focus,
+    .email-button:active.focus,
+    .email-button:active:focus,
+    .email-button:focus,.email-button:active,.email-button, .email-button:hover {
+    outline: none;
+    background-color: transparent;
+    text-decoration: none;
+    border-color: transparent;
+    box-shadow:none;
 }
-.btn-primary, .btn-primary:hover, .btn-primary:focus, .btn-primary:active, .btn-primary.active, .open > .dropdown-toggle.btn-primary, .btn-primary.disabled, .btn-primary[disabled], fieldset[disabled] .btn-primary, .btn-primary.disabled:hover, .btn-primary[disabled]:hover, fieldset[disabled] .btn-primary:hover, .btn-primary.disabled:focus, .btn-primary[disabled]:focus, fieldset[disabled] .btn-primary:focus, .btn-primary.disabled:active, .btn-primary[disabled]:active, fieldset[disabled] .btn-primary:active, .btn-primary.disabled.active, .btn-primary[disabled].active, fieldset[disabled] .btn-primary.active {
-        color: #fff;
-        background-color:transparent;
-        border-color:transparent;
+
+
+
+.table-hover{
+    overflow:auto;
+    width: 100%;
+    font-size:.9em;
+    text-align: left;
     }
+
+tr{
+    height: 3em;
+}
+
+td{
+   padding-left: 20px;
+   
+}
+
+th{
+    height: 5em;
+white-space: pre-wrap;
+    padding-left: 20px;
+    width:8em;
+    background-color: #dddddd;
+}
