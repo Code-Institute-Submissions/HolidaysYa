@@ -13,8 +13,7 @@
 
 
 	<!--Custom Font-->
-	<link href="https://fonts.googleapis.com/css?family=Montserrat:300,300i,400,400i,500,500i,600,600i,700,700i"
-		rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Montserrat:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
 
 </head>
 
@@ -22,15 +21,11 @@
 	<nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
 		<div class="container-fluid">
 			<div class="navbar-header">
-				<button type="button" id="navbar-button" class="navbar-toggle collapsed hide" data-toggle="collapse"
-					data-target="#sidebar-collapse"><span class="sr-only">Toggle navigation</span>
+				<button type="button" id="navbar-button" class="navbar-toggle collapsed hide" data-toggle="collapse" data-target="#sidebar-collapse"><span class="sr-only">Toggle navigation</span>
 					<span class="icon-bar"></span>
 					<span class="icon-bar"></span>
 					<span class="icon-bar"></span>
 				</button>
-
-
-
 
 				<a class="navbar-brand" href="#"><span>Eurotrip</span>Dashboard</a>
 
@@ -49,7 +44,8 @@
 					</li>
 				</ul>
 			</div>
-		</div><!-- /.container-fluid -->
+		</div>
+		<!-- /.container-fluid -->
 	</nav>
 
 
@@ -58,8 +54,6 @@
 	<!-- </section> -->
 
 	<div id="sidebar-collapse" class="col-sm-1 sidebar hide">
-
-
 		<ul class="nav menu">
 			<li><a class="goback"><em class="fa fa-calendar faSide">&nbsp;</em></a></li>
 			<!-- <li><a href="charts.html"><em class="fa fa-bar-chart">&nbsp;</em> Charts</a></li> -->
@@ -68,30 +62,26 @@
 				</a>
 				<ul class="children collapse" id="sub-item-1">
 					<li class="budget">
-						<form>
-							<div class="form-group">
-								<label for="maxBudget2">Try with a different budget</label>
-								<input type="number" class="form-control" id="maxBudget2" name="maxBudget2" required />
-								<div class="buttons">
-									<button class="btn btn-success filterSideBar" id="filterBudget">show cities</button>
-								</div>
+						<div class="form-group">
+							<label for="maxBudget2">Try with a different budget</label>
+							<input type="number" class="form-control" id="maxBudget2" name="maxBudget2" required/>
+							<div class="buttons">
+								<button class="btn btn-success filterSideBar" id="filterSideBudget">show cities</button>
 							</div>
-						</form>
+						</div>
 					</li>
 
 					<li class="weather">
-						<form>
-							<div class="form-group">
-								<label for="minTemp2">Minimun temperature</label>
-								<input type="number" class="form-control" id="minTemp2" name="minTemp2" />
-								<label for="maxTemp2">Maximun temperature</label>
-								<input type="number" class="form-control" id="maxTemp2" name="maxTemp2" />
-								<div class="buttonsSide">
-									<button class="btn btn-success" id="filterWeather">show cities</button>
+						<div class="form-group">
+							<label for="minTemp2">Minimun temperature</label>
+							<input type="number" class="form-control" id="minTemp2" name="minTemp2" />
+							<label for="maxTemp2">Maximun temperature</label>
+							<input type="number" class="form-control" id="maxTemp2" name="maxTemp2" />
+							<div class="buttonsSide">
+								<button class="btn btn-success" id="filterSideWeather">show cities</button>
 
-								</div>
 							</div>
-						</form>
+						</div>
 					</li>
 
 				</ul>
@@ -122,9 +112,7 @@
 	<section id="monthId">
 		<div class="overlay1">
 			<h1>Welcome!</h1>
-			<p>We have gathered data from the most visited cities in Europe to help you deciding which is the best place
-				for
-				your next holidays in Europe.</p>
+			<p>We have gathered data from the most visited cities in Europe to help you deciding which is the best place for your next holidays in Europe.</p>
 
 			<!-- <hr> -->
 			<h3 class="titleInput">Please select the month that you want to travel</h3>
@@ -157,8 +145,7 @@
 			<input type="number" id="maxBudget" name="maxBudget" required />
 			<div class="buttons">
 				<!-- <button class="btn btn-danger goback">Change month</button> -->
-				<button class="btn btn-info button" id="resultsBudget" onclick="showTitle('Budget')">show
-					cities</button>
+				<button class="btn btn-info button" id="resultsBudget" onclick="showTitle('Budget')">show cities</button>
 			</div>
 		</div>
 	</section>
@@ -201,8 +188,7 @@
 					<!-- http://bl.ocks.org/d3noob/6584483 here I lear about the resetAll-->
 					<!-- https://www.w3docs.com/snippets/html/how-to-create-an-html-button-that-acts-like-a-link.html here I learnt how to made a button behave as a link-->
 
-					<button class="btn btn-info"
-						onclick="window.location.href = 'javascript:dc.filterAll(); dc.renderAll();';">Reset
+					<button class="btn btn-info" onclick="window.location.href = 'javascript:dc.filterAll(); dc.renderAll();';">Reset
 						All</button>
 				</div>
 			</div>
@@ -244,8 +230,7 @@
 					</div>
 					<div class="col-xs-4 col-sm-2 col-md-2 no-padding">
 						<div class="panel panel-teal panel-widget border-right">
-							<div class="row no-padding"><em class="budget fa fa-xl fa-hotel color-blue"></em><em
-									class="weather fa fa-xl fa fa-thermometer color-red"></em>
+							<div class="row no-padding"><em class="budget fa fa-xl fa-hotel color-blue"></em><em class="weather fa fa-xl fa fa-thermometer color-red"></em>
 								<div class="large" id="hostel_maxtem"></div>
 								<div class="text-muted budget">Hostel</div>
 								<div class="text-muted weather">MaxTemp</div>
@@ -255,8 +240,7 @@
 					</div>
 					<div class="col-xs-4 col-sm-2 col-md-2 no-padding">
 						<div class="panel panel-teal panel-widget border-right">
-							<div class="row no-padding"><em class="budget fa fa-xl fa-cutlery color-green"></em><em
-									class="weather fa fa-xl fa fa-thermometer-0 color-blue"></em>
+							<div class="row no-padding"><em class="budget fa fa-xl fa-cutlery color-green"></em><em class="weather fa fa-xl fa fa-thermometer-0 color-blue"></em>
 								<div class="large" id="meals_mintem"></div>
 								<div class="text-muted budget">Meals</div>
 								<div class="text-muted weather">MinTemp</div>
@@ -266,8 +250,7 @@
 					</div>
 					<div class="col-xs-4 col-sm-2 col-md-2 no-padding">
 						<div class="panel panel-blue panel-widget border-right">
-							<div class="row no-padding"><em class="budget fa fa-xl fa-glass color-yellow"></em><em
-									class="weather fa fa-xl fa fa-thermometer-2 color-yellow"></em>
+							<div class="row no-padding"><em class="budget fa fa-xl fa-glass color-yellow"></em><em class="weather fa fa-xl fa fa-thermometer-2 color-yellow"></em>
 								<div class="large" id="drinks_avgtemp"></div>
 								<div class="text-muted budget">Drinks</div>
 								<div class="text-muted weather">Avg.Temp</div>
@@ -277,8 +260,7 @@
 					</div>
 					<div class="col-xs-4 col-sm-2 col-md-2 no-padding">
 						<div class="panel panel-orange panel-widget border-right">
-							<div class="row no-padding"><em class="budget fa fa-xl fa-train color-orange"></em><em
-									class="weather fa fa-xl fa fa-umbrella color-green"></em>
+							<div class="row no-padding"><em class="budget fa fa-xl fa-train color-orange"></em><em class="weather fa fa-xl fa fa-umbrella color-green"></em>
 								<div class="large" id="transport_maxpreci"></div>
 								<div class="text-muted budget">Transport</div>
 								<div class="text-muted weather">Max. Precipitation</div>
@@ -288,8 +270,7 @@
 					</div>
 					<div class="col-xs-4 col-sm-2 col-md-2 no-padding">
 						<div class="panel panel-red panel-widget ">
-							<div class="row no-padding"><em class="budget fa fa-xl fa-institution color-red"></em><em
-									class="weather fa fa-xl fa fa-umbrella color-orange"></em>
+							<div class="row no-padding"><em class="budget fa fa-xl fa-institution color-red"></em><em class="weather fa fa-xl fa fa-umbrella color-orange"></em>
 								<div class="large" id="attractions_minpreci"></div>
 								<div class="text-muted budget">Attractions</div>
 								<div class="text-muted weather">Min. Precipitation</div>
@@ -348,8 +329,7 @@
 										<div class="panel-heading row">
 											<div class="col-xs-10" id="pieChart"></div>
 											<div class="col-xs-2">
-												<span
-													class="pull-right clickable panel-toggle panel-button-tab-left"><em
+												<span class="pull-right clickable panel-toggle panel-button-tab-left"><em
 														class="fa fa-toggle-up"></em></span>
 											</div>
 										</div>
@@ -363,8 +343,7 @@
 										<div class="panel-heading row">
 											<div class="col-xs-10" id="scatterChart"></div>
 											<div class="col-xs-2">
-												<span
-													class="pull-right clickable panel-toggle panel-button-tab-left"><em
+												<span class="pull-right clickable panel-toggle panel-button-tab-left"><em
 														class="fa fa-toggle-up"></em></span>
 											</div>
 										</div>
@@ -419,24 +398,22 @@
 				<div class="modal-header">
 					<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
 							aria-hidden="true">&times;</span></button>
-					<h4 class="modal-title text-center" id="myModalLabel">Do you need more information?</h4>
+					<h4 class="modal-title text-center" id="myModalLabel">Do you need more information about an specific country?</h4>
 				</div>
 				<div class="modal-body">
 
 					<form>
 						<div class="form-group">
-							<input type="text" name="name" class="form-control" id="InputName"
-								placeholder="Enter your name" required>
+							<input type="text" name="name" class="form-control" id="InputName" placeholder="Enter your name" required>
 						</div>
 						<div class="form-group">
-							<input type="email" name="email" class="form-control" id="InputEmail"
-								placeholder="Enter your email" required>
+							<input type="email" name="email" class="form-control" id="InputEmail" placeholder="Enter your email" required>
 						</div>
 						<textarea class="form-control" rows="3"></textarea>
 						<div class="modal-footer">
-								<button type="submit" class="btn btn-default btn-reset" data-dismiss="modal">Cancel</button>
-								<button type="submit" class="btn btn-signin">Submit</button>
-							</div>
+							<button type="submit" class="btn btn-default btn-reset" data-dismiss="modal">Cancel</button>
+							<button type="submit" class="btn btn-signin">Submit</button>
+						</div>
 					</form>
 
 				</div>
