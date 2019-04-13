@@ -47,29 +47,25 @@ function getMonth(error, data) {
         $('#grafId').addClass('hide');
         $('#hamburguerButton').addClass('hide');
         $('#sidebar-collapse').addClass('hide');
-
-        sidebar-collapse
     })
 
-    $("#filterSideBudget").click(function () {
-        $('#monthId').addClass('hide');
-        $('#budgetId').slideUp(1000);
-        $('#grafId').removeClass('hide').slideDown(1000);
-        $('#hamburguerButton').removeClass('hide');
-        $('#sidebar-collapse').removeClass('hide');
-        $('.weather').hide();
-        $('.budget').show();
-    })
+    // $("#filterSideBudget").click(function () {
+    //     $('#monthId').addClass('hide');
+    //     $('#budgetId').slideUp(1000);
+    //     $('#grafId').removeClass('hide').slideDown(1000);
+    //     $('#sidebar-collapse').removeClass('hide');
+    //     $('.weather').hide();
+    //     $('.budget').show();
+    // })
 
-    $("#filterSideWeather").click(function () {
-        $('#monthId').addClass('hide');
-        $('#WeathertId').slideUp(1000);
-        $('#grafId').removeClass('hide').slideDown(1000);
-        $('#hamburguerButton').removeClass('hide');
-        $('#sidebar-collapse').removeClass('hide');
-        $('.budget').hide();
-        $('.weather').show();
-    })
+    // $("#filterSideWeather").click(function () {
+    //     $('#monthId').addClass('hide');
+    //     $('#WeathertId').slideUp(1000);
+    //     $('#grafId').removeClass('hide').slideDown(1000);
+    //     $('#sidebar-collapse').removeClass('hide');
+    //     $('.budget').hide();
+    //     $('.weather').show();
+    // })
 
     //buttons on main page (page with month selection)
     $("#resultsBudget").click(onClickFilterByBudget);
@@ -214,19 +210,27 @@ function citiesMatchingCriteria(data, filteredBy) {
         }
     }
     else {
+        if ($(window).width() < 776) {
+            $('#hamburguerButton').removeClass('hide');
+        }
+
+        $('#grafId').removeClass('hide').slideDown(1000);
+        $('#navbar-button').removeClass('hide');
+        $('#sidebar-collapse').removeClass('hide').show(1000);
+
         if (filteredBy == "Budget") {
             $('#budgetId').slideUp(1000);
-            $('#grafId').removeClass('hide').slideDown(1000);
-            $('#navbar-button').removeClass('hide');
-            $('#sidebar-collapse').removeClass('hide').show(1000);
+            // $('#grafId').removeClass('hide').slideDown(1000);
+            // $('#navbar-button').removeClass('hide');
+            // $('#sidebar-collapse').removeClass('hide').show(1000);
             $('.weather').hide();
             $('.budget').show();
         }
         if (filteredBy == "Weather") {
             $('#weatherId').slideUp(1000);
-            $('#grafId').removeClass('hide').slideDown(1000);
-            $('#navbar-button').removeClass('hide');
-            $('#sidebar-collapse').removeClass('hide').show(1000);
+            // $('#grafId').removeClass('hide').slideDown(1000);
+            // $('#navbar-button').removeClass('hide');
+            // $('#sidebar-collapse').removeClass('hide').show(1000);
             $('.budget').hide();
             $('.weather').show();
         }
