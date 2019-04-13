@@ -6,6 +6,8 @@
   
 
 html,body{
+    margin:0px;
+    padding: 0px;
     height: 100%;
     width: 100%;
     
@@ -31,36 +33,34 @@ html,body{
 
   .navbar{
     margin: 0px;
-    
  } 
 
- .navbar ul {
+ /* .navbar ul {
     position:absolute;
     right:10px;
-    }
+    } */
 
 
 
-.navbar-right{
+/* .navbar-right{
     float:right;
-}
+} */
 
 
 .borderSocial {
     background: rgba(255, 255, 255, 0.1);
     float: left;
+    height: 40px;
+    width: 40px;
     margin: 10px 8px;
-    padding: 0px;
+    padding: 10px; 
     border-radius: 4px;
 }
 
 
 .social{
-    color: #fff;
-    height: 40px;
-    width: 40px;
-    padding-top: 11px;
-    padding-left: 9px;
+    color: #fff;   
+    padding-left: 5px;
 }
 
 
@@ -138,16 +138,24 @@ html,body{
 }
 
 #monthSelector, #maxBudget, #maxTemp, #minTemp {
-    width: 300px;
+    width: 50%;
     font-size: 18px;
     height: 40px;
     border: none;
 }
 
+@media (min-width: 768px){
+    #monthSelector, #maxBudget, #maxTemp, #minTemp {
+        width: 250px;
+        font-size: 18px;
+        height: 40px;
+        border: none;
+    }
+}
 
 .button{
     border-radius: 25px;
-    width: 250px;
+    width: 15em;
     font-size: 1.1em;
     font-weight:800;
     height: 60px;
@@ -166,9 +174,9 @@ html,body{
 
 #monthId p{
     color:white;
-    font-size: 20px;
+    font-size: 1.2em;
     font-weight: 400;
-    width:60%;
+    width:70%;
     background-color: rgba(0,0,0,0.3);
     padding: 5px;
     margin: 15px;
@@ -539,4 +547,96 @@ th{
     padding-left: 20px;
     width:8em;
     background-color: #dddddd;
+}
+
+
+
+
+
+.dropdown a.dropdown-toggle, .dropdown, .dropdown a{
+    width:100%;
+    text-align: center;
+}
+
+
+
+.navbar-default{
+    background-color: transparent;
+    border-color: transparent;
+}
+
+.navbar-default .navbar-toggle .icon-bar {
+    background-color: #fff;
+}
+
+
+.navbar-default .navbar-toggle .icon-bar:hover {
+    color: #46b8da;
+   
+}
+
+.navbar-collapse .visible-xs{
+    background-color: #222222;
+    margin-top: 0px;   
+}
+
+
+@media (max-width: 767px){
+.navbar-default .navbar-nav .open .dropdown-menu>li>a {
+    color: white;
+}
+}
+
+
+
+
+.navbar-default .navbar-toggle:hover {
+    background-color: transparent;
+}
+
+.navbar-toggle{
+margin-bottom: 10px;
+width: 50px;
+height: 40px;
+}
+
+.col-xs-6, .col-sm-10{
+    padding: 0px;
+}
+
+@media (min-width: 768px)
+.collapse .navbar-right {
+    margin-right: 20px;
+}
+
+.navbar-collapse .navbar-right{
+    margin-right: 25px;
+}
+
+.navbar-default ul h4{
+    color: white;
+}
+
+.navbar-default .navbar-nav>.open>a, .navbar-default .navbar-nav>.open>a:focus, .navbar-default .navbar-nav>.open>a:hover, .navbar-default .navbar-nav>.open>a, .navbar-default .navbar-nav>.open>a:focus, .navbar-default .navbar-nav>.open>a:hover {
+    color: white;
+    background-color: transparent
+}
+
+.navbar-default .navbar-nav>li>a:focus, .navbar-default .navbar-nav>li>a:hover, .navbar-default .navbar-nav>li>a {
+    color: white;
+    background-color: transparent;
+}
+
+.navbar-default .dropdown{
+    background-color: transparent;
+}
+
+
+.navbar-collapse .socialMediaLinks{
+    background-color: transparent;
+}
+
+.dropdown {
+    margin: 0px;
+    padding: 0px;
 }

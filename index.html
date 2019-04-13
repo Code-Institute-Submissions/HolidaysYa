@@ -13,58 +13,135 @@
 
 
 	<!--Custom Font-->
-	<link href="https://fonts.googleapis.com/css?family=Montserrat:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Montserrat:300,300i,400,400i,500,500i,600,600i,700,700i"
+		rel="stylesheet">
 
 </head>
 
 <body>
-	<nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
-		<div class="container-fluid">
+	<header class="conainer-fluid navbar-custom navbar-fixed-top">
+		<nav class="navbar navbar-custom navbar-fixed-top">
 			<div class="navbar-header">
-				<button type="button" id="navbar-button" class="navbar-toggle collapsed hide" data-toggle="collapse" data-target="#sidebar-collapse"><span class="sr-only">Toggle navigation</span>
-					<span class="icon-bar"></span>
-					<span class="icon-bar"></span>
-					<span class="icon-bar"></span>
-				</button>
+				<div class="row">
+					<!-- LOGO -->
+					<div class="col-xs-6 col-sm-2 logo">
+						<a class="navbar-brand" href="#"><span>Eurotrip</span>Dashboard</a>
+					</div>
 
-				<a class="navbar-brand" href="#"><span>Eurotrip</span>Dashboard</a>
+					<!-- --NAV from bootstrap -->
 
-				<ul class="nav navbar-top-links navbar-right hidden-xs">
-					<li class="borderSocial"><a class="social" href="#">
-							<em class="fa fa-facebook"></em>
-						</a>
-					</li>
-					<li class="borderSocial"><a class="social" href="#">
-							<em class="fa fa-twitter"></em>
-						</a>
-					</li>
-					<li class="borderSocial"><a class="social" href="#">
-							<em class="fa fa-linkedin"></em>
-						</a>
-					</li>
-				</ul>
+					<div class="col-xs-6 col-sm-10">
+						<nav class="navbar navbar-default">
+							<!-- Brand and toggle get grouped for better mobile display -->
+							<div class="navbar-header">
+								<button id="hamburguerButton" type="button" class="navbar-toggle collapsed hide" data-toggle="collapse"
+									data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+									<span class="sr-only">Toggle navigation</span>
+									<span class="icon-bar"></span>
+									<span class="icon-bar"></span>
+									<span class="icon-bar"></span>
+								</button>
+							</div>
+
+							<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+								<ul class="nav navbar-nav visible-xs">
+									<li>
+										<h4>Change Month</h4>
+									</li>
+									<li>
+										<h4>Change Budget</h4>
+									</li>
+									<li>
+										<h4>Contact Us!</h4>
+									</li>
+
+									<li class="dropdown">
+										<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
+											aria-haspopup="true" aria-expanded="false">Follow Us!!<span
+												class="caret"></span></a>
+										<ul class="dropdown-menu">
+											<li><a href="#">Facebook</a></li>
+											<li><a href="#">Twitter</a></li>
+											<li><a href="#">Linkedin</a></li>
+										</ul>
+									</li>
+
+									<!-- <li>
+										<div class="borderSocial hidden-xs">
+											<a class="social" href="#">
+												<em class="fa fa-facebook"></em>
+											</a>
+										</div>
+									</li>
+									<li>
+										<div class="borderSocial hidden-xs">
+											<a class="social" href="#">
+												<em class="fa fa-twitter"></em>
+											</a>
+										</div>
+									</li>
+									<li>
+										<div class="borderSocial hidden-xs">
+											<a class="social" href="#">
+												<em class="fa fa-linkedin"></em>
+											</a>
+										</div>
+									</li> -->
+								</ul>
+								<ul class="nav navbar-nav navbar-right socialMediaLinks">
+										<li>
+												<div class="borderSocial hidden-xs">
+													<a class="social" href="#">
+														<em class="fa fa-facebook"></em>
+													</a>
+												</div>
+											</li>
+											<li>
+												<div class="borderSocial hidden-xs">
+													<a class="social" href="#">
+														<em class="fa fa-twitter"></em>
+													</a>
+												</div>
+											</li>
+											<li>
+												<div class="borderSocial hidden-xs">
+													<a class="social" href="#">
+														<em class="fa fa-linkedin"></em>
+													</a>
+												</div>
+											</li>
+								</ul>
+
+								<!-- /.navbar-collapse -->
+							</div>
+							<!-- /.container-fluid -->
+						</nav>
+					</div>
+
+				</div>
 			</div>
-		</div>
-		<!-- /.container-fluid -->
-	</nav>
-
-
-
+		</nav>
+	</header>
 
 	<!-- </section> -->
+	<!-- <div id="sidebar-collapse" class="col-sm-1 sidebar hide"> -->
+	<div id="sidebar-collapse" class="col-sm-1 sidebar hide hidden-xs">
 
-	<div id="sidebar-collapse" class="col-sm-1 sidebar hide">
 		<ul class="nav menu">
-			<li><a class="goback"><em class="fa fa-calendar faSide">&nbsp;</em></a></li>
+			<li>
+				<a class="goback"><em class="fa fa-calendar faSide hidden-xs"></em>
+					<h4>Change Month</h4>
+				</a></li>
 			<!-- <li><a href="charts.html"><em class="fa fa-bar-chart">&nbsp;</em> Charts</a></li> -->
 			<li class="parent "><a data-toggle="collapse" href="#sub-item-1">
-					<em data-toggle="collapse" href="#sub-item-1" class="fa fa-filter faSide">&nbsp;</em>
+					<h4>Change budget</h4>
+					<em data-toggle="collapse" href="#sub-item-1" class="fa fa-filter faSide hidden-xs"></em>
 				</a>
 				<ul class="children collapse" id="sub-item-1">
 					<li class="budget">
 						<div class="form-group">
 							<label for="maxBudget2">Try with a different budget</label>
-							<input type="number" class="form-control" id="maxBudget2" name="maxBudget2" required/>
+							<input type="number" class="form-control" id="maxBudget2" name="maxBudget2" required />
 							<div class="buttons">
 								<button class="btn btn-success filterSideBar" id="filterSideBudget">show cities</button>
 							</div>
@@ -87,8 +164,10 @@
 				</ul>
 			</li>
 			<li>
-				<button type="button" class="btn btn-primary btn-lg email-button" data-toggle="modal" data-target="#myModal">
-					<em class="fa fa-envelope faSide">&nbsp;</em>
+				<h4>Contact Us!</h4>
+				<button type="button" class="btn btn-primary btn-lg email-button" data-toggle="modal"
+					data-target="#myModal">
+					<em class="fa fa-envelope faSide hidden-xs">&nbsp;</em>
 				</button>
 			</li>
 
@@ -112,7 +191,8 @@
 	<section id="monthId">
 		<div class="overlay1">
 			<h1>Welcome!</h1>
-			<p>We have gathered data from the most visited cities in Europe to help you deciding which is the best place for your next holidays in Europe.</p>
+			<p>We have gathered data from the most visited cities in Europe to help you deciding which is the best place
+				for your next holidays in Europe.</p>
 
 			<!-- <hr> -->
 			<h3 class="titleInput">Please select the month that you want to travel</h3>
@@ -145,7 +225,8 @@
 			<input type="number" id="maxBudget" name="maxBudget" required />
 			<div class="buttons">
 				<!-- <button class="btn btn-danger goback">Change month</button> -->
-				<button class="btn btn-info button" id="resultsBudget" onclick="showTitle('Budget')">show cities</button>
+				<button class="btn btn-info button" id="resultsBudget" onclick="showTitle('Budget')">show
+					cities</button>
 			</div>
 		</div>
 	</section>
@@ -188,7 +269,8 @@
 					<!-- http://bl.ocks.org/d3noob/6584483 here I lear about the resetAll-->
 					<!-- https://www.w3docs.com/snippets/html/how-to-create-an-html-button-that-acts-like-a-link.html here I learnt how to made a button behave as a link-->
 
-					<button class="btn btn-info" onclick="window.location.href = 'javascript:dc.filterAll(); dc.renderAll();';">Reset
+					<button class="btn btn-info"
+						onclick="window.location.href = 'javascript:dc.filterAll(); dc.renderAll();';">Reset
 						All</button>
 				</div>
 			</div>
@@ -230,7 +312,8 @@
 					</div>
 					<div class="col-xs-4 col-sm-2 col-md-2 no-padding">
 						<div class="panel panel-teal panel-widget border-right">
-							<div class="row no-padding"><em class="budget fa fa-xl fa-hotel color-blue"></em><em class="weather fa fa-xl fa fa-thermometer color-red"></em>
+							<div class="row no-padding"><em class="budget fa fa-xl fa-hotel color-blue"></em><em
+									class="weather fa fa-xl fa fa-thermometer color-red"></em>
 								<div class="large" id="hostel_maxtem"></div>
 								<div class="text-muted budget">Hostel</div>
 								<div class="text-muted weather">MaxTemp</div>
@@ -240,7 +323,8 @@
 					</div>
 					<div class="col-xs-4 col-sm-2 col-md-2 no-padding">
 						<div class="panel panel-teal panel-widget border-right">
-							<div class="row no-padding"><em class="budget fa fa-xl fa-cutlery color-green"></em><em class="weather fa fa-xl fa fa-thermometer-0 color-blue"></em>
+							<div class="row no-padding"><em class="budget fa fa-xl fa-cutlery color-green"></em><em
+									class="weather fa fa-xl fa fa-thermometer-0 color-blue"></em>
 								<div class="large" id="meals_mintem"></div>
 								<div class="text-muted budget">Meals</div>
 								<div class="text-muted weather">MinTemp</div>
@@ -250,7 +334,8 @@
 					</div>
 					<div class="col-xs-4 col-sm-2 col-md-2 no-padding">
 						<div class="panel panel-blue panel-widget border-right">
-							<div class="row no-padding"><em class="budget fa fa-xl fa-glass color-yellow"></em><em class="weather fa fa-xl fa fa-thermometer-2 color-yellow"></em>
+							<div class="row no-padding"><em class="budget fa fa-xl fa-glass color-yellow"></em><em
+									class="weather fa fa-xl fa fa-thermometer-2 color-yellow"></em>
 								<div class="large" id="drinks_avgtemp"></div>
 								<div class="text-muted budget">Drinks</div>
 								<div class="text-muted weather">Avg.Temp</div>
@@ -260,7 +345,8 @@
 					</div>
 					<div class="col-xs-4 col-sm-2 col-md-2 no-padding">
 						<div class="panel panel-orange panel-widget border-right">
-							<div class="row no-padding"><em class="budget fa fa-xl fa-train color-orange"></em><em class="weather fa fa-xl fa fa-umbrella color-green"></em>
+							<div class="row no-padding"><em class="budget fa fa-xl fa-train color-orange"></em><em
+									class="weather fa fa-xl fa fa-umbrella color-green"></em>
 								<div class="large" id="transport_maxpreci"></div>
 								<div class="text-muted budget">Transport</div>
 								<div class="text-muted weather">Max. Precipitation</div>
@@ -270,7 +356,8 @@
 					</div>
 					<div class="col-xs-4 col-sm-2 col-md-2 no-padding">
 						<div class="panel panel-red panel-widget ">
-							<div class="row no-padding"><em class="budget fa fa-xl fa-institution color-red"></em><em class="weather fa fa-xl fa fa-umbrella color-orange"></em>
+							<div class="row no-padding"><em class="budget fa fa-xl fa-institution color-red"></em><em
+									class="weather fa fa-xl fa fa-umbrella color-orange"></em>
 								<div class="large" id="attractions_minpreci"></div>
 								<div class="text-muted budget">Attractions</div>
 								<div class="text-muted weather">Min. Precipitation</div>
@@ -329,7 +416,8 @@
 										<div class="panel-heading row">
 											<div class="col-xs-10" id="pieChart"></div>
 											<div class="col-xs-2">
-												<span class="pull-right clickable panel-toggle panel-button-tab-left"><em
+												<span
+													class="pull-right clickable panel-toggle panel-button-tab-left"><em
 														class="fa fa-toggle-up"></em></span>
 											</div>
 										</div>
@@ -343,7 +431,8 @@
 										<div class="panel-heading row">
 											<div class="col-xs-10" id="scatterChart"></div>
 											<div class="col-xs-2">
-												<span class="pull-right clickable panel-toggle panel-button-tab-left"><em
+												<span
+													class="pull-right clickable panel-toggle panel-button-tab-left"><em
 														class="fa fa-toggle-up"></em></span>
 											</div>
 										</div>
@@ -398,16 +487,19 @@
 				<div class="modal-header">
 					<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
 							aria-hidden="true">&times;</span></button>
-					<h4 class="modal-title text-center" id="myModalLabel">Do you need more information about an specific country?</h4>
+					<h4 class="modal-title text-center" id="myModalLabel">Do you need more information about an specific
+						country?</h4>
 				</div>
 				<div class="modal-body">
 
 					<form>
 						<div class="form-group">
-							<input type="text" name="name" class="form-control" id="InputName" placeholder="Enter your name" required>
+							<input type="text" name="name" class="form-control" id="InputName"
+								placeholder="Enter your name" required>
 						</div>
 						<div class="form-group">
-							<input type="email" name="email" class="form-control" id="InputEmail" placeholder="Enter your email" required>
+							<input type="email" name="email" class="form-control" id="InputEmail"
+								placeholder="Enter your email" required>
 						</div>
 						<textarea class="form-control" rows="3"></textarea>
 						<div class="modal-footer">

@@ -18,8 +18,9 @@ function getMonth(error, data) {
         $('#monthId').removeClass('hide').fadeIn(1000);
         $('#budgetId').addClass('hide');
         $('#weatherId').addClass('hide');
-        $('#grafId').addClass('hide');
+        $('#hamburguerButton').addClass('hide');
         $('#sidebar-collapse').addClass('hide');
+        $('#grafId').addClass('hide');
         $('#navbar-button').addClass('hide');
     })
 
@@ -44,14 +45,18 @@ function getMonth(error, data) {
         $('#budgetId').addClass('hide');
         $('#weatherId').addClass('hide');
         $('#grafId').addClass('hide');
+        $('#hamburguerButton').addClass('hide');
         $('#sidebar-collapse').addClass('hide');
+
+        sidebar-collapse
     })
 
     $("#filterSideBudget").click(function () {
         $('#monthId').addClass('hide');
         $('#budgetId').slideUp(1000);
         $('#grafId').removeClass('hide').slideDown(1000);
-        $('#sidebar-collapse').removeClass('hide').show(1000);
+        $('#hamburguerButton').removeClass('hide');
+        $('#sidebar-collapse').removeClass('hide');
         $('.weather').hide();
         $('.budget').show();
     })
@@ -60,7 +65,8 @@ function getMonth(error, data) {
         $('#monthId').addClass('hide');
         $('#WeathertId').slideUp(1000);
         $('#grafId').removeClass('hide').slideDown(1000);
-        $('#sidebar-collapse').removeClass('hide').show(1000);
+        $('#hamburguerButton').removeClass('hide');
+        $('#sidebar-collapse').removeClass('hide');
         $('.budget').hide();
         $('.weather').show();
     })
