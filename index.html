@@ -16,6 +16,13 @@
 	<link href="https://fonts.googleapis.com/css?family=Montserrat:300,300i,400,400i,500,500i,600,600i,700,700i"
 		rel="stylesheet">
 
+	<!-- emailJS -->
+	<script type="text/javascript" src="https://cdn.emailjs.com/sdk/2.3.2/email.min.js"></script>
+	<script type="text/javascript">
+		(function () {
+			emailjs.init("user_50CQdKQtjaK7mvIZbRmht");
+		})();
+	</script>
 </head>
 
 <body>
@@ -34,8 +41,9 @@
 						<nav class="navbar navbar-default">
 							<!-- Brand and toggle get grouped for better mobile display -->
 							<div class="navbar-header">
-								<button id="hamburguerButton" type="button" class="navbar-toggle collapsed hide" data-toggle="collapse"
-									data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+								<button id="hamburguerButton" type="button" class="navbar-toggle collapsed hide"
+									data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"
+									aria-expanded="false">
 									<span class="sr-only">Toggle navigation</span>
 									<span class="icon-bar"></span>
 									<span class="icon-bar"></span>
@@ -89,27 +97,27 @@
 									</li> -->
 								</ul>
 								<ul class="nav navbar-nav navbar-right socialMediaLinks">
-										<li>
-												<div class="borderSocial hidden-xs">
-													<a class="social" href="#">
-														<em class="fa fa-facebook"></em>
-													</a>
-												</div>
-											</li>
-											<li>
-												<div class="borderSocial hidden-xs">
-													<a class="social" href="#">
-														<em class="fa fa-twitter"></em>
-													</a>
-												</div>
-											</li>
-											<li>
-												<div class="borderSocial hidden-xs">
-													<a class="social" href="#">
-														<em class="fa fa-linkedin"></em>
-													</a>
-												</div>
-											</li>
+									<li>
+										<div class="borderSocial hidden-xs">
+											<a class="social" href="#">
+												<em class="fa fa-facebook"></em>
+											</a>
+										</div>
+									</li>
+									<li>
+										<div class="borderSocial hidden-xs">
+											<a class="social" href="#">
+												<em class="fa fa-twitter"></em>
+											</a>
+										</div>
+									</li>
+									<li>
+										<div class="borderSocial hidden-xs">
+											<a class="social" href="#">
+												<em class="fa fa-linkedin"></em>
+											</a>
+										</div>
+									</li>
 								</ul>
 
 								<!-- /.navbar-collapse -->
@@ -187,7 +195,6 @@
 	</div>
 	<!--/.sidebar-->
 
-
 	<section id="monthId">
 		<div class="overlay1">
 			<h1>Welcome!</h1>
@@ -251,12 +258,10 @@
 		</div>
 	</section>
 
-
 	<!-- this section is hidden at the beggining -->
 
 	<section class="container-fluid hide" id="grafId" class="hide">
 		<div class="col-sm-11 col-sm-offset-1 main">
-
 
 			<!-- Should I use the infor message for title and error??? -->
 
@@ -275,21 +280,17 @@
 				</div>
 			</div>
 			<!--/.row-->
-
 			<hr>
-
 
 			<!-- SelectCharts -->
 			<div class="row filters">
 				<div class="col-md-4 no-padding text-center filters">
 					<h3 class="filterTitles">Filter by Region</h3>
 					<div id="filterByRegion"></div>
-
 				</div>
 				<div class="col-md-4 no-padding text-center filters">
 					<h3 class="filterTitles">Filter by Country</h3>
 					<div id="filterByCountry"></div>
-
 				</div>
 				<div class="col-md-4 no-padding text-center filters">
 					<h3 class="filterTitles">Filter by City</h3>
@@ -297,7 +298,6 @@
 				</div>
 			</div>
 			<!--/.row-->
-
 
 			<!-- NumberDisplays -->
 			<div class="panel panel-container NumberDisplays">
@@ -317,7 +317,6 @@
 								<div class="large" id="hostel_maxtem"></div>
 								<div class="text-muted budget">Hostel</div>
 								<div class="text-muted weather">MaxTemp</div>
-
 							</div>
 						</div>
 					</div>
@@ -328,7 +327,6 @@
 								<div class="large" id="meals_mintem"></div>
 								<div class="text-muted budget">Meals</div>
 								<div class="text-muted weather">MinTemp</div>
-
 							</div>
 						</div>
 					</div>
@@ -339,7 +337,6 @@
 								<div class="large" id="drinks_avgtemp"></div>
 								<div class="text-muted budget">Drinks</div>
 								<div class="text-muted weather">Avg.Temp</div>
-
 							</div>
 						</div>
 					</div>
@@ -350,7 +347,6 @@
 								<div class="large" id="transport_maxpreci"></div>
 								<div class="text-muted budget">Transport</div>
 								<div class="text-muted weather">Max. Precipitation</div>
-
 							</div>
 						</div>
 					</div>
@@ -361,7 +357,6 @@
 								<div class="large" id="attractions_minpreci"></div>
 								<div class="text-muted budget">Attractions</div>
 								<div class="text-muted weather">Min. Precipitation</div>
-
 							</div>
 						</div>
 					</div>
@@ -372,20 +367,19 @@
 			<!-- charts -->
 			<div class="row">
 				<div class="col-md-4">
-
 					<div class="panel panel-default">
 						<div class="panel-heading row">
 							<div class="col-xs-10" id="titleRowChart"></div>
 							<div class="col-xs-2">
-								<span class="pull-right clickable panel-toggle panel-button-tab-left"><em
-										class="fa fa-toggle-up"></em></span>
+								<span class="pull-right clickable panel-toggle panel-button-tab-left">
+									<em class="fa fa-toggle-up"></em>
+								</span>
 							</div>
 						</div>
 						<div class="panel-body">
 							<div class="main-chart" id="rowChart"></div>
 						</div>
 					</div>
-
 				</div>
 
 				<div class="col-md-8">
@@ -396,8 +390,9 @@
 								<div class="panel-heading row">
 									<div class="col-xs-10" id="stackedComposite"></div>
 									<div class="col-xs-2">
-										<span class="pull-right clickable panel-toggle panel-button-tab-left"><em
-												class="fa fa-toggle-up"></em></span>
+										<span class="pull-right clickable panel-toggle panel-button-tab-left">
+											<em class="fa fa-toggle-up"></em>
+										</span>
 									</div>
 								</div>
 								<div class="panel-body">
@@ -410,15 +405,14 @@
 					<div class=row>
 						<div class="col-md-12">
 							<div class=row>
-
 								<div class="col-md-4">
 									<div class="panel panel-default">
 										<div class="panel-heading row">
 											<div class="col-xs-10" id="pieChart"></div>
 											<div class="col-xs-2">
-												<span
-													class="pull-right clickable panel-toggle panel-button-tab-left"><em
-														class="fa fa-toggle-up"></em></span>
+												<span class="pull-right clickable panel-toggle panel-button-tab-left">
+													<em class="fa fa-toggle-up"></em>
+												</span>
 											</div>
 										</div>
 										<div class="panel-body">
@@ -431,9 +425,9 @@
 										<div class="panel-heading row">
 											<div class="col-xs-10" id="scatterChart"></div>
 											<div class="col-xs-2">
-												<span
-													class="pull-right clickable panel-toggle panel-button-tab-left"><em
-														class="fa fa-toggle-up"></em></span>
+												<span class="pull-right clickable panel-toggle panel-button-tab-left">
+													<em class="fa fa-toggle-up"></em>
+												</span>
 											</div>
 										</div>
 										<div class="panel-body">
@@ -445,14 +439,9 @@
 							</div>
 						</div>
 					</div>
-
 				</div>
-
-
 			</div>
 			<!--/.row-->
-
-
 
 			<div class=row>
 				<div class="col-md-12">
@@ -492,7 +481,7 @@
 				</div>
 				<div class="modal-body">
 
-					<form>
+					<form onsubmit="return sendMail(this);" method="POST">
 						<div class="form-group">
 							<input type="text" name="name" class="form-control" id="InputName"
 								placeholder="Enter your name" required>
@@ -501,7 +490,7 @@
 							<input type="email" name="email" class="form-control" id="InputEmail"
 								placeholder="Enter your email" required>
 						</div>
-						<textarea class="form-control" rows="3"></textarea>
+						<textarea class="form-control" rows="3" name="info"></textarea>
 						<div class="modal-footer">
 							<button type="submit" class="btn btn-default btn-reset" data-dismiss="modal">Cancel</button>
 							<button type="submit" class="btn btn-signin">Submit</button>
@@ -529,6 +518,7 @@
 	<script type="text/javascript" src="js/queue.min.js"></script>
 	<script src="js/bootstrap.min.js"></script>
 	<script src="js/custom.js"></script>
+	<script type="text/javascript" src="js/sendEmail.js"></script>
 	<script type="text/javascript" src="js/filterData.js"></script>
 	<script type="text/javascript" src="js/common.js"></script>
 	<script type="text/javascript" src="js/createChartsBudget.js"></script>

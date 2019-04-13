@@ -71,7 +71,6 @@ html,body{
 
 #monthId, #budgetId,#weatherId{
     /* so it doesn't hide under the navbar */
-    /* padding-top: 60px;   */
     height: 100vh;
     width: 100vw;
     display: flex;
@@ -262,7 +261,7 @@ display: flex;
 
 #grafId {
     /* so it doesnt hide under the navBar */
-    /* margin-top: 80px;   */
+    margin-top: 80px;  
     height: 100vh;
     width: 100vw;
 }
