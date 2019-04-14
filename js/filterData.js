@@ -18,26 +18,18 @@ function getMonth(error, data) {
         $('#monthId').removeClass('hide').fadeIn(1000);
         $('#budgetId').addClass('hide');
         $('#weatherId').addClass('hide');
+        $('#errors').addClass('hide');
         $('#grafId').addClass('hide');
         $('#hamburguerButton').addClass('hide');
         $('#navbar-collapse-1').addClass('hide');
         $('#sidebar-collapse').addClass('hide');
     })
 
-    //    //When change month is pressed, hide current screen and show month selection screen
-    //    $(".goback").click(function () {
-    //     $('#monthId').removeClass('hide').fadeIn(1000);
-    //     $('#budgetId').addClass('hide');
-    //     $('#weatherId').addClass('hide');
-    //     $('#grafId').addClass('hide');
-    //     $('#hamburguerButton').addClass('hide');
-    //     $('#sidebar-collapse').addClass('hide');
-    // })
-
     $(".change-budget").click(function () {
         $('#budgetId').removeClass('hide').fadeIn(1000);
         $('#monthId').addClass('hide');
         $('#weatherId').addClass('hide');
+        $('#errors').addClass('hide');
         $('#grafId').addClass('hide');
         $('#hamburguerButton').addClass('hide');
         $('#navbar-collapse-1').addClass('hide');
@@ -49,6 +41,7 @@ function getMonth(error, data) {
         $('#weatherId').removeClass('hide').fadeIn(1000);
         $('#monthId').addClass('hide');
         $('#budgetId').addClass('hide');
+        $('#errors').addClass('hide');
         $('#grafId').addClass('hide');
         $('#hamburguerButton').addClass('hide');
         $('#navbar-collapse-1').addClass('hide');
@@ -71,7 +64,7 @@ function getMonth(error, data) {
         $('#weatherId').removeClass('hide').slideDown(1000);
     })
 
-     //buttons on main page (page with month selection)
+    //buttons on main page (page with month selection)
     $("#resultsBudget").click(onClickFilterByBudget);
     $("#resultsWeather").click(onClickFilterByWeather);
 
@@ -126,8 +119,8 @@ function filterDataBudget(maxBudget, dataMonth) {
     });
 
     if (maxBudget == "") {
-        //  document.getElementById("infoMessage").innerHTML = `<h2 class="text-danger">Please enter the budget</h2>`;
-        alert('Please enter the budget')
+        showErrorMessage();
+        $('#errorMessage').html(`<h2>Please enter the budget</h2>`);      
     }
     else {
         //If there is one or more cities matching the criteria it will call 
@@ -189,11 +182,13 @@ function filterDataWeather(min, max, dataMonth) {
 
 
     if ((isNaN(min)) && (isNaN(max))) {
-        alert("Please enter maximun and/or minimun temperatures");
+        showErrorMessage();
+        $('#errorMessage').html(`<h2>Please enter maximun and/or minimun temperatures</h2>`);      
         return 0;
     }
     else if ((!(isNaN(min))) && (!(isNaN(max))) && max < min) {
-        alert("The minimum temperature can't be higher that the maximum temperature");
+        showErrorMessage();
+        $('#errorMessage').html(`<h2>The minimum temperature can't be higher that the maximum temperature</h2>`);
         return 0;
     }
     else {
@@ -201,23 +196,24 @@ function filterDataWeather(min, max, dataMonth) {
     }
 }
 
-
 function citiesMatchingCriteria(data, filteredBy) {
     //document.getElementById("infoMessage").innerHTML = "";
 
     if (checkIfObjectEmpty(data)) {
+        showErrorMessage();
         if (filteredBy == "Budget") {
-            alert("We're sorry but Europe is not that cheap!");
+            // document.getElementById("#errorMessage").innerHTML = `We're sorry but Europe is not that cheap!`;
+            $('#errorMessage').html(`<h2>We're sorry but Europe is not that cheap!</h2>`);
         }
         if (filteredBy == "Weather") {
-            alert("We're sorry but we don't cities with that average weather");
+            $('#errorMessage').html(`<h2>We're sorry but we don't cities with that average weather</h2>`);
         }
     }
     else {
         if ($(window).width() < 768) {
             $('#hamburguerButton').removeClass('hide');
         }
-          
+        $('#errors').addClass('hide');
         $('#grafId').removeClass('hide').slideDown(1000);
         $('#sidebar-collapse').removeClass('hide').show(1000);
 
@@ -243,20 +239,6 @@ function checkIfObjectEmpty(data) {
             return false;
     }
     return true;
-}
-
-function dataParser(data) {
-    data.forEach(function (d) {
-        d.hostelNight = parseInt(d.hostelNight);
-        d.meals = parseInt(d.meals);
-        d.drinks = parseInt(d.drinks);
-        d.transport = parseInt(d.transport);
-        d.attractions = parseInt(d.attractions);
-        d.visitorsCity = parseInt(d.visitorsCity);
-        d.minTemp = parseInt(d.minTemp);
-        d.maxTemp = parseInt(d.maxTemp);
-        d.precipitation = parseInt(d.precipitation);
-    })
 }
 
 function createDataForGraphics(data, filteredBy) {
@@ -318,3 +300,25 @@ function fiterBy(ndx, element) {
         .title(function (d) { return d.key; })
         .group(group);
 };
+
+function showErrorMessage(){
+    $('#errors').removeClass('hide');
+    $('#budgetId').addClass('hide');
+    $('#weatherId').addClass('hide');
+    $('#monthId').addClass('hide');
+    $('#grafId').addClass('hide');
+}
+
+function dataParser(data) {
+    data.forEach(function (d) {
+        d.hostelNight = parseInt(d.hostelNight);
+        d.meals = parseInt(d.meals);
+        d.drinks = parseInt(d.drinks);
+        d.transport = parseInt(d.transport);
+        d.attractions = parseInt(d.attractions);
+        d.visitorsCity = parseInt(d.visitorsCity);
+        d.minTemp = parseInt(d.minTemp);
+        d.maxTemp = parseInt(d.maxTemp);
+        d.precipitation = parseInt(d.precipitation);
+    })
+}

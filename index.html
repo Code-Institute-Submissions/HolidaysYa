@@ -11,7 +11,6 @@
 	<!-- my stylesheet -->
 	<link href="css/style.css" rel="stylesheet">
 
-
 	<!--Custom Font-->
 	<link href="https://fonts.googleapis.com/css?family=Montserrat:300,300i,400,400i,500,500i,600,600i,700,700i"
 		rel="stylesheet">
@@ -155,7 +154,6 @@
 							<input type="number" class="form-control" id="maxTemp2" name="maxTemp2" />
 							<div class="buttonsSide">
 								<button class="btn btn-success" id="filterSideWeather">show cities</button>
-
 							</div>
 						</div>
 					</li>
@@ -169,12 +167,9 @@
 					<em class="fa fa-envelope faSide hidden-xs">&nbsp;</em>
 				</button>
 			</li>
-
 			<li><a href="#"><em class="fa fa-facebook faSide hidden-sm hidden-md hidden-lg">&nbsp;</em></a></li>
 			<li><a href="#"><em class="fa fa-twitter faSide hidden-sm hidden-md hidden-lg">&nbsp;</em></a></li>
 			<li><a href="#"><em class="fa fa-linkedin faSide hidden-sm hidden-md hidden-lg">&nbsp;</em></a></li>
-
-
 		</ul>
 		</li>
 		</ul>
@@ -217,7 +212,6 @@
 			<label for="maxBudget" class="titleInput">What is your maximun budget?</label>
 			<input type="number" id="maxBudget" name="maxBudget" required />
 			<div class="buttons">
-				<!-- <button class="btn btn-danger goback">Change month</button> -->
 				<button class="btn btn-info button" id="resultsBudget" onclick="showTitle('Budget')">show
 					cities</button>
 			</div>
@@ -237,16 +231,18 @@
 			</div>
 
 			<div class="buttons">
-				<!-- <button class="btn btn-danger goback">Change month</button> -->
 				<button class="btn btn-info button" id="resultsWeather" onclick="showTitle('Weather')">show
 					cities</button>
 			</div>
 		</div>
 	</section>
 
+	<section id="errors" class="hide">
+		<div id="errorMessage"></div>
+	</section>
 	<!-- this section is hidden at the beggining -->
 
-	<section class="container-fluid hide" id="grafId" class="hide">
+	<section class="container-fluid hide" id="grafId" class="hide">		
 		<div class="col-lg-11 col-lg-offset-1 col-sm-10 col-sm-offset-2 main">
 
 			<!-- Should I use the infor message for title and error??? -->
@@ -460,7 +456,6 @@
 				</div>
 			</div>
 		</div>
-
 	</section>
 	<!--/.main-->
 

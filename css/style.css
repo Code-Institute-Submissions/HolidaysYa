@@ -20,13 +20,16 @@ html, body {
 .navbar {
     margin: 0px;
 }
+
 .navbar-default {
     background-color: transparent;
     border-color: transparent;
 }
+
 .navbar-default ul {
     color: white;
 }
+
 /* logo */
 
 .navbar-header .navbar-brand {
@@ -48,7 +51,6 @@ html, body {
 .navbar-default .navbar-toggle:hover {
     background-color: transparent;
 }
-
 
 .navbar-default .navbar-toggle .icon-bar {
     background-color: white;
@@ -73,8 +75,8 @@ html, body {
     justify-content: center;
 }
 
-.navbar-collapse{
-    padding-left:0px;
+.navbar-collapse {
+    padding-left: 0px;
 }
 
 .navbar-collapse .nav>.menu-item {
@@ -94,13 +96,14 @@ html, body {
     padding-top: 1.2em;
     font-size: 1em;
 }
+
 .caret {
     margin-top: 1em;
     padding-bottom: 1em;
 }
 
 .navbar-collapse .nav>.dropdown>.dropdown-menu {
-   width:100%;
+    width: 100%;
 }
 
 .navbar-collapse .nav>.dropdown>.dropdown-menu>li {
@@ -108,23 +111,23 @@ html, body {
     padding-bottom: 0.7em;
     font-size: 1em;
     border-top: 0.1px solid white;
- }
+}
 
- .navbar-collapse .nav>.dropdown>.dropdown-menu>li>a {
+.navbar-collapse .nav>.dropdown>.dropdown-menu>li>a {
     padding-right: 15px;
     color: #fff;
- }
+}
 
- .navbar-collapse .nav>.menu-item button{
-     width: 100%;
-     height: 100%;
-     background-color: transparent;
-     border: none;
-     box-shadow: none;
-     outline: none;
- }
+.navbar-collapse .nav>.menu-item button {
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    border: none;
+    box-shadow: none;
+    outline: none;
+}
 
- .navbar-default .navbar-nav>.open>a, .navbar-default .navbar-nav>.open>a:focus, .navbar-default .navbar-nav>.open>a:hover, .navbar-default .navbar-nav>.open>a, .navbar-default .navbar-nav>.open>a:focus, .navbar-default .navbar-nav>.open>a:hover {
+.navbar-default .navbar-nav>.open>a, .navbar-default .navbar-nav>.open>a:focus, .navbar-default .navbar-nav>.open>a:hover, .navbar-default .navbar-nav>.open>a, .navbar-default .navbar-nav>.open>a:focus, .navbar-default .navbar-nav>.open>a:hover {
     color: white;
     background-color: transparent;
 }
@@ -154,8 +157,8 @@ html, body {
     margin: 10px 8px;
     padding: 10px;
     border-radius: 8px;
-    
 }
+
 .borderSocial:hover {
     background: rgba(255, 255, 255, 0.2);
 }
@@ -166,13 +169,11 @@ html, body {
     width: 100%;
     color: #fff;
     padding-left: 5px;
-   
 }
-
 
 /************************************** sidebar */
 
-.sidebar li{
+.sidebar li {
     text-align: center;
 }
 
@@ -180,54 +181,54 @@ html, body {
     background-color: transparent;
 }
 
-.sidebar{
-overflow:visible;
-box-shadow: 1px 1px 7px #dedede;
+.sidebar {
+    overflow: visible;
+    box-shadow: 1px 1px 7px #dedede;
 }
 
 .sidebar ul {
     margin: 0px;
 }
 
-.sidebar ul li{
+.sidebar ul li {
     padding-bottom: 15px;
 }
 
-.sidebar h4{
-    padding-bottom:8px;
+.sidebar h4 {
+    padding-bottom: 8px;
     font-size: 0.9em;
     font-weight: 400;
 }
 
- .sidebar ul.nav li a {
+.sidebar ul.nav li a {
     height: 100%;
 }
 
-.sidebar ul.nav ul.children .budget, .sidebar ul.nav ul.children .weather{
+.sidebar ul.nav ul.children .budget, .sidebar ul.nav ul.children .weather {
     padding-top: 10px;
     margin: 0px 5px;
     background: #ededed;
 }
 
-.sidebar .form-group{
-display: flex;
-flex-direction: column;
-align-items: center;
-justify-content: center;
+.sidebar .form-group {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
-.sidebar label{
+.sidebar label {
     padding-top: 10px;
     font-size: 0.8em;
-    font-weight: 800;   
+    font-weight: 800;
 }
 
-.sidebar .btn-success{
+.sidebar .btn-success {
     background-color: #0e9e8d;
     border-color: #0e9e8d;
 }
 
-.buttonsSide{
+.buttonsSide {
     margin-top: 15px;
 }
 
@@ -254,12 +255,12 @@ justify-content: center;
 }
 
 .btn-group-lg>.btn, .btn-lg {
-    padding:0px;
-    }
+    padding: 0px;
+}
 
 /* background section month selection, budget selection and weather selection */
 
-#monthId, #budgetId, #weatherId {
+#monthId, #budgetId, #weatherId, #errors {
     /* so it doesn't hide under the navbar */
     height: 100vh;
     width: 100vw;
@@ -294,7 +295,26 @@ justify-content: center;
     background-size: cover;
 }
 
+#errors {
+    background: url("../images/sad-mobile.jpg") no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+@media (min-width: 768px) {
+    #errors {
+        background: url("../images/sad.jpg") no-repeat center center fixed;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+    }
+}
+
 /* I added an overlay to make the text more readeble */
+
 .overlay1, .overlay {
     width: 100%;
     height: 100%;
@@ -315,6 +335,7 @@ justify-content: center;
 }
 
 /*common to the three sections*/
+
 .titleInput {
     margin-bottom: 20px;
     color: white;
@@ -324,14 +345,17 @@ justify-content: center;
 }
 
 /* input fields */
+
 #monthSelector, #maxBudget, #maxTemp, #minTemp {
     font-size: 18px;
     height: 40px;
     border: none;
 }
+
 #monthSelector {
     width: 150px;
 }
+
 #maxBudget, #maxTemp, #minTemp {
     width: 80px;
 }
@@ -351,7 +375,6 @@ justify-content: center;
         font-size: 1.1em;
     }
 }
- 
 
 /* month section */
 
@@ -364,8 +387,8 @@ justify-content: center;
 
 @media (min-width: 768px) {
     #monthId h1 {
-          font-size: 4em;      
-    }    
+        font-size: 4em;
+    }
 }
 
 #monthId p {
@@ -444,6 +467,7 @@ justify-content: center;
 .panel-widget .large {
     font-size: 2em;
 }
+
 .panel-widget .text-muted {
     margin-top: 0px;
 }
@@ -484,7 +508,6 @@ justify-content: center;
     border: none;
 }
 
-
 /*chart panels*/
 
 .panel-widget {
@@ -497,7 +520,6 @@ justify-content: center;
     line-height: 20px;
     /* display: flex; */
     margin: 0px;
-    
 }
 
 .pull-right {
@@ -517,12 +539,13 @@ justify-content: center;
 /*CHARTS*/
 
 /* legends */
+
 .dc-legend-item {
     font-size: 0.8em;
 }
 
-
 /*charts axis style*/
+
 path.domain {
     stroke: rgb(0, 0, 0);
     fill: none;
@@ -531,18 +554,21 @@ path.domain {
 
 #rowChart .axis, #correlation .axis {
     font-size: 0.6em;
-} 
+}
 
 /*composite line chart - max and min temperature*/
+
 #dailyBudget_Temp path {
     fill: none;
 }
+
 .stack-list .line {
     stroke-width: 1.5;
     stroke-linecap: round;
 }
 
 /* axis charts max and min temperature & total budget */
+
 #dailyBudget_Temp .axis {
     font-size: 0.5em;
 }
@@ -550,6 +576,7 @@ path.domain {
 /* how to rotate the labels so they fit well in the screen
 https://github.com/dc-js/dc.js/issues/731
 */
+
 #dailyBudget_Temp .x.axis text, #rowChart .x.axis text {
     text-anchor: end !important;
     transform: rotate(-45deg);
@@ -573,23 +600,20 @@ https://github.com/dc-js/dc.js/issues/731
     }
     #rowChart .axis, #correlation .axis {
         font-size: 0.8em;
-    } 
+    }
 }
-
-
-
 
 /* table */
 
 .table {
     position: relative;
-    table-layout: fixed ;
+    table-layout: fixed;
     width: 100%;
     font-size: 1.2em;
     text-align: center;
 }
 
-thead{
+thead {
     background-color: #e6e6e6;
 }
 
@@ -609,7 +633,6 @@ td {
     padding-right: 50px;
 }
 
-
 .email-button {
     background-color: transparent;
     border: none;
@@ -624,10 +647,33 @@ td {
     box-shadow: none;
 }
 
+/* error messages */
+
+#errorMessage {
+    width: 70%;
+    text-align: center;
+}
+
+#errorMessage h2 {
+    color: white;
+    font-weight: 700;
+    line-height: 40px;
+    font-size: 1.2em;
+}
+
+@media (min-width: 768px) {
+    #errorMessage {
+        width: 50%;
+    }
+    #errorMessage h2 {
+        font-size: 1.8em;
+    }
+}
 
 /*jquery classes*/
 
 /*weather, budget and graphics sections are hiden at the beggining*/
+
 .hide {
     display: none;
 }
