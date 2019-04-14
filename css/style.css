@@ -1,51 +1,185 @@
 * {
     box-sizing: border-box;
-    margin:0px;
+    margin: 0px;
     padding: 0px;
-  }
-  
+}
 
-html,body{
-    margin:0px;
+html, body {
+    margin: 0px;
     padding: 0px;
     height: 100%;
     width: 100%;
-    
-    /* background-color: lightgrey; */
+}
+
+/* HEADER */
+
+.navbar {
+    margin: 0px;
 }
 
 /* logo */
+
 .navbar-header .navbar-brand {
-    color: #fff;
-    font-size: 20px;
+    font-size: 1.8em;
     text-transform: capitalize;
     font-weight: 500;
-    height: 60px;
-    padding-top: 18px;
+    margin-left: 15px;
 }
 
-/* h1,h2,h3,.navbar,p,row,col-xs-6,div{
+/* humburuer button */
+
+.navbar-default .navbar-toggle {
+    border-color: transparent;
+    background: transparent;
+    width: 60px;
+    height: 42px;
+}
+
+.navbar-default .navbar-toggle .icon-bar {
+    background-color: white;
+    height: 0.3em;
+    width: 2em;
+    border-radius: 5px;
+}
+
+.navbar-fixed-bottom .navbar-collapse, .navbar-fixed-top .navbar-collapse {
+    max-height: 100%;
+}
+
+.navbar-collapse .nav>li, .navbar-collapse .nav>li>a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.navbar-collapse .nav>.menu-item {
+    padding-top: 1.5em;
+    padding-bottom: 1.5em;
+    font-size: 1.3em;
+    border-bottom: 1px solid white;
+}
+
+.navbar-collapse .nav>.dropdown {
+    background-color: rgb(7, 125, 204);
+    padding-top: 1.5em;
+    /* margin-top: 20px; */
+    font-size: 1.3em;
+}
+
+.caret {
+    margin-top: 1em;
+    padding-bottom: 1em;
+}
+
+.navbar-collapse .nav>.dropdown>.dropdown-menu {
+   width:100%;
+}
+
+.navbar-collapse .nav>.dropdown>.dropdown-menu>li {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-size: 1.2em;
+    border-top: 0.1px solid white;
+ }
+
+ .navbar-collapse .nav>.dropdown>.dropdown-menu>li>a {
+    padding-right: 15px;
+    color: #fff;
+ }
+
+ .navbar-collapse .nav>.menu-item button{
+     width: 100%;
+     height: 100%;
+     background-color: transparent;
+     border: none;
+     box-shadow: none;
+     outline: none;
+ }
+
+ 
+.navbar-collapse .visible-xs {
+    background-color: #222222;
+    margin-top: 0px;
+}
+
+.navbar-default .navbar-nav>.open>a, .navbar-default .navbar-nav>.open>a:focus, .navbar-default .navbar-nav>.open>a:hover, .navbar-default .navbar-nav>.open>a, .navbar-default .navbar-nav>.open>a:focus, .navbar-default .navbar-nav>.open>a:hover {
+    color: white;
+    background-color: transparent;
     margin: 0px;
     padding: 0px;
-} */
+}
 
-/* background section month selection, budget selection and weather selection */
-
-  .navbar{
+.navbar-default .navbar-nav>li>a:focus, .navbar-default .navbar-nav>li>a:hover, .navbar-default .navbar-nav>li>a {
+    color: white;
+    background-color: transparent;
     margin: 0px;
- } 
+    padding: 0px;
+}
 
- /* .navbar ul {
-    position:absolute;
-    right:10px;
-    } */
+.navbar-default .dropdown {
+    background-color: transparent;
+}
 
+.dropdown a.dropdown-toggle, .dropdown, .dropdown a {
+    width: 100%;
+    text-align: center;
+}
 
+.navbar-default {
+    background-color: transparent;
+    border-color: transparent;
+}
 
-/* .navbar-right{
-    float:right;
-} */
+/* sidebar */
 
+.sidebar>li>a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.sidebar ul.nav a:hover, .sidebar ul.nav li.parent ul li a:hover {
+    background-color: transparent;
+}
+
+@media (min-width: 767px) {
+    .navbar-default .navbar-nav .open .dropdown-menu>li>a {
+        color: white;
+    }
+}
+
+.navbar-default .navbar-toggle:hover {
+    background-color: transparent;
+}
+
+.col-xs-6, .col-sm-10 {
+    padding: 0px;
+}
+
+@media (min-width: 768px) {
+    .collapse .navbar-right {
+        margin-right: 20px;
+    }
+}
+
+.navbar-collapse .navbar-right {
+    margin-right: 25px;
+}
+
+.navbar-default ul {
+    color: white;
+}
+
+.navbar-collapse .socialMediaLinks {
+    background-color: transparent;
+}
+
+.dropdown {
+    margin: 0px;
+    padding: 0px;
+}
 
 .borderSocial {
     background: rgba(255, 255, 255, 0.1);
@@ -53,34 +187,29 @@ html,body{
     height: 40px;
     width: 40px;
     margin: 10px 8px;
-    padding: 10px; 
+    padding: 10px;
     border-radius: 4px;
 }
 
-
-.social{
-    color: #fff;   
+.social {
+    color: #fff;
     padding-left: 5px;
 }
 
+/* background section month selection, budget selection and weather selection */
 
-
-
-
-
-
-#monthId, #budgetId,#weatherId{
+#monthId, #budgetId, #weatherId {
     /* so it doesn't hide under the navbar */
     height: 100vh;
     width: 100vw;
     display: flex;
-    flex-direction: column; 
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     /* background-color: #777777; */
 }
 
-#monthId{
+#monthId {
     background: url("../images/amsterdam.jpg") no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -88,7 +217,7 @@ html,body{
     background-size: cover;
 }
 
-#budgetId{
+#budgetId {
     background: url("../images/budget.jpg") no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -96,8 +225,7 @@ html,body{
     background-size: cover;
 }
 
-
-#weatherId{
+#weatherId {
     background: url("../images/weather.jpg") no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -106,31 +234,32 @@ html,body{
 }
 
 /* I added an overlay to make the text more readeble */
-.overlay1, .overlay{
+
+.overlay1, .overlay {
     width: 100%;
     height: 100%;
-    background-image: linear-gradient(to bottom, rgba(0,0,0,1), rgba(0,0,0,0));
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
     /* background-color: rgba(0,0,0,0.4); */
     display: flex;
     align-items: center;
     justify-content: center;
-    flex-direction: column; 
+    flex-direction: column;
     text-align: center;
 }
 
-.overlay{
-    background-image: linear-gradient(to bottom, rgba(0,0,0,0.5), rgba(0,0,0,0));
+.overlay {
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0));
 }
 
-.overlay1{
-    background-image: linear-gradient(to bottom, rgba(0,0,0,1), rgba(0,0,0,0));    
+.overlay1 {
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
 }
 
 /*common to the three sections*/
 
-.titleInput{
+.titleInput {
     margin-bottom: 20px;
-    color:white;
+    color: white;
     font-size: 20px;
     font-weight: 600;
     width: 60%;
@@ -143,7 +272,7 @@ html,body{
     border: none;
 }
 
-@media (min-width: 768px){
+@media (min-width: 768px) {
     #monthSelector, #maxBudget, #maxTemp, #minTemp {
         width: 250px;
         font-size: 18px;
@@ -152,122 +281,94 @@ html,body{
     }
 }
 
-.button{
+.button {
     border-radius: 25px;
     width: 15em;
     font-size: 1.1em;
-    font-weight:800;
+    font-weight: 800;
     height: 60px;
-    margin:20px 30px 0px 30px;
+    margin: 20px 30px 0px 30px;
     box-sizing: border-box;
 }
-
 
 /* month section */
 
-#monthId h1{
-    color:white;
+#monthId h1 {
+    color: white;
     font-weight: 400;
     width: 60%;
-   }
+}
 
-#monthId p{
-    color:white;
+#monthId p {
+    color: white;
     font-size: 1.2em;
     font-weight: 400;
-    width:70%;
-    background-color: rgba(0,0,0,0.3);
+    width: 70%;
+    background-color: rgba(0, 0, 0, 0.3);
     padding: 5px;
     margin: 15px;
-    box-sizing: border-box; 
+    box-sizing: border-box;
     padding: 15px;
     margin: 35px;
     box-sizing: border-box;
-
 }
 
-#monthSelector option{
+#monthSelector option {
     text-align: center;
 }
 
-
 /* weather section */
 
-.inputBlock{
-display: flex;
+.inputBlock {
+    display: flex;
 }
 
-
-
 /* sidebar */
+
 .sidebar ul.nav li a {
     height: 80px;
 }
 
-.buttonsSide{
+.buttonsSide {
     display: flex;
-    flex-direction: column; 
+    flex-direction: column;
     align-items: center;
     justify-content: center;
 }
 
-.form-group input{
+.form-group input {
     margin: 10px 0px;
 }
 
-.filterSideBar{
-    margin:20px 0px;
-    
+.filterSideBar {
+    margin: 20px 0px;
 }
 
-.nav>li {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
-
-
-.sidebar ul.nav a:hover, .sidebar ul.nav li.parent ul li a:hover {
-    background-color:transparent;
-}
-
-.nav>li>a{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    
-}
-
-.faSide{
-    font-size:36px;
-    color:grey;
+.faSide {
+    font-size: 36px;
+    color: grey;
     transition: all .3s ease-in-out;
     -webkit-transition: all .3s ease-in-out;
     -moz-transition: all .3s ease-in-out;
     -o-transition: all .3s ease-in-out;
 }
 
-.faSide:hover{
-    color:#52a9ec;
+.faSide:hover {
+    color: #52a9ec;
 }
-
-
-
-
 
 /* charts section */
 
 #grafId {
     /* so it doesnt hide under the navBar */
-    margin-top: 80px;  
+    margin-top: 80px;
     height: 100vh;
     width: 100vw;
 }
 
 /* title and reset button */
-.reset{
+
+.reset {
     text-align: right;
     margin-top: 20px;
 }
@@ -283,83 +384,74 @@ display: flex;
     font-size: 12px;
 }
 
-.filters{
+.filters {
     margin-bottom: 10px;
 }
 
-.filterTitles{
-   color:#808589;
-   font-size: 16px;
-   font-weight: 400;
-   padding-bottom:10px; 
+.filterTitles {
+    color: #808589;
+    font-size: 16px;
+    font-weight: 400;
+    padding-bottom: 10px;
 }
-
 
 /* numberDisplays */
 
-.numberDisplay{
-    color:black;
-    font-size:26px;
-    margin:15px;
+.numberDisplay {
+    color: black;
+    font-size: 26px;
+    margin: 15px;
 }
 
-
-.number-display{
+.number-display {
     font-size: 25px;
 }
 
-.color-lightblue{
-    color:#30a5ff;
+.color-lightblue {
+    color: #30a5ff;
 }
 
-
-.color-blue{
-    color:#006B99;
+.color-blue {
+    color: #006B99;
 }
 
-.color-green{
-    color:#0E9E8D;
+.color-green {
+    color: #0E9E8D;
 }
 
-
-.color-yellow{
-    color:#F2C44F;
+.color-yellow {
+    color: #F2C44F;
 }
 
-.color-orange{
-    color:#F4994E;
+.color-orange {
+    color: #F4994E;
 }
 
-.color-red{
-    color:#E86443;
+.color-red {
+    color: #E86443;
 }
 
-
-.color-purple{ 
-    color: rgb(131, 27, 150) 
+.color-purple {
+    color: rgb(131, 27, 150)
 }
-    
-   
-   
+
 .text-muted {
-     color: #a7a1a1;
+    color: #a7a1a1;
 }
-    
-.NumberDisplays{
-     background-color: transparent;
-     margin-bottom: 0px;
-     padding:0px;
+
+.NumberDisplays {
+    background-color: transparent;
+    margin-bottom: 0px;
+    padding: 0px;
 }
 
 .border-right {
-     border:none;
+    border: none;
 }
-    
+
 .row:before {
     display: none;
 }
-
-
 
 /*chart panels*/
 
@@ -370,8 +462,9 @@ display: flex;
 .panel-widget .large {
     font-size: 2em;
 }
+
 .panel-widget .text-muted {
-        margin-top: 0px; 
+    margin-top: 0px;
 }
 
 .panel-heading {
@@ -381,8 +474,8 @@ display: flex;
     margin: 0px;
 }
 
-.pull-right{
-text-align: right;
+.pull-right {
+    text-align: right;
 }
 
 .panel-toggle {
@@ -395,247 +488,104 @@ text-align: right;
     color: #52a9ec;
 }
 
-
 /* row chart */
-
 
 /*for small screens*/
 
-
 /*chart axis style*/
-path.domain{
-    stroke:rgb(0, 0, 0);
-    fill:none;
+
+path.domain {
+    stroke: rgb(0, 0, 0);
+    fill: none;
     stroke-width: 0.8;
-    }
-
-    
-#dailyBudget_Temp path{
-    fill:none;
-    }
- 
-    /*styles temp chart*/
-.stack-list .line{
-stroke-width: 2;
-stroke-linecap:round;
-        }
-     
- #dailyBudget_Temp .axis{
-    font-size: 0.8em;    
-
-} 
-
-.dc-legend-item{
-    font-size: 0.8em; 
 }
 
-
-.x-axis-label, .y-axis-label{
- font-weight: bold;
- font-size: 0.9em; 
-
-}
-.axis{
-    font-size: 0.8em;    
-
+#dailyBudget_Temp path {
+    fill: none;
 }
 
+/*styles temp chart*/
 
+.stack-list .line {
+    stroke-width: 2;
+    stroke-linecap: round;
+}
 
+#dailyBudget_Temp .axis {
+    font-size: 0.8em;
+}
 
+.dc-legend-item {
+    font-size: 0.8em;
+}
 
+.x-axis-label, .y-axis-label {
+    font-weight: bold;
+    font-size: 0.9em;
+}
+
+.axis {
+    font-size: 0.8em;
+}
 
 /* how to rotate the labels so they fit well in the screen
 https://github.com/dc-js/dc.js/issues/731
 */
-#dailyBudget_Temp .x.axis text, #rowChart .x.axis text{
+
+#dailyBudget_Temp .x.axis text, #rowChart .x.axis text {
     text-anchor: end !important;
     transform: rotate(-45deg);
     /* font-size: 1em; */
 }
 
-
-
-
 /* table */
 
-.table{
+.table {
     font-size: 10px;
     text-align: center;
 }
 
-
 /*jquery classes*/
+
 /*weather, budget and graphics sections are hiden at the beggining*/
 
 .hide {
     display: none;
 }
 
-/*********************************** FIX THIS!!!!!******************/
-/*after adding this the charts overflow the parent div */
-
-
-
-/* #rowChart{
-    height:60vh;
-
-}
-
-#dailyBudget_Temp, #currency_precipitation,#correlation{
-    height:23vh;
-
-} */
-
-
-
-
-
-
-.email-button{
-background-color: transparent;
-border:none;
-color:grey;
-}
-
-/* .email-button, .email-button:hover, .email-button:focus, .email-button:active, .email-button:active:focus{
+.email-button {
     background-color: transparent;
-    border:none;
-    border-color: transparent;
-    
-    } */
+    border: none;
+    color: grey;
+}
 
-    /* .email-button:hover{
-        color: #52a9ec;
-    } */
-    
-    .email-button.active.focus,
-    .email-button:focus,
-    .email-button.focus,
-    .email-button:active.focus,
-    .email-button:active:focus,
-    .email-button:focus,.email-button:active,.email-button, .email-button:hover {
+.email-button.active.focus, .email-button:focus, .email-button.focus, .email-button:active.focus, .email-button:active:focus, .email-button:focus, .email-button:active, .email-button, .email-button:hover {
     outline: none;
     background-color: transparent;
     text-decoration: none;
     border-color: transparent;
-    box-shadow:none;
+    box-shadow: none;
 }
 
-
-
-.table-hover{
-    overflow:auto;
+.table-hover {
+    overflow: auto;
     width: 100%;
-    font-size:.9em;
+    font-size: .9em;
     text-align: left;
-    }
+}
 
-tr{
+tr {
     height: 3em;
 }
 
-td{
-   padding-left: 20px;
-   
+td {
+    padding-left: 20px;
 }
 
-th{
+th {
     height: 5em;
     white-space: pre-wrap;
     padding-left: 20px;
-    width:8em;
+    width: 8em;
     background-color: #dddddd;
-}
-
-
-
-
-
-.dropdown a.dropdown-toggle, .dropdown, .dropdown a{
-    width:100%;
-    text-align: center;
-}
-
-
-
-.navbar-default{
-    background-color: transparent;
-    border-color: transparent;
-}
-
-.navbar-default .navbar-toggle .icon-bar {
-    background-color: #fff;
-}
-
-
-.navbar-default .navbar-toggle .icon-bar:hover {
-    color: #46b8da;
-   
-}
-
-.navbar-collapse .visible-xs{
-    background-color: #222222;
-    margin-top: 0px;   
-}
-
-
-@media (max-width: 767px){
-.navbar-default .navbar-nav .open .dropdown-menu>li>a {
-    color: white;
-}
-}
-
-
-
-
-.navbar-default .navbar-toggle:hover {
-    background-color: transparent;
-}
-
-.navbar-toggle{
-margin-bottom: 10px;
-width: 50px;
-height: 40px;
-}
-
-.col-xs-6, .col-sm-10{
-    padding: 0px;
-}
-
-@media (min-width: 768px)
-.collapse .navbar-right {
-    margin-right: 20px;
-}
-
-.navbar-collapse .navbar-right{
-    margin-right: 25px;
-}
-
-.navbar-default ul h4{
-    color: white;
-}
-
-.navbar-default .navbar-nav>.open>a, .navbar-default .navbar-nav>.open>a:focus, .navbar-default .navbar-nav>.open>a:hover, .navbar-default .navbar-nav>.open>a, .navbar-default .navbar-nav>.open>a:focus, .navbar-default .navbar-nav>.open>a:hover {
-    color: white;
-    background-color: transparent
-}
-
-.navbar-default .navbar-nav>li>a:focus, .navbar-default .navbar-nav>li>a:hover, .navbar-default .navbar-nav>li>a {
-    color: white;
-    background-color: transparent;
-}
-
-.navbar-default .dropdown{
-    background-color: transparent;
-}
-
-
-.navbar-collapse .socialMediaLinks{
-    background-color: transparent;
-}
-
-.dropdown {
-    margin: 0px;
-    padding: 0px;
 }

@@ -14,14 +14,38 @@ function getMonth(error, data) {
     $(document).data('data', data);
 
     //if the logo is clicked go to the main page
-    $(".navbar-brand").removeClass('hide').click(function () {
+    $(".change-month").removeClass('hide').click(function () {
         $('#monthId').removeClass('hide').fadeIn(1000);
         $('#budgetId').addClass('hide');
         $('#weatherId').addClass('hide');
-        $('#hamburguerButton').addClass('hide');
-        $('#sidebar-collapse').addClass('hide');
         $('#grafId').addClass('hide');
-        $('#navbar-button').addClass('hide');
+        $('#hamburguerButton').addClass('hide');
+        $('#navbar-collapse-1').addClass('hide');
+        $('#sidebar-collapse').addClass('hide');
+    })
+
+    $(".change-budget").click(function () {
+        $('#budgetId').removeClass('hide').fadeIn(1000);
+        $('#monthId').addClass('hide');
+        $('#weatherId').addClass('hide');
+        $('#grafId').addClass('hide');
+        $('#hamburguerButton').addClass('hide');
+        $('#navbar-collapse-1').addClass('hide');
+        $('#sidebar-collapse').addClass('hide');
+    })
+
+    $(".change-temperatures").click(function () {
+        $('#weatherId').removeClass('hide').fadeIn(1000);
+        $('#monthId').addClass('hide');
+        $('#budgetId').addClass('hide');
+        $('#grafId').addClass('hide');
+        $('#hamburguerButton').addClass('hide');
+        $('#navbar-collapse-1').addClass('hide');
+        $('#sidebar-collapse').addClass('hide');
+    })
+
+    $("#hamburguerButton").click(function () {
+        $('#navbar-collapse-1').removeClass('hide');
     })
 
     //When choose budget button is pressed, hide month selection page and show budget selection page
@@ -37,10 +61,6 @@ function getMonth(error, data) {
 
     //When change month is pressed, hide current screen and show month selection screen
     $(".goback").click(function () {
-        //everytime we start a new search we clear the input fields
-        // $('input[name=minTemp]').val('');
-        // $('input[name=maxTemp]').val('');
-        // $('input[name=maxBudget]').val('');
         $('#monthId').removeClass('hide').fadeIn(1000);
         $('#budgetId').addClass('hide');
         $('#weatherId').addClass('hide');
@@ -48,24 +68,6 @@ function getMonth(error, data) {
         $('#hamburguerButton').addClass('hide');
         $('#sidebar-collapse').addClass('hide');
     })
-
-    // $("#filterSideBudget").click(function () {
-    //     $('#monthId').addClass('hide');
-    //     $('#budgetId').slideUp(1000);
-    //     $('#grafId').removeClass('hide').slideDown(1000);
-    //     $('#sidebar-collapse').removeClass('hide');
-    //     $('.weather').hide();
-    //     $('.budget').show();
-    // })
-
-    // $("#filterSideWeather").click(function () {
-    //     $('#monthId').addClass('hide');
-    //     $('#WeathertId').slideUp(1000);
-    //     $('#grafId').removeClass('hide').slideDown(1000);
-    //     $('#sidebar-collapse').removeClass('hide');
-    //     $('.budget').hide();
-    //     $('.weather').show();
-    // })
 
     //buttons on main page (page with month selection)
     $("#resultsBudget").click(onClickFilterByBudget);
@@ -210,27 +212,20 @@ function citiesMatchingCriteria(data, filteredBy) {
         }
     }
     else {
-        if ($(window).width() < 776) {
+        if ($(window).width() < 768) {
             $('#hamburguerButton').removeClass('hide');
         }
-
+      
         $('#grafId').removeClass('hide').slideDown(1000);
-        $('#navbar-button').removeClass('hide');
         $('#sidebar-collapse').removeClass('hide').show(1000);
 
         if (filteredBy == "Budget") {
             $('#budgetId').slideUp(1000);
-            // $('#grafId').removeClass('hide').slideDown(1000);
-            // $('#navbar-button').removeClass('hide');
-            // $('#sidebar-collapse').removeClass('hide').show(1000);
             $('.weather').hide();
             $('.budget').show();
         }
         if (filteredBy == "Weather") {
             $('#weatherId').slideUp(1000);
-            // $('#grafId').removeClass('hide').slideDown(1000);
-            // $('#navbar-button').removeClass('hide');
-            // $('#sidebar-collapse').removeClass('hide').show(1000);
             $('.budget').hide();
             $('.weather').show();
         }
@@ -264,7 +259,7 @@ function dataParser(data) {
 
 function createDataForGraphics(data, filteredBy) {
     var ndx = crossfilter(data);
-   
+
     fiterBy(ndx, "#filterByRegion");
     fiterBy(ndx, "#filterByCountry");
     fiterBy(ndx, "#filterByCity");
