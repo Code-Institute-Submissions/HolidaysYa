@@ -24,6 +24,16 @@ function getMonth(error, data) {
         $('#sidebar-collapse').addClass('hide');
     })
 
+    //    //When change month is pressed, hide current screen and show month selection screen
+    //    $(".goback").click(function () {
+    //     $('#monthId').removeClass('hide').fadeIn(1000);
+    //     $('#budgetId').addClass('hide');
+    //     $('#weatherId').addClass('hide');
+    //     $('#grafId').addClass('hide');
+    //     $('#hamburguerButton').addClass('hide');
+    //     $('#sidebar-collapse').addClass('hide');
+    // })
+
     $(".change-budget").click(function () {
         $('#budgetId').removeClass('hide').fadeIn(1000);
         $('#monthId').addClass('hide');
@@ -59,17 +69,7 @@ function getMonth(error, data) {
         $('#weatherId').removeClass('hide').slideDown(1000);
     })
 
-    //When change month is pressed, hide current screen and show month selection screen
-    $(".goback").click(function () {
-        $('#monthId').removeClass('hide').fadeIn(1000);
-        $('#budgetId').addClass('hide');
-        $('#weatherId').addClass('hide');
-        $('#grafId').addClass('hide');
-        $('#hamburguerButton').addClass('hide');
-        $('#sidebar-collapse').addClass('hide');
-    })
-
-    //buttons on main page (page with month selection)
+     //buttons on main page (page with month selection)
     $("#resultsBudget").click(onClickFilterByBudget);
     $("#resultsWeather").click(onClickFilterByWeather);
 
@@ -215,7 +215,7 @@ function citiesMatchingCriteria(data, filteredBy) {
         if ($(window).width() < 768) {
             $('#hamburguerButton').removeClass('hide');
         }
-      
+          
         $('#grafId').removeClass('hide').slideDown(1000);
         $('#sidebar-collapse').removeClass('hide').show(1000);
 

@@ -11,12 +11,22 @@ html, body {
     width: 100%;
 }
 
+.col-xs-6, .col-sm-10 {
+    padding: 0px;
+}
+
 /* HEADER */
 
 .navbar {
     margin: 0px;
 }
-
+.navbar-default {
+    background-color: transparent;
+    border-color: transparent;
+}
+.navbar-default ul {
+    color: white;
+}
 /* logo */
 
 .navbar-header .navbar-brand {
@@ -35,11 +45,21 @@ html, body {
     height: 42px;
 }
 
+.navbar-default .navbar-toggle:hover {
+    background-color: transparent;
+}
+
+
 .navbar-default .navbar-toggle .icon-bar {
     background-color: white;
     height: 0.3em;
     width: 2em;
     border-radius: 5px;
+}
+
+.navbar-collapse .visible-xs {
+    background-color: #222222;
+    margin-top: 0px;
 }
 
 .navbar-fixed-bottom .navbar-collapse, .navbar-fixed-top .navbar-collapse {
@@ -53,20 +73,27 @@ html, body {
     justify-content: center;
 }
 
+.navbar-collapse{
+    padding-left:0px;
+}
+
 .navbar-collapse .nav>.menu-item {
-    padding-top: 1.5em;
-    padding-bottom: 1.5em;
-    font-size: 1.3em;
+    padding-top: 1.2em;
+    padding-bottom: 1.2em;
+    font-size: 1em;
     border-bottom: 1px solid white;
+}
+
+.visible-xs .dropdown {
+    margin: 0px;
+    padding: 0px;
 }
 
 .navbar-collapse .nav>.dropdown {
     background-color: rgb(7, 125, 204);
-    padding-top: 1.5em;
-    /* margin-top: 20px; */
-    font-size: 1.3em;
+    padding-top: 1.2em;
+    font-size: 1em;
 }
-
 .caret {
     margin-top: 1em;
     padding-bottom: 1em;
@@ -77,9 +104,9 @@ html, body {
 }
 
 .navbar-collapse .nav>.dropdown>.dropdown-menu>li {
-    padding-top: 10px;
-    padding-bottom: 10px;
-    font-size: 1.2em;
+    padding-top: 0.7em;
+    padding-bottom: 0.7em;
+    font-size: 1em;
     border-top: 0.1px solid white;
  }
 
@@ -97,28 +124,13 @@ html, body {
      outline: none;
  }
 
- 
-.navbar-collapse .visible-xs {
-    background-color: #222222;
-    margin-top: 0px;
-}
-
-.navbar-default .navbar-nav>.open>a, .navbar-default .navbar-nav>.open>a:focus, .navbar-default .navbar-nav>.open>a:hover, .navbar-default .navbar-nav>.open>a, .navbar-default .navbar-nav>.open>a:focus, .navbar-default .navbar-nav>.open>a:hover {
+ .navbar-default .navbar-nav>.open>a, .navbar-default .navbar-nav>.open>a:focus, .navbar-default .navbar-nav>.open>a:hover, .navbar-default .navbar-nav>.open>a, .navbar-default .navbar-nav>.open>a:focus, .navbar-default .navbar-nav>.open>a:hover {
     color: white;
     background-color: transparent;
-    margin: 0px;
-    padding: 0px;
 }
 
 .navbar-default .navbar-nav>li>a:focus, .navbar-default .navbar-nav>li>a:hover, .navbar-default .navbar-nav>li>a {
     color: white;
-    background-color: transparent;
-    margin: 0px;
-    padding: 0px;
-}
-
-.navbar-default .dropdown {
-    background-color: transparent;
 }
 
 .dropdown a.dropdown-toggle, .dropdown, .dropdown a {
@@ -126,75 +138,130 @@ html, body {
     text-align: center;
 }
 
-.navbar-default {
+/* social media icons */
+
+.navbar-collapse .navbar-right {
+    margin-right: 25px;
     background-color: transparent;
-    border-color: transparent;
 }
 
-/* sidebar */
+.borderSocial {
+    background: rgba(255, 255, 255, 0.1);
+    float: left;
+    position: relative;
+    height: 40px;
+    width: 40px;
+    margin: 10px 8px;
+    padding: 10px;
+    border-radius: 8px;
+    
+}
+.borderSocial:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
 
-.sidebar>li>a {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+.social, .social:hover, .social:focus, .social:active {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    color: #fff;
+    padding-left: 5px;
+   
+}
+
+
+/************************************** sidebar */
+
+.sidebar li{
+    text-align: center;
+}
+
+.sidebar li{
+    text-align: center;
 }
 
 .sidebar ul.nav a:hover, .sidebar ul.nav li.parent ul li a:hover {
     background-color: transparent;
 }
 
-@media (min-width: 767px) {
+/* @media (min-width: 767px) {
     .navbar-default .navbar-nav .open .dropdown-menu>li>a {
-        color: white;
+        color: red;
     }
+} */
+
+
+.sidebar{
+overflow:visible;
 }
 
-.navbar-default .navbar-toggle:hover {
-    background-color: transparent;
-}
 
-.col-xs-6, .col-sm-10 {
-    padding: 0px;
-}
-
-@media (min-width: 768px) {
-    .collapse .navbar-right {
-        margin-right: 20px;
-    }
-}
-
-.navbar-collapse .navbar-right {
-    margin-right: 25px;
-}
-
-.navbar-default ul {
-    color: white;
-}
-
-.navbar-collapse .socialMediaLinks {
-    background-color: transparent;
-}
-
-.dropdown {
+.sidebar ul {
     margin: 0px;
-    padding: 0px;
 }
 
-.borderSocial {
-    background: rgba(255, 255, 255, 0.1);
-    float: left;
-    height: 40px;
-    width: 40px;
-    margin: 10px 8px;
-    padding: 10px;
-    border-radius: 4px;
+.sidebar ul li{
+    padding-bottom: 15px;
 }
 
-.social {
-    color: #fff;
-    padding-left: 5px;
+.sidebar h4{
+    padding-bottom:8px;
+    font-size: 1em;
+    font-weight: 400;
 }
+
+ .sidebar ul.nav li a {
+    height: 100%;
+
+}
+
+.sidebar ul.nav ul.children {
+    padding-top: 10px;
+    background: #ededed;
+}
+
+.sidebar .form-group{
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+}
+
+.sidebar label{
+    padding-top: 10px;
+    font-size: 0.8em;
+    font-weight: 800;   
+}
+
+.buttonsSide{
+    margin-top: 15px;
+}
+
+.sidebar input {
+    width: 100px;
+    height: 25px;
+}
+
+.filterSideBar {
+    margin: 20px 0px;
+}
+
+.faSide {
+    font-size: 36px;
+    color: grey;
+    transition: all .3s ease-in-out;
+    -webkit-transition: all .3s ease-in-out;
+    -moz-transition: all .3s ease-in-out;
+    -o-transition: all .3s ease-in-out;
+}
+
+.faSide:hover {
+    color: #52a9ec;
+}
+
+.btn-group-lg>.btn, .btn-lg {
+    padding:0px;
+    }
 
 /* background section month selection, budget selection and weather selection */
 
@@ -323,39 +390,6 @@ html, body {
     display: flex;
 }
 
-/* sidebar */
-
-.sidebar ul.nav li a {
-    height: 80px;
-}
-
-.buttonsSide {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
-
-.form-group input {
-    margin: 10px 0px;
-}
-
-.filterSideBar {
-    margin: 20px 0px;
-}
-
-.faSide {
-    font-size: 36px;
-    color: grey;
-    transition: all .3s ease-in-out;
-    -webkit-transition: all .3s ease-in-out;
-    -moz-transition: all .3s ease-in-out;
-    -o-transition: all .3s ease-in-out;
-}
-
-.faSide:hover {
-    color: #52a9ec;
-}
 
 /* charts section */
 
