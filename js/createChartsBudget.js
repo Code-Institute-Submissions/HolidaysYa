@@ -18,7 +18,6 @@ function createRowChart(ndx) {
         .group(budgetGroup);
 }
 
-
 function createTotalDailyBudget(ndx) {
     var cityDim = ndx.dimension(dc.pluck('city'));
     var hostel = cityDim.group().reduceSum(dc.pluck('hostelNight'));
@@ -51,8 +50,6 @@ function createTotalDailyBudget(ndx) {
     //??????.legend(dc.legend().x(320).y(20).itemHeight(15).gap(5));
 };
 
-
-
 function createCurrencyChart(ndx) {
     var dimCurrency = ndx.dimension(dc.pluck('currencyCode'))
     var groupCurrency = dimCurrency.group();
@@ -69,8 +66,6 @@ function createCurrencyChart(ndx) {
         .renderLabel(false)
         .transitionDuration(1500);
 };
-
-
 
 function createCorrelationCharts(data, ndx) {
     var maxArrivals = d3.max(data, function (d) { return d.visitorsCity; });
@@ -200,3 +195,73 @@ function show_avg(ndx, product, element) {
         .group(average_cost);
 }
 
+function createTableBudget(ndx) {
+    var total=0;
+    var allDimension = ndx.dimension(function (d) {
+        return (d);
+    });
+    var tableChart = dc.dataTable('#table');
+    tableChart
+        .height(300)
+        .width(400)
+        .useViewBoxResizing(true) // allows chart to be responsive
+        .dimension(allDimension)
+        .group(function (data) {
+            return (data);
+        })
+        .size(Infinity)
+        .columns([
+            {
+                label: "City",
+                format: function (d) { return d.city }
+            },
+            {
+                label: "Country",
+                format: function (d) { return d.country }
+            },
+            {
+                label: "Tatal/day",
+                format: function (d) { 
+                    total=d.hostelNight + d.drinks+ d.meals + d.attractions + d.transport; 
+                    return total }
+            },
+            {
+                label: "Hostel",
+                format: function (d) { return d.hostelNight }
+            },
+            {
+                label: "Meals",
+                format: function (d) { return d.meals }
+            },
+            {
+                label: "Drinks",
+                format: function (d) { return d.drinks }
+            },
+            {
+                label: "Transport",
+                format: function (d) { return d.transport }
+            },
+            {
+                label: "Attractions",
+                format: function (d) { return d.attractions }
+            },
+            {
+                label: "Currency",
+                format: function (d) { return d.currency }
+            },
+            {
+                label: "Visitors (Millions/year)",
+                format: function (d) { return d.visitorsCity }
+            },
+            {
+                label: "Find out more...",
+                format: function (d) { return d.wikiLink }
+            }
+        ])
+        .sortBy(function (d) {
+           total=d.hostelNight+d.drinks+d.meals+d.attractions+d.transport; 
+            return total;
+        })
+        .showGroups(false)// this will remove the [object][object] at the top of the rows
+        .order(d3.ascending);
+}

@@ -199,5 +199,59 @@ function createPrecipitationChart(ndx) {
 };
 
 
+function createTableWeather(ndx) {
+    var allDimension = ndx.dimension(function (d) {
+        return (d);
+    });
 
+    var tableChart = dc.dataTable('#table');
+    tableChart
+        .height(300)
+        .width(400)
+        .useViewBoxResizing(true) // allows chart to be responsive
+        .dimension(allDimension)
+        .group(function (data) {
+            return (data);
+        })
+        .size(Infinity)
+        .columns([
+            {
+                label: "City",
+                format: function (d) { return d.city }
+            },
+            {
+                label: "Country",
+                format: function (d) { return d.country }
+            },
+            {
+                label: "min.Temp(C)",
+                format: function (d) { return d.minTemp }
+            },
+            {
+                label: "max.Temp(C)",
+                format: function (d) { return d.maxTemp }
+            },
+            {
+                label: "avg.Temp(C)",
+                format: function (d) { return (d.maxTemp+d.minTemp)/2 }
+            },
+            {
+                label: "Precipitation",
+                format: function (d) { return d.precipitation }
+            },
+            {
+                label: "Visitors (Millions/year)",
+                format: function (d) { return d.visitorsCity }
+            },
+            {
+                label: "Find out more...",
+                format: function (d) { return d.wikiLink }
+            }
+        ])
+        .sortBy(function (d) {
+            return (d.maxTemp+d.minTemp)/2;
+        })
+        .showGroups(false)// this will remove the [object][object] at the top of the rows
+        .order(d3.ascending);
+}
 

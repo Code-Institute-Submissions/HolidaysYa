@@ -265,11 +265,12 @@ function createDataForGraphics(data, filteredBy) {
     fiterBy(ndx, "#filterByRegion");
     fiterBy(ndx, "#filterByCountry");
     fiterBy(ndx, "#filterByCity");
-    createTable(ndx);
+    // createTable(ndx);
     countCities(ndx);
 
     //Budget graphics
     if (filteredBy === 'Budget') {
+        createTableBudget(ndx);
         show_avg(ndx, "hostel", "#hostel_maxtem");
         show_avg(ndx, "meals", "#meals_mintem");
         show_avg(ndx, "drinks", "#drinks_avgtemp");
@@ -283,6 +284,7 @@ function createDataForGraphics(data, filteredBy) {
 
     //weather graphics
     if (filteredBy === 'Weather') {
+        createTableWeather(ndx);
         createRowChartWeather(ndx);
         createPrecipitationChart(ndx);
         show_max_weather(ndx, 'maxTemp', "#hostel_maxtem");

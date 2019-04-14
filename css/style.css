@@ -195,15 +195,8 @@ box-shadow: 1px 1px 7px #dedede;
 
 .sidebar h4{
     padding-bottom:8px;
-    font-size: 1em;
+    font-size: 0.9em;
     font-weight: 400;
-}
-
-@media (min-width: 768px) {
-    .sidebar h4{
-        font-size: 1em;
-        font-weight: 400;
-    }
 }
 
  .sidebar ul.nav li a {
@@ -589,17 +582,33 @@ https://github.com/dc-js/dc.js/issues/731
 /* table */
 
 .table {
-    font-size: 10px;
+    position: relative;
+    table-layout: fixed ;
+    width: 100%;
+    font-size: 1.2em;
     text-align: center;
 }
 
-/*jquery classes*/
-
-/*weather, budget and graphics sections are hiden at the beggining*/
-
-.hide {
-    display: none;
+thead{
+    background-color: #e6e6e6;
 }
+
+th {
+    height: 5em;
+    padding-left: 20px;
+    text-align: left;
+    width: 10%;
+}
+
+tr {
+    height: 3em;
+}
+
+td {
+    padding-left: 20px;
+    padding-right: 50px;
+}
+
 
 .email-button {
     background-color: transparent;
@@ -615,25 +624,10 @@ https://github.com/dc-js/dc.js/issues/731
     box-shadow: none;
 }
 
-.table-hover {
-    /* overflow: auto; */
-    width: 100%;
-    font-size: .9em;
-    text-align: left;
-}
 
-tr {
-    height: 3em;
-}
+/*jquery classes*/
 
-td {
-    padding-left: 20px;
-}
-
-th {
-    height: 5em;
-    white-space: pre-wrap;
-    padding-left: 20px;
-    width: 8em;
-    background-color: #dddddd;
+/*weather, budget and graphics sections are hiden at the beggining*/
+.hide {
+    display: none;
 }
