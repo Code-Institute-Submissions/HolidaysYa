@@ -1,7 +1,6 @@
 
 
 function show_max_weather(ndx, column, element) {
-
     // in order to calculate the maximum temperature I used Stackoverflow for help and they suggest to use the following code
     var maxDim = ndx.dimension(dc.pluck(column));
 
@@ -10,11 +9,9 @@ function show_max_weather(ndx, column, element) {
         .valueAccessor(x => x)
         .formatNumber(d3.format('.0f'))
         .render();
-
 }
 
 function show_min_weather(ndx, column, element) {
-
     var minDim = ndx.dimension(dc.pluck(column));
 
     dc.numberDisplay(element)
@@ -22,11 +19,9 @@ function show_min_weather(ndx, column, element) {
         .valueAccessor(x => x)
         .formatNumber(d3.format('.0f'))
         .render();
-
 }
 
 function show_avg_temp(ndx, max, min, element) {
-
     var maxDim = ndx.dimension(dc.pluck(max));
     var minDim = ndx.dimension(dc.pluck(min));
 
@@ -35,45 +30,34 @@ function show_avg_temp(ndx, max, min, element) {
         .valueAccessor(x => x)
         .formatNumber(d3.format('.1f'))
         .render();
-
 }
 
 function dim_max_groupAll(maxDim, column) {
-
     return {
         value: function () {
             return maxDim.top(1)[0][column];
         }
     };
-
-
 }
 
 function dim_min_groupAll(minDim, column) {
-
     return {
         value: function () {
             return minDim.bottom(1)[0][column];
         }
     };
-
 }
 
 function dim_avg_groupAll(maxDim, minDim) {
-
     return {
         value: function () {
             return (maxDim.top(1)[0].maxTemp + minDim.bottom(1)[0].minTemp) / 2;
         }
-
     }
 }
 
-
-
 function createRowChartWeather(ndx) {
     var dimCity = ndx.dimension(dc.pluck('city'));
-
     var precipitationGroup = dimCity.group().reduceSum(dc.pluck('precipitation'));
 
     dc.rowChart("#rowChart")
@@ -84,32 +68,29 @@ function createRowChartWeather(ndx) {
         //.xAxis().tickValues([0, 50, 100, 150])  
         .elasticX(true)
         .transitionDuration(1500)
-        .ordinalColors(["#006B99","#2E85AB","#5CA0BE","#8BBBD0","#B9D6E3","#0E9E8D","#39AFA1","#65C1B6","#91D2CB","#BDE4DF","#F2C44F","#ECC970","#F0D590","#F6E6BD","#F4994E","#F6AB6E","#F9C9A2","#FAD5B7","#E86443","#EA7254","#EC8065","#F3B3A3","#F6C6BA","#F9D9D1"])
+        .ordinalColors(["#006B99", "#2E85AB", "#5CA0BE", "#8BBBD0", "#B9D6E3", "#0E9E8D", "#39AFA1", "#65C1B6", "#91D2CB", "#BDE4DF", "#F2C44F", "#ECC970", "#F0D590", "#F6E6BD", "#F4994E", "#F6AB6E", "#F9C9A2", "#FAD5B7", "#E86443", "#EA7254", "#EC8065", "#F3B3A3", "#F6C6BA", "#F9D9D1"])
         .dimension(dimCity)
         .group(precipitationGroup);
 }
 
 
 function cityTemp(ndx) {
-
     //initial issue with the alignment of the chart was fixed after reading the following link
     //https://github.com/dc-js/dc.js/issues/662
 
     var dim = ndx.dimension(dc.pluck('city')),
-
         grp1 = dim.group().reduceSum(dc.pluck('maxTemp')),
         grp2 = dim.group().reduceSum(dc.pluck('minTemp'));
 
     var composite = dc.compositeChart("#dailyBudget_Temp");
-
     composite
         .height(250)
         .useViewBoxResizing(true) // allows chart to be responsive
-        .margins({ top: 60, right: 20, bottom: 60, left: 35 })
+        .margins({ top: 60, right: 20, bottom: 55, left: 35 })
         .x(d3.scale.ordinal())
         .xUnits(dc.units.ordinal)
-       .dimension(dim)
-       .group(grp1, "max. Temperature")
+        .dimension(dim)
+        .group(grp1, "max. Temperature")
         .yAxisLabel("Temperature")
         .xAxisLabel("City")
         .clipPadding(10)
@@ -122,36 +103,30 @@ function cityTemp(ndx) {
                 .group(grp1, "max. Temperature")
                 .clipPadding(10)
                 .colors('#E86443')
-               .dashStyle([3,3]),
+                .dashStyle([3, 3]),
             dc.lineChart(composite)
                 .dimension(dim)
                 .group(grp2, "min. Temperature")
                 .clipPadding(10)
                 .colors('#006B99')
-                .dashStyle([8,3])
+                .dashStyle([8, 3])
         ])
         .brushOn(false)
         .transitionDuration(1500);
 }
 
-
-
-
 function createCorrelationTemp(data, ndx) {
-
     var maxArrivals = d3.max(data, function (d) { return d.visitorsCity; });
-
+   
     var dimTemp = ndx.dimension(function (d) {
         var avgTemp = (d.maxTemp + d.minTemp) / 2;
         return [d.visitorsCity, avgTemp, d.city];
     });
-
     var temperatureGroup = dimTemp.group();
-
+    
     var dimPreci = ndx.dimension(function (d) {
         return [d.visitorsCity, d.precipitation, d.city];
     });
-
     var precipitationGroup = dimPreci.group();
 
     var composite = dc.compositeChart("#correlation")
@@ -190,15 +165,12 @@ function createCorrelationTemp(data, ndx) {
                 })
                 .group(precipitationGroup, "precipitation")
                 .useRightYAxis(true)
-
         ]);
-
 }
 
 
 
 function createPrecipitationChart(ndx) {
-
     var dimPrecipitation = ndx.dimension(function (d) {
         if (d.precipitation >= 85) {
             return "Hight";
@@ -222,7 +194,7 @@ function createPrecipitationChart(ndx) {
         .dimension(dimPrecipitation)
         .group(groupPrecipitation)
         .renderLabel(false)
-        .ordinalColors(["#E86443","#F2C44F","#0E9E8D"]) 
+        .ordinalColors(["#E86443", "#F2C44F", "#0E9E8D"])
         .transitionDuration(1500);
 };
 

@@ -42,6 +42,7 @@ function getMonth(error, data) {
         $('#hamburguerButton').addClass('hide');
         $('#navbar-collapse-1').addClass('hide');
         $('#sidebar-collapse').addClass('hide');
+
     })
 
     $(".change-temperatures").click(function () {
@@ -52,6 +53,7 @@ function getMonth(error, data) {
         $('#hamburguerButton').addClass('hide');
         $('#navbar-collapse-1').addClass('hide');
         $('#sidebar-collapse').addClass('hide');
+
     })
 
     $("#hamburguerButton").click(function () {

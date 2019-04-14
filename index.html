@@ -62,8 +62,7 @@
 										Change Temperatures
 									</li>
 									<li class="menu-item contact-us">
-										<button type="button"
-											data-toggle="modal" data-target="#myModal">
+										<button type="button" data-toggle="modal" data-target="#myModal">
 											Contact Us!
 										</button>
 									</li>
@@ -118,8 +117,7 @@
 
 	<!-- </section> -->
 	<!-- <div id="sidebar-collapse" class="col-sm-1 sidebar hide"> -->
-	<div id="sidebar-collapse" class="col-sm-2 sidebar hide hidden-xs">
-
+	<div id="sidebar-collapse" class="col-sm-2 col-lg-1 sidebar hide hidden-xs">
 		<ul class="nav menu">
 			<li>
 				<a class="change-month">
@@ -134,13 +132,13 @@
 					<em data-toggle="collapse" href="#sub-item-1" class="fa fa-filter faSide hidden-xs"></em>
 				</a>
 				<a data-toggle="collapse" href="#sub-item-2" class="weather">
-						<h4>Change Temperatures</h4>
-						<em data-toggle="collapse" href="#sub-item-2" class="fa fa-filter faSide hidden-xs"></em>
+					<h4>Change Temperatures</h4>
+					<em data-toggle="collapse" href="#sub-item-2" class="fa fa-filter faSide hidden-xs"></em>
 				</a>
 				<ul class="children collapse" id="sub-item-1">
 					<li class="budget">
 						<div class="form-group">
-							<label for="maxBudget2">Try with a different budget</label>
+							<label for="maxBudget2">New budget</label>
 							<input type="number" class="form-control" id="maxBudget2" name="maxBudget2" required />
 							<div class="buttons">
 								<button class="btn btn-success filterSideBar" id="filterSideBudget">show cities</button>
@@ -179,11 +177,6 @@
 
 		</ul>
 		</li>
-
-
-
-
-
 		</ul>
 	</div>
 	<!--/.sidebar-->
@@ -254,7 +247,7 @@
 	<!-- this section is hidden at the beggining -->
 
 	<section class="container-fluid hide" id="grafId" class="hide">
-		<div class="col-sm-10 col-sm-offset-2 main">
+		<div class="col-lg-11 col-lg-offset-1 col-sm-10 col-sm-offset-2 main">
 
 			<!-- Should I use the infor message for title and error??? -->
 
@@ -447,7 +440,7 @@
 						</div>
 						<div class="panel-body">
 							<div class="container-table">
-								<div class="main-chart table-hover" id="table"></div>
+								<div class="main-chart table-hover table-responsive" id="table"></div>
 							</div>
 						</div>
 					</div>
@@ -455,11 +448,28 @@
 			</div>
 
 
+			<div class=row>
+				<div class="col-md-12">
+						<div class="panel panel-default footer">
+							<div class="panel-body">
+								<p>
+									Data collected from XXXX
+								</p>
+								<p>
+									Template based on "XXX"
+								</p>
+							</div>
+					</div>
+
+				</div>
+			</div>
+
+
 
 		</div>
+
 	</section>
 	<!--/.main-->
-
 
 
 	<!-- Modal from bootstrap-->

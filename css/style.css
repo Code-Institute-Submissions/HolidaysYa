@@ -176,25 +176,14 @@ html, body {
     text-align: center;
 }
 
-.sidebar li{
-    text-align: center;
-}
-
 .sidebar ul.nav a:hover, .sidebar ul.nav li.parent ul li a:hover {
     background-color: transparent;
 }
 
-/* @media (min-width: 767px) {
-    .navbar-default .navbar-nav .open .dropdown-menu>li>a {
-        color: red;
-    }
-} */
-
-
 .sidebar{
 overflow:visible;
+box-shadow: 1px 1px 7px #dedede;
 }
-
 
 .sidebar ul {
     margin: 0px;
@@ -210,13 +199,20 @@ overflow:visible;
     font-weight: 400;
 }
 
- .sidebar ul.nav li a {
-    height: 100%;
-
+@media (min-width: 768px) {
+    .sidebar h4{
+        font-size: 1em;
+        font-weight: 400;
+    }
 }
 
-.sidebar ul.nav ul.children {
+ .sidebar ul.nav li a {
+    height: 100%;
+}
+
+.sidebar ul.nav ul.children .budget, .sidebar ul.nav ul.children .weather{
     padding-top: 10px;
+    margin: 0px 5px;
     background: #ededed;
 }
 
@@ -231,6 +227,11 @@ justify-content: center;
     padding-top: 10px;
     font-size: 0.8em;
     font-weight: 800;   
+}
+
+.sidebar .btn-success{
+    background-color: #0e9e8d;
+    border-color: #0e9e8d;
 }
 
 .buttonsSide{
@@ -301,12 +302,10 @@ justify-content: center;
 }
 
 /* I added an overlay to make the text more readeble */
-
 .overlay1, .overlay {
     width: 100%;
     height: 100%;
-    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
-    /* background-color: rgba(0,0,0,0.4); */
+    /* background-image: linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0)); */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -323,65 +322,78 @@ justify-content: center;
 }
 
 /*common to the three sections*/
-
 .titleInput {
     margin-bottom: 20px;
     color: white;
-    font-size: 20px;
+    font-size: 1.6em;
     font-weight: 600;
     width: 60%;
 }
 
+/* input fields */
 #monthSelector, #maxBudget, #maxTemp, #minTemp {
-    width: 50%;
     font-size: 18px;
     height: 40px;
     border: none;
 }
-
-@media (min-width: 768px) {
-    #monthSelector, #maxBudget, #maxTemp, #minTemp {
-        width: 250px;
-        font-size: 18px;
-        height: 40px;
-        border: none;
-    }
+#monthSelector {
+    width: 150px;
+}
+#maxBudget, #maxTemp, #minTemp {
+    width: 80px;
 }
 
 .button {
     border-radius: 25px;
     width: 15em;
-    font-size: 1.1em;
+    height: 4em;
+    font-size: 0.9em;
     font-weight: 800;
-    height: 60px;
     margin: 20px 30px 0px 30px;
     box-sizing: border-box;
 }
+
+@media (min-width: 768px) {
+    .button {
+        font-size: 1.1em;
+    }
+}
+ 
 
 /* month section */
 
 #monthId h1 {
     color: white;
     font-weight: 400;
-    width: 60%;
+    width: 100%;
+    font-size: 2em;
+}
+
+@media (min-width: 768px) {
+    #monthId h1 {
+          font-size: 4em;      
+    }    
 }
 
 #monthId p {
     color: white;
-    font-size: 1.2em;
+    font-size: 1em;
     font-weight: 400;
-    width: 70%;
-    background-color: rgba(0, 0, 0, 0.3);
+    width: 80%;
+    background-color: rgba(0, 0, 0, 0.6);
     padding: 5px;
-    margin: 15px;
     box-sizing: border-box;
     padding: 15px;
-    margin: 35px;
+    margin-top: 10px;
     box-sizing: border-box;
 }
 
-#monthSelector option {
-    text-align: center;
+@media (min-width: 768px) {
+    #monthId p {
+        font-size: 1.2em;
+        width: 40%;
+        margin: 20px;
+    }
 }
 
 /* weather section */
@@ -390,12 +402,11 @@ justify-content: center;
     display: flex;
 }
 
-
 /* charts section */
 
 #grafId {
     /* so it doesnt hide under the navBar */
-    margin-top: 80px;
+    margin-top: 60px;
     height: 100vh;
     width: 100vw;
 }
@@ -431,14 +442,17 @@ justify-content: center;
 
 /* numberDisplays */
 
-.numberDisplay {
-    color: black;
-    font-size: 26px;
-    margin: 15px;
+.NumberDisplays {
+    background-color: transparent;
+    margin-bottom: 0px;
+    padding: 0px;
 }
 
-.number-display {
-    font-size: 25px;
+.panel-widget .large {
+    font-size: 2em;
+}
+.panel-widget .text-muted {
+    margin-top: 0px;
 }
 
 .color-lightblue {
@@ -473,19 +487,10 @@ justify-content: center;
     color: #a7a1a1;
 }
 
-.NumberDisplays {
-    background-color: transparent;
-    margin-bottom: 0px;
-    padding: 0px;
-}
-
 .border-right {
     border: none;
 }
 
-.row:before {
-    display: none;
-}
 
 /*chart panels*/
 
@@ -493,19 +498,13 @@ justify-content: center;
     padding: 0px;
 }
 
-.panel-widget .large {
-    font-size: 2em;
-}
-
-.panel-widget .text-muted {
-    margin-top: 0px;
-}
-
 .panel-heading {
-    font-size: 15px;
+    height: 100%;
+    font-size: 1.1em;
     line-height: 20px;
-    display: flex;
+    /* display: flex; */
     margin: 0px;
+    
 }
 
 .pull-right {
@@ -522,55 +521,70 @@ justify-content: center;
     color: #52a9ec;
 }
 
-/* row chart */
+/*CHARTS*/
 
-/*for small screens*/
+/* legends */
+.dc-legend-item {
+    font-size: 0.8em;
+}
 
-/*chart axis style*/
 
+/*charts axis style*/
 path.domain {
     stroke: rgb(0, 0, 0);
     fill: none;
     stroke-width: 0.8;
 }
 
+#rowChart .axis, #correlation .axis {
+    font-size: 0.6em;
+} 
+
+/*composite line chart - max and min temperature*/
 #dailyBudget_Temp path {
     fill: none;
 }
-
-/*styles temp chart*/
-
 .stack-list .line {
-    stroke-width: 2;
+    stroke-width: 1.5;
     stroke-linecap: round;
 }
 
+/* axis charts max and min temperature & total budget */
 #dailyBudget_Temp .axis {
-    font-size: 0.8em;
-}
-
-.dc-legend-item {
-    font-size: 0.8em;
-}
-
-.x-axis-label, .y-axis-label {
-    font-weight: bold;
-    font-size: 0.9em;
-}
-
-.axis {
-    font-size: 0.8em;
+    font-size: 0.5em;
 }
 
 /* how to rotate the labels so they fit well in the screen
 https://github.com/dc-js/dc.js/issues/731
 */
-
 #dailyBudget_Temp .x.axis text, #rowChart .x.axis text {
     text-anchor: end !important;
     transform: rotate(-45deg);
-    /* font-size: 1em; */
 }
+
+.x-axis-label, .y-axis-label {
+    font-weight: bold;
+    font-size: 0.7em;
+}
+
+@media (min-width: 768px) {
+    #dailyBudget_Temp .axis {
+        font-size: 0.8em;
+    }
+    .dc-legend-item {
+        font-size: 0.8em;
+    }
+    .x-axis-label, .y-axis-label {
+        font-weight: bold;
+        font-size: 0.9em;
+    }
+    #rowChart .axis, #correlation .axis {
+        font-size: 0.8em;
+    } 
+}
+
+
+
 
 /* table */
 
@@ -602,7 +616,7 @@ https://github.com/dc-js/dc.js/issues/731
 }
 
 .table-hover {
-    overflow: auto;
+    /* overflow: auto; */
     width: 100%;
     font-size: .9em;
     text-align: left;

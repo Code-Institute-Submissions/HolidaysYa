@@ -1,7 +1,5 @@
 function createRowChart(ndx) {
-    
     var dimCity = ndx.dimension(dc.pluck('city'));
-
     var budgetGroup = dimCity.group().reduceSum(function (d) {
         var totalBudget = d.hostelNight + d.meals + d.drinks + d.attractions + d.transport;
         return [totalBudget];
@@ -22,7 +20,6 @@ function createRowChart(ndx) {
 
 
 function createTotalDailyBudget(ndx) {
-
     var cityDim = ndx.dimension(dc.pluck('city'));
     var hostel = cityDim.group().reduceSum(dc.pluck('hostelNight'));
     var meals = cityDim.group().reduceSum(dc.pluck('meals'));
@@ -30,11 +27,10 @@ function createTotalDailyBudget(ndx) {
     var transport = cityDim.group().reduceSum(dc.pluck('transport'));
     var attractions = cityDim.group().reduceSum(dc.pluck('attractions'));
 
-
     dc.barChart('#dailyBudget_Temp')
         .height(300)
         .useViewBoxResizing(true) // allows chart to be responsive        
-        .margins({ top: 15, right: 10, bottom: 80, left: 50 })
+        .margins({ top: 15, right: 10, bottom: 55, left: 35 })
         .dimension(cityDim)
         .group(hostel, "hostel")
         .stack(meals, "meals")
@@ -53,13 +49,11 @@ function createTotalDailyBudget(ndx) {
         .yAxisLabel('Total daily budget')
         .yAxis().ticks(6);
     //??????.legend(dc.legend().x(320).y(20).itemHeight(15).gap(5));
-
 };
 
 
 
 function createCurrencyChart(ndx) {
-
     var dimCurrency = ndx.dimension(dc.pluck('currencyCode'))
     var groupCurrency = dimCurrency.group();
 
@@ -79,7 +73,6 @@ function createCurrencyChart(ndx) {
 
 
 function createCorrelationCharts(data, ndx) {
-
     var maxArrivals = d3.max(data, function (d) { return d.visitorsCity; });
 
     var dimBudget = ndx.dimension(function (d) {
@@ -88,16 +81,7 @@ function createCorrelationCharts(data, ndx) {
     });
 
     var budgetGroup = dimBudget.group();
-
-    // var cityColours = d3.scale.ordinal()
-    //     .domain(["Vienna", "Brussels", "Prague", "Copenhagen", "Helsinki", "Paris", "Berlin", "Athens",
-    //         "Budapest", "Dublin", "Milan", "Rome", "Amsterdam", "Oslo", "Warsaw", "Lisbon",
-    //         "Barcelona", "Madrid", "Stockholm", "Istanbul", "Edinburgh", "London"])
-    //     .range(["#FBEC5D", "#F2C649", "#6050DC", "#0BDA51", "#979AAA", "#F37A48", "#FDBE02", "#FF8243",
-    //         "#74C365", "#880085", "#EAA221", "#C32148", "#800000", "#B03060", "#E0B0FF", "#915F6D", "#EF98AA",
-    //         "#47ABCC", "#30BFBF", "#ACACE6", "#5E8C31", "#D9E650"]);
-
-
+    
     dc.scatterPlot("#correlation")
         .height(200)
         .useViewBoxResizing(true) // allows chart to be responsive
@@ -112,10 +96,6 @@ function createCorrelationCharts(data, ndx) {
         .title(function (d) {
             return "In " + d.key[2] + " you will need a daily bugget of " + d.key[1] + " \nand there was " + d.key[0] + " millions visits in 2017";
         })
-        // .colorAccessor(function (d) {
-        //     return d.key[0];
-        // })
-        // .colors(cityColours)
         .dimension(dimBudget)
         .group(budgetGroup);
 }
@@ -123,11 +103,7 @@ function createCorrelationCharts(data, ndx) {
 function show_avg(ndx, product, element) {
 
     var average_cost = ndx.groupAll().reduce(
-
-        //Add a data entry
-        //p and v by convention, p will keep track of the changes and v will be input values from the actual values from the dataset that will affect the values of p
-
-        //inline function adder
+         //function adder
         function (p, v) {
             p.count++;
             p.totaldrinks += +v.drinks;
@@ -147,10 +123,7 @@ function show_avg(ndx, product, element) {
 
             return p;
         },
-
-        //inline function remover
-
-        // Remov ethe data entry
+        //function remover
         function (p, v) {
             p.count--;
             if (p.count == 0) {
@@ -187,16 +160,11 @@ function show_avg(ndx, product, element) {
             }
             return p;
         },
-
-        //inline function initialiser
-
-        //Initialise the Reducer
+        //Initialise
         function () {
             return { count: 0, totaldrinks: 0, averagedrinks: 0, totalmeals: 0, averagemeals: 0, totalattractions: 0, averageattractions: 0, totaltransport: 0, averagetransport: 0, totalhostel: 0, averagehostel: 0 }
         }
     );
-
-
 
     dc.numberDisplay(element)
         .formatNumber(function (d) {
@@ -206,7 +174,6 @@ function show_avg(ndx, product, element) {
             else {
                 return "€" + d3.format(".0s")(d);
             }
-
         })
         .valueAccessor(function (d) {
             if (d.count == 0) {
