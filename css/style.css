@@ -4,14 +4,16 @@
     padding: 0px;
 }
 
-html, body {
+html,
+body {
     margin: 0px;
     padding: 0px;
     height: 100%;
     width: 100%;
 }
 
-.col-xs-6, .col-sm-10 {
+.col-xs-6,
+.col-sm-10 {
     padding: 0px;
 }
 
@@ -64,11 +66,13 @@ html, body {
     margin-top: 0px;
 }
 
-.navbar-fixed-bottom .navbar-collapse, .navbar-fixed-top .navbar-collapse {
+.navbar-fixed-bottom .navbar-collapse,
+.navbar-fixed-top .navbar-collapse {
     max-height: 100%;
 }
 
-.navbar-collapse .nav>li, .navbar-collapse .nav>li>a {
+.navbar-collapse .nav>li,
+.navbar-collapse .nav>li>a {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -127,16 +131,25 @@ html, body {
     outline: none;
 }
 
-.navbar-default .navbar-nav>.open>a, .navbar-default .navbar-nav>.open>a:focus, .navbar-default .navbar-nav>.open>a:hover, .navbar-default .navbar-nav>.open>a, .navbar-default .navbar-nav>.open>a:focus, .navbar-default .navbar-nav>.open>a:hover {
+.navbar-default .navbar-nav>.open>a,
+.navbar-default .navbar-nav>.open>a:focus,
+.navbar-default .navbar-nav>.open>a:hover,
+.navbar-default .navbar-nav>.open>a,
+.navbar-default .navbar-nav>.open>a:focus,
+.navbar-default .navbar-nav>.open>a:hover {
     color: white;
     background-color: transparent;
 }
 
-.navbar-default .navbar-nav>li>a:focus, .navbar-default .navbar-nav>li>a:hover, .navbar-default .navbar-nav>li>a {
+.navbar-default .navbar-nav>li>a:focus,
+.navbar-default .navbar-nav>li>a:hover,
+.navbar-default .navbar-nav>li>a {
     color: white;
 }
 
-.dropdown a.dropdown-toggle, .dropdown, .dropdown a {
+.dropdown a.dropdown-toggle,
+.dropdown,
+.dropdown a {
     width: 100%;
     text-align: center;
 }
@@ -163,7 +176,10 @@ html, body {
     background: rgba(255, 255, 255, 0.2);
 }
 
-.social, .social:hover, .social:focus, .social:active {
+.social,
+.social:hover,
+.social:focus,
+.social:active {
     position: absolute;
     height: 100%;
     width: 100%;
@@ -177,7 +193,8 @@ html, body {
     text-align: center;
 }
 
-.sidebar ul.nav a:hover, .sidebar ul.nav li.parent ul li a:hover {
+.sidebar ul.nav a:hover,
+.sidebar ul.nav li.parent ul li a:hover {
     background-color: transparent;
 }
 
@@ -204,7 +221,8 @@ html, body {
     height: 100%;
 }
 
-.sidebar ul.nav ul.children .budget, .sidebar ul.nav ul.children .weather {
+.sidebar ul.nav ul.children .budget,
+.sidebar ul.nav ul.children .weather {
     padding-top: 10px;
     margin: 0px 5px;
     background: #ededed;
@@ -254,13 +272,17 @@ html, body {
     color: #52a9ec;
 }
 
-.btn-group-lg>.btn, .btn-lg {
+.btn-group-lg>.btn,
+.btn-lg {
     padding: 0px;
 }
 
 /* background section month selection, budget selection and weather selection */
 
-#monthId, #budgetId, #weatherId, #errors {
+#monthId,
+#budgetId,
+#weatherId,
+#errors {
     /* so it doesn't hide under the navbar */
     height: 100vh;
     width: 100vw;
@@ -296,7 +318,7 @@ html, body {
 }
 
 #errors {
-    background: url("../images/sad-mobile.jpg") no-repeat center center fixed;
+    background: url("../images/sad-mobile-red.jpg") no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -305,7 +327,7 @@ html, body {
 
 @media (min-width: 768px) {
     #errors {
-        background: url("../images/sad.jpg") no-repeat center center fixed;
+        background: url("../images/sadred.jpg") no-repeat center center fixed;
         -webkit-background-size: cover;
         -moz-background-size: cover;
         -o-background-size: cover;
@@ -315,7 +337,8 @@ html, body {
 
 /* I added an overlay to make the text more readeble */
 
-.overlay1, .overlay {
+.overlay1,
+.overlay {
     width: 100%;
     height: 100%;
     /* background-image: linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0)); */
@@ -346,7 +369,10 @@ html, body {
 
 /* input fields */
 
-#monthSelector, #maxBudget, #maxTemp, #minTemp {
+#monthSelector,
+#maxBudget,
+#maxTemp,
+#minTemp {
     font-size: 18px;
     height: 40px;
     border: none;
@@ -356,7 +382,9 @@ html, body {
     width: 150px;
 }
 
-#maxBudget, #maxTemp, #minTemp {
+#maxBudget,
+#maxTemp,
+#minTemp {
     width: 80px;
 }
 
@@ -434,6 +462,11 @@ html, body {
     margin-top: 20px;
 }
 
+.resetButtom {
+    margin-right: 15px;
+}
+
+
 /* filters */
 
 .dc-select-menu {
@@ -443,6 +476,7 @@ html, body {
     background: white;
     text-align: center;
     font-size: 12px;
+    margin-right: 15px;
 }
 
 .filters {
@@ -514,6 +548,10 @@ html, body {
     padding: 0px;
 }
 
+.panel-default {
+    margin-right: 15px;
+}
+
 .panel-heading {
     height: 100%;
     font-size: 1.1em;
@@ -552,7 +590,8 @@ path.domain {
     stroke-width: 0.8;
 }
 
-#rowChart .axis, #correlation .axis {
+#rowChart .axis,
+#correlation .axis {
     font-size: 0.6em;
 }
 
@@ -577,12 +616,14 @@ path.domain {
 https://github.com/dc-js/dc.js/issues/731
 */
 
-#dailyBudget_Temp .x.axis text, #rowChart .x.axis text {
+#dailyBudget_Temp .x.axis text,
+#rowChart .x.axis text {
     text-anchor: end !important;
     transform: rotate(-45deg);
 }
 
-.x-axis-label, .y-axis-label {
+.x-axis-label,
+.y-axis-label {
     font-weight: bold;
     font-size: 0.7em;
 }
@@ -594,11 +635,13 @@ https://github.com/dc-js/dc.js/issues/731
     .dc-legend-item {
         font-size: 0.8em;
     }
-    .x-axis-label, .y-axis-label {
+    .x-axis-label,
+    .y-axis-label {
         font-weight: bold;
         font-size: 0.9em;
     }
-    #rowChart .axis, #correlation .axis {
+    #rowChart .axis,
+    #correlation .axis {
         font-size: 0.8em;
     }
 }
@@ -609,7 +652,7 @@ https://github.com/dc-js/dc.js/issues/731
     position: relative;
     table-layout: fixed;
     width: 100%;
-    font-size: 1.2em;
+    font-size: 0.9em;
     text-align: center;
 }
 
@@ -618,20 +661,56 @@ thead {
 }
 
 th {
-    height: 5em;
-    padding-left: 20px;
+    font-size: 9px;
+    height: 2em;
+    padding-left: 5px;
     text-align: left;
     width: 10%;
 }
 
 tr {
-    height: 3em;
+    height: 2em;
 }
 
 td {
-    padding-left: 20px;
-    padding-right: 50px;
+    padding-left: 10px;
+    padding-right: 10px;
+    font-size: 8px;
 }
+
+
+@media (min-width: 768px) {
+    .table {
+        text-align: center;
+    }
+
+    thead {
+        background-color: #e6e6e6;
+    }
+
+    th {
+        font-size: 12px;
+        font-weight: 700;
+        height: 5em;
+        padding-left: 10px;
+        width: 10%;
+        padding-right: 10px
+    }
+
+    tr {
+        height: 3em;
+    }
+
+    tr td {
+        padding-left: 10px;
+        padding-right: 10px;
+        font-size: 12px;
+    }
+
+}
+
+
+
 
 .email-button {
     background-color: transparent;
@@ -639,7 +718,15 @@ td {
     color: grey;
 }
 
-.email-button.active.focus, .email-button:focus, .email-button.focus, .email-button:active.focus, .email-button:active:focus, .email-button:focus, .email-button:active, .email-button, .email-button:hover {
+.email-button.active.focus,
+.email-button:focus,
+.email-button.focus,
+.email-button:active.focus,
+.email-button:active:focus,
+.email-button:focus,
+.email-button:active,
+.email-button,
+.email-button:hover {
     outline: none;
     background-color: transparent;
     text-decoration: none;
@@ -647,7 +734,7 @@ td {
     box-shadow: none;
 }
 
-/* error messages */
+/* error messages page*/
 
 #errorMessage {
     width: 70%;
@@ -655,10 +742,10 @@ td {
 }
 
 #errorMessage h2 {
-    color: white;
+    color: #f33809;
     font-weight: 700;
     line-height: 40px;
-    font-size: 1.2em;
+    font-size: 1.4em;
 }
 
 @media (min-width: 768px) {
@@ -666,7 +753,7 @@ td {
         width: 50%;
     }
     #errorMessage h2 {
-        font-size: 1.8em;
+        font-size: 2.2em;
     }
 }
 

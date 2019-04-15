@@ -220,7 +220,7 @@ function createTableBudget(ndx) {
                 format: function (d) { return d.country }
             },
             {
-                label: "Tatal/day",
+                label: "Daily budget",
                 format: function (d) { 
                     total=d.hostelNight + d.drinks+ d.meals + d.attractions + d.transport; 
                     return total }

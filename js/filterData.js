@@ -118,9 +118,9 @@ function filterDataBudget(maxBudget, dataMonth) {
         return (totalBudget < maxBudget);
     });
 
-    if (maxBudget == "") {
+    if (isNaN(maxBudget)) {
         showErrorMessage();
-        $('#errorMessage').html(`<h2>Please enter the budget</h2>`);      
+        $('#errorMessage').html(`<h2>You need to enter a value</h2>`);      
     }
     else {
         //If there is one or more cities matching the criteria it will call 
@@ -203,10 +203,10 @@ function citiesMatchingCriteria(data, filteredBy) {
         showErrorMessage();
         if (filteredBy == "Budget") {
             // document.getElementById("#errorMessage").innerHTML = `We're sorry but Europe is not that cheap!`;
-            $('#errorMessage').html(`<h2>We're sorry but Europe is not that cheap!</h2>`);
+            $('#errorMessage').html(`<h2>We're sorry but we couldn't find any city in Europe for that daily budget</h2>`);
         }
         if (filteredBy == "Weather") {
-            $('#errorMessage').html(`<h2>We're sorry but we don't cities with that average weather</h2>`);
+            $('#errorMessage').html(`<h2>We're sorry but we couldn't find cities for the selected temperatures</h2>`);
         }
     }
     else {

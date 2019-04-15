@@ -1,265 +1,265 @@
 country,city,month,attractions,hostelNight,drinks,meals,transport,minTemp,maxTemp,precipitation,currency,currencyCode,visitorsCity,region,wikiLink
-Austria,Vienna,January,15.36,19.92,11.52,22.39,4.83,-3.7,2.5,35,Euro,EUR,16.3,Western Europe,https://en.wikipedia.org/wiki/Vienna
-Austria,Vienna,February,15.36,19.92,11.52,22.39,4.83,-2.5,4.8,39,Euro,EUR,16.3,Western Europe,https://en.wikipedia.org/wiki/Vienna
-Austria,Vienna,March,15.36,19.92,11.52,22.39,4.83,0.2,9.9,41,Euro,EUR,16.3,Western Europe,https://en.wikipedia.org/wiki/Vienna
-Austria,Vienna,April,15.36,19.92,11.52,22.39,4.83,4.4,15.6,48,Euro,EUR,16.3,Western Europe,https://en.wikipedia.org/wiki/Vienna
-Austria,Vienna,May,15.36,19.92,11.52,22.39,4.83,8.9,20.7,64,Euro,EUR,16.3,Western Europe,https://en.wikipedia.org/wiki/Vienna
-Austria,Vienna,June,15.36,19.92,11.52,22.39,4.83,12.4,23.9,75,Euro,EUR,16.3,Western Europe,https://en.wikipedia.org/wiki/Vienna
-Austria,Vienna,July,15.36,19.92,11.52,22.39,4.83,13.8,26.1,73,Euro,EUR,16.3,Western Europe,https://en.wikipedia.org/wiki/Vienna
-Austria,Vienna,August,15.36,19.92,11.52,22.39,4.83,13.5,25.5,65,Euro,EUR,16.3,Western Europe,https://en.wikipedia.org/wiki/Vienna
-Austria,Vienna,September,15.36,19.92,11.52,22.39,4.83,9.6,20.9,48,Euro,EUR,16.3,Western Europe,https://en.wikipedia.org/wiki/Vienna
-Austria,Vienna,October,15.36,19.92,11.52,22.39,4.83,5,15,42,Euro,EUR,16.3,Western Europe,https://en.wikipedia.org/wiki/Vienna
-Austria,Vienna,November,15.36,19.92,11.52,22.39,4.83,1.5,8.1,49,Euro,EUR,16.3,Western Europe,https://en.wikipedia.org/wiki/Vienna
-Austria,Vienna,December,15.36,19.92,11.52,22.39,4.83,-1.8,3.8,44,Euro,EUR,16.3,Western Europe,https://en.wikipedia.org/wiki/Vienna
-Belgium,Brussels,January,10.97,26.34,13.17,23.7,4.61,-0.5,4.8,68,Euro,EUR,6.4,Western Europe,https://en.wikipedia.org/wiki/Brussels
-Belgium,Brussels,February,10.97,26.34,13.17,23.7,4.61,0.7,6.7,52,Euro,EUR,6.4,Western Europe,https://en.wikipedia.org/wiki/Brussels
-Belgium,Brussels,March,10.97,26.34,13.17,23.7,4.61,2.5,10.3,68,Euro,EUR,6.4,Western Europe,https://en.wikipedia.org/wiki/Brussels
-Belgium,Brussels,April,10.97,26.34,13.17,23.7,4.61,5.1,14.3,52,Euro,EUR,6.4,Western Europe,https://en.wikipedia.org/wiki/Brussels
-Belgium,Brussels,May,10.97,26.34,13.17,23.7,4.61,8.2,18.5,65,Euro,EUR,6.4,Western Europe,https://en.wikipedia.org/wiki/Brussels
-Belgium,Brussels,June,10.97,26.34,13.17,23.7,4.61,11.2,22,73,Euro,EUR,6.4,Western Europe,https://en.wikipedia.org/wiki/Brussels
-Belgium,Brussels,July,10.97,26.34,13.17,23.7,4.61,12.5,22.8,69,Euro,EUR,6.4,Western Europe,https://en.wikipedia.org/wiki/Brussels
-Belgium,Brussels,August,10.97,26.34,13.17,23.7,4.61,12.6,22.6,61,Euro,EUR,6.4,Western Europe,https://en.wikipedia.org/wiki/Brussels
-Belgium,Brussels,September,10.97,26.34,13.17,23.7,4.61,10.9,20.7,63,Euro,EUR,6.4,Western Europe,https://en.wikipedia.org/wiki/Brussels
-Belgium,Brussels,October,10.97,26.34,13.17,23.7,4.61,7.6,15.5,72,Euro,EUR,6.4,Western Europe,https://en.wikipedia.org/wiki/Brussels
-Belgium,Brussels,November,10.97,26.34,13.17,23.7,4.61,3.6,9.1,71,Euro,EUR,6.4,Western Europe,https://en.wikipedia.org/wiki/Brussels
-Belgium,Brussels,December,10.97,26.34,13.17,23.7,4.61,0.7,5.8,71,Euro,EUR,6.4,Western Europe,https://en.wikipedia.org/wiki/Brussels
-Czech Republic,Prague,January,13.01,11.49,4.55,16.13,2.08,-3.8,1.8,21,Czech Krona,CZK,18.1,Eastern Europe,https://en.wikipedia.org/wiki/Prague
-Czech Republic,Prague,February,13.01,11.49,4.55,16.13,2.08,-2.9,3.7,19,Czech Krona,CZK,18.1,Eastern Europe,https://en.wikipedia.org/wiki/Prague
-Czech Republic,Prague,March,13.01,11.49,4.55,16.13,2.08,0,8.8,26,Czech Krona,CZK,18.1,Eastern Europe,https://en.wikipedia.org/wiki/Prague
-Czech Republic,Prague,April,13.01,11.49,4.55,16.13,2.08,3.4,14.2,31,Czech Krona,CZK,18.1,Eastern Europe,https://en.wikipedia.org/wiki/Prague
-Czech Republic,Prague,May,13.01,11.49,4.55,16.13,2.08,8.2,19.7,61,Czech Krona,CZK,18.1,Eastern Europe,https://en.wikipedia.org/wiki/Prague
-Czech Republic,Prague,June,13.01,11.49,4.55,16.13,2.08,11.3,22.5,69,Czech Krona,CZK,18.1,Eastern Europe,https://en.wikipedia.org/wiki/Prague
-Czech Republic,Prague,July,13.01,11.49,4.55,16.13,2.08,12.8,24.6,70,Czech Krona,CZK,18.1,Eastern Europe,https://en.wikipedia.org/wiki/Prague
-Czech Republic,Prague,August,13.01,11.49,4.55,16.13,2.08,12.6,24.4,65,Czech Krona,CZK,18.1,Eastern Europe,https://en.wikipedia.org/wiki/Prague
-Czech Republic,Prague,September,13.01,11.49,4.55,16.13,2.08,9,19.7,42,Czech Krona,CZK,18.1,Eastern Europe,https://en.wikipedia.org/wiki/Prague
-Czech Republic,Prague,October,13.01,11.49,4.55,16.13,2.08,4.8,13.8,30,Czech Krona,CZK,18.1,Eastern Europe,https://en.wikipedia.org/wiki/Prague
-Czech Republic,Prague,November,13.01,11.49,4.55,16.13,2.08,0.7,6.6,29,Czech Krona,CZK,18.1,Eastern Europe,https://en.wikipedia.org/wiki/Prague
-Czech Republic,Prague,December,13.01,11.49,4.55,16.13,2.08,-2,3.2,23,Czech Krona,CZK,18.1,Eastern Europe,https://en.wikipedia.org/wiki/Prague
-Denmark,Copenhagen,January,12.04,25.21,18.05,25.27,7.22,-1.7,2.5,50,Danish Kroner,DKK,8.1,Northern_Europe,https://en.wikipedia.org/wiki/Copenhagen
-Denmark,Copenhagen,February,12.04,25.21,18.05,25.27,7.22,-1.9,2.8,33,Danish Kroner,DKK,8.1,Northern_Europe,https://en.wikipedia.org/wiki/Copenhagen
-Denmark,Copenhagen,March,12.04,25.21,18.05,25.27,7.22,-0.2,5.5,39,Danish Kroner,DKK,8.1,Northern_Europe,https://en.wikipedia.org/wiki/Copenhagen
-Denmark,Copenhagen,April,12.04,25.21,18.05,25.27,7.22,2.9,10.3,40,Danish Kroner,DKK,8.1,Northern_Europe,https://en.wikipedia.org/wiki/Copenhagen
-Denmark,Copenhagen,May,12.04,25.21,18.05,25.27,7.22,7.7,15.9,42,Danish Kroner,DKK,8.1,Northern_Europe,https://en.wikipedia.org/wiki/Copenhagen
-Denmark,Copenhagen,June,12.04,25.21,18.05,25.27,7.22,11.5,19.7,52,Danish Kroner,DKK,8.1,Northern_Europe,https://en.wikipedia.org/wiki/Copenhagen
-Denmark,Copenhagen,July,12.04,25.21,18.05,25.27,7.22,13.3,21.1,67,Danish Kroner,DKK,8.1,Northern_Europe,https://en.wikipedia.org/wiki/Copenhagen
-Denmark,Copenhagen,August,12.04,25.21,18.05,25.27,7.22,13,21,64,Danish Kroner,DKK,8.1,Northern_Europe,https://en.wikipedia.org/wiki/Copenhagen
-Denmark,Copenhagen,September,12.04,25.21,18.05,25.27,7.22,10.4,17,61,Danish Kroner,DKK,8.1,Northern_Europe,https://en.wikipedia.org/wiki/Copenhagen
-Denmark,Copenhagen,October,12.04,25.21,18.05,25.27,7.22,7,12.3,56,Danish Kroner,DKK,8.1,Northern_Europe,https://en.wikipedia.org/wiki/Copenhagen
-Denmark,Copenhagen,November,12.04,25.21,18.05,25.27,7.22,1.6,7.3,60,Danish Kroner,DKK,8.1,Northern_Europe,https://en.wikipedia.org/wiki/Copenhagen
-Denmark,Copenhagen,December,12.04,25.21,18.05,25.27,7.22,0.4,3.9,57,Danish Kroner,DKK,8.1,Northern_Europe,https://en.wikipedia.org/wiki/Copenhagen
-Finland,Helsinki,January,7.68,25.33,19.75,25.02,5.49,-8.2,-2.7,44,Euro,EUR,5.3,Northern_Europe,https://en.wikipedia.org/wiki/Helsinki
-Finland,Helsinki,February,7.68,25.33,19.75,25.02,5.49,-8.6,-3,33,Euro,EUR,5.3,Northern_Europe,https://en.wikipedia.org/wiki/Helsinki
-Finland,Helsinki,March,7.68,25.33,19.75,25.02,5.49,-5.4,0.8,33,Euro,EUR,5.3,Northern_Europe,https://en.wikipedia.org/wiki/Helsinki
-Finland,Helsinki,April,7.68,25.33,19.75,25.02,5.49,-0.1,6.7,37,Euro,EUR,5.3,Northern_Europe,https://en.wikipedia.org/wiki/Helsinki
-Finland,Helsinki,May,7.68,25.33,19.75,25.02,5.49,5.5,14,36,Euro,EUR,5.3,Northern_Europe,https://en.wikipedia.org/wiki/Helsinki
-Finland,Helsinki,June,7.68,25.33,19.75,25.02,5.49,10.6,18.9,47,Euro,EUR,5.3,Northern_Europe,https://en.wikipedia.org/wiki/Helsinki
-Finland,Helsinki,July,7.68,25.33,19.75,25.02,5.49,13.2,20.8,72,Euro,EUR,5.3,Northern_Europe,https://en.wikipedia.org/wiki/Helsinki
-Finland,Helsinki,August,7.68,25.33,19.75,25.02,5.49,12.3,19.3,78,Euro,EUR,5.3,Northern_Europe,https://en.wikipedia.org/wiki/Helsinki
-Finland,Helsinki,September,7.68,25.33,19.75,25.02,5.49,7.7,13.8,71,Euro,EUR,5.3,Northern_Europe,https://en.wikipedia.org/wiki/Helsinki
-Finland,Helsinki,October,7.68,25.33,19.75,25.02,5.49,3.5,8.4,72,Euro,EUR,5.3,Northern_Europe,https://en.wikipedia.org/wiki/Helsinki
-Finland,Helsinki,November,7.68,25.33,19.75,25.02,5.49,-1.2,3,70,Euro,EUR,5.3,Northern_Europe,https://en.wikipedia.org/wiki/Helsinki
-Finland,Helsinki,December,7.68,25.33,19.75,25.02,5.49,-5.6,-0.5,57,Euro,EUR,5.3,Northern_Europe,https://en.wikipedia.org/wiki/Helsinki
-France,Paris,January,13.17,27.89,13.17,22.39,3.95,0.7,6,54,Euro,EUR,35.2,Western Europe,https://en.wikipedia.org/wiki/Paris
-France,Paris,February,13.17,27.89,13.17,22.39,3.95,1.2,7.3,46,Euro,EUR,35.2,Western Europe,https://en.wikipedia.org/wiki/Paris
-France,Paris,March,13.17,27.89,13.17,22.39,3.95,3.4,12.2,50,Euro,EUR,35.2,Western Europe,https://en.wikipedia.org/wiki/Paris
-France,Paris,April,13.17,27.89,13.17,22.39,3.95,5.8,15.9,44,Euro,EUR,35.2,Western Europe,https://en.wikipedia.org/wiki/Paris
-France,Paris,May,13.17,27.89,13.17,22.39,3.95,8.9,19.8,58,Euro,EUR,35.2,Western Europe,https://en.wikipedia.org/wiki/Paris
-France,Paris,June,13.17,27.89,13.17,22.39,3.95,12.1,22.9,56,Euro,EUR,35.2,Western Europe,https://en.wikipedia.org/wiki/Paris
-France,Paris,July,13.17,27.89,13.17,22.39,3.95,14.1,24.8,53,Euro,EUR,35.2,Western Europe,https://en.wikipedia.org/wiki/Paris
-France,Paris,August,13.17,27.89,13.17,22.39,3.95,13.9,24.3,51,Euro,EUR,35.2,Western Europe,https://en.wikipedia.org/wiki/Paris
-France,Paris,September,13.17,27.89,13.17,22.39,3.95,11.5,21.3,56,Euro,EUR,35.2,Western Europe,https://en.wikipedia.org/wiki/Paris
-France,Paris,October,13.17,27.89,13.17,22.39,3.95,7.6,15.7,57,Euro,EUR,35.2,Western Europe,https://en.wikipedia.org/wiki/Paris
-France,Paris,November,13.17,27.89,13.17,22.39,3.95,4.3,10.1,58,Euro,EUR,35.2,Western Europe,https://en.wikipedia.org/wiki/Paris
-France,Paris,December,13.17,27.89,13.17,22.39,3.95,1.8,6.7,54,Euro,EUR,35.2,Western Europe,https://en.wikipedia.org/wiki/Paris
-Germany,Berlin,January,13.17,17.56,9.88,18.44,5.93,-3.4,1.7,43,Euro,EUR,31.2,Western Europe,https://en.wikipedia.org/wiki/Berlin
-Germany,Berlin,February,13.17,17.56,9.88,18.44,5.93,-2.9,3,34,Euro,EUR,31.2,Western Europe,https://en.wikipedia.org/wiki/Berlin
-Germany,Berlin,March,13.17,17.56,9.88,18.44,5.93,0,7.9,35,Euro,EUR,31.2,Western Europe,https://en.wikipedia.org/wiki/Berlin
-Germany,Berlin,April,13.17,17.56,9.88,18.44,5.93,3.8,13.5,41,Euro,EUR,31.2,Western Europe,https://en.wikipedia.org/wiki/Berlin
-Germany,Berlin,May,13.17,17.56,9.88,18.44,5.93,8,19.1,54,Euro,EUR,31.2,Western Europe,https://en.wikipedia.org/wiki/Berlin
-Germany,Berlin,June,13.17,17.56,9.88,18.44,5.93,11.3,22.3,70,Euro,EUR,31.2,Western Europe,https://en.wikipedia.org/wiki/Berlin
-Germany,Berlin,July,13.17,17.56,9.88,18.44,5.93,13.4,23.8,57,Euro,EUR,31.2,Western Europe,https://en.wikipedia.org/wiki/Berlin
-Germany,Berlin,August,13.17,17.56,9.88,18.44,5.93,12.7,23.3,61,Euro,EUR,31.2,Western Europe,https://en.wikipedia.org/wiki/Berlin
-Germany,Berlin,September,13.17,17.56,9.88,18.44,5.93,9.5,19.4,44,Euro,EUR,31.2,Western Europe,https://en.wikipedia.org/wiki/Berlin
-Germany,Berlin,October,13.17,17.56,9.88,18.44,5.93,7.5,13.3,37,Euro,EUR,31.2,Western Europe,https://en.wikipedia.org/wiki/Berlin
-Germany,Berlin,November,13.17,17.56,9.88,18.44,5.93,1.9,7,45,Euro,EUR,31.2,Western Europe,https://en.wikipedia.org/wiki/Berlin
-Germany,Berlin,December,13.17,17.56,9.88,18.44,5.93,-1.2,3.2,49,Euro,EUR,31.2,Western Europe,https://en.wikipedia.org/wiki/Berlin
-Greece,Athens,January,8.78,10.97,8.23,21.07,3.07,6.3,12.8,52,Euro,EUR,5.5,Southern Europe,https://en.wikipedia.org/wiki/Athens
-Greece,Athens,February,8.78,10.97,8.23,21.07,3.07,6.6,13.7,43,Euro,EUR,5.5,Southern Europe,https://en.wikipedia.org/wiki/Athens
-Greece,Athens,March,8.78,10.97,8.23,21.07,3.07,7.7,15.4,45,Euro,EUR,5.5,Southern Europe,https://en.wikipedia.org/wiki/Athens
-Greece,Athens,April,8.78,10.97,8.23,21.07,3.07,11.2,20.2,27,Euro,EUR,5.5,Southern Europe,https://en.wikipedia.org/wiki/Athens
-Greece,Athens,May,8.78,10.97,8.23,21.07,3.07,15.6,25.2,20,Euro,EUR,5.5,Southern Europe,https://en.wikipedia.org/wiki/Athens
-Greece,Athens,June,8.78,10.97,8.23,21.07,3.07,19.7,29.9,8,Euro,EUR,5.5,Southern Europe,https://en.wikipedia.org/wiki/Athens
-Greece,Athens,July,8.78,10.97,8.23,21.07,3.07,22.5,33.3,5,Euro,EUR,5.5,Southern Europe,https://en.wikipedia.org/wiki/Athens
-Greece,Athens,August,8.78,10.97,8.23,21.07,3.07,22.6,33.1,5,Euro,EUR,5.5,Southern Europe,https://en.wikipedia.org/wiki/Athens
-Greece,Athens,September,8.78,10.97,8.23,21.07,3.07,19.1,29.1,13,Euro,EUR,5.5,Southern Europe,https://en.wikipedia.org/wiki/Athens
-Greece,Athens,October,8.78,10.97,8.23,21.07,3.07,15.2,23.6,52,Euro,EUR,5.5,Southern Europe,https://en.wikipedia.org/wiki/Athens
-Greece,Athens,November,8.78,10.97,8.23,21.07,3.07,11.6,18.5,59,Euro,EUR,5.5,Southern Europe,https://en.wikipedia.org/wiki/Athens
-Greece,Athens,December,8.78,10.97,8.23,21.07,3.07,8.1,14.5,68,Euro,EUR,5.5,Southern Europe,https://en.wikipedia.org/wiki/Athens
-Hungary,Budapest,January,6.37,7.91,3.72,11.04,2.48,-3.3,1.6,37,Hungary Forint,HUF,10,Eastern Europe,https://en.wikipedia.org/wiki/Budapest
-Hungary,Budapest,February,6.37,7.91,3.72,11.04,2.48,-1.1,4.7,34,Hungary Forint,HUF,10,Eastern Europe,https://en.wikipedia.org/wiki/Budapest
-Hungary,Budapest,March,6.37,7.91,3.72,11.04,2.48,2,10.5,32,Hungary Forint,HUF,10,Eastern Europe,https://en.wikipedia.org/wiki/Budapest
-Hungary,Budapest,April,6.37,7.91,3.72,11.04,2.48,6.4,16.8,42,Hungary Forint,HUF,10,Eastern Europe,https://en.wikipedia.org/wiki/Budapest
-Hungary,Budapest,May,6.37,7.91,3.72,11.04,2.48,10.8,21.9,60,Hungary Forint,HUF,10,Eastern Europe,https://en.wikipedia.org/wiki/Budapest
-Hungary,Budapest,June,6.37,7.91,3.72,11.04,2.48,14.1,24.8,69,Hungary Forint,HUF,10,Eastern Europe,https://en.wikipedia.org/wiki/Budapest
-Hungary,Budapest,July,6.37,7.91,3.72,11.04,2.48,15.6,26.9,53,Hungary Forint,HUF,10,Eastern Europe,https://en.wikipedia.org/wiki/Budapest
-Hungary,Budapest,August,6.37,7.91,3.72,11.04,2.48,15.3,26.4,53,Hungary Forint,HUF,10,Eastern Europe,https://en.wikipedia.org/wiki/Budapest
-Hungary,Budapest,September,6.37,7.91,3.72,11.04,2.48,11.8,22.4,41,Hungary Forint,HUF,10,Eastern Europe,https://en.wikipedia.org/wiki/Budapest
-Hungary,Budapest,October,6.37,7.91,3.72,11.04,2.48,6.9,16.2,40,Hungary Forint,HUF,10,Eastern Europe,https://en.wikipedia.org/wiki/Budapest
-Hungary,Budapest,November,6.37,7.91,3.72,11.04,2.48,2.5,8.3,57,Hungary Forint,HUF,10,Eastern Europe,https://en.wikipedia.org/wiki/Budapest
-Hungary,Budapest,December,6.37,7.91,3.72,11.04,2.48,-1.1,3.6,46,Hungary Forint,HUF,10,Eastern Europe,https://en.wikipedia.org/wiki/Budapest
-Ireland,Dublin,January,10.97,16.46,16.46,21.07,3.29,2.5,7.9,70,Euro,EUR,5.9,Northern_Europe,https://en.wikipedia.org/wiki/Dublin
-Ireland,Dublin,February,10.97,16.46,16.46,21.07,3.29,2.4,7.9,52,Euro,EUR,5.9,Northern_Europe,https://en.wikipedia.org/wiki/Dublin
-Ireland,Dublin,March,10.97,16.46,16.46,21.07,3.29,3.1,9.8,53,Euro,EUR,5.9,Northern_Europe,https://en.wikipedia.org/wiki/Dublin
-Ireland,Dublin,April,10.97,16.46,16.46,21.07,3.29,4.4,12,50,Euro,EUR,5.9,Northern_Europe,https://en.wikipedia.org/wiki/Dublin
-Ireland,Dublin,May,10.97,16.46,16.46,21.07,3.29,6.7,14.8,60,Euro,EUR,5.9,Northern_Europe,https://en.wikipedia.org/wiki/Dublin
-Ireland,Dublin,June,10.97,16.46,16.46,21.07,3.29,9.4,17.7,55,Euro,EUR,5.9,Northern_Europe,https://en.wikipedia.org/wiki/Dublin
-Ireland,Dublin,July,10.97,16.46,16.46,21.07,3.29,11.3,19.4,53,Euro,EUR,5.9,Northern_Europe,https://en.wikipedia.org/wiki/Dublin
-Ireland,Dublin,August,10.97,16.46,16.46,21.07,3.29,11.1,19.2,71,Euro,EUR,5.9,Northern_Europe,https://en.wikipedia.org/wiki/Dublin
-Ireland,Dublin,September,10.97,16.46,16.46,21.07,3.29,9.6,17.2,75,Euro,EUR,5.9,Northern_Europe,https://en.wikipedia.org/wiki/Dublin
-Ireland,Dublin,October,10.97,16.46,16.46,21.07,3.29,7.5,14.2,76,Euro,EUR,5.9,Northern_Europe,https://en.wikipedia.org/wiki/Dublin
-Ireland,Dublin,November,10.97,16.46,16.46,21.07,3.29,4.3,10.2,72,Euro,EUR,5.9,Northern_Europe,https://en.wikipedia.org/wiki/Dublin
-Ireland,Dublin,December,10.97,16.46,16.46,21.07,3.29,3.2,8.7,80,Euro,EUR,5.9,Northern_Europe,https://en.wikipedia.org/wiki/Dublin
-Italy,Milan,January,10.97,28.97,11.52,19.75,4.39,-0.8,4.7,55,Euro,EUR,11.3,Southern Europe,https://en.wikipedia.org/wiki/Milan
-Italy,Milan,February,10.97,28.97,11.52,19.75,4.39,0.9,7.8,62,Euro,EUR,11.3,Southern Europe,https://en.wikipedia.org/wiki/Milan
-Italy,Milan,March,10.97,28.97,11.52,19.75,4.39,4.3,13.1,79,Euro,EUR,11.3,Southern Europe,https://en.wikipedia.org/wiki/Milan
-Italy,Milan,April,10.97,28.97,11.52,19.75,4.39,7.9,18.2,92,Euro,EUR,11.3,Southern Europe,https://en.wikipedia.org/wiki/Milan
-Italy,Milan,May,10.97,28.97,11.52,19.75,4.39,12.1,23.1,94,Euro,EUR,11.3,Southern Europe,https://en.wikipedia.org/wiki/Milan
-Italy,Milan,June,10.97,28.97,11.52,19.75,4.39,15.8,26.5,97,Euro,EUR,11.3,Southern Europe,https://en.wikipedia.org/wiki/Milan
-Italy,Milan,July,10.97,28.97,11.52,19.75,4.39,18.3,29.3,67,Euro,EUR,11.3,Southern Europe,https://en.wikipedia.org/wiki/Milan
-Italy,Milan,August,10.97,28.97,11.52,19.75,4.39,17.8,27.8,90,Euro,EUR,11.3,Southern Europe,https://en.wikipedia.org/wiki/Milan
-Italy,Milan,September,10.97,28.97,11.52,19.75,4.39,14.7,24,78,Euro,EUR,11.3,Southern Europe,https://en.wikipedia.org/wiki/Milan
-Italy,Milan,October,10.97,28.97,11.52,19.75,4.39,9.5,17.4,118,Euro,EUR,11.3,Southern Europe,https://en.wikipedia.org/wiki/Milan
-Italy,Milan,November,10.97,28.97,11.52,19.75,4.39,4.6,10.8,110,Euro,EUR,11.3,Southern Europe,https://en.wikipedia.org/wiki/Milan
-Italy,Milan,December,10.97,28.97,11.52,19.75,4.39,0.6,6,71,Euro,EUR,11.3,Southern Europe,https://en.wikipedia.org/wiki/Milan
-Italy,Rome,January,13.17,25.84,9.88,21.07,3.29,3.8,11.7,79,Euro,EUR,26.9,Southern Europe,https://en.wikipedia.org/wiki/Rome
-Italy,Rome,February,13.17,25.84,9.88,21.07,3.29,4.5,13.3,70,Euro,EUR,26.9,Southern Europe,https://en.wikipedia.org/wiki/Rome
-Italy,Rome,March,13.17,25.84,9.88,21.07,3.29,6.1,15.5,70,Euro,EUR,26.9,Southern Europe,https://en.wikipedia.org/wiki/Rome
-Italy,Rome,April,13.17,25.84,9.88,21.07,3.29,8.5,18.9,62,Euro,EUR,26.9,Southern Europe,https://en.wikipedia.org/wiki/Rome
-Italy,Rome,May,13.17,25.84,9.88,21.07,3.29,12.2,23.3,46,Euro,EUR,26.9,Southern Europe,https://en.wikipedia.org/wiki/Rome
-Italy,Rome,June,13.17,25.84,9.88,21.07,3.29,15.9,27.5,35,Euro,EUR,26.9,Southern Europe,https://en.wikipedia.org/wiki/Rome
-Italy,Rome,July,13.17,25.84,9.88,21.07,3.29,18.3,30.6,17,Euro,EUR,26.9,Southern Europe,https://en.wikipedia.org/wiki/Rome
-Italy,Rome,August,13.17,25.84,9.88,21.07,3.29,18.4,30.2,33,Euro,EUR,26.9,Southern Europe,https://en.wikipedia.org/wiki/Rome
-Italy,Rome,September,13.17,25.84,9.88,21.07,3.29,15.9,26.7,73,Euro,EUR,26.9,Southern Europe,https://en.wikipedia.org/wiki/Rome
-Italy,Rome,October,13.17,25.84,9.88,21.07,3.29,11.7,21.9,103,Euro,EUR,26.9,Southern Europe,https://en.wikipedia.org/wiki/Rome
-Italy,Rome,November,13.17,25.84,9.88,21.07,3.29,8,16.7,114,Euro,EUR,26.9,Southern Europe,https://en.wikipedia.org/wiki/Rome
-Italy,Rome,December,13.17,25.84,9.88,21.07,3.29,5,12.9,96,Euro,EUR,26.9,Southern Europe,https://en.wikipedia.org/wiki/Rome
-Netherlands,Amsterdam,January,17.56,40.49,13.17,17.12,6.15,-0.1,4.9,70,Euro,EUR,15.5,Western Europe,https://en.wikipedia.org/wiki/Amsterdam
-Netherlands,Amsterdam,February,17.56,40.49,13.17,17.12,6.15,-0.1,5.4,47,Euro,EUR,15.5,Western Europe,https://en.wikipedia.org/wiki/Amsterdam
-Netherlands,Amsterdam,March,17.56,40.49,13.17,17.12,6.15,1.6,8,64,Euro,EUR,15.5,Western Europe,https://en.wikipedia.org/wiki/Amsterdam
-Netherlands,Amsterdam,April,17.56,40.49,13.17,17.12,6.15,4,8.1,44,Euro,EUR,15.5,Western Europe,https://en.wikipedia.org/wiki/Amsterdam
-Netherlands,Amsterdam,May,17.56,40.49,13.17,17.12,6.15,7.7,15.8,50,Euro,EUR,15.5,Western Europe,https://en.wikipedia.org/wiki/Amsterdam
-Netherlands,Amsterdam,June,17.56,40.49,13.17,17.12,6.15,10.6,18.8,59,Euro,EUR,15.5,Western Europe,https://en.wikipedia.org/wiki/Amsterdam
-Netherlands,Amsterdam,July,17.56,40.49,13.17,17.12,6.15,12.6,20.5,75,Euro,EUR,15.5,Western Europe,https://en.wikipedia.org/wiki/Amsterdam
-Netherlands,Amsterdam,August,17.56,40.49,13.17,17.12,6.15,12.5,20.6,77,Euro,EUR,15.5,Western Europe,https://en.wikipedia.org/wiki/Amsterdam
-Netherlands,Amsterdam,September,17.56,40.49,13.17,17.12,6.15,10.4,18.3,79,Euro,EUR,15.5,Western Europe,https://en.wikipedia.org/wiki/Amsterdam
-Netherlands,Amsterdam,October,17.56,40.49,13.17,17.12,6.15,7.5,14.2,87,Euro,EUR,15.5,Western Europe,https://en.wikipedia.org/wiki/Amsterdam
-Netherlands,Amsterdam,November,17.56,40.49,13.17,17.12,6.15,3.7,9,79,Euro,EUR,15.5,Western Europe,https://en.wikipedia.org/wiki/Amsterdam
-Netherlands,Amsterdam,December,17.56,40.49,13.17,17.12,6.15,1.1,6,74,Euro,EUR,15.5,Western Europe,https://en.wikipedia.org/wiki/Amsterdam
-Norway,Oslo,January,8.05,45.9,17.26,26.23,6.9,-6.2,-1.2,49,Norwegian Kroner,NOK,7.25,Northern_Europe,https://en.wikipedia.org/wiki/Oslo
-Norway,Oslo,February,8.05,45.9,17.26,26.23,6.9,-6.7,-0.8,36,Norwegian Kroner,NOK,7.25,Northern_Europe,https://en.wikipedia.org/wiki/Oslo
-Norway,Oslo,March,8.05,45.9,17.26,26.23,6.9,-2.9,3.5,43,Norwegian Kroner,NOK,7.25,Northern_Europe,https://en.wikipedia.org/wiki/Oslo
-Norway,Oslo,April,8.05,45.9,17.26,26.23,6.9,1,9.1,41,Norwegian Kroner,NOK,7.25,Northern_Europe,https://en.wikipedia.org/wiki/Oslo
-Norway,Oslo,May,8.05,45.9,17.26,26.23,6.9,6.5,16,50,Norwegian Kroner,NOK,7.25,Northern_Europe,https://en.wikipedia.org/wiki/Oslo
-Norway,Oslo,June,8.05,45.9,17.26,26.23,6.9,10.9,20.1,64,Norwegian Kroner,NOK,7.25,Northern_Europe,https://en.wikipedia.org/wiki/Oslo
-Norway,Oslo,July,8.05,45.9,17.26,26.23,6.9,12.6,21.6,77,Norwegian Kroner,NOK,7.25,Northern_Europe,https://en.wikipedia.org/wiki/Oslo
-Norway,Oslo,August,8.05,45.9,17.26,26.23,6.9,11.8,20.4,89,Norwegian Kroner,NOK,7.25,Northern_Europe,https://en.wikipedia.org/wiki/Oslo
-Norway,Oslo,September,8.05,45.9,17.26,26.23,6.9,8,15.2,83,Norwegian Kroner,NOK,7.25,Northern_Europe,https://en.wikipedia.org/wiki/Oslo
-Norway,Oslo,October,8.05,45.9,17.26,26.23,6.9,4.2,9.5,81,Norwegian Kroner,NOK,7.25,Northern_Europe,https://en.wikipedia.org/wiki/Oslo
-Norway,Oslo,November,8.05,45.9,17.26,26.23,6.9,-0.8,3.6,74,Norwegian Kroner,NOK,7.25,Northern_Europe,https://en.wikipedia.org/wiki/Oslo
-Norway,Oslo,December,8.05,45.9,17.26,26.23,6.9,-4.7,0.1,53,Norwegian Kroner,NOK,7.25,Northern_Europe,https://en.wikipedia.org/wiki/Oslo
-Poland,Warsaw,January,6.93,9.2,6.16,10.16,1.75,-6.2,-0.8,22,Polish Zlotych,PLN,9.7,Eastern Europe,https://en.wikipedia.org/wiki/Warsaw
-Poland,Warsaw,February,6.93,9.2,6.16,10.16,1.75,-5.6,0.3,23,Polish Zlotych,PLN,9.7,Eastern Europe,https://en.wikipedia.org/wiki/Warsaw
-Poland,Warsaw,March,6.93,9.2,6.16,10.16,1.75,-2.2,5.2,25,Polish Zlotych,PLN,9.7,Eastern Europe,https://en.wikipedia.org/wiki/Warsaw
-Poland,Warsaw,April,6.93,9.2,6.16,10.16,1.75,3,12.9,33,Polish Zlotych,PLN,9.7,Eastern Europe,https://en.wikipedia.org/wiki/Warsaw
-Poland,Warsaw,May,6.93,9.2,6.16,10.16,1.75,7.9,18.7,53,Polish Zlotych,PLN,9.7,Eastern Europe,https://en.wikipedia.org/wiki/Warsaw
-Poland,Warsaw,June,6.93,9.2,6.16,10.16,1.75,11.5,22.2,67,Polish Zlotych,PLN,9.7,Eastern Europe,https://en.wikipedia.org/wiki/Warsaw
-Poland,Warsaw,July,6.93,9.2,6.16,10.16,1.75,12.9,23.5,71,Polish Zlotych,PLN,9.7,Eastern Europe,https://en.wikipedia.org/wiki/Warsaw
-Poland,Warsaw,August,6.93,9.2,6.16,10.16,1.75,12.1,22.8,58,Polish Zlotych,PLN,9.7,Eastern Europe,https://en.wikipedia.org/wiki/Warsaw
-Poland,Warsaw,September,6.93,9.2,6.16,10.16,1.75,8.6,18.1,43,Polish Zlotych,PLN,9.7,Eastern Europe,https://en.wikipedia.org/wiki/Warsaw
-Poland,Warsaw,October,6.93,9.2,6.16,10.16,1.75,4.5,12.5,35,Polish Zlotych,PLN,9.7,Eastern Europe,https://en.wikipedia.org/wiki/Warsaw
-Poland,Warsaw,November,6.93,9.2,6.16,10.16,1.75,0.6,5.7,39,Polish Zlotych,PLN,9.7,Eastern Europe,https://en.wikipedia.org/wiki/Warsaw
-Poland,Warsaw,December,6.93,9.2,6.16,10.16,1.75,-3.4,1.2,32,Polish Zlotych,PLN,9.7,Eastern Europe,https://en.wikipedia.org/wiki/Warsaw
-Portugal,Lisbon,January,8.78,14.11,9.88,18.44,3.07,8.6,14.8,101,Euro,EUR,10.67,Southern Europe,https://en.wikipedia.org/wiki/Lisbon
-Portugal,Lisbon,February,8.78,14.11,9.88,18.44,3.07,9.2,15.7,92,Euro,EUR,10.67,Southern Europe,https://en.wikipedia.org/wiki/Lisbon
-Portugal,Lisbon,March,8.78,14.11,9.88,18.44,3.07,10.1,17.5,72,Euro,EUR,10.67,Southern Europe,https://en.wikipedia.org/wiki/Lisbon
-Portugal,Lisbon,April,8.78,14.11,9.88,18.44,3.07,11.5,19.4,53,Euro,EUR,10.67,Southern Europe,https://en.wikipedia.org/wiki/Lisbon
-Portugal,Lisbon,May,8.78,14.11,9.88,18.44,3.07,13.2,21.9,41,Euro,EUR,10.67,Southern Europe,https://en.wikipedia.org/wiki/Lisbon
-Portugal,Lisbon,June,8.78,14.11,9.88,18.44,3.07,15.6,24.7,20,Euro,EUR,10.67,Southern Europe,https://en.wikipedia.org/wiki/Lisbon
-Portugal,Lisbon,July,8.78,14.11,9.88,18.44,3.07,17.4,27.4,3,Euro,EUR,10.67,Southern Europe,https://en.wikipedia.org/wiki/Lisbon
-Portugal,Lisbon,August,8.78,14.11,9.88,18.44,3.07,17.6,27.8,5,Euro,EUR,10.67,Southern Europe,https://en.wikipedia.org/wiki/Lisbon
-Portugal,Lisbon,September,8.78,14.11,9.88,18.44,3.07,16.9,26.3,23,Euro,EUR,10.67,Southern Europe,https://en.wikipedia.org/wiki/Lisbon
-Portugal,Lisbon,October,8.78,14.11,9.88,18.44,3.07,14.8,22.6,71,Euro,EUR,10.67,Southern Europe,https://en.wikipedia.org/wiki/Lisbon
-Portugal,Lisbon,November,8.78,14.11,9.88,18.44,3.07,11.4,17.9,106,Euro,EUR,10.67,Southern Europe,https://en.wikipedia.org/wiki/Lisbon
-Portugal,Lisbon,December,8.78,14.11,9.88,18.44,3.07,9.3,15,104,Euro,EUR,10.67,Southern Europe,https://en.wikipedia.org/wiki/Lisbon
-Spain,Barcelona,January,14.27,20.96,9.88,21.07,4.72,6.6,13.1,39,Euro,EUR,20.6,Southern Europe,https://en.wikipedia.org/wiki/Barcelona
-Spain,Barcelona,February,14.27,20.96,9.88,21.07,4.72,7.4,14.1,36,Euro,EUR,20.6,Southern Europe,https://en.wikipedia.org/wiki/Barcelona
-Spain,Barcelona,March,14.27,20.96,9.88,21.07,4.72,9,16.1,45,Euro,EUR,20.6,Southern Europe,https://en.wikipedia.org/wiki/Barcelona
-Spain,Barcelona,April,14.27,20.96,9.88,21.07,4.72,10.7,18.6,48,Euro,EUR,20.6,Southern Europe,https://en.wikipedia.org/wiki/Barcelona
-Spain,Barcelona,May,14.27,20.96,9.88,21.07,4.72,13.8,21.7,52,Euro,EUR,20.6,Southern Europe,https://en.wikipedia.org/wiki/Barcelona
-Spain,Barcelona,June,14.27,20.96,9.88,21.07,4.72,17.5,25.3,42,Euro,EUR,20.6,Southern Europe,https://en.wikipedia.org/wiki/Barcelona
-Spain,Barcelona,July,14.27,20.96,9.88,21.07,4.72,20.3,27.9,25,Euro,EUR,20.6,Southern Europe,https://en.wikipedia.org/wiki/Barcelona
-Spain,Barcelona,August,14.27,20.96,9.88,21.07,4.72,20.2,27.5,51,Euro,EUR,20.6,Southern Europe,https://en.wikipedia.org/wiki/Barcelona
-Spain,Barcelona,September,14.27,20.96,9.88,21.07,4.72,18.3,25.1,73,Euro,EUR,20.6,Southern Europe,https://en.wikipedia.org/wiki/Barcelona
-Spain,Barcelona,October,14.27,20.96,9.88,21.07,4.72,14.4,20.9,93,Euro,EUR,20.6,Southern Europe,https://en.wikipedia.org/wiki/Barcelona
-Spain,Barcelona,November,14.27,20.96,9.88,21.07,4.72,10.3,16.5,59,Euro,EUR,20.6,Southern Europe,https://en.wikipedia.org/wiki/Barcelona
-Spain,Barcelona,December,14.27,20.96,9.88,21.07,4.72,7.7,13.7,49,Euro,EUR,20.6,Southern Europe,https://en.wikipedia.org/wiki/Barcelona
-Spain,Madrid,January,10.97,16.46,6.58,21.07,3.29,1.4,8.6,43,Euro,EUR,19.2,Southern Europe,https://en.wikipedia.org/wiki/Madrid
-Spain,Madrid,February,10.97,16.46,6.58,21.07,3.29,1.9,10.9,44,Euro,EUR,19.2,Southern Europe,https://en.wikipedia.org/wiki/Madrid
-Spain,Madrid,March,10.97,16.46,6.58,21.07,3.29,4.6,14.7,35,Euro,EUR,19.2,Southern Europe,https://en.wikipedia.org/wiki/Madrid
-Spain,Madrid,April,10.97,16.46,6.58,21.07,3.29,6.7,17.8,45,Euro,EUR,19.2,Southern Europe,https://en.wikipedia.org/wiki/Madrid
-Spain,Madrid,May,10.97,16.46,6.58,21.07,3.29,10,21.6,44,Euro,EUR,19.2,Southern Europe,https://en.wikipedia.org/wiki/Madrid
-Spain,Madrid,June,10.97,16.46,6.58,21.07,3.29,14.1,26.8,28,Euro,EUR,19.2,Southern Europe,https://en.wikipedia.org/wiki/Madrid
-Spain,Madrid,July,10.97,16.46,6.58,21.07,3.29,17.3,30.8,11,Euro,EUR,19.2,Southern Europe,https://en.wikipedia.org/wiki/Madrid
-Spain,Madrid,August,10.97,16.46,6.58,21.07,3.29,17,29.5,11,Euro,EUR,19.2,Southern Europe,https://en.wikipedia.org/wiki/Madrid
-Spain,Madrid,September,10.97,16.46,6.58,21.07,3.29,14.1,25.2,30,Euro,EUR,19.2,Southern Europe,https://en.wikipedia.org/wiki/Madrid
-Spain,Madrid,October,10.97,16.46,6.58,21.07,3.29,9.4,18.7,51,Euro,EUR,19.2,Southern Europe,https://en.wikipedia.org/wiki/Madrid
-Spain,Madrid,November,10.97,16.46,6.58,21.07,3.29,4.9,12.9,58,Euro,EUR,19.2,Southern Europe,https://en.wikipedia.org/wiki/Madrid
-Spain,Madrid,December,10.97,16.46,6.58,21.07,3.29,2,8.9,50,Euro,EUR,19.2,Southern Europe,https://en.wikipedia.org/wiki/Madrid
-Sweden,Stockholm,January,15.93,21.77,15.93,22.94,7.65,-4.4,-0.1,39,Swedish Kronor,SEK,9.3,Northern_Europe,https://en.wikipedia.org/wiki/Stockholm
-Sweden,Stockholm,February,15.93,21.77,15.93,22.94,7.65,-4.9,-0.2,28,Swedish Kronor,SEK,9.3,Northern_Europe,https://en.wikipedia.org/wiki/Stockholm
-Sweden,Stockholm,March,15.93,21.77,15.93,22.94,7.65,-2.3,3.3,25,Swedish Kronor,SEK,9.3,Northern_Europe,https://en.wikipedia.org/wiki/Stockholm
-Sweden,Stockholm,April,15.93,21.77,15.93,22.94,7.65,1.2,8.9,30,Swedish Kronor,SEK,9.3,Northern_Europe,https://en.wikipedia.org/wiki/Stockholm
-Sweden,Stockholm,May,15.93,21.77,15.93,22.94,7.65,6.1,15.8,30,Swedish Kronor,SEK,9.3,Northern_Europe,https://en.wikipedia.org/wiki/Stockholm
-Sweden,Stockholm,June,15.93,21.77,15.93,22.94,7.65,11.2,20.6,45,Swedish Kronor,SEK,9.3,Northern_Europe,https://en.wikipedia.org/wiki/Stockholm
-Sweden,Stockholm,July,15.93,21.77,15.93,22.94,7.65,13.6,22.2,66,Swedish Kronor,SEK,9.3,Northern_Europe,https://en.wikipedia.org/wiki/Stockholm
-Sweden,Stockholm,August,15.93,21.77,15.93,22.94,7.65,13,20.8,63,Swedish Kronor,SEK,9.3,Northern_Europe,https://en.wikipedia.org/wiki/Stockholm
-Sweden,Stockholm,September,15.93,21.77,15.93,22.94,7.65,9.2,15.4,54,Swedish Kronor,SEK,9.3,Northern_Europe,https://en.wikipedia.org/wiki/Stockholm
-Sweden,Stockholm,October,15.93,21.77,15.93,22.94,7.65,5.3,10,49,Swedish Kronor,SEK,9.3,Northern_Europe,https://en.wikipedia.org/wiki/Stockholm
-Sweden,Stockholm,November,15.93,21.77,15.93,22.94,7.65,0.8,4.6,52,Swedish Kronor,SEK,9.3,Northern_Europe,https://en.wikipedia.org/wiki/Stockholm
-Sweden,Stockholm,December,15.93,21.77,15.93,22.94,7.65,-2.6,1.5,46,Swedish Kronor,SEK,9.3,Northern_Europe,https://en.wikipedia.org/wiki/Stockholm
-Turkey,Istanbul,January,6.64,7,6.64,8.5,1.77,3,8.5,102,Turkish Iira,TRY,13.4,Southern Europe,https://en.wikipedia.org/wiki/Istanbul
-Turkey,Istanbul,February,6.64,7,6.64,8.5,1.77,3,8.7,71,Turkish Iira,TRY,13.4,Southern Europe,https://en.wikipedia.org/wiki/Istanbul
-Turkey,Istanbul,March,6.64,7,6.64,8.5,1.77,3.9,10.7,70,Turkish Iira,TRY,13.4,Southern Europe,https://en.wikipedia.org/wiki/Istanbul
-Turkey,Istanbul,April,6.64,7,6.64,8.5,1.77,7.5,15.9,51,Turkish Iira,TRY,13.4,Southern Europe,https://en.wikipedia.org/wiki/Istanbul
-Turkey,Istanbul,May,6.64,7,6.64,8.5,1.77,11.7,20.6,33,Turkish Iira,TRY,13.4,Southern Europe,https://en.wikipedia.org/wiki/Istanbul
-Turkey,Istanbul,June,6.64,7,6.64,8.5,1.77,15.9,25.3,30,Turkish Iira,TRY,13.4,Southern Europe,https://en.wikipedia.org/wiki/Istanbul
-Turkey,Istanbul,July,6.64,7,6.64,8.5,1.77,18.6,27.6,24,Turkish Iira,TRY,13.4,Southern Europe,https://en.wikipedia.org/wiki/Istanbul
-Turkey,Istanbul,August,6.64,7,6.64,8.5,1.77,18.9,27.5,32,Turkish Iira,TRY,13.4,Southern Europe,https://en.wikipedia.org/wiki/Istanbul
-Turkey,Istanbul,September,6.64,7,6.64,8.5,1.77,15.6,24.1,46,Turkish Iira,TRY,13.4,Southern Europe,https://en.wikipedia.org/wiki/Istanbul
-Turkey,Istanbul,October,6.64,7,6.64,8.5,1.77,12.1,19.4,73,Turkish Iira,TRY,13.4,Southern Europe,https://en.wikipedia.org/wiki/Istanbul
-Turkey,Istanbul,November,6.64,7,6.64,8.5,1.77,8.4,14.9,91,Turkish Iira,TRY,13.4,Southern Europe,https://en.wikipedia.org/wiki/Istanbul
-Turkey,Istanbul,December,6.64,7,6.64,8.5,1.77,5.4,11,124,Turkish Iira,TRY,13.4,Southern Europe,https://en.wikipedia.org/wiki/Istanbul
-United Kingdom,Edinburgh,January,18.85,15.21,11.31,19.6,4.02,0,5.9,61,British Pound,GBP,4.6,Northern_Europe,https://en.wikipedia.org/wiki/Edinburgh
-United Kingdom,Edinburgh,February,18.85,15.21,11.31,19.6,4.02,-0.1,6.1,43,British Pound,GBP,4.6,Northern_Europe,https://en.wikipedia.org/wiki/Edinburgh
-United Kingdom,Edinburgh,March,18.85,15.21,11.31,19.6,4.02,1.5,8.6,51,British Pound,GBP,4.6,Northern_Europe,https://en.wikipedia.org/wiki/Edinburgh
-United Kingdom,Edinburgh,April,18.85,15.21,11.31,19.6,4.02,3.4,11.6,43,British Pound,GBP,4.6,Northern_Europe,https://en.wikipedia.org/wiki/Edinburgh
-United Kingdom,Edinburgh,May,18.85,15.21,11.31,19.6,4.02,5.9,14.5,54,British Pound,GBP,4.6,Northern_Europe,https://en.wikipedia.org/wiki/Edinburgh
-United Kingdom,Edinburgh,June,18.85,15.21,11.31,19.6,4.02,8.8,17.5,52,British Pound,GBP,4.6,Northern_Europe,https://en.wikipedia.org/wiki/Edinburgh
-United Kingdom,Edinburgh,July,18.85,15.21,11.31,19.6,4.02,10.5,19.1,63,British Pound,GBP,4.6,Northern_Europe,https://en.wikipedia.org/wiki/Edinburgh
-United Kingdom,Edinburgh,August,18.85,15.21,11.31,19.6,4.02,10.2,18.6,70,British Pound,GBP,4.6,Northern_Europe,https://en.wikipedia.org/wiki/Edinburgh
-United Kingdom,Edinburgh,September,18.85,15.21,11.31,19.6,4.02,8.4,16.2,70,British Pound,GBP,4.6,Northern_Europe,https://en.wikipedia.org/wiki/Edinburgh
-United Kingdom,Edinburgh,October,18.85,15.21,11.31,19.6,4.02,5.9,13.1,70,British Pound,GBP,4.6,Northern_Europe,https://en.wikipedia.org/wiki/Edinburgh
-United Kingdom,Edinburgh,November,18.85,15.21,11.31,19.6,4.02,2.5,9,68,British Pound,GBP,4.6,Northern_Europe,https://en.wikipedia.org/wiki/Edinburgh
-United Kingdom,Edinburgh,December,18.85,15.21,11.31,19.6,4.02,1.1,7,61,British Pound,GBP,4.6,Northern_Europe,https://en.wikipedia.org/wiki/Edinburgh
-United Kingdom,London,January,18.85,26.26,15.08,26.39,6.03,1.8,8,56,British Pound,GBP,75.1,Northern_Europe,https://en.wikipedia.org/wiki/London
-United Kingdom,London,February,18.85,26.26,15.08,26.39,6.03,2,8.1,39,British Pound,GBP,75.1,Northern_Europe,https://en.wikipedia.org/wiki/London
-United Kingdom,London,March,18.85,26.26,15.08,26.39,6.03,3.4,11,46,British Pound,GBP,75.1,Northern_Europe,https://en.wikipedia.org/wiki/London
-United Kingdom,London,April,18.85,26.26,15.08,26.39,6.03,5.7,13.8,45,British Pound,GBP,75.1,Northern_Europe,https://en.wikipedia.org/wiki/London
-United Kingdom,London,May,18.85,26.26,15.08,26.39,6.03,8.6,17.7,49,British Pound,GBP,75.1,Northern_Europe,https://en.wikipedia.org/wiki/London
-United Kingdom,London,June,18.85,26.26,15.08,26.39,6.03,11.8,21.4,50,British Pound,GBP,75.1,Northern_Europe,https://en.wikipedia.org/wiki/London
-United Kingdom,London,July,18.85,26.26,15.08,26.39,6.03,13.8,23.6,48,British Pound,GBP,75.1,Northern_Europe,https://en.wikipedia.org/wiki/London
-United Kingdom,London,August,18.85,26.26,15.08,26.39,6.03,13.3,23.1,53,British Pound,GBP,75.1,Northern_Europe,https://en.wikipedia.org/wiki/London
-United Kingdom,London,September,18.85,26.26,15.08,26.39,6.03,10.9,20.1,56,British Pound,GBP,75.1,Northern_Europe,https://en.wikipedia.org/wiki/London
-United Kingdom,London,October,18.85,26.26,15.08,26.39,6.03,7.7,15.6,60,British Pound,GBP,75.1,Northern_Europe,https://en.wikipedia.org/wiki/London
-United Kingdom,London,November,18.85,26.26,15.08,26.39,6.03,4.5,11,61,British Pound,GBP,75.1,Northern_Europe,https://en.wikipedia.org/wiki/London
-United Kingdom,London,December,18.85,26.26,15.08,26.39,6.03,2.7,8.6,58,British Pound,GBP,75.1,Northern_Europe,https://en.wikipedia.org/wiki/London
+Austria,Vienna,January,14,19.56,10.5,20.4,4.4,-3.7,2.5,35,Euro,EUR,16.3,Western Europe,"<a href=""https://en.wikipedia.org/wiki/Vienna"" target=""blank"">https://en.wikipedia.org/wiki/Vienna</a>"
+Austria,Vienna,February,14,19.56,10.5,20.4,4.4,-2.5,4.8,39,Euro,EUR,16.3,Western Europe,"<a href=""https://en.wikipedia.org/wiki/Vienna"" target=""blank"">https://en.wikipedia.org/wiki/Vienna</a>"
+Austria,Vienna,March,14,19.56,10.5,20.4,4.4,0.2,9.9,41,Euro,EUR,16.3,Western Europe,"<a href=""https://en.wikipedia.org/wiki/Vienna"" target=""blank"">https://en.wikipedia.org/wiki/Vienna</a>"
+Austria,Vienna,April,14,19.56,10.5,20.4,4.4,4.4,15.6,48,Euro,EUR,16.3,Western Europe,"<a href=""https://en.wikipedia.org/wiki/Vienna"" target=""blank"">https://en.wikipedia.org/wiki/Vienna</a>"
+Austria,Vienna,May,14,19.56,10.5,20.4,4.4,8.9,20.7,64,Euro,EUR,16.3,Western Europe,"<a href=""https://en.wikipedia.org/wiki/Vienna"" target=""blank"">https://en.wikipedia.org/wiki/Vienna</a>"
+Austria,Vienna,June,14,19.56,10.5,20.4,4.4,12.4,23.9,75,Euro,EUR,16.3,Western Europe,"<a href=""https://en.wikipedia.org/wiki/Vienna"" target=""blank"">https://en.wikipedia.org/wiki/Vienna</a>"
+Austria,Vienna,July,14,19.56,10.5,20.4,4.4,13.8,26.1,73,Euro,EUR,16.3,Western Europe,"<a href=""https://en.wikipedia.org/wiki/Vienna"" target=""blank"">https://en.wikipedia.org/wiki/Vienna</a>"
+Austria,Vienna,August,14,19.56,10.5,20.4,4.4,13.5,25.5,65,Euro,EUR,16.3,Western Europe,"<a href=""https://en.wikipedia.org/wiki/Vienna"" target=""blank"">https://en.wikipedia.org/wiki/Vienna</a>"
+Austria,Vienna,September,14,19.56,10.5,20.4,4.4,9.6,20.9,48,Euro,EUR,16.3,Western Europe,"<a href=""https://en.wikipedia.org/wiki/Vienna"" target=""blank"">https://en.wikipedia.org/wiki/Vienna</a>"
+Austria,Vienna,October,14,19.56,10.5,20.4,4.4,5,15,42,Euro,EUR,16.3,Western Europe,"<a href=""https://en.wikipedia.org/wiki/Vienna"" target=""blank"">https://en.wikipedia.org/wiki/Vienna</a>"
+Austria,Vienna,November,14,19.56,10.5,20.4,4.4,1.5,8.1,49,Euro,EUR,16.3,Western Europe,"<a href=""https://en.wikipedia.org/wiki/Vienna"" target=""blank"">https://en.wikipedia.org/wiki/Vienna</a>"
+Austria,Vienna,December,14,19.56,10.5,20.4,4.4,-1.8,3.8,44,Euro,EUR,16.3,Western Europe,"<a href=""https://en.wikipedia.org/wiki/Vienna"" target=""blank"">https://en.wikipedia.org/wiki/Vienna</a>"
+Belgium,Brussels,January,10,25.5,12,21.6,4.2,-0.5,4.8,68,Euro,EUR,6.4,Western Europe,"<a href=""https://en.wikipedia.org/wiki/Brussels"" target=""blank"">https://en.wikipedia.org/wiki/Brussels</a>"
+Belgium,Brussels,February,10,25.5,12,21.6,4.2,0.7,6.7,52,Euro,EUR,6.4,Western Europe,"<a href=""https://en.wikipedia.org/wiki/Brussels"" target=""blank"">https://en.wikipedia.org/wiki/Brussels</a>"
+Belgium,Brussels,March,10,25.5,12,21.6,4.2,2.5,10.3,68,Euro,EUR,6.4,Western Europe,"<a href=""https://en.wikipedia.org/wiki/Brussels"" target=""blank"">https://en.wikipedia.org/wiki/Brussels</a>"
+Belgium,Brussels,April,10,25.5,12,21.6,4.2,5.1,14.3,52,Euro,EUR,6.4,Western Europe,"<a href=""https://en.wikipedia.org/wiki/Brussels"" target=""blank"">https://en.wikipedia.org/wiki/Brussels</a>"
+Belgium,Brussels,May,10,25.5,12,21.6,4.2,8.2,18.5,65,Euro,EUR,6.4,Western Europe,"<a href=""https://en.wikipedia.org/wiki/Brussels"" target=""blank"">https://en.wikipedia.org/wiki/Brussels</a>"
+Belgium,Brussels,June,10,25.5,12,21.6,4.2,11.2,22,73,Euro,EUR,6.4,Western Europe,"<a href=""https://en.wikipedia.org/wiki/Brussels"" target=""blank"">https://en.wikipedia.org/wiki/Brussels</a>"
+Belgium,Brussels,July,10,25.5,12,21.6,4.2,12.5,22.8,69,Euro,EUR,6.4,Western Europe,"<a href=""https://en.wikipedia.org/wiki/Brussels"" target=""blank"">https://en.wikipedia.org/wiki/Brussels</a>"
+Belgium,Brussels,August,10,25.5,12,21.6,4.2,12.6,22.6,61,Euro,EUR,6.4,Western Europe,"<a href=""https://en.wikipedia.org/wiki/Brussels"" target=""blank"">https://en.wikipedia.org/wiki/Brussels</a>"
+Belgium,Brussels,September,10,25.5,12,21.6,4.2,10.9,20.7,63,Euro,EUR,6.4,Western Europe,"<a href=""https://en.wikipedia.org/wiki/Brussels"" target=""blank"">https://en.wikipedia.org/wiki/Brussels</a>"
+Belgium,Brussels,October,10,25.5,12,21.6,4.2,7.6,15.5,72,Euro,EUR,6.4,Western Europe,"<a href=""https://en.wikipedia.org/wiki/Brussels"" target=""blank"">https://en.wikipedia.org/wiki/Brussels</a>"
+Belgium,Brussels,November,10,25.5,12,21.6,4.2,3.6,9.1,71,Euro,EUR,6.4,Western Europe,"<a href=""https://en.wikipedia.org/wiki/Brussels"" target=""blank"">https://en.wikipedia.org/wiki/Brussels</a>"
+Belgium,Brussels,December,10,25.5,12,21.6,4.2,0.7,5.8,71,Euro,EUR,6.4,Western Europe,"<a href=""https://en.wikipedia.org/wiki/Brussels"" target=""blank"">https://en.wikipedia.org/wiki/Brussels</a>"
+Czech Republic,Prague,January,9.75,10.92,4.09,14.51,1.87,-3.8,1.8,21,Czech Krona,CZK,18.1,Eastern Europe,"<a href=""https://en.wikipedia.org/wiki/Prague"" target=""blank"">https://en.wikipedia.org/wiki/Prague</a>"
+Czech Republic,Prague,February,9.75,10.92,4.09,14.51,1.87,-2.9,3.7,19,Czech Krona,CZK,18.1,Eastern Europe,"<a href=""https://en.wikipedia.org/wiki/Prague"" target=""blank"">https://en.wikipedia.org/wiki/Prague</a>"
+Czech Republic,Prague,March,9.75,10.92,4.09,14.51,1.87,0,8.8,26,Czech Krona,CZK,18.1,Eastern Europe,"<a href=""https://en.wikipedia.org/wiki/Prague"" target=""blank"">https://en.wikipedia.org/wiki/Prague</a>"
+Czech Republic,Prague,April,9.75,10.92,4.09,14.51,1.87,3.4,14.2,31,Czech Krona,CZK,18.1,Eastern Europe,"<a href=""https://en.wikipedia.org/wiki/Prague"" target=""blank"">https://en.wikipedia.org/wiki/Prague</a>"
+Czech Republic,Prague,May,9.75,10.92,4.09,14.51,1.87,8.2,19.7,61,Czech Krona,CZK,18.1,Eastern Europe,"<a href=""https://en.wikipedia.org/wiki/Prague"" target=""blank"">https://en.wikipedia.org/wiki/Prague</a>"
+Czech Republic,Prague,June,9.75,10.92,4.09,14.51,1.87,11.3,22.5,69,Czech Krona,CZK,18.1,Eastern Europe,"<a href=""https://en.wikipedia.org/wiki/Prague"" target=""blank"">https://en.wikipedia.org/wiki/Prague</a>"
+Czech Republic,Prague,July,9.75,10.92,4.09,14.51,1.87,12.8,24.6,70,Czech Krona,CZK,18.1,Eastern Europe,"<a href=""https://en.wikipedia.org/wiki/Prague"" target=""blank"">https://en.wikipedia.org/wiki/Prague</a>"
+Czech Republic,Prague,August,9.75,10.92,4.09,14.51,1.87,12.6,24.4,65,Czech Krona,CZK,18.1,Eastern Europe,"<a href=""https://en.wikipedia.org/wiki/Prague"" target=""blank"">https://en.wikipedia.org/wiki/Prague</a>"
+Czech Republic,Prague,September,9.75,10.92,4.09,14.51,1.87,9,19.7,42,Czech Krona,CZK,18.1,Eastern Europe,"<a href=""https://en.wikipedia.org/wiki/Prague"" target=""blank"">https://en.wikipedia.org/wiki/Prague</a>"
+Czech Republic,Prague,October,9.75,10.92,4.09,14.51,1.87,4.8,13.8,30,Czech Krona,CZK,18.1,Eastern Europe,"<a href=""https://en.wikipedia.org/wiki/Prague"" target=""blank"">https://en.wikipedia.org/wiki/Prague</a>"
+Czech Republic,Prague,November,9.75,10.92,4.09,14.51,1.87,0.7,6.6,29,Czech Krona,CZK,18.1,Eastern Europe,"<a href=""https://en.wikipedia.org/wiki/Prague"" target=""blank"">https://en.wikipedia.org/wiki/Prague</a>"
+Czech Republic,Prague,December,9.75,10.92,4.09,14.51,1.87,-2,3.2,23,Czech Krona,CZK,18.1,Eastern Europe,"<a href=""https://en.wikipedia.org/wiki/Prague"" target=""blank"">https://en.wikipedia.org/wiki/Prague</a>"
+Denmark,Copenhagen,January,13.4,34.3,16.08,22.51,6.43,-1.7,2.5,50,Danish Kroner,DKK,8.1,Northern_Europe,"<a href=""https://en.wikipedia.org/wiki/Copenhagen"" target=""blank"">https://en.wikipedia.org/wiki/Copenhagen</a>"
+Denmark,Copenhagen,February,13.4,34.3,16.08,22.51,6.43,-1.9,2.8,33,Danish Kroner,DKK,8.1,Northern_Europe,"<a href=""https://en.wikipedia.org/wiki/Copenhagen"" target=""blank"">https://en.wikipedia.org/wiki/Copenhagen</a>"
+Denmark,Copenhagen,March,13.4,34.3,16.08,22.51,6.43,-0.2,5.5,39,Danish Kroner,DKK,8.1,Northern_Europe,"<a href=""https://en.wikipedia.org/wiki/Copenhagen"" target=""blank"">https://en.wikipedia.org/wiki/Copenhagen</a>"
+Denmark,Copenhagen,April,13.4,34.3,16.08,22.51,6.43,2.9,10.3,40,Danish Kroner,DKK,8.1,Northern_Europe,"<a href=""https://en.wikipedia.org/wiki/Copenhagen"" target=""blank"">https://en.wikipedia.org/wiki/Copenhagen</a>"
+Denmark,Copenhagen,May,13.4,34.3,16.08,22.51,6.43,7.7,15.9,42,Danish Kroner,DKK,8.1,Northern_Europe,"<a href=""https://en.wikipedia.org/wiki/Copenhagen"" target=""blank"">https://en.wikipedia.org/wiki/Copenhagen</a>"
+Denmark,Copenhagen,June,13.4,34.3,16.08,22.51,6.43,11.5,19.7,52,Danish Kroner,DKK,8.1,Northern_Europe,"<a href=""https://en.wikipedia.org/wiki/Copenhagen"" target=""blank"">https://en.wikipedia.org/wiki/Copenhagen</a>"
+Denmark,Copenhagen,July,13.4,34.3,16.08,22.51,6.43,13.3,21.1,67,Danish Kroner,DKK,8.1,Northern_Europe,"<a href=""https://en.wikipedia.org/wiki/Copenhagen"" target=""blank"">https://en.wikipedia.org/wiki/Copenhagen</a>"
+Denmark,Copenhagen,August,13.4,34.3,16.08,22.51,6.43,13,21,64,Danish Kroner,DKK,8.1,Northern_Europe,"<a href=""https://en.wikipedia.org/wiki/Copenhagen"" target=""blank"">https://en.wikipedia.org/wiki/Copenhagen</a>"
+Denmark,Copenhagen,September,13.4,34.3,16.08,22.51,6.43,10.4,17,61,Danish Kroner,DKK,8.1,Northern_Europe,"<a href=""https://en.wikipedia.org/wiki/Copenhagen"" target=""blank"">https://en.wikipedia.org/wiki/Copenhagen</a>"
+Denmark,Copenhagen,October,13.4,34.3,16.08,22.51,6.43,7,12.3,56,Danish Kroner,DKK,8.1,Northern_Europe,"<a href=""https://en.wikipedia.org/wiki/Copenhagen"" target=""blank"">https://en.wikipedia.org/wiki/Copenhagen</a>"
+Denmark,Copenhagen,November,13.4,34.3,16.08,22.51,6.43,1.6,7.3,60,Danish Kroner,DKK,8.1,Northern_Europe,"<a href=""https://en.wikipedia.org/wiki/Copenhagen"" target=""blank"">https://en.wikipedia.org/wiki/Copenhagen</a>"
+Denmark,Copenhagen,December,13.4,34.3,16.08,22.51,6.43,0.4,3.9,57,Danish Kroner,DKK,8.1,Northern_Europe,"<a href=""https://en.wikipedia.org/wiki/Copenhagen"" target=""blank"">https://en.wikipedia.org/wiki/Copenhagen</a>"
+Finland,Helsinki,January,7,20.52,18,22.8,5,-8.2,-2.7,44,Euro,EUR,5.3,Northern_Europe,"<a href=""https://en.wikipedia.org/wiki/Helsinki"" target=""blank"">https://en.wikipedia.org/wiki/Helsinki</a>"
+Finland,Helsinki,February,7,20.52,18,22.8,5,-8.6,-3,33,Euro,EUR,5.3,Northern_Europe,"<a href=""https://en.wikipedia.org/wiki/Helsinki"" target=""blank"">https://en.wikipedia.org/wiki/Helsinki</a>"
+Finland,Helsinki,March,7,20.52,18,22.8,5,-5.4,0.8,33,Euro,EUR,5.3,Northern_Europe,"<a href=""https://en.wikipedia.org/wiki/Helsinki"" target=""blank"">https://en.wikipedia.org/wiki/Helsinki</a>"
+Finland,Helsinki,April,7,20.52,18,22.8,5,-0.1,6.7,37,Euro,EUR,5.3,Northern_Europe,"<a href=""https://en.wikipedia.org/wiki/Helsinki"" target=""blank"">https://en.wikipedia.org/wiki/Helsinki</a>"
+Finland,Helsinki,May,7,20.52,18,22.8,5,5.5,14,36,Euro,EUR,5.3,Northern_Europe,"<a href=""https://en.wikipedia.org/wiki/Helsinki"" target=""blank"">https://en.wikipedia.org/wiki/Helsinki</a>"
+Finland,Helsinki,June,7,20.52,18,22.8,5,10.6,18.9,47,Euro,EUR,5.3,Northern_Europe,"<a href=""https://en.wikipedia.org/wiki/Helsinki"" target=""blank"">https://en.wikipedia.org/wiki/Helsinki</a>"
+Finland,Helsinki,July,7,20.52,18,22.8,5,13.2,20.8,72,Euro,EUR,5.3,Northern_Europe,"<a href=""https://en.wikipedia.org/wiki/Helsinki"" target=""blank"">https://en.wikipedia.org/wiki/Helsinki</a>"
+Finland,Helsinki,August,7,20.52,18,22.8,5,12.3,19.3,78,Euro,EUR,5.3,Northern_Europe,"<a href=""https://en.wikipedia.org/wiki/Helsinki"" target=""blank"">https://en.wikipedia.org/wiki/Helsinki</a>"
+Finland,Helsinki,September,7,20.52,18,22.8,5,7.7,13.8,71,Euro,EUR,5.3,Northern_Europe,"<a href=""https://en.wikipedia.org/wiki/Helsinki"" target=""blank"">https://en.wikipedia.org/wiki/Helsinki</a>"
+Finland,Helsinki,October,7,20.52,18,22.8,5,3.5,8.4,72,Euro,EUR,5.3,Northern_Europe,"<a href=""https://en.wikipedia.org/wiki/Helsinki"" target=""blank"">https://en.wikipedia.org/wiki/Helsinki</a>"
+Finland,Helsinki,November,7,20.52,18,22.8,5,-1.2,3,70,Euro,EUR,5.3,Northern_Europe,"<a href=""https://en.wikipedia.org/wiki/Helsinki"" target=""blank"">https://en.wikipedia.org/wiki/Helsinki</a>"
+Finland,Helsinki,December,7,20.52,18,22.8,5,-5.6,-0.5,57,Euro,EUR,5.3,Northern_Europe,"<a href=""https://en.wikipedia.org/wiki/Helsinki"" target=""blank"">https://en.wikipedia.org/wiki/Helsinki</a>"
+France,Paris,January,15,25.65,12,20.4,3.6,0.7,6,54,Euro,EUR,35.2,Western Europe,"<a href=""https://en.wikipedia.org/wiki/Paris"" target=""blank"">https://en.wikipedia.org/wiki/Paris</a>"
+France,Paris,February,15,25.65,12,20.4,3.6,1.2,7.3,46,Euro,EUR,35.2,Western Europe,"<a href=""https://en.wikipedia.org/wiki/Paris"" target=""blank"">https://en.wikipedia.org/wiki/Paris</a>"
+France,Paris,March,15,25.65,12,20.4,3.6,3.4,12.2,50,Euro,EUR,35.2,Western Europe,"<a href=""https://en.wikipedia.org/wiki/Paris"" target=""blank"">https://en.wikipedia.org/wiki/Paris</a>"
+France,Paris,April,15,25.65,12,20.4,3.6,5.8,15.9,44,Euro,EUR,35.2,Western Europe,"<a href=""https://en.wikipedia.org/wiki/Paris"" target=""blank"">https://en.wikipedia.org/wiki/Paris</a>"
+France,Paris,May,15,25.65,12,20.4,3.6,8.9,19.8,58,Euro,EUR,35.2,Western Europe,"<a href=""https://en.wikipedia.org/wiki/Paris"" target=""blank"">https://en.wikipedia.org/wiki/Paris</a>"
+France,Paris,June,15,25.65,12,20.4,3.6,12.1,22.9,56,Euro,EUR,35.2,Western Europe,"<a href=""https://en.wikipedia.org/wiki/Paris"" target=""blank"">https://en.wikipedia.org/wiki/Paris</a>"
+France,Paris,July,15,25.65,12,20.4,3.6,14.1,24.8,53,Euro,EUR,35.2,Western Europe,"<a href=""https://en.wikipedia.org/wiki/Paris"" target=""blank"">https://en.wikipedia.org/wiki/Paris</a>"
+France,Paris,August,15,25.65,12,20.4,3.6,13.9,24.3,51,Euro,EUR,35.2,Western Europe,"<a href=""https://en.wikipedia.org/wiki/Paris"" target=""blank"">https://en.wikipedia.org/wiki/Paris</a>"
+France,Paris,September,15,25.65,12,20.4,3.6,11.5,21.3,56,Euro,EUR,35.2,Western Europe,"<a href=""https://en.wikipedia.org/wiki/Paris"" target=""blank"">https://en.wikipedia.org/wiki/Paris</a>"
+France,Paris,October,15,25.65,12,20.4,3.6,7.6,15.7,57,Euro,EUR,35.2,Western Europe,"<a href=""https://en.wikipedia.org/wiki/Paris"" target=""blank"">https://en.wikipedia.org/wiki/Paris</a>"
+France,Paris,November,15,25.65,12,20.4,3.6,4.3,10.1,58,Euro,EUR,35.2,Western Europe,"<a href=""https://en.wikipedia.org/wiki/Paris"" target=""blank"">https://en.wikipedia.org/wiki/Paris</a>"
+France,Paris,December,15,25.65,12,20.4,3.6,1.8,6.7,54,Euro,EUR,35.2,Western Europe,"<a href=""https://en.wikipedia.org/wiki/Paris"" target=""blank"">https://en.wikipedia.org/wiki/Paris</a>"
+Germany,Berlin,January,12,16.8,9,16.8,5.6,-3.4,1.7,43,Euro,EUR,31.2,Western Europe,"<a href=""https://en.wikipedia.org/wiki/Berlin"" target=""blank"">https://en.wikipedia.org/wiki/Berlin</a>"
+Germany,Berlin,February,12,16.8,9,16.8,5.6,-2.9,3,34,Euro,EUR,31.2,Western Europe,"<a href=""https://en.wikipedia.org/wiki/Berlin"" target=""blank"">https://en.wikipedia.org/wiki/Berlin</a>"
+Germany,Berlin,March,12,16.8,9,16.8,5.6,0,7.9,35,Euro,EUR,31.2,Western Europe,"<a href=""https://en.wikipedia.org/wiki/Berlin"" target=""blank"">https://en.wikipedia.org/wiki/Berlin</a>"
+Germany,Berlin,April,12,16.8,9,16.8,5.6,3.8,13.5,41,Euro,EUR,31.2,Western Europe,"<a href=""https://en.wikipedia.org/wiki/Berlin"" target=""blank"">https://en.wikipedia.org/wiki/Berlin</a>"
+Germany,Berlin,May,12,16.8,9,16.8,5.6,8,19.1,54,Euro,EUR,31.2,Western Europe,"<a href=""https://en.wikipedia.org/wiki/Berlin"" target=""blank"">https://en.wikipedia.org/wiki/Berlin</a>"
+Germany,Berlin,June,12,16.8,9,16.8,5.6,11.3,22.3,70,Euro,EUR,31.2,Western Europe,"<a href=""https://en.wikipedia.org/wiki/Berlin"" target=""blank"">https://en.wikipedia.org/wiki/Berlin</a>"
+Germany,Berlin,July,12,16.8,9,16.8,5.6,13.4,23.8,57,Euro,EUR,31.2,Western Europe,"<a href=""https://en.wikipedia.org/wiki/Berlin"" target=""blank"">https://en.wikipedia.org/wiki/Berlin</a>"
+Germany,Berlin,August,12,16.8,9,16.8,5.6,12.7,23.3,61,Euro,EUR,31.2,Western Europe,"<a href=""https://en.wikipedia.org/wiki/Berlin"" target=""blank"">https://en.wikipedia.org/wiki/Berlin</a>"
+Germany,Berlin,September,12,16.8,9,16.8,5.6,9.5,19.4,44,Euro,EUR,31.2,Western Europe,"<a href=""https://en.wikipedia.org/wiki/Berlin"" target=""blank"">https://en.wikipedia.org/wiki/Berlin</a>"
+Germany,Berlin,October,12,16.8,9,16.8,5.6,7.5,13.3,37,Euro,EUR,31.2,Western Europe,"<a href=""https://en.wikipedia.org/wiki/Berlin"" target=""blank"">https://en.wikipedia.org/wiki/Berlin</a>"
+Germany,Berlin,November,12,16.8,9,16.8,5.6,1.9,7,45,Euro,EUR,31.2,Western Europe,"<a href=""https://en.wikipedia.org/wiki/Berlin"" target=""blank"">https://en.wikipedia.org/wiki/Berlin</a>"
+Germany,Berlin,December,12,16.8,9,16.8,5.6,-1.2,3.2,49,Euro,EUR,31.2,Western Europe,"<a href=""https://en.wikipedia.org/wiki/Berlin"" target=""blank"">https://en.wikipedia.org/wiki/Berlin</a>"
+Greece,Athens,January,10,14,9,19.2,2.8,6.3,12.8,52,Euro,EUR,5.5,Southern Europe,"<a href=""https://en.wikipedia.org/wiki/Athens"" target=""blank"">https://en.wikipedia.org/wiki/Athens</a>"
+Greece,Athens,February,10,14,9,19.2,2.8,6.6,13.7,43,Euro,EUR,5.5,Southern Europe,"<a href=""https://en.wikipedia.org/wiki/Athens"" target=""blank"">https://en.wikipedia.org/wiki/Athens</a>"
+Greece,Athens,March,10,14,9,19.2,2.8,7.7,15.4,45,Euro,EUR,5.5,Southern Europe,"<a href=""https://en.wikipedia.org/wiki/Athens"" target=""blank"">https://en.wikipedia.org/wiki/Athens</a>"
+Greece,Athens,April,10,14,9,19.2,2.8,11.2,20.2,27,Euro,EUR,5.5,Southern Europe,"<a href=""https://en.wikipedia.org/wiki/Athens"" target=""blank"">https://en.wikipedia.org/wiki/Athens</a>"
+Greece,Athens,May,10,14,9,19.2,2.8,15.6,25.2,20,Euro,EUR,5.5,Southern Europe,"<a href=""https://en.wikipedia.org/wiki/Athens"" target=""blank"">https://en.wikipedia.org/wiki/Athens</a>"
+Greece,Athens,June,10,14,9,19.2,2.8,19.7,29.9,8,Euro,EUR,5.5,Southern Europe,"<a href=""https://en.wikipedia.org/wiki/Athens"" target=""blank"">https://en.wikipedia.org/wiki/Athens</a>"
+Greece,Athens,July,10,14,9,19.2,2.8,22.5,33.3,5,Euro,EUR,5.5,Southern Europe,"<a href=""https://en.wikipedia.org/wiki/Athens"" target=""blank"">https://en.wikipedia.org/wiki/Athens</a>"
+Greece,Athens,August,10,14,9,19.2,2.8,22.6,33.1,5,Euro,EUR,5.5,Southern Europe,"<a href=""https://en.wikipedia.org/wiki/Athens"" target=""blank"">https://en.wikipedia.org/wiki/Athens</a>"
+Greece,Athens,September,10,14,9,19.2,2.8,19.1,29.1,13,Euro,EUR,5.5,Southern Europe,"<a href=""https://en.wikipedia.org/wiki/Athens"" target=""blank"">https://en.wikipedia.org/wiki/Athens</a>"
+Greece,Athens,October,10,14,9,19.2,2.8,15.2,23.6,52,Euro,EUR,5.5,Southern Europe,"<a href=""https://en.wikipedia.org/wiki/Athens"" target=""blank"">https://en.wikipedia.org/wiki/Athens</a>"
+Greece,Athens,November,10,14,9,19.2,2.8,11.6,18.5,59,Euro,EUR,5.5,Southern Europe,"<a href=""https://en.wikipedia.org/wiki/Athens"" target=""blank"">https://en.wikipedia.org/wiki/Athens</a>"
+Greece,Athens,December,10,14,9,19.2,2.8,8.1,14.5,68,Euro,EUR,5.5,Southern Europe,"<a href=""https://en.wikipedia.org/wiki/Athens"" target=""blank"">https://en.wikipedia.org/wiki/Athens</a>"
+Hungary,Budapest,January,4.69,9.98,3.28,9.75,2.19,-3.3,1.6,37,Hungary Forint,HUF,10,Eastern Europe,"<a href=""https://en.wikipedia.org/wiki/Budapest"" target=""blank"">https://en.wikipedia.org/wiki/Budapest</a>"
+Hungary,Budapest,February,4.69,9.98,3.28,9.75,2.19,-1.1,4.7,34,Hungary Forint,HUF,10,Eastern Europe,"<a href=""https://en.wikipedia.org/wiki/Budapest"" target=""blank"">https://en.wikipedia.org/wiki/Budapest</a>"
+Hungary,Budapest,March,4.69,9.98,3.28,9.75,2.19,2,10.5,32,Hungary Forint,HUF,10,Eastern Europe,"<a href=""https://en.wikipedia.org/wiki/Budapest"" target=""blank"">https://en.wikipedia.org/wiki/Budapest</a>"
+Hungary,Budapest,April,4.69,9.98,3.28,9.75,2.19,6.4,16.8,42,Hungary Forint,HUF,10,Eastern Europe,"<a href=""https://en.wikipedia.org/wiki/Budapest"" target=""blank"">https://en.wikipedia.org/wiki/Budapest</a>"
+Hungary,Budapest,May,4.69,9.98,3.28,9.75,2.19,10.8,21.9,60,Hungary Forint,HUF,10,Eastern Europe,"<a href=""https://en.wikipedia.org/wiki/Budapest"" target=""blank"">https://en.wikipedia.org/wiki/Budapest</a>"
+Hungary,Budapest,June,4.69,9.98,3.28,9.75,2.19,14.1,24.8,69,Hungary Forint,HUF,10,Eastern Europe,"<a href=""https://en.wikipedia.org/wiki/Budapest"" target=""blank"">https://en.wikipedia.org/wiki/Budapest</a>"
+Hungary,Budapest,July,4.69,9.98,3.28,9.75,2.19,15.6,26.9,53,Hungary Forint,HUF,10,Eastern Europe,"<a href=""https://en.wikipedia.org/wiki/Budapest"" target=""blank"">https://en.wikipedia.org/wiki/Budapest</a>"
+Hungary,Budapest,August,4.69,9.98,3.28,9.75,2.19,15.3,26.4,53,Hungary Forint,HUF,10,Eastern Europe,"<a href=""https://en.wikipedia.org/wiki/Budapest"" target=""blank"">https://en.wikipedia.org/wiki/Budapest</a>"
+Hungary,Budapest,September,4.69,9.98,3.28,9.75,2.19,11.8,22.4,41,Hungary Forint,HUF,10,Eastern Europe,"<a href=""https://en.wikipedia.org/wiki/Budapest"" target=""blank"">https://en.wikipedia.org/wiki/Budapest</a>"
+Hungary,Budapest,October,4.69,9.98,3.28,9.75,2.19,6.9,16.2,40,Hungary Forint,HUF,10,Eastern Europe,"<a href=""https://en.wikipedia.org/wiki/Budapest"" target=""blank"">https://en.wikipedia.org/wiki/Budapest</a>"
+Hungary,Budapest,November,4.69,9.98,3.28,9.75,2.19,2.5,8.3,57,Hungary Forint,HUF,10,Eastern Europe,"<a href=""https://en.wikipedia.org/wiki/Budapest"" target=""blank"">https://en.wikipedia.org/wiki/Budapest</a>"
+Hungary,Budapest,December,4.69,9.98,3.28,9.75,2.19,-1.1,3.6,46,Hungary Forint,HUF,10,Eastern Europe,"<a href=""https://en.wikipedia.org/wiki/Budapest"" target=""blank"">https://en.wikipedia.org/wiki/Budapest</a>"
+Ireland,Dublin,January,10,20.25,15,19.2,3,2.5,7.9,70,Euro,EUR,5.9,Northern_Europe,"<a href=""https://en.wikipedia.org/wiki/Dublin"" target=""blank"">https://en.wikipedia.org/wiki/Dublin</a>"
+Ireland,Dublin,February,10,20.25,15,19.2,3,2.4,7.9,52,Euro,EUR,5.9,Northern_Europe,"<a href=""https://en.wikipedia.org/wiki/Dublin"" target=""blank"">https://en.wikipedia.org/wiki/Dublin</a>"
+Ireland,Dublin,March,10,20.25,15,19.2,3,3.1,9.8,53,Euro,EUR,5.9,Northern_Europe,"<a href=""https://en.wikipedia.org/wiki/Dublin"" target=""blank"">https://en.wikipedia.org/wiki/Dublin</a>"
+Ireland,Dublin,April,10,20.25,15,19.2,3,4.4,12,50,Euro,EUR,5.9,Northern_Europe,"<a href=""https://en.wikipedia.org/wiki/Dublin"" target=""blank"">https://en.wikipedia.org/wiki/Dublin</a>"
+Ireland,Dublin,May,10,20.25,15,19.2,3,6.7,14.8,60,Euro,EUR,5.9,Northern_Europe,"<a href=""https://en.wikipedia.org/wiki/Dublin"" target=""blank"">https://en.wikipedia.org/wiki/Dublin</a>"
+Ireland,Dublin,June,10,20.25,15,19.2,3,9.4,17.7,55,Euro,EUR,5.9,Northern_Europe,"<a href=""https://en.wikipedia.org/wiki/Dublin"" target=""blank"">https://en.wikipedia.org/wiki/Dublin</a>"
+Ireland,Dublin,July,10,20.25,15,19.2,3,11.3,19.4,53,Euro,EUR,5.9,Northern_Europe,"<a href=""https://en.wikipedia.org/wiki/Dublin"" target=""blank"">https://en.wikipedia.org/wiki/Dublin</a>"
+Ireland,Dublin,August,10,20.25,15,19.2,3,11.1,19.2,71,Euro,EUR,5.9,Northern_Europe,"<a href=""https://en.wikipedia.org/wiki/Dublin"" target=""blank"">https://en.wikipedia.org/wiki/Dublin</a>"
+Ireland,Dublin,September,10,20.25,15,19.2,3,9.6,17.2,75,Euro,EUR,5.9,Northern_Europe,"<a href=""https://en.wikipedia.org/wiki/Dublin"" target=""blank"">https://en.wikipedia.org/wiki/Dublin</a>"
+Ireland,Dublin,October,10,20.25,15,19.2,3,7.5,14.2,76,Euro,EUR,5.9,Northern_Europe,"<a href=""https://en.wikipedia.org/wiki/Dublin"" target=""blank"">https://en.wikipedia.org/wiki/Dublin</a>"
+Ireland,Dublin,November,10,20.25,15,19.2,3,4.3,10.2,72,Euro,EUR,5.9,Northern_Europe,"<a href=""https://en.wikipedia.org/wiki/Dublin"" target=""blank"">https://en.wikipedia.org/wiki/Dublin</a>"
+Ireland,Dublin,December,10,20.25,15,19.2,3,3.2,8.7,80,Euro,EUR,5.9,Northern_Europe,"<a href=""https://en.wikipedia.org/wiki/Dublin"" target=""blank"">https://en.wikipedia.org/wiki/Dublin</a>"
+Italy,Milan,January,10,19.99,10.5,18,4,-0.8,4.7,55,Euro,EUR,11.3,Southern Europe,"<a href=""https://en.wikipedia.org/wiki/Milan"" target=""blank"">https://en.wikipedia.org/wiki/Milan</a>"
+Italy,Milan,February,10,19.99,10.5,18,4,0.9,7.8,62,Euro,EUR,11.3,Southern Europe,"<a href=""https://en.wikipedia.org/wiki/Milan"" target=""blank"">https://en.wikipedia.org/wiki/Milan</a>"
+Italy,Milan,March,10,19.99,10.5,18,4,4.3,13.1,79,Euro,EUR,11.3,Southern Europe,"<a href=""https://en.wikipedia.org/wiki/Milan"" target=""blank"">https://en.wikipedia.org/wiki/Milan</a>"
+Italy,Milan,April,10,19.99,10.5,18,4,7.9,18.2,92,Euro,EUR,11.3,Southern Europe,"<a href=""https://en.wikipedia.org/wiki/Milan"" target=""blank"">https://en.wikipedia.org/wiki/Milan</a>"
+Italy,Milan,May,10,19.99,10.5,18,4,12.1,23.1,94,Euro,EUR,11.3,Southern Europe,"<a href=""https://en.wikipedia.org/wiki/Milan"" target=""blank"">https://en.wikipedia.org/wiki/Milan</a>"
+Italy,Milan,June,10,19.99,10.5,18,4,15.8,26.5,97,Euro,EUR,11.3,Southern Europe,"<a href=""https://en.wikipedia.org/wiki/Milan"" target=""blank"">https://en.wikipedia.org/wiki/Milan</a>"
+Italy,Milan,July,10,19.99,10.5,18,4,18.3,29.3,67,Euro,EUR,11.3,Southern Europe,"<a href=""https://en.wikipedia.org/wiki/Milan"" target=""blank"">https://en.wikipedia.org/wiki/Milan</a>"
+Italy,Milan,August,10,19.99,10.5,18,4,17.8,27.8,90,Euro,EUR,11.3,Southern Europe,"<a href=""https://en.wikipedia.org/wiki/Milan"" target=""blank"">https://en.wikipedia.org/wiki/Milan</a>"
+Italy,Milan,September,10,19.99,10.5,18,4,14.7,24,78,Euro,EUR,11.3,Southern Europe,"<a href=""https://en.wikipedia.org/wiki/Milan"" target=""blank"">https://en.wikipedia.org/wiki/Milan</a>"
+Italy,Milan,October,10,19.99,10.5,18,4,9.5,17.4,118,Euro,EUR,11.3,Southern Europe,"<a href=""https://en.wikipedia.org/wiki/Milan"" target=""blank"">https://en.wikipedia.org/wiki/Milan</a>"
+Italy,Milan,November,10,19.99,10.5,18,4,4.6,10.8,110,Euro,EUR,11.3,Southern Europe,"<a href=""https://en.wikipedia.org/wiki/Milan"" target=""blank"">https://en.wikipedia.org/wiki/Milan</a>"
+Italy,Milan,December,10,19.99,10.5,18,4,0.6,6,71,Euro,EUR,11.3,Southern Europe,"<a href=""https://en.wikipedia.org/wiki/Milan"" target=""blank"">https://en.wikipedia.org/wiki/Milan</a>"
+Italy,Rome,January,12,22.79,9,19.2,3,3.8,11.7,79,Euro,EUR,26.9,Southern Europe,"<a href=""https://en.wikipedia.org/wiki/Rome"" target=""blank"">https://en.wikipedia.org/wiki/Rome</a>"
+Italy,Rome,February,12,22.79,9,19.2,3,12,13.3,70,Euro,EUR,26.9,Southern Europe,"<a href=""https://en.wikipedia.org/wiki/Rome"" target=""blank"">https://en.wikipedia.org/wiki/Rome</a>"
+Italy,Rome,March,12,22.79,9,19.2,3,12,15.5,70,Euro,EUR,26.9,Southern Europe,"<a href=""https://en.wikipedia.org/wiki/Rome"" target=""blank"">https://en.wikipedia.org/wiki/Rome</a>"
+Italy,Rome,April,12,22.79,9,19.2,3,12,18.9,62,Euro,EUR,26.9,Southern Europe,"<a href=""https://en.wikipedia.org/wiki/Rome"" target=""blank"">https://en.wikipedia.org/wiki/Rome</a>"
+Italy,Rome,May,12,22.79,9,19.2,3,12,23.3,46,Euro,EUR,26.9,Southern Europe,"<a href=""https://en.wikipedia.org/wiki/Rome"" target=""blank"">https://en.wikipedia.org/wiki/Rome</a>"
+Italy,Rome,June,12,22.79,9,19.2,3,12,27.5,35,Euro,EUR,26.9,Southern Europe,"<a href=""https://en.wikipedia.org/wiki/Rome"" target=""blank"">https://en.wikipedia.org/wiki/Rome</a>"
+Italy,Rome,July,12,22.79,9,19.2,3,12,30.6,17,Euro,EUR,26.9,Southern Europe,"<a href=""https://en.wikipedia.org/wiki/Rome"" target=""blank"">https://en.wikipedia.org/wiki/Rome</a>"
+Italy,Rome,August,12,22.79,9,19.2,3,12,30.2,33,Euro,EUR,26.9,Southern Europe,"<a href=""https://en.wikipedia.org/wiki/Rome"" target=""blank"">https://en.wikipedia.org/wiki/Rome</a>"
+Italy,Rome,September,12,22.79,9,19.2,3,12,26.7,73,Euro,EUR,26.9,Southern Europe,"<a href=""https://en.wikipedia.org/wiki/Rome"" target=""blank"">https://en.wikipedia.org/wiki/Rome</a>"
+Italy,Rome,October,12,22.79,9,19.2,3,12,21.9,103,Euro,EUR,26.9,Southern Europe,"<a href=""https://en.wikipedia.org/wiki/Rome"" target=""blank"">https://en.wikipedia.org/wiki/Rome</a>"
+Italy,Rome,November,12,22.79,9,19.2,3,12,16.7,114,Euro,EUR,26.9,Southern Europe,"<a href=""https://en.wikipedia.org/wiki/Rome"" target=""blank"">https://en.wikipedia.org/wiki/Rome</a>"
+Italy,Rome,December,12,22.79,9,19.2,3,12,12.9,96,Euro,EUR,26.9,Southern Europe,"<a href=""https://en.wikipedia.org/wiki/Rome"" target=""blank"">https://en.wikipedia.org/wiki/Rome</a>"
+Netherlands,Amsterdam,January,15,30.35,12,16.8,5.6,-0.1,4.9,70,Euro,EUR,15.5,Western Europe,"<a href=""https://en.wikipedia.org/wiki/Amsterdam"" target=""blank"">https://en.wikipedia.org/wiki/Amsterdam</a>"
+Netherlands,Amsterdam,February,15,30.35,12,16.8,5.6,-0.1,5.4,47,Euro,EUR,15.5,Western Europe,"<a href=""https://en.wikipedia.org/wiki/Amsterdam"" target=""blank"">https://en.wikipedia.org/wiki/Amsterdam</a>"
+Netherlands,Amsterdam,March,15,30.35,12,16.8,5.6,1.6,8,64,Euro,EUR,15.5,Western Europe,"<a href=""https://en.wikipedia.org/wiki/Amsterdam"" target=""blank"">https://en.wikipedia.org/wiki/Amsterdam</a>"
+Netherlands,Amsterdam,April,15,30.35,12,16.8,5.6,4,8.1,44,Euro,EUR,15.5,Western Europe,"<a href=""https://en.wikipedia.org/wiki/Amsterdam"" target=""blank"">https://en.wikipedia.org/wiki/Amsterdam</a>"
+Netherlands,Amsterdam,May,15,30.35,12,16.8,5.6,7.7,15.8,50,Euro,EUR,15.5,Western Europe,"<a href=""https://en.wikipedia.org/wiki/Amsterdam"" target=""blank"">https://en.wikipedia.org/wiki/Amsterdam</a>"
+Netherlands,Amsterdam,June,15,30.35,12,16.8,5.6,10.6,18.8,59,Euro,EUR,15.5,Western Europe,"<a href=""https://en.wikipedia.org/wiki/Amsterdam"" target=""blank"">https://en.wikipedia.org/wiki/Amsterdam</a>"
+Netherlands,Amsterdam,July,15,30.35,12,16.8,5.6,12.6,20.5,75,Euro,EUR,15.5,Western Europe,"<a href=""https://en.wikipedia.org/wiki/Amsterdam"" target=""blank"">https://en.wikipedia.org/wiki/Amsterdam</a>"
+Netherlands,Amsterdam,August,15,30.35,12,16.8,5.6,12.5,20.6,77,Euro,EUR,15.5,Western Europe,"<a href=""https://en.wikipedia.org/wiki/Amsterdam"" target=""blank"">https://en.wikipedia.org/wiki/Amsterdam</a>"
+Netherlands,Amsterdam,September,15,30.35,12,16.8,5.6,10.4,18.3,79,Euro,EUR,15.5,Western Europe,"<a href=""https://en.wikipedia.org/wiki/Amsterdam"" target=""blank"">https://en.wikipedia.org/wiki/Amsterdam</a>"
+Netherlands,Amsterdam,October,15,30.35,12,16.8,5.6,7.5,14.2,87,Euro,EUR,15.5,Western Europe,"<a href=""https://en.wikipedia.org/wiki/Amsterdam"" target=""blank"">https://en.wikipedia.org/wiki/Amsterdam</a>"
+Netherlands,Amsterdam,November,15,30.35,12,16.8,5.6,3.7,9,79,Euro,EUR,15.5,Western Europe,"<a href=""https://en.wikipedia.org/wiki/Amsterdam"" target=""blank"">https://en.wikipedia.org/wiki/Amsterdam</a>"
+Netherlands,Amsterdam,December,15,30.35,12,16.8,5.6,1.1,6,74,Euro,EUR,15.5,Western Europe,"<a href=""https://en.wikipedia.org/wiki/Amsterdam"" target=""blank"">https://en.wikipedia.org/wiki/Amsterdam</a>"
+Norway,Oslo,January,8.33,28.23,15.63,23.75,6.88,-6.2,-1.2,49,Norwegian Kroner,NOK,7.25,Northern_Europe,"<a href=""https://en.wikipedia.org/wiki/Oslo"" target=""blank"">https://en.wikipedia.org/wiki/Oslo</a>"
+Norway,Oslo,February,8.33,28.23,15.63,23.75,6.88,-6.7,-0.8,36,Norwegian Kroner,NOK,7.25,Northern_Europe,"<a href=""https://en.wikipedia.org/wiki/Oslo"" target=""blank"">https://en.wikipedia.org/wiki/Oslo</a>"
+Norway,Oslo,March,8.33,28.23,15.63,23.75,6.88,-2.9,3.5,43,Norwegian Kroner,NOK,7.25,Northern_Europe,"<a href=""https://en.wikipedia.org/wiki/Oslo"" target=""blank"">https://en.wikipedia.org/wiki/Oslo</a>"
+Norway,Oslo,April,8.33,28.23,15.63,23.75,6.88,1,9.1,41,Norwegian Kroner,NOK,7.25,Northern_Europe,"<a href=""https://en.wikipedia.org/wiki/Oslo"" target=""blank"">https://en.wikipedia.org/wiki/Oslo</a>"
+Norway,Oslo,May,8.33,28.23,15.63,23.75,6.88,6.5,16,50,Norwegian Kroner,NOK,7.25,Northern_Europe,"<a href=""https://en.wikipedia.org/wiki/Oslo"" target=""blank"">https://en.wikipedia.org/wiki/Oslo</a>"
+Norway,Oslo,June,8.33,28.23,15.63,23.75,6.88,10.9,20.1,64,Norwegian Kroner,NOK,7.25,Northern_Europe,"<a href=""https://en.wikipedia.org/wiki/Oslo"" target=""blank"">https://en.wikipedia.org/wiki/Oslo</a>"
+Norway,Oslo,July,8.33,28.23,15.63,23.75,6.88,12.6,21.6,77,Norwegian Kroner,NOK,7.25,Northern_Europe,"<a href=""https://en.wikipedia.org/wiki/Oslo"" target=""blank"">https://en.wikipedia.org/wiki/Oslo</a>"
+Norway,Oslo,August,8.33,28.23,15.63,23.75,6.88,11.8,20.4,89,Norwegian Kroner,NOK,7.25,Northern_Europe,"<a href=""https://en.wikipedia.org/wiki/Oslo"" target=""blank"">https://en.wikipedia.org/wiki/Oslo</a>"
+Norway,Oslo,September,8.33,28.23,15.63,23.75,6.88,8,15.2,83,Norwegian Kroner,NOK,7.25,Northern_Europe,"<a href=""https://en.wikipedia.org/wiki/Oslo"" target=""blank"">https://en.wikipedia.org/wiki/Oslo</a>"
+Norway,Oslo,October,8.33,28.23,15.63,23.75,6.88,4.2,9.5,81,Norwegian Kroner,NOK,7.25,Northern_Europe,"<a href=""https://en.wikipedia.org/wiki/Oslo"" target=""blank"">https://en.wikipedia.org/wiki/Oslo</a>"
+Norway,Oslo,November,8.33,28.23,15.63,23.75,6.88,-0.8,3.6,74,Norwegian Kroner,NOK,7.25,Northern_Europe,"<a href=""https://en.wikipedia.org/wiki/Oslo"" target=""blank"">https://en.wikipedia.org/wiki/Oslo</a>"
+Norway,Oslo,December,8.33,28.23,15.63,23.75,6.88,-4.7,0.1,53,Norwegian Kroner,NOK,7.25,Northern_Europe,"<a href=""https://en.wikipedia.org/wiki/Oslo"" target=""blank"">https://en.wikipedia.org/wiki/Oslo</a>"
+Poland,Warsaw,January,5.38,10.94,5.61,9.26,1.59,-6.2,-0.8,22,Polish Zlotych,PLN,9.7,Eastern Europe,"<a href=""https://en.wikipedia.org/wiki/Warsaw"" target=""blank"">https://en.wikipedia.org/wiki/Warsaw</a>"
+Poland,Warsaw,February,5.38,10.94,5.61,9.26,1.59,-5.6,0.3,23,Polish Zlotych,PLN,9.7,Eastern Europe,"<a href=""https://en.wikipedia.org/wiki/Warsaw"" target=""blank"">https://en.wikipedia.org/wiki/Warsaw</a>"
+Poland,Warsaw,March,5.38,10.94,5.61,9.26,1.59,-2.2,5.2,25,Polish Zlotych,PLN,9.7,Eastern Europe,"<a href=""https://en.wikipedia.org/wiki/Warsaw"" target=""blank"">https://en.wikipedia.org/wiki/Warsaw</a>"
+Poland,Warsaw,April,5.38,10.94,5.61,9.26,1.59,3,12.9,33,Polish Zlotych,PLN,9.7,Eastern Europe,"<a href=""https://en.wikipedia.org/wiki/Warsaw"" target=""blank"">https://en.wikipedia.org/wiki/Warsaw</a>"
+Poland,Warsaw,May,5.38,10.94,5.61,9.26,1.59,7.9,18.7,53,Polish Zlotych,PLN,9.7,Eastern Europe,"<a href=""https://en.wikipedia.org/wiki/Warsaw"" target=""blank"">https://en.wikipedia.org/wiki/Warsaw</a>"
+Poland,Warsaw,June,5.38,10.94,5.61,9.26,1.59,11.5,22.2,67,Polish Zlotych,PLN,9.7,Eastern Europe,"<a href=""https://en.wikipedia.org/wiki/Warsaw"" target=""blank"">https://en.wikipedia.org/wiki/Warsaw</a>"
+Poland,Warsaw,July,5.38,10.94,5.61,9.26,1.59,12.9,23.5,71,Polish Zlotych,PLN,9.7,Eastern Europe,"<a href=""https://en.wikipedia.org/wiki/Warsaw"" target=""blank"">https://en.wikipedia.org/wiki/Warsaw</a>"
+Poland,Warsaw,August,5.38,10.94,5.61,9.26,1.59,12.1,22.8,58,Polish Zlotych,PLN,9.7,Eastern Europe,"<a href=""https://en.wikipedia.org/wiki/Warsaw"" target=""blank"">https://en.wikipedia.org/wiki/Warsaw</a>"
+Poland,Warsaw,September,5.38,10.94,5.61,9.26,1.59,8.6,18.1,43,Polish Zlotych,PLN,9.7,Eastern Europe,"<a href=""https://en.wikipedia.org/wiki/Warsaw"" target=""blank"">https://en.wikipedia.org/wiki/Warsaw</a>"
+Poland,Warsaw,October,5.38,10.94,5.61,9.26,1.59,4.5,12.5,35,Polish Zlotych,PLN,9.7,Eastern Europe,"<a href=""https://en.wikipedia.org/wiki/Warsaw"" target=""blank"">https://en.wikipedia.org/wiki/Warsaw</a>"
+Poland,Warsaw,November,5.38,10.94,5.61,9.26,1.59,0.6,5.7,39,Polish Zlotych,PLN,9.7,Eastern Europe,"<a href=""https://en.wikipedia.org/wiki/Warsaw"" target=""blank"">https://en.wikipedia.org/wiki/Warsaw</a>"
+Poland,Warsaw,December,5.38,10.94,5.61,9.26,1.59,-3.4,1.2,32,Polish Zlotych,PLN,9.7,Eastern Europe,"<a href=""https://en.wikipedia.org/wiki/Warsaw"" target=""blank"">https://en.wikipedia.org/wiki/Warsaw</a>"
+Portugal,Lisbon,January,8,10.5,10.5,16.8,2.8,8.6,14.8,101,Euro,EUR,10.67,Southern Europe,"<a href=""https://en.wikipedia.org/wiki/Lisbon"" target=""blank"">https://en.wikipedia.org/wiki/Lisbon</a>"
+Portugal,Lisbon,February,8,10.5,10.5,16.8,2.8,9.2,15.7,92,Euro,EUR,10.67,Southern Europe,"<a href=""https://en.wikipedia.org/wiki/Lisbon"" target=""blank"">https://en.wikipedia.org/wiki/Lisbon</a>"
+Portugal,Lisbon,March,8,10.5,10.5,16.8,2.8,10.1,17.5,72,Euro,EUR,10.67,Southern Europe,"<a href=""https://en.wikipedia.org/wiki/Lisbon"" target=""blank"">https://en.wikipedia.org/wiki/Lisbon</a>"
+Portugal,Lisbon,April,8,10.5,10.5,16.8,2.8,11.5,19.4,53,Euro,EUR,10.67,Southern Europe,"<a href=""https://en.wikipedia.org/wiki/Lisbon"" target=""blank"">https://en.wikipedia.org/wiki/Lisbon</a>"
+Portugal,Lisbon,May,8,10.5,10.5,16.8,2.8,13.2,21.9,41,Euro,EUR,10.67,Southern Europe,"<a href=""https://en.wikipedia.org/wiki/Lisbon"" target=""blank"">https://en.wikipedia.org/wiki/Lisbon</a>"
+Portugal,Lisbon,June,8,10.5,10.5,16.8,2.8,15.6,24.7,20,Euro,EUR,10.67,Southern Europe,"<a href=""https://en.wikipedia.org/wiki/Lisbon"" target=""blank"">https://en.wikipedia.org/wiki/Lisbon</a>"
+Portugal,Lisbon,July,8,10.5,10.5,16.8,2.8,17.4,27.4,3,Euro,EUR,10.67,Southern Europe,"<a href=""https://en.wikipedia.org/wiki/Lisbon"" target=""blank"">https://en.wikipedia.org/wiki/Lisbon</a>"
+Portugal,Lisbon,August,8,10.5,10.5,16.8,2.8,17.6,27.8,5,Euro,EUR,10.67,Southern Europe,"<a href=""https://en.wikipedia.org/wiki/Lisbon"" target=""blank"">https://en.wikipedia.org/wiki/Lisbon</a>"
+Portugal,Lisbon,September,8,10.5,10.5,16.8,2.8,16.9,26.3,23,Euro,EUR,10.67,Southern Europe,"<a href=""https://en.wikipedia.org/wiki/Lisbon"" target=""blank"">https://en.wikipedia.org/wiki/Lisbon</a>"
+Portugal,Lisbon,October,8,10.5,10.5,16.8,2.8,14.8,22.6,71,Euro,EUR,10.67,Southern Europe,"<a href=""https://en.wikipedia.org/wiki/Lisbon"" target=""blank"">https://en.wikipedia.org/wiki/Lisbon</a>"
+Portugal,Lisbon,November,8,10.5,10.5,16.8,2.8,11.4,17.9,106,Euro,EUR,10.67,Southern Europe,"<a href=""https://en.wikipedia.org/wiki/Lisbon"" target=""blank"">https://en.wikipedia.org/wiki/Lisbon</a>"
+Portugal,Lisbon,December,8,10.5,10.5,16.8,2.8,9.3,15,104,Euro,EUR,10.67,Southern Europe,"<a href=""https://en.wikipedia.org/wiki/Lisbon"" target=""blank"">https://en.wikipedia.org/wiki/Lisbon</a>"
+Spain,Barcelona,January,13,19.92,9,19.2,4.3,6.6,13.1,39,Euro,EUR,20.6,Southern Europe,"<a href=""https://en.wikipedia.org/wiki/Barcelona"" target=""blank"">https://en.wikipedia.org/wiki/Barcelona</a>"
+Spain,Barcelona,February,13,19.92,9,19.2,4.3,7.4,14.1,36,Euro,EUR,20.6,Southern Europe,"<a href=""https://en.wikipedia.org/wiki/Barcelona"" target=""blank"">https://en.wikipedia.org/wiki/Barcelona</a>"
+Spain,Barcelona,March,13,19.92,9,19.2,4.3,9,16.1,45,Euro,EUR,20.6,Southern Europe,"<a href=""https://en.wikipedia.org/wiki/Barcelona"" target=""blank"">https://en.wikipedia.org/wiki/Barcelona</a>"
+Spain,Barcelona,April,13,19.92,9,19.2,4.3,10.7,18.6,48,Euro,EUR,20.6,Southern Europe,"<a href=""https://en.wikipedia.org/wiki/Barcelona"" target=""blank"">https://en.wikipedia.org/wiki/Barcelona</a>"
+Spain,Barcelona,May,13,19.92,9,19.2,4.3,13.8,21.7,52,Euro,EUR,20.6,Southern Europe,"<a href=""https://en.wikipedia.org/wiki/Barcelona"" target=""blank"">https://en.wikipedia.org/wiki/Barcelona</a>"
+Spain,Barcelona,June,13,19.92,9,19.2,4.3,17.5,25.3,42,Euro,EUR,20.6,Southern Europe,"<a href=""https://en.wikipedia.org/wiki/Barcelona"" target=""blank"">https://en.wikipedia.org/wiki/Barcelona</a>"
+Spain,Barcelona,July,13,19.92,9,19.2,4.3,20.3,27.9,25,Euro,EUR,20.6,Southern Europe,"<a href=""https://en.wikipedia.org/wiki/Barcelona"" target=""blank"">https://en.wikipedia.org/wiki/Barcelona</a>"
+Spain,Barcelona,August,13,19.92,9,19.2,4.3,20.2,27.5,51,Euro,EUR,20.6,Southern Europe,"<a href=""https://en.wikipedia.org/wiki/Barcelona"" target=""blank"">https://en.wikipedia.org/wiki/Barcelona</a>"
+Spain,Barcelona,September,13,19.92,9,19.2,4.3,18.3,25.1,73,Euro,EUR,20.6,Southern Europe,"<a href=""https://en.wikipedia.org/wiki/Barcelona"" target=""blank"">https://en.wikipedia.org/wiki/Barcelona</a>"
+Spain,Barcelona,October,13,19.92,9,19.2,4.3,14.4,20.9,93,Euro,EUR,20.6,Southern Europe,"<a href=""https://en.wikipedia.org/wiki/Barcelona"" target=""blank"">https://en.wikipedia.org/wiki/Barcelona</a>"
+Spain,Barcelona,November,13,19.92,9,19.2,4.3,10.3,16.5,59,Euro,EUR,20.6,Southern Europe,"<a href=""https://en.wikipedia.org/wiki/Barcelona"" target=""blank"">https://en.wikipedia.org/wiki/Barcelona</a>"
+Spain,Barcelona,December,13,19.92,9,19.2,4.3,7.7,13.7,49,Euro,EUR,20.6,Southern Europe,"<a href=""https://en.wikipedia.org/wiki/Barcelona"" target=""blank"">https://en.wikipedia.org/wiki/Barcelona</a>"
+Spain,Madrid,January,10,16.49,6,19.2,3,1.4,8.6,43,Euro,EUR,19.2,Southern Europe,"<a href=""https://en.wikipedia.org/wiki/Madrid"" target=""blank"">https://en.wikipedia.org/wiki/Madrid</a>"
+Spain,Madrid,February,10,16.49,6,19.2,3,1.9,10.9,44,Euro,EUR,19.2,Southern Europe,"<a href=""https://en.wikipedia.org/wiki/Madrid"" target=""blank"">https://en.wikipedia.org/wiki/Madrid</a>"
+Spain,Madrid,March,10,16.49,6,19.2,3,4.6,14.7,35,Euro,EUR,19.2,Southern Europe,"<a href=""https://en.wikipedia.org/wiki/Madrid"" target=""blank"">https://en.wikipedia.org/wiki/Madrid</a>"
+Spain,Madrid,April,10,16.49,6,19.2,3,6.7,17.8,45,Euro,EUR,19.2,Southern Europe,"<a href=""https://en.wikipedia.org/wiki/Madrid"" target=""blank"">https://en.wikipedia.org/wiki/Madrid</a>"
+Spain,Madrid,May,10,16.49,6,19.2,3,10,21.6,44,Euro,EUR,19.2,Southern Europe,"<a href=""https://en.wikipedia.org/wiki/Madrid"" target=""blank"">https://en.wikipedia.org/wiki/Madrid</a>"
+Spain,Madrid,June,10,16.49,6,19.2,3,14.1,26.8,28,Euro,EUR,19.2,Southern Europe,"<a href=""https://en.wikipedia.org/wiki/Madrid"" target=""blank"">https://en.wikipedia.org/wiki/Madrid</a>"
+Spain,Madrid,July,10,16.49,6,19.2,3,17.3,30.8,11,Euro,EUR,19.2,Southern Europe,"<a href=""https://en.wikipedia.org/wiki/Madrid"" target=""blank"">https://en.wikipedia.org/wiki/Madrid</a>"
+Spain,Madrid,August,10,16.49,6,19.2,3,17,29.5,11,Euro,EUR,19.2,Southern Europe,"<a href=""https://en.wikipedia.org/wiki/Madrid"" target=""blank"">https://en.wikipedia.org/wiki/Madrid</a>"
+Spain,Madrid,September,10,16.49,6,19.2,3,14.1,25.2,30,Euro,EUR,19.2,Southern Europe,"<a href=""https://en.wikipedia.org/wiki/Madrid"" target=""blank"">https://en.wikipedia.org/wiki/Madrid</a>"
+Spain,Madrid,October,10,16.49,6,19.2,3,9.4,18.7,51,Euro,EUR,19.2,Southern Europe,"<a href=""https://en.wikipedia.org/wiki/Madrid"" target=""blank"">https://en.wikipedia.org/wiki/Madrid</a>"
+Spain,Madrid,November,10,16.49,6,19.2,3,4.9,12.9,58,Euro,EUR,19.2,Southern Europe,"<a href=""https://en.wikipedia.org/wiki/Madrid"" target=""blank"">https://en.wikipedia.org/wiki/Madrid</a>"
+Spain,Madrid,December,10,16.49,6,19.2,3,2,8.9,50,Euro,EUR,19.2,Southern Europe,"<a href=""https://en.wikipedia.org/wiki/Madrid"" target=""blank"">https://en.wikipedia.org/wiki/Madrid</a>"
+Sweden,Stockholm,January,14.32,24.44,14.32,20.62,6.87,-4.4,-0.1,39,Swedish Kronor,SEK,9.3,Northern_Europe,"<a href=""https://en.wikipedia.org/wiki/Stockholm"" target=""blank"">https://en.wikipedia.org/wiki/Stockholm</a>"
+Sweden,Stockholm,February,14.32,24.44,14.32,20.62,6.87,-4.9,-0.2,28,Swedish Kronor,SEK,9.3,Northern_Europe,"<a href=""https://en.wikipedia.org/wiki/Stockholm"" target=""blank"">https://en.wikipedia.org/wiki/Stockholm</a>"
+Sweden,Stockholm,March,14.32,24.44,14.32,20.62,6.87,-2.3,3.3,25,Swedish Kronor,SEK,9.3,Northern_Europe,"<a href=""https://en.wikipedia.org/wiki/Stockholm"" target=""blank"">https://en.wikipedia.org/wiki/Stockholm</a>"
+Sweden,Stockholm,April,14.32,24.44,14.32,20.62,6.87,1.2,8.9,30,Swedish Kronor,SEK,9.3,Northern_Europe,"<a href=""https://en.wikipedia.org/wiki/Stockholm"" target=""blank"">https://en.wikipedia.org/wiki/Stockholm</a>"
+Sweden,Stockholm,May,14.32,24.44,14.32,20.62,6.87,6.1,15.8,30,Swedish Kronor,SEK,9.3,Northern_Europe,"<a href=""https://en.wikipedia.org/wiki/Stockholm"" target=""blank"">https://en.wikipedia.org/wiki/Stockholm</a>"
+Sweden,Stockholm,June,14.32,24.44,14.32,20.62,6.87,11.2,20.6,45,Swedish Kronor,SEK,9.3,Northern_Europe,"<a href=""https://en.wikipedia.org/wiki/Stockholm"" target=""blank"">https://en.wikipedia.org/wiki/Stockholm</a>"
+Sweden,Stockholm,July,14.32,24.44,14.32,20.62,6.87,13.6,22.2,66,Swedish Kronor,SEK,9.3,Northern_Europe,"<a href=""https://en.wikipedia.org/wiki/Stockholm"" target=""blank"">https://en.wikipedia.org/wiki/Stockholm</a>"
+Sweden,Stockholm,August,14.32,24.44,14.32,20.62,6.87,13,20.8,63,Swedish Kronor,SEK,9.3,Northern_Europe,"<a href=""https://en.wikipedia.org/wiki/Stockholm"" target=""blank"">https://en.wikipedia.org/wiki/Stockholm</a>"
+Sweden,Stockholm,September,14.32,24.44,14.32,20.62,6.87,9.2,15.4,54,Swedish Kronor,SEK,9.3,Northern_Europe,"<a href=""https://en.wikipedia.org/wiki/Stockholm"" target=""blank"">https://en.wikipedia.org/wiki/Stockholm</a>"
+Sweden,Stockholm,October,14.32,24.44,14.32,20.62,6.87,5.3,10,49,Swedish Kronor,SEK,9.3,Northern_Europe,"<a href=""https://en.wikipedia.org/wiki/Stockholm"" target=""blank"">https://en.wikipedia.org/wiki/Stockholm</a>"
+Sweden,Stockholm,November,14.32,24.44,14.32,20.62,6.87,0.8,4.6,52,Swedish Kronor,SEK,9.3,Northern_Europe,"<a href=""https://en.wikipedia.org/wiki/Stockholm"" target=""blank"">https://en.wikipedia.org/wiki/Stockholm</a>"
+Sweden,Stockholm,December,14.32,24.44,14.32,20.62,6.87,-2.6,1.5,46,Swedish Kronor,SEK,9.3,Northern_Europe,"<a href=""https://en.wikipedia.org/wiki/Stockholm"" target=""blank"">https://en.wikipedia.org/wiki/Stockholm</a>"
+Turkey,Istanbul,January,4.57,7.32,6.86,7.5,1.22,3,8.5,102,Turkish Iira,TRY,13.4,Southern Europe,"<a href=""https://en.wikipedia.org/wiki/Istanbul"" target=""blank"">https://en.wikipedia.org/wiki/Istanbul</a>"
+Turkey,Istanbul,February,4.57,7.32,6.86,7.5,1.22,3,8.7,71,Turkish Iira,TRY,13.4,Southern Europe,"<a href=""https://en.wikipedia.org/wiki/Istanbul"" target=""blank"">https://en.wikipedia.org/wiki/Istanbul</a>"
+Turkey,Istanbul,March,4.57,7.32,6.86,7.5,1.22,3.9,10.7,70,Turkish Iira,TRY,13.4,Southern Europe,"<a href=""https://en.wikipedia.org/wiki/Istanbul"" target=""blank"">https://en.wikipedia.org/wiki/Istanbul</a>"
+Turkey,Istanbul,April,4.57,7.32,6.86,7.5,1.22,7.5,15.9,51,Turkish Iira,TRY,13.4,Southern Europe,"<a href=""https://en.wikipedia.org/wiki/Istanbul"" target=""blank"">https://en.wikipedia.org/wiki/Istanbul</a>"
+Turkey,Istanbul,May,4.57,7.32,6.86,7.5,1.22,11.7,20.6,33,Turkish Iira,TRY,13.4,Southern Europe,"<a href=""https://en.wikipedia.org/wiki/Istanbul"" target=""blank"">https://en.wikipedia.org/wiki/Istanbul</a>"
+Turkey,Istanbul,June,4.57,7.32,6.86,7.5,1.22,15.9,25.3,30,Turkish Iira,TRY,13.4,Southern Europe,"<a href=""https://en.wikipedia.org/wiki/Istanbul"" target=""blank"">https://en.wikipedia.org/wiki/Istanbul</a>"
+Turkey,Istanbul,July,4.57,7.32,6.86,7.5,1.22,18.6,27.6,24,Turkish Iira,TRY,13.4,Southern Europe,"<a href=""https://en.wikipedia.org/wiki/Istanbul"" target=""blank"">https://en.wikipedia.org/wiki/Istanbul</a>"
+Turkey,Istanbul,August,4.57,7.32,6.86,7.5,1.22,18.9,27.5,32,Turkish Iira,TRY,13.4,Southern Europe,"<a href=""https://en.wikipedia.org/wiki/Istanbul"" target=""blank"">https://en.wikipedia.org/wiki/Istanbul</a>"
+Turkey,Istanbul,September,4.57,7.32,6.86,7.5,1.22,15.6,24.1,46,Turkish Iira,TRY,13.4,Southern Europe,"<a href=""https://en.wikipedia.org/wiki/Istanbul"" target=""blank"">https://en.wikipedia.org/wiki/Istanbul</a>"
+Turkey,Istanbul,October,4.57,7.32,6.86,7.5,1.22,12.1,19.4,73,Turkish Iira,TRY,13.4,Southern Europe,"<a href=""https://en.wikipedia.org/wiki/Istanbul"" target=""blank"">https://en.wikipedia.org/wiki/Istanbul</a>"
+Turkey,Istanbul,November,4.57,7.32,6.86,7.5,1.22,8.4,14.9,91,Turkish Iira,TRY,13.4,Southern Europe,"<a href=""https://en.wikipedia.org/wiki/Istanbul"" target=""blank"">https://en.wikipedia.org/wiki/Istanbul</a>"
+Turkey,Istanbul,December,4.57,7.32,6.86,7.5,1.22,5.4,11,124,Turkish Iira,TRY,13.4,Southern Europe,"<a href=""https://en.wikipedia.org/wiki/Istanbul"" target=""blank"">https://en.wikipedia.org/wiki/Istanbul</a>"
+United Kingdom,Edinburgh,January,16.23,15.97,12.17,18.08,3.71,0,5.9,61,British Pound,GBP,4.6,Northern_Europe,"<a href=""https://en.wikipedia.org/wiki/Edinburgh"" target=""blank"">https://en.wikipedia.org/wiki/Edinburgh</a>"
+United Kingdom,Edinburgh,February,16.23,15.97,12.17,18.08,3.71,-0.1,6.1,43,British Pound,GBP,4.6,Northern_Europe,"<a href=""https://en.wikipedia.org/wiki/Edinburgh"" target=""blank"">https://en.wikipedia.org/wiki/Edinburgh</a>"
+United Kingdom,Edinburgh,March,16.23,15.97,12.17,18.08,3.71,1.5,8.6,51,British Pound,GBP,4.6,Northern_Europe,"<a href=""https://en.wikipedia.org/wiki/Edinburgh"" target=""blank"">https://en.wikipedia.org/wiki/Edinburgh</a>"
+United Kingdom,Edinburgh,April,16.23,15.97,12.17,18.08,3.71,3.4,11.6,43,British Pound,GBP,4.6,Northern_Europe,"<a href=""https://en.wikipedia.org/wiki/Edinburgh"" target=""blank"">https://en.wikipedia.org/wiki/Edinburgh</a>"
+United Kingdom,Edinburgh,May,16.23,15.97,12.17,18.08,3.71,5.9,14.5,54,British Pound,GBP,4.6,Northern_Europe,"<a href=""https://en.wikipedia.org/wiki/Edinburgh"" target=""blank"">https://en.wikipedia.org/wiki/Edinburgh</a>"
+United Kingdom,Edinburgh,June,16.23,15.97,12.17,18.08,3.71,8.8,17.5,52,British Pound,GBP,4.6,Northern_Europe,"<a href=""https://en.wikipedia.org/wiki/Edinburgh"" target=""blank"">https://en.wikipedia.org/wiki/Edinburgh</a>"
+United Kingdom,Edinburgh,July,16.23,15.97,12.17,18.08,3.71,10.5,19.1,63,British Pound,GBP,4.6,Northern_Europe,"<a href=""https://en.wikipedia.org/wiki/Edinburgh"" target=""blank"">https://en.wikipedia.org/wiki/Edinburgh</a>"
+United Kingdom,Edinburgh,August,16.23,15.97,12.17,18.08,3.71,10.2,18.6,70,British Pound,GBP,4.6,Northern_Europe,"<a href=""https://en.wikipedia.org/wiki/Edinburgh"" target=""blank"">https://en.wikipedia.org/wiki/Edinburgh</a>"
+United Kingdom,Edinburgh,September,16.23,15.97,12.17,18.08,3.71,8.4,16.2,70,British Pound,GBP,4.6,Northern_Europe,"<a href=""https://en.wikipedia.org/wiki/Edinburgh"" target=""blank"">https://en.wikipedia.org/wiki/Edinburgh</a>"
+United Kingdom,Edinburgh,October,16.23,15.97,12.17,18.08,3.71,5.9,13.1,70,British Pound,GBP,4.6,Northern_Europe,"<a href=""https://en.wikipedia.org/wiki/Edinburgh"" target=""blank"">https://en.wikipedia.org/wiki/Edinburgh</a>"
+United Kingdom,Edinburgh,November,16.23,15.97,12.17,18.08,3.71,2.5,9,68,British Pound,GBP,4.6,Northern_Europe,"<a href=""https://en.wikipedia.org/wiki/Edinburgh"" target=""blank"">https://en.wikipedia.org/wiki/Edinburgh</a>"
+United Kingdom,Edinburgh,December,16.23,15.97,12.17,18.08,3.71,1.1,7,61,British Pound,GBP,4.6,Northern_Europe,"<a href=""https://en.wikipedia.org/wiki/Edinburgh"" target=""blank"">https://en.wikipedia.org/wiki/Edinburgh</a>"
+United Kingdom,London,January,20.86,19.33,15.65,24.34,5.56,1.8,8,56,British Pound,GBP,75.1,Northern_Europe,"<a href=""https://en.wikipedia.org/wiki/London"" target=""blank"">https://en.wikipedia.org/wiki/London</a>"
+United Kingdom,London,February,20.86,19.33,15.65,24.34,5.56,2,8.1,39,British Pound,GBP,75.1,Northern_Europe,"<a href=""https://en.wikipedia.org/wiki/London"" target=""blank"">https://en.wikipedia.org/wiki/London</a>"
+United Kingdom,London,March,20.86,19.33,15.65,24.34,5.56,3.4,11,46,British Pound,GBP,75.1,Northern_Europe,"<a href=""https://en.wikipedia.org/wiki/London"" target=""blank"">https://en.wikipedia.org/wiki/London</a>"
+United Kingdom,London,April,20.86,19.33,15.65,24.34,5.56,5.7,13.8,45,British Pound,GBP,75.1,Northern_Europe,"<a href=""https://en.wikipedia.org/wiki/London"" target=""blank"">https://en.wikipedia.org/wiki/London</a>"
+United Kingdom,London,May,20.86,19.33,15.65,24.34,5.56,8.6,17.7,49,British Pound,GBP,75.1,Northern_Europe,"<a href=""https://en.wikipedia.org/wiki/London"" target=""blank"">https://en.wikipedia.org/wiki/London</a>"
+United Kingdom,London,June,20.86,19.33,15.65,24.34,5.56,11.8,21.4,50,British Pound,GBP,75.1,Northern_Europe,"<a href=""https://en.wikipedia.org/wiki/London"" target=""blank"">https://en.wikipedia.org/wiki/London</a>"
+United Kingdom,London,July,20.86,19.33,15.65,24.34,5.56,13.8,23.6,48,British Pound,GBP,75.1,Northern_Europe,"<a href=""https://en.wikipedia.org/wiki/London"" target=""blank"">https://en.wikipedia.org/wiki/London</a>"
+United Kingdom,London,August,20.86,19.33,15.65,24.34,5.56,13.3,23.1,53,British Pound,GBP,75.1,Northern_Europe,"<a href=""https://en.wikipedia.org/wiki/London"" target=""blank"">https://en.wikipedia.org/wiki/London</a>"
+United Kingdom,London,September,20.86,19.33,15.65,24.34,5.56,10.9,20.1,56,British Pound,GBP,75.1,Northern_Europe,"<a href=""https://en.wikipedia.org/wiki/London"" target=""blank"">https://en.wikipedia.org/wiki/London</a>"
+United Kingdom,London,October,20.86,19.33,15.65,24.34,5.56,7.7,15.6,60,British Pound,GBP,75.1,Northern_Europe,"<a href=""https://en.wikipedia.org/wiki/London"" target=""blank"">https://en.wikipedia.org/wiki/London</a>"
+United Kingdom,London,November,20.86,19.33,15.65,24.34,5.56,4.5,11,61,British Pound,GBP,75.1,Northern_Europe,"<a href=""https://en.wikipedia.org/wiki/London"" target=""blank"">https://en.wikipedia.org/wiki/London</a>"
+United Kingdom,London,December,20.86,19.33,15.65,24.34,5.56,2.7,8.6,58,British Pound,GBP,75.1,Northern_Europe,"<a href=""https://en.wikipedia.org/wiki/London"" target=""blank"">https://en.wikipedia.org/wiki/London</a>"
