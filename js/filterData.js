@@ -3,8 +3,8 @@ queue()
     .await(getMonth);
 
 function getMonth(error, data) {
-    if (error) { /////////// improve this???
-        alert("error with data");
+    if (error) { 
+        $('#errorMessage').html(`<h2>Error retrieving the data</h2>`); 
     }
 
     //convert to number the number fields

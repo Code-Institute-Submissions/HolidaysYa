@@ -179,9 +179,13 @@
 	<section id="monthId">
 		<div class="overlay1">
 			<h1>Welcome!</h1>
-			<p>We have gathered data from the most visited cities in Europe to help you deciding which is the best place
-				for your next holidays in Europe.</p>
-
+			<div class="wrapper-text">
+				<p>We have gathered data from the most visited cities in Europe to help you deciding which is the best
+					place
+					for your next holidays in Europe.</p>
+				<p class="small">The data has been collected from <b>https://www.priceoftravel.com</b> and
+					<b>https://es.climate-data.org</b></p>
+			</div>
 			<!-- <hr> -->
 			<h3 class="titleInput">Please select the month that you want to travel</h3>
 
@@ -246,7 +250,7 @@
 	</section>
 	<!-- this section is hidden at the beggining -->
 
-	<section class="container-fluid hide" id="grafId" class="hide">		
+	<section class="container-fluid hide" id="grafId" class="hide">
 		<div class="col-lg-11 col-lg-offset-1 col-sm-10 col-sm-offset-2 main">
 
 			<!-- Should I use the infor message for title and error??? -->
@@ -429,12 +433,12 @@
 				<div class="col-md-12">
 					<div class="panel panel-default">
 						<div class="panel-heading row">
-								<div class="col-xs-10">Summary table</div>
-								<div class="col-xs-2">
-										<span class="pull-right clickable panel-toggle panel-button-tab-left">
-											<em class="fa fa-toggle-up"></em>
-										</span>
-									</div>
+							<div class="col-xs-10">Summary table</div>
+							<div class="col-xs-2">
+								<span class="pull-right clickable panel-toggle panel-button-tab-left">
+									<em class="fa fa-toggle-up"></em>
+								</span>
+							</div>
 						</div>
 						<div class="panel-body">
 							<div class="container-table">
@@ -446,15 +450,12 @@
 			</div>
 			<div class=row>
 				<div class="col-md-12">
-						<div class="panel panel-default footer">
-							<div class="panel-body">
-								<p>
-									Data collected from XXXX
-								</p>
-								<p>
-									Template based on "XXX"
-								</p>
-							</div>
+					<div class="panel panel-default footer">
+						<div class="panel-body">
+							<p>
+								<b>Ample Bootstrap Admin Lite</b> was used to build some parts of this website.
+							</p>
+						</div>
 					</div>
 
 				</div>
@@ -475,7 +476,6 @@
 						country?</h4>
 				</div>
 				<div class="modal-body">
-
 					<form onsubmit="return sendMail(this);" method="POST">
 						<div class="form-group">
 							<input type="text" name="name" class="form-control" id="InputName"

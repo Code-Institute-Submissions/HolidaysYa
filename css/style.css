@@ -4,16 +4,14 @@
     padding: 0px;
 }
 
-html,
-body {
+html, body {
     margin: 0px;
     padding: 0px;
     height: 100%;
     width: 100%;
 }
 
-.col-xs-6,
-.col-sm-10 {
+.col-xs-6, .col-sm-10 {
     padding: 0px;
 }
 
@@ -66,13 +64,11 @@ body {
     margin-top: 0px;
 }
 
-.navbar-fixed-bottom .navbar-collapse,
-.navbar-fixed-top .navbar-collapse {
+.navbar-fixed-bottom .navbar-collapse, .navbar-fixed-top .navbar-collapse {
     max-height: 100%;
 }
 
-.navbar-collapse .nav>li,
-.navbar-collapse .nav>li>a {
+.navbar-collapse .nav>li, .navbar-collapse .nav>li>a {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -131,25 +127,16 @@ body {
     outline: none;
 }
 
-.navbar-default .navbar-nav>.open>a,
-.navbar-default .navbar-nav>.open>a:focus,
-.navbar-default .navbar-nav>.open>a:hover,
-.navbar-default .navbar-nav>.open>a,
-.navbar-default .navbar-nav>.open>a:focus,
-.navbar-default .navbar-nav>.open>a:hover {
+.navbar-default .navbar-nav>.open>a, .navbar-default .navbar-nav>.open>a:focus, .navbar-default .navbar-nav>.open>a:hover, .navbar-default .navbar-nav>.open>a, .navbar-default .navbar-nav>.open>a:focus, .navbar-default .navbar-nav>.open>a:hover {
     color: white;
     background-color: transparent;
 }
 
-.navbar-default .navbar-nav>li>a:focus,
-.navbar-default .navbar-nav>li>a:hover,
-.navbar-default .navbar-nav>li>a {
+.navbar-default .navbar-nav>li>a:focus, .navbar-default .navbar-nav>li>a:hover, .navbar-default .navbar-nav>li>a {
     color: white;
 }
 
-.dropdown a.dropdown-toggle,
-.dropdown,
-.dropdown a {
+.dropdown a.dropdown-toggle, .dropdown, .dropdown a {
     width: 100%;
     text-align: center;
 }
@@ -176,10 +163,7 @@ body {
     background: rgba(255, 255, 255, 0.2);
 }
 
-.social,
-.social:hover,
-.social:focus,
-.social:active {
+.social, .social:hover, .social:focus, .social:active {
     position: absolute;
     height: 100%;
     width: 100%;
@@ -193,8 +177,7 @@ body {
     text-align: center;
 }
 
-.sidebar ul.nav a:hover,
-.sidebar ul.nav li.parent ul li a:hover {
+.sidebar ul.nav a:hover, .sidebar ul.nav li.parent ul li a:hover {
     background-color: transparent;
 }
 
@@ -221,8 +204,7 @@ body {
     height: 100%;
 }
 
-.sidebar ul.nav ul.children .budget,
-.sidebar ul.nav ul.children .weather {
+.sidebar ul.nav ul.children .budget, .sidebar ul.nav ul.children .weather {
     padding-top: 10px;
     margin: 0px 5px;
     background: #ededed;
@@ -272,18 +254,14 @@ body {
     color: #52a9ec;
 }
 
-.btn-group-lg>.btn,
-.btn-lg {
+.btn-group-lg>.btn, .btn-lg {
     padding: 0px;
 }
 
 /* background section month selection, budget selection and weather selection */
 
-#monthId,
-#budgetId,
-#weatherId,
-#errors {
-    /* so it doesn't hide under the navbar */
+#monthId, #budgetId, #weatherId, #errors {
+    /* margin-top: 60px; */
     height: 100vh;
     width: 100vw;
     display: flex;
@@ -337,8 +315,7 @@ body {
 
 /* I added an overlay to make the text more readeble */
 
-.overlay1,
-.overlay {
+.overlay1, .overlay {
     width: 100%;
     height: 100%;
     /* background-image: linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0)); */
@@ -360,19 +337,26 @@ body {
 /*common to the three sections*/
 
 .titleInput {
-    margin-bottom: 20px;
+    margin-bottom: 10px;
     color: white;
-    font-size: 1.6em;
+    font-size: 1.2em;
     font-weight: 600;
-    width: 60%;
+    width: 65%;
+}
+
+@media (min-width: 768px) {
+    .titleInput {
+        margin-bottom: 20px;
+        color: white;
+        font-size: 1.6em;
+        font-weight: 600;
+        width: 60%;
+    }
 }
 
 /* input fields */
 
-#monthSelector,
-#maxBudget,
-#maxTemp,
-#minTemp {
+#monthSelector, #maxBudget, #maxTemp, #minTemp {
     font-size: 18px;
     height: 40px;
     border: none;
@@ -382,9 +366,7 @@ body {
     width: 150px;
 }
 
-#maxBudget,
-#maxTemp,
-#minTemp {
+#maxBudget, #maxTemp, #minTemp {
     width: 80px;
 }
 
@@ -410,33 +392,42 @@ body {
     color: white;
     font-weight: 400;
     width: 100%;
-    font-size: 2em;
+    font-size: 1.5em;
 }
 
 @media (min-width: 768px) {
     #monthId h1 {
-        font-size: 4em;
+        font-size: 3em;
     }
 }
 
-#monthId p {
-    color: white;
-    font-size: 1em;
-    font-weight: 400;
+.wrapper-text {
     width: 80%;
     background-color: rgba(0, 0, 0, 0.6);
     padding: 5px;
     box-sizing: border-box;
     padding: 15px;
-    margin-top: 10px;
     box-sizing: border-box;
 }
 
+#monthId p {
+    color: white;
+    font-size: 0.8em;
+    font-weight: 400;
+}
+
 @media (min-width: 768px) {
+    .wrapper-text {
+        width: 60%;
+        margin-top: 5px;
+    }
     #monthId p {
-        font-size: 1.2em;
-        width: 40%;
+        font-size: 1em;
         margin: 20px;
+    }
+    .small {
+        color: #30a5ff;
+        font-size: 0.9em;
     }
 }
 
@@ -462,10 +453,9 @@ body {
     margin-top: 20px;
 }
 
-.resetButtom {
+.reset .btn-info {
     margin-right: 15px;
 }
-
 
 /* filters */
 
@@ -590,8 +580,7 @@ path.domain {
     stroke-width: 0.8;
 }
 
-#rowChart .axis,
-#correlation .axis {
+#rowChart .axis, #correlation .axis {
     font-size: 0.6em;
 }
 
@@ -616,14 +605,12 @@ path.domain {
 https://github.com/dc-js/dc.js/issues/731
 */
 
-#dailyBudget_Temp .x.axis text,
-#rowChart .x.axis text {
+#dailyBudget_Temp .x.axis text, #rowChart .x.axis text {
     text-anchor: end !important;
     transform: rotate(-45deg);
 }
 
-.x-axis-label,
-.y-axis-label {
+.x-axis-label, .y-axis-label {
     font-weight: bold;
     font-size: 0.7em;
 }
@@ -635,13 +622,11 @@ https://github.com/dc-js/dc.js/issues/731
     .dc-legend-item {
         font-size: 0.8em;
     }
-    .x-axis-label,
-    .y-axis-label {
+    .x-axis-label, .y-axis-label {
         font-weight: bold;
         font-size: 0.9em;
     }
-    #rowChart .axis,
-    #correlation .axis {
+    #rowChart .axis, #correlation .axis {
         font-size: 0.8em;
     }
 }
@@ -678,16 +663,13 @@ td {
     font-size: 8px;
 }
 
-
 @media (min-width: 768px) {
     .table {
         text-align: center;
     }
-
     thead {
         background-color: #e6e6e6;
     }
-
     th {
         font-size: 12px;
         font-weight: 700;
@@ -696,21 +678,15 @@ td {
         width: 10%;
         padding-right: 10px
     }
-
     tr {
         height: 3em;
     }
-
     tr td {
         padding-left: 10px;
         padding-right: 10px;
         font-size: 12px;
     }
-
 }
-
-
-
 
 .email-button {
     background-color: transparent;
@@ -718,15 +694,7 @@ td {
     color: grey;
 }
 
-.email-button.active.focus,
-.email-button:focus,
-.email-button.focus,
-.email-button:active.focus,
-.email-button:active:focus,
-.email-button:focus,
-.email-button:active,
-.email-button,
-.email-button:hover {
+.email-button.active.focus, .email-button:focus, .email-button.focus, .email-button:active.focus, .email-button:active:focus, .email-button:focus, .email-button:active, .email-button, .email-button:hover {
     outline: none;
     background-color: transparent;
     text-decoration: none;
