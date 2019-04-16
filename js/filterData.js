@@ -3,8 +3,8 @@ queue()
     .await(getMonth);
 
 function getMonth(error, data) {
-    if (error) { 
-        $('#errorMessage').html(`<h2>Error retrieving the data</h2>`); 
+    if (error) {
+        $('#errorMessage').html(`<h2>Error retrieving the data</h2>`);
     }
 
     //convert to number the number fields
@@ -120,7 +120,7 @@ function filterDataBudget(maxBudget, dataMonth) {
 
     if (isNaN(maxBudget)) {
         showErrorMessage();
-        $('#errorMessage').html(`<h2>You need to enter a value</h2>`);      
+        $('#errorMessage').html(`<h2>You need to enter a value</h2>`);
     }
     else {
         //If there is one or more cities matching the criteria it will call 
@@ -142,20 +142,22 @@ function onClickFilterByWeather() {
     var max;
 
     if (!(isNaN(minTemp)) || !(isNaN(maxTemp))) {
-        console.log('first')
         min = minTemp;
         max = maxTemp;
-        $('input[name=minTemp2]').val('');
-        $('input[name=maxTemp2]').val('');
+        // $('input[name=minTemp2]').val('');
+        // $('input[name=maxTemp2]').val('');
     }
     if (!(isNaN(minTemp2)) || !(isNaN(maxTemp2))) {
-        console.log('second')
         min = minTemp2;
         max = maxTemp2;
-        $('input[name=minTemp]').val('');
-        $('input[name=maxTemp]').val('');
+        // $('input[name=minTemp]').val('');
+        // $('input[name=maxTemp]').val('');
     }
     filterDataWeather(min, max, dataMonth)
+    $('input[name=minTemp2]').val('');
+    $('input[name=maxTemp2]').val('');
+    $('input[name=minTemp]').val('');
+    $('input[name=maxTemp]').val('');
 
 }
 
@@ -168,11 +170,9 @@ function filterDataWeather(min, max, dataMonth) {
     dataWeather = dataMonth.filter(function (element) {
 
         if ((!(isNaN(min))) && (!(isNaN(max))) && max > min) {
-            console.log('both');
             return (min <= element.minTemp && max >= element.maxTemp);
         }
         else if ((!(isNaN(min))) && (isNaN(max))) {
-            console.log('min');
             return (min <= element.minTemp);
         }
         else if ((!(isNaN(max))) && (isNaN(min))) {
@@ -183,7 +183,7 @@ function filterDataWeather(min, max, dataMonth) {
 
     if ((isNaN(min)) && (isNaN(max))) {
         showErrorMessage();
-        $('#errorMessage').html(`<h2>Please enter maximun and/or minimun temperatures</h2>`);      
+        $('#errorMessage').html(`<h2>Please enter maximun and/or minimun temperatures</h2>`);
         return 0;
     }
     else if ((!(isNaN(min))) && (!(isNaN(max))) && max < min) {
@@ -301,7 +301,7 @@ function fiterBy(ndx, element) {
         .group(group);
 };
 
-function showErrorMessage(){
+function showErrorMessage() {
     $('#errors').removeClass('hide');
     $('#budgetId').addClass('hide');
     $('#weatherId').addClass('hide');

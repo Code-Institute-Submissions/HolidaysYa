@@ -39,7 +39,7 @@ function countCities(ndx) {
     );
 
     dc.numberDisplay('#totalCities')
-        .formatNumber(d3.format(".1s"))
+        .formatNumber(d3.format("d"))
         .valueAccessor(function (d) {
                 return d.count;
                 })
