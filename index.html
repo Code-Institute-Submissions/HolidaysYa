@@ -213,7 +213,12 @@
 
 	<section id="budgetId" class="hide">
 		<div class="overlay">
-			<label for="maxBudget" class="titleInput">What is your maximun budget(€)?</label>
+				<div class="wrapper-text-budget">
+						<p>This maximum budget should include the price for one night in a hostel (bunk bed), the price for three budget meals, the price for two drinks, the price for transport (two journeys) and the price for two top attractions.</p>
+						<p>*If you are not sure about the budget we recommend you to enter "91" (that is the maximum budget in our records) so you can see all the cities and then decide.</p>
+
+					</div>
+			<label for="maxBudget" class="titleInput">What is your maximun budget(€) per day?</label>
 			<input type="number" id="maxBudget" name="maxBudget" required />
 			<div class="buttons">
 				<button class="btn btn-info button" id="resultsBudget" onclick="showTitle('Budget')">show

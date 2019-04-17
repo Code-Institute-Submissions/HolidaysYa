@@ -148,6 +148,7 @@ function createCorrelationTemp(data, ndx) {
         .compose([
             dc.scatterPlot(composite)
                 .dimension(dimTemp)
+                // .renderHorizontalGridLines(true)
                 .symbolSize(7)
                 .colors('#F2C44F')
                 .clipPadding(10)
@@ -157,6 +158,7 @@ function createCorrelationTemp(data, ndx) {
                 .group(temperatureGroup, "temperature"),
             dc.scatterPlot(composite)
                 .dimension(dimPreci)
+                // .renderHorizontalGridLines(true)
                 .symbolSize(7)
                 .colors('#0E9E8D')
                 .clipPadding(10)

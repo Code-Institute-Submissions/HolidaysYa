@@ -115,7 +115,7 @@ function filterDataBudget(maxBudget, dataMonth) {
             element.drinks +
             element.transport +
             element.attractions;
-        return (totalBudget < maxBudget);
+        return (totalBudget <= maxBudget);
     });
 
     if (isNaN(maxBudget)) {

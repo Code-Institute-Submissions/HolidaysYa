@@ -2,10 +2,10 @@ function showTitle(option) {
     document.getElementById("title").innerHTML = `<h2>Results By ${option}</h2>`;
 
      if(option==="Budget"){
-         document.getElementById("titleRowChart").innerHTML = "Euros needed per day";
-         document.getElementById("stackedComposite").innerHTML = "Budget distribution";
+         document.getElementById("titleRowChart").innerHTML = "Budget needed per day (€)";
+         document.getElementById("stackedComposite").innerHTML = "Budget distribution (€)";
          document.getElementById("pieChart").innerHTML = "Currency";
-         document.getElementById("scatterChart").innerHTML = "Correlation between total budget needed and number of visitor per year";  
+         document.getElementById("scatterChart").innerHTML = "Correlation between cost of visiting and number of visitor per year";  
         }
         else{
         document.getElementById("titleRowChart").innerHTML = "Precipitation per month (mm)";

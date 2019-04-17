@@ -344,14 +344,13 @@ html, body {
     font-size: 1.2em;
     font-weight: 600;
     width: 65%;
+    margin-top: 20px;
 }
 
 @media (min-width: 768px) {
     .titleInput {
         margin-bottom: 20px;
-        color: white;
         font-size: 1.6em;
-        font-weight: 600;
         width: 60%;
     }
 }
@@ -403,7 +402,7 @@ html, body {
     }
 }
 
-.wrapper-text {
+.wrapper-text, .wrapper-text-budget {
     width: 80%;
     background-color: rgba(0, 0, 0, 0.6);
     padding: 5px;
@@ -412,14 +411,23 @@ html, body {
     box-sizing: border-box;
 }
 
-#monthId p {
+.wrapper-text {
+    background-color: rgba(0, 0, 0, 0.6);
+   }
+
+.wrapper-text-budget {
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+
+#monthId p, #budgetId p {
     color: white;
     font-size: 0.8em;
     font-weight: 400;
 }
 
 #monthId .small {
-    font-size: 0.6em;
+    font-size: 0.7em;
 }
 
 #monthId p a {
@@ -428,16 +436,15 @@ html, body {
 }
 
 @media (min-width: 768px) {
-    .wrapper-text {
+    .wrapper-text,.wrapper-text-budget {
         width: 60%;
         margin-top: 5px;
     }
-    #monthId p {
+    #monthId p,  #budgetId p {
         font-size: 1em;
         margin: 20px;
     }
-    .small {
-        color: #30a5ff;
+    #monthId .small {
         font-size: 0.9em;
     }
 }

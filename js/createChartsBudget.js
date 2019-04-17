@@ -9,11 +9,10 @@ function createRowChart(ndx) {
         .height(600)
         .useViewBoxResizing(true)
         .x(d3.scale.linear().domain([0, 200]))
-        //Why this doesn't work
-        //.xAxis().tickValues([0, 50, 100, 150])  
+        .title(function (d) { return "Minimun daily budget in " + d.key + ": " + d.value + "€"; })
         .elasticX(true)
         .transitionDuration(1500)
-        .ordinalColors(["#006B99","#2E85AB","#5CA0BE","#8BBBD0","#B9D6E3","#0E9E8D","#39AFA1","#65C1B6","#91D2CB","#BDE4DF","#F2C44F","#ECC970","#F0D590","#F6E6BD","#F4994E","#F6AB6E","#F9C9A2","#FAD5B7","#E86443","#EA7254","#EC8065","#F3B3A3","#F6C6BA","#F9D9D1"])
+        .ordinalColors(["#006B99", "#2E85AB", "#5CA0BE", "#8BBBD0", "#B9D6E3", "#0E9E8D", "#39AFA1", "#65C1B6", "#91D2CB", "#BDE4DF", "#F2C44F", "#ECC970", "#F0D590", "#F6E6BD", "#F4994E", "#F6AB6E", "#F9C9A2", "#FAD5B7", "#E86443", "#EA7254", "#EC8065", "#F3B3A3", "#F6C6BA", "#F9D9D1"])
         .dimension(dimCity)
         .group(budgetGroup);
 }
@@ -37,9 +36,9 @@ function createTotalDailyBudget(ndx) {
         .stack(attractions, "attractions")
         .stack(transport, "transport")
         .title(function (d) {
-            return 'In ' + d.key + ' the ' + this.layer + ' by day cost: ' + d.value;
+            return 'In ' + d.key + ' the ' + this.layer + ' by day cost: ' + d.value + '€';
         })
-        .ordinalColors(["#006B99","#0E9E8D","#F2C44F","#F4994E","#E86443"]) 
+        .ordinalColors(["#006B99", "#0E9E8D", "#F2C44F", "#F4994E", "#E86443"])
         .transitionDuration(1500)
         .x(d3.scale.ordinal())
         .xUnits(dc.units.ordinal)
@@ -62,8 +61,8 @@ function createCurrencyChart(ndx) {
         .externalRadiusPadding(40)
         .dimension(dimCurrency)
         .group(groupCurrency)
-        .ordinalColors(["#006B99","#4593B4","#0E9E8D","#65C1B6","#F2C44F","#F0D590","#F4994E","#F8BE8E","#E86443"])
         .renderLabel(false)
+        .ordinalColors(["#006B99", "#4593B4", "#0E9E8D", "#65C1B6", "#F2C44F", "#F0D590", "#F4994E", "#F8BE8E", "#E86443"])
         .transitionDuration(1500);
 };
 
@@ -76,7 +75,7 @@ function createCorrelationCharts(data, ndx) {
     });
 
     var budgetGroup = dimBudget.group();
-    
+
     dc.scatterPlot("#correlation")
         .height(200)
         .useViewBoxResizing(true) // allows chart to be responsive
@@ -96,9 +95,8 @@ function createCorrelationCharts(data, ndx) {
 }
 
 function show_avg(ndx, product, element) {
-
     var average_cost = ndx.groupAll().reduce(
-         //function adder
+        //function adder
         function (p, v) {
             p.count++;
             p.totaldrinks += +v.drinks;
@@ -164,10 +162,10 @@ function show_avg(ndx, product, element) {
     dc.numberDisplay(element)
         .formatNumber(function (d) {
             if (product != "transport") {
-                return "€" + d3.format(".2s")(d);
+                return d3.format(".2s")(d) + "€";
             }
             else {
-                return "€" + d3.format(".0s")(d);
+                return d3.format(".0s")(d) + "€";
             }
         })
         .valueAccessor(function (d) {
@@ -196,7 +194,7 @@ function show_avg(ndx, product, element) {
 }
 
 function createTableBudget(ndx) {
-    var total=0;
+    var total = 0;
     var allDimension = ndx.dimension(function (d) {
         return (d);
     });
@@ -221,9 +219,10 @@ function createTableBudget(ndx) {
             },
             {
                 label: "Daily budget",
-                format: function (d) { 
-                    total=d.hostelNight + d.drinks+ d.meals + d.attractions + d.transport; 
-                    return total }
+                format: function (d) {
+                    total = d.hostelNight + d.drinks + d.meals + d.attractions + d.transport;
+                    return total
+                }
             },
             {
                 label: "Hostel",
@@ -259,7 +258,7 @@ function createTableBudget(ndx) {
             }
         ])
         .sortBy(function (d) {
-           total=d.hostelNight+d.drinks+d.meals+d.attractions+d.transport; 
+            total = d.hostelNight + d.drinks + d.meals + d.attractions + d.transport;
             return total;
         })
         .showGroups(false)// this will remove the [object][object] at the top of the rows
