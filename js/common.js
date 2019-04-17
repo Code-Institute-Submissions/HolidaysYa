@@ -9,9 +9,9 @@ function showTitle(option) {
         }
         else{
         document.getElementById("titleRowChart").innerHTML = "Precipitation per month (mm)";
-        document.getElementById("stackedComposite").innerHTML = "Maximum and Minimum temperatures";
+        document.getElementById("stackedComposite").innerHTML = "Maximum and Minimum temperatures(°C)";
         document.getElementById("pieChart").innerHTML = "Chances of precipitation";
-        document.getElementById("scatterChart").innerHTML = "Correlation between av.temperature and precipitation and number of visitor per year";
+        document.getElementById("scatterChart").innerHTML = "Correlation between Avg. temperature/Precipitation and number of visitor per year";
     }
 }
 

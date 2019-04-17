@@ -93,15 +93,15 @@ function createRowChartWeather(ndx) {
         .height(600)
         .useViewBoxResizing(true)
         .x(d3.scale.linear().domain([0, 200]))
-        //Why this doesn't work is becau
-        //.xAxis().tickValues([0, 50, 100, 150])  
         .elasticX(true)
+        .title(function(d){
+            return "The average precipitation (mm) for " + d.key + " is: " + d.value + "mm";
+        })
         .transitionDuration(1500)
         .ordinalColors(["#006B99", "#2E85AB", "#5CA0BE", "#8BBBD0", "#B9D6E3", "#0E9E8D", "#39AFA1", "#65C1B6", "#91D2CB", "#BDE4DF", "#F2C44F", "#ECC970", "#F0D590", "#F6E6BD", "#F4994E", "#F6AB6E", "#F9C9A2", "#FAD5B7", "#E86443", "#EA7254", "#EC8065", "#F3B3A3", "#F6C6BA", "#F9D9D1"])
         .dimension(dimCity)
         .group(precipitationGroup);
 }
-
 
 function cityTemp(ndx) {
     //initial issue with the alignment of the chart was fixed after reading the following link
@@ -119,9 +119,12 @@ function cityTemp(ndx) {
         .x(d3.scale.ordinal())
         .xUnits(dc.units.ordinal)
         .dimension(dim)
-        .group(grp1, "max. Temperature")
-        .yAxisLabel("Temperature")
+        .group(grp1, "max. Temperature (°C)")
+        .yAxisLabel("Temperature (°C)")
         .xAxisLabel("City")
+        .title(function(d){
+            return d.key + ": " + d.value + "°C";
+        })
         .clipPadding(10)
         .legend(dc.legend().x(30).y(0).itemHeight(13).gap(5))
         .renderHorizontalGridLines(true)
@@ -129,13 +132,13 @@ function cityTemp(ndx) {
         .compose([
             dc.lineChart(composite)
                 .dimension(dim)
-                .group(grp1, "max. Temperature")
+                 .group(grp1, "max. Temperature (°C)")
                 .clipPadding(10)
                 .colors('#E86443')
                 .dashStyle([3, 3]),
             dc.lineChart(composite)
                 .dimension(dim)
-                .group(grp2, "min. Temperature")
+                .group(grp2, "min. Temperature (°C)")
                 .clipPadding(10)
                 .colors('#006B99')
                 .dashStyle([8, 3])
@@ -166,12 +169,12 @@ function createCorrelationTemp(data, ndx) {
         .legend(dc.legend().x(40).y(0).itemHeight(13).gap(5))
         .x(d3.scale.linear().domain([0, maxArrivals]))
         .xAxisLabel('Number of country visitors (2017 or 2018)')
-        .yAxisLabel("Avg. Temperature")
-        .rightYAxisLabel("Avg. Precipitation")
+        .yAxisLabel("Avg. Temperature (°C)")
+        .rightYAxisLabel("Avg. Precipitation (mm)")
         .clipPadding(10)
         .shareTitle(false)
         .dimension(dimTemp)
-        .group(temperatureGroup, "temperature")
+        .group(temperatureGroup, "Temperature (°C)")
         .renderHorizontalGridLines(true)
         .brushOn(false)
         .compose([
@@ -182,9 +185,9 @@ function createCorrelationTemp(data, ndx) {
                 .colors('#F2C44F')
                 .clipPadding(10)
                 .title(function (d) {
-                    return d.key[2] + " the average temperature is " + d.key[1] + " degrees\nand there was " + d.key[0] + " millions visits in 2017";
+                    return d.key[2] + " the average temperature (°C) is " + d.key[1] + " degrees\nand there was " + d.key[0] + " millions visits in 2017";
                 })
-                .group(temperatureGroup, "temperature"),
+                .group(temperatureGroup, "temperature (°C)"),
             dc.scatterPlot(composite)
                 .dimension(dimPreci)
                 // .renderHorizontalGridLines(true)
@@ -192,9 +195,9 @@ function createCorrelationTemp(data, ndx) {
                 .colors('#0E9E8D')
                 .clipPadding(10)
                 .title(function (d) {
-                    return d.key[2] + " the average precipitation is " + d.key[1] + " mm\nand there was " + d.key[0] + " millions visits in 2017";
+                    return d.key[2] + " the average precipitation (mm) is " + d.key[1] + " mm\nand there was " + d.key[0] + " millions visits in 2017";
                 })
-                .group(precipitationGroup, "precipitation")
+                .group(precipitationGroup, "precipitation (mm)")
                 .useRightYAxis(true)
         ]);
 }
@@ -255,15 +258,15 @@ function createTableWeather(ndx) {
                 format: function (d) { return d.country }
             },
             {
-                label: "min.Temp(C)",
+                label: "min.Temp(°C)",
                 format: function (d) { return d.minTemp }
             },
             {
-                label: "max.Temp(C)",
+                label: "max.Temp(°C)",
                 format: function (d) { return d.maxTemp }
             },
             {
-                label: "avg.Temp(C)",
+                label: "avg.Temp(°C)",
                 format: function (d) { return (d.maxTemp + d.minTemp) / 2 }
             },
             {
@@ -282,7 +285,8 @@ function createTableWeather(ndx) {
         .sortBy(function (d) {
             return (d.maxTemp + d.minTemp) / 2;
         })
-        .showGroups(false)// this will remove the [object][object] at the top of the rows
-        .order(d3.ascending);
+        .order(d3.descending)
+        .showGroups(false);// this will remove the [object][object] at the top of the rows
+        
 }
 
