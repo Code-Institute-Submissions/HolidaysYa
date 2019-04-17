@@ -1,5 +1,4 @@
 
-
 function show_max_weather(ndx, column, element) {
     // in order to calculate the maximum temperature I used Stackoverflow for help and they suggest to use the following code
     var maxDim = ndx.dimension(dc.pluck(column));
@@ -21,17 +20,6 @@ function show_min_weather(ndx, column, element) {
         .render();
 }
 
-function show_avg_temp(ndx, max, min, element) {
-    var maxDim = ndx.dimension(dc.pluck(max));
-    var minDim = ndx.dimension(dc.pluck(min));
-
-    dc.numberDisplay(element)
-        .group(dim_avg_groupAll(maxDim, minDim))
-        .valueAccessor(x => x)
-        .formatNumber(d3.format('.1f'))
-        .render();
-}
-
 function dim_max_groupAll(maxDim, column) {
     return {
         value: function () {
@@ -48,12 +36,53 @@ function dim_min_groupAll(minDim, column) {
     };
 }
 
-function dim_avg_groupAll(maxDim, minDim) {
-    return {
-        value: function () {
-            return (maxDim.top(1)[0].maxTemp + minDim.bottom(1)[0].minTemp) / 2;
+function show_avg_temp(ndx, element) {
+    var average_temp = ndx.groupAll().reduce(
+        //function adder
+        function (p, v) {
+            p.count++;
+            p.totalmax += +v.maxTemp;
+            p.totalmin += +v.minTemp;
+            p.totalavg = (p.totalmax + p.totalmin) / 2;
+            p.averageTemp = p.totalavg / p.count;
+            return p;
+        },
+        //function remover
+        function (p, v) {
+            p.count--;
+            if (p.count == 0) {
+                p.totalmax = 0;
+                p.totalmin = 0;
+                p.totalavg = 0;
+                p.averageTemp = 0;
+            }
+            else {
+                p.totalmax -= +v.maxTemp;
+                p.totalmin -= +v.minTemp;
+                p.totalavg = (p.totalmax + p.totalmin) / 2;
+                p.averageTemp = p.totalavg / p.count;
+            }
+            return p;
+        },
+        //Initialise
+        function () {
+            return { count: 0, totalmax: 0, totalmin: 0, totalavg: 0, averageTemp: 0 }
         }
-    }
+    );
+
+    dc.numberDisplay(element)
+        .formatNumber(function (d) {
+              return d3.format(".1f")(d);
+        })
+        .valueAccessor(function (d) {
+            if (d.count == 0) {
+                return 0;
+            }
+            else {
+                return d.averageTemp;
+            }
+        })
+        .group(average_temp);
 }
 
 function createRowChartWeather(ndx) {
@@ -117,13 +146,13 @@ function cityTemp(ndx) {
 
 function createCorrelationTemp(data, ndx) {
     var maxArrivals = d3.max(data, function (d) { return d.visitorsCity; });
-   
+
     var dimTemp = ndx.dimension(function (d) {
         var avgTemp = (d.maxTemp + d.minTemp) / 2;
         return [d.visitorsCity, avgTemp, d.city];
     });
     var temperatureGroup = dimTemp.group();
-    
+
     var dimPreci = ndx.dimension(function (d) {
         return [d.visitorsCity, d.precipitation, d.city];
     });
@@ -235,7 +264,7 @@ function createTableWeather(ndx) {
             },
             {
                 label: "avg.Temp(C)",
-                format: function (d) { return (d.maxTemp+d.minTemp)/2 }
+                format: function (d) { return (d.maxTemp + d.minTemp) / 2 }
             },
             {
                 label: "Precipitation",
@@ -251,7 +280,7 @@ function createTableWeather(ndx) {
             }
         ])
         .sortBy(function (d) {
-            return (d.maxTemp+d.minTemp)/2;
+            return (d.maxTemp + d.minTemp) / 2;
         })
         .showGroups(false)// this will remove the [object][object] at the top of the rows
         .order(d3.ascending);

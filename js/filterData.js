@@ -271,7 +271,9 @@ function createDataForGraphics(data, filteredBy) {
         createPrecipitationChart(ndx);
         show_max_weather(ndx, 'maxTemp', "#hostel_maxtem");
         show_min_weather(ndx, 'minTemp', "#meals_mintem");
-        show_avg_temp(ndx, 'maxTemp', 'minTemp', "#drinks_avgtemp");
+        show_avg_temp(ndx, "#drinks_avgtemp");
+        // show_avg_temp(ndx, 'maxTemp', 'minTemp', "#drinks_avgtemp");
+
         show_max_weather(ndx, 'precipitation', "#transport_maxpreci");
         show_min_weather(ndx, 'precipitation', "#attractions_minpreci");
         cityTemp(ndx);
