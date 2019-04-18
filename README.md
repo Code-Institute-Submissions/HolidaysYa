@@ -170,11 +170,11 @@ The dashboard for the weather will display the following elements:
 
 #### Mockup tool:
 
-- **[Pencil:](https://pencil.evolus.vn/ 'https://pencil.evolus.vn/')** I have used Pencil to create the initial mockups for the website.
+- **[Pencil:](https://pencil.evolus.vn/ 'https://pencil.evolus.vn/)** I have used Pencil to create the initial mockups for the website.
 
 #### Graphic Desing software:
 
-- **[Adobe Fireworks:](https://www.adobe.com/products/fireworks.html')** I have used Adobe Fireworks to edit the background images.
+- **[Adobe Fireworks:](https://www.adobe.com/products/fireworks.html)** I have used Adobe Fireworks to edit the background images.
 
 #### Languages:
 
@@ -182,21 +182,21 @@ The dashboard for the weather will display the following elements:
 
 - **CSS3:** Is the language used to add styles to the HTML.
 
-- **JavaScript** This is the language used to add interactivity to the website and in order to manipulate the  data so it can be used to create the visualizations needed.
+- **[JavaScript:](https://developer.mozilla.org/en-US/docs/Web/JavaScript)** This is the language used to add interactivity to the website and in order to manipulate the  data so it can be used to create the visualizations needed.
 
 #### Libraries
 
-- **jQuery** This JavaScript library has been used to manipulate the DOM elements in a easier way than doing it with JavaScript. Mainly has been used to hide and show diferent sections of the website.
+- **[jQuery](https://jquery.com/)** This JavaScript library has been used to manipulate the DOM elements in a easier way than doing it with JavaScript. Mainly has been used to hide and show diferent sections of the website.
 
-- **D3.js** JavaScript library is used to create data visualization.
-- **DC.js** Is nother JavaScript library that provides prebuilt chart types for D3.
-- **Crossfilter.js** Is a JavaScript library that allows the charts to be interactive and interdependent of the same dataset.
-- **queue.js** Is a JavaScript library that is needed in order to wait for the data to be fully loaded before the rest of the code is run.
+- **[D3.js](https://d3js.org/)** JavaScript library is used to create data visualization.
+- **[DC.js](https://dc-js.github.io/dc.js/)** Is nother JavaScript library that provides prebuilt chart types for D3.
+- **[Crossfilter.js](http://crossfilter.github.io/crossfilter/)** Is a JavaScript library that allows the charts to be interactive and interdependent of the same dataset.
+- **[queue.js](https://github.com/d3/d3-queue)** Is a JavaScript library that is needed in order to wait for the data to be fully loaded before the rest of the code is run.
 - **[FontAwesome:](https://fontawesome.com/ 'https://fontawesome.com/')** This library was already included in the template that I downloaded and I have used it to add icons in several places in the website to improve the user experience and to add social media links.
 
 #### Development environment:
 
-- **[VisualStudio:]**
+- **[VisualStudio:](https://visualstudio.microsoft.com/)**
 For this second project I was recommended by my mentor change to VisualStudio because it seems to be a more powerful Development environment than Cloud9 and also using VisualStudio I was able to work without internet conexion when I needed to.
 
 #### Version control system:
