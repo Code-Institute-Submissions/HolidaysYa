@@ -104,9 +104,6 @@ function createRowChartWeather(ndx) {
 }
 
 function cityTemp(ndx) {
-    //initial issue with the alignment of the chart was fixed after reading the following link
-    //https://github.com/dc-js/dc.js/issues/662
-
     var dim = ndx.dimension(dc.pluck('city')),
         grp1 = dim.group().reduceSum(dc.pluck('maxTemp')),
         grp2 = dim.group().reduceSum(dc.pluck('minTemp'));
