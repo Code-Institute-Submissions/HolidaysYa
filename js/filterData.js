@@ -23,7 +23,7 @@ function getMonth(error, data) {
         $('#hamburguerButton').addClass('hide');
         $('#navbar-collapse-1').addClass('hide');
         $('#sidebar-collapse').addClass('hide');
-    })
+    });
 
     $(".change-budget").click(function () {
         $('#budgetId').removeClass('hide').fadeIn(1000);
@@ -35,7 +35,7 @@ function getMonth(error, data) {
         $('#navbar-collapse-1').addClass('hide');
         $('#sidebar-collapse').addClass('hide');
 
-    })
+    });
 
     $(".change-temperatures").click(function () {
         $('#weatherId').removeClass('hide').fadeIn(1000);
@@ -47,22 +47,22 @@ function getMonth(error, data) {
         $('#navbar-collapse-1').addClass('hide');
         $('#sidebar-collapse').addClass('hide');
 
-    })
+    });
 
     $("#hamburguerButton").click(function () {
         $('#navbar-collapse-1').removeClass('hide');
-    })
+    });
 
     //When choose budget button is pressed, hide month selection page and show budget selection page
     $('#chooseBudget').click(function () {
         $('#monthId').slideUp(1000);
         $('#budgetId').removeClass('hide').slideDown(1000);
-    })
+    });
     //When choose weather button is pressed, hide month selection page and show weather selection page
     $('#chooseWeather').click(function () {
         $('#monthId').slideUp(1000);
         $('#weatherId').removeClass('hide').slideDown(1000);
-    })
+    });
 
     //buttons on main page (page with month selection)
     $("#resultsBudget").click(onClickFilterByBudget);
@@ -100,7 +100,7 @@ function onClickFilterByBudget() {
         maxBudget = maxBudgetValue2;
         $('input[name=maxBudget2]').val('');
     }
-    filterDataBudget(maxBudget, dataMonth)
+    filterDataBudget(maxBudget, dataMonth);
 }
 
 
@@ -153,7 +153,7 @@ function onClickFilterByWeather() {
         // $('input[name=minTemp]').val('');
         // $('input[name=maxTemp]').val('');
     }
-    filterDataWeather(min, max, dataMonth)
+    filterDataWeather(min, max, dataMonth);
     $('input[name=minTemp2]').val('');
     $('input[name=maxTemp2]').val('');
     $('input[name=minTemp]').val('');
@@ -261,7 +261,7 @@ function createDataForGraphics(data, filteredBy) {
         createRowChart(ndx);
         createTotalDailyBudget(ndx);
         createCurrencyChart(ndx);
-        createCorrelationCharts(data, ndx)
+        createCorrelationCharts(data, ndx);
     }
 
     //weather graphics
@@ -301,7 +301,7 @@ function fiterBy(ndx, element) {
         .dimension(dim)
         .title(function (d) { return d.key; })
         .group(group);
-};
+}
 
 function showErrorMessage() {
     $('#errors').removeClass('hide');
@@ -322,5 +322,5 @@ function dataParser(data) {
         d.minTemp = parseInt(d.minTemp);
         d.maxTemp = parseInt(d.maxTemp);
         d.precipitation = parseInt(d.precipitation);
-    })
+    });
 }

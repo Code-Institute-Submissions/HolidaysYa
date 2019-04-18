@@ -66,7 +66,7 @@ function show_avg_temp(ndx, element) {
         },
         //Initialise
         function () {
-            return { count: 0, totalmax: 0, totalmin: 0, totalavg: 0, averageTemp: 0 }
+            return { count: 0, totalmax: 0, totalmin: 0, totalavg: 0, averageTemp: 0 };
         }
     );
 
@@ -158,7 +158,7 @@ function createCorrelationTemp(data, ndx) {
     });
     var precipitationGroup = dimPreci.group();
 
-    var composite = dc.compositeChart("#correlation")
+    var composite = dc.compositeChart("#correlation");
     composite
         .height(250)
         .useViewBoxResizing(true) // allows chart to be responsive
@@ -227,8 +227,7 @@ function createPrecipitationChart(ndx) {
         .renderLabel(false)
         .ordinalColors(["#E86443", "#F2C44F", "#0E9E8D"])
         .transitionDuration(1500);
-};
-
+}
 
 function createTableWeather(ndx) {
     var allDimension = ndx.dimension(function (d) {
@@ -248,35 +247,35 @@ function createTableWeather(ndx) {
         .columns([
             {
                 label: "City",
-                format: function (d) { return d.city }
+                format: function (d) { return d.city; }
             },
             {
                 label: "Country",
-                format: function (d) { return d.country }
+                format: function (d) { return d.country; }
             },
             {
                 label: "min.Temp(°C)",
-                format: function (d) { return d.minTemp }
+                format: function (d) { return d.minTemp; }
             },
             {
                 label: "max.Temp(°C)",
-                format: function (d) { return d.maxTemp }
+                format: function (d) { return d.maxTemp; }
             },
             {
                 label: "avg.Temp(°C)",
-                format: function (d) { return (d.maxTemp + d.minTemp) / 2 }
+                format: function (d) { return (d.maxTemp + d.minTemp) / 2;}
             },
             {
                 label: "Precipitation",
-                format: function (d) { return d.precipitation }
+                format: function (d) { return d.precipitation; }
             },
             {
                 label: "Visitors (Millions/year)",
-                format: function (d) { return d.visitorsCity }
+                format: function (d) { return d.visitorsCity; }
             },
             {
                 label: "Find out more...",
-                format: function (d) { return d.wikiLink }
+                format: function (d) { return d.wikiLink; }
             }
         ])
         .sortBy(function (d) {

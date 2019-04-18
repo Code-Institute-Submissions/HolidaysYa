@@ -47,10 +47,10 @@ function createTotalDailyBudget(ndx) {
         .yAxisLabel('Total daily budget')
         .yAxis().ticks(6);
     //??????.legend(dc.legend().x(320).y(20).itemHeight(15).gap(5));
-};
+}
 
 function createCurrencyChart(ndx) {
-    var dimCurrency = ndx.dimension(dc.pluck('currencyCode'))
+    var dimCurrency = ndx.dimension(dc.pluck('currencyCode'));
     var groupCurrency = dimCurrency.group();
 
     dc.pieChart("#currency_precipitation")
@@ -64,7 +64,7 @@ function createCurrencyChart(ndx) {
         .renderLabel(false)
         .ordinalColors(["#006B99", "#4593B4", "#0E9E8D", "#65C1B6", "#F2C44F", "#F0D590", "#F4994E", "#F8BE8E", "#E86443"])
         .transitionDuration(1500);
-};
+}
 
 function createCorrelationCharts(data, ndx) {
     var maxArrivals = d3.max(data, function (d) { return d.visitorsCity; });
@@ -105,13 +105,13 @@ function show_avg(ndx, product, element) {
             p.totalmeals += +v.meals;
             p.averagemeals = p.totalmeals / p.count;
 
-            p.totalattractions += +v.attractions
+            p.totalattractions += +v.attractions;
             p.averageattractions = p.totalattractions / p.count;
 
-            p.totaltransport += +v.transport
+            p.totaltransport += +v.transport;
             p.averagetransport = p.totaltransport / p.count;
 
-            p.totalhostel += +v.hostelNight
+            p.totalhostel += +v.hostelNight;
             p.averagehostel = p.totalhostel / p.count;
 
             return p;
@@ -136,26 +136,26 @@ function show_avg(ndx, product, element) {
                 p.averagehostel = 0;
             }
             else {
-                p.totaldrinks -= +v.drinks
+                p.totaldrinks -= +v.drinks;
                 p.averagedrinks = p.totaldrinks / p.count;
 
-                p.totalmeals -= +v.meals
+                p.totalmeals -= +v.meals;
                 p.averagemeals = p.totalmeals / p.count;
 
-                p.totalattractions -= +v.attractions
+                p.totalattractions -= +v.attractions;
                 p.averageattractions = p.totalattractions / p.count;
 
-                p.totaltransport -= +v.transport
+                p.totaltransport -= +v.transport;
                 p.averagetransport = p.totaltransport / p.count;
 
-                p.totalhostel -= +v.hostelNight
+                p.totalhostel -= +v.hostelNight;
                 p.averagehostel = p.totalhostel / p.count;
             }
             return p;
         },
         //Initialise
         function () {
-            return { count: 0, totaldrinks: 0, averagedrinks: 0, totalmeals: 0, averagemeals: 0, totalattractions: 0, averageattractions: 0, totaltransport: 0, averagetransport: 0, totalhostel: 0, averagehostel: 0 }
+            return { count: 0, totaldrinks: 0, averagedrinks: 0, totalmeals: 0, averagemeals: 0, totalattractions: 0, averageattractions: 0, totaltransport: 0, averagetransport: 0, totalhostel: 0, averagehostel: 0 };
         }
     );
 
@@ -211,50 +211,50 @@ function createTableBudget(ndx) {
         .columns([
             {
                 label: "City",
-                format: function (d) { return d.city }
+                format: function (d) { return d.city; }
             },
             {
                 label: "Country",
-                format: function (d) { return d.country }
+                format: function (d) { return d.country;}
             },
             {
                 label: "Daily budget",
                 format: function (d) {
                     total = d.hostelNight + d.drinks + d.meals + d.attractions + d.transport;
-                    return total
+                    return total;
                 }
             },
             {
                 label: "Hostel",
-                format: function (d) { return d.hostelNight }
+                format: function (d) { return d.hostelNight; }
             },
             {
                 label: "Meals",
-                format: function (d) { return d.meals }
+                format: function (d) { return d.meals; }
             },
             {
                 label: "Drinks",
-                format: function (d) { return d.drinks }
+                format: function (d) { return d.drinks; }
             },
             {
                 label: "Transport",
-                format: function (d) { return d.transport }
+                format: function (d) { return d.transport; }
             },
             {
                 label: "Attractions",
-                format: function (d) { return d.attractions }
+                format: function (d) { return d.attractions; }
             },
             {
                 label: "Currency",
-                format: function (d) { return d.currency }
+                format: function (d) { return d.currency; }
             },
             {
                 label: "Visitors (Millions/year)",
-                format: function (d) { return d.visitorsCity }
+                format: function (d) { return d.visitorsCity; }
             },
             {
                 label: "Find out more...",
-                format: function (d) { return d.wikiLink }
+                format: function (d) { return d.wikiLink; }
             }
         ])
         .sortBy(function (d) {

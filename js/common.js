@@ -34,7 +34,7 @@ function countCities(ndx) {
         //inline function initialiser
         //Initialise the Reducer
         function () {
-            return { count: 0 }
+            return { count: 0 };
         }
     );
 
