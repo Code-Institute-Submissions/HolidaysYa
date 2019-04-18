@@ -233,7 +233,7 @@ I have used development tools in Google Chrome to check how the website would lo
 
 
 ### Problems and bugs:
-- **Horizontal grid lines not being redered:** 
+- **Horizontal grid lines not being rendered:** I could't see the horizontal grid lines rendered from the charts but the js code was correct. In the end I realised that at some point I had commented out the "dc.css" file so when I uncommented it out I could see the horizontal grid lines. 
 
 - **Hamburguer button second time that is opened**
 

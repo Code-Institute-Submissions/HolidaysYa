@@ -104,7 +104,6 @@ function onClickFilterByBudget() {
     filterDataBudget(maxBudget, dataMonth);
 }
 
-
 function filterDataBudget(maxBudget, dataMonth) {
     var filteredBy = 'Budget';
     var totalBudget = 0;
@@ -145,21 +144,16 @@ function onClickFilterByWeather() {
     if (!(isNaN(minTemp)) || !(isNaN(maxTemp))) {
         min = minTemp;
         max = maxTemp;
-        // $('input[name=minTemp2]').val('');
-        // $('input[name=maxTemp2]').val('');
     }
     if (!(isNaN(minTemp2)) || !(isNaN(maxTemp2))) {
         min = minTemp2;
         max = maxTemp2;
-        // $('input[name=minTemp]').val('');
-        // $('input[name=maxTemp]').val('');
     }
     filterDataWeather(min, max, dataMonth);
     $('input[name=minTemp2]').val('');
     $('input[name=maxTemp2]').val('');
     $('input[name=minTemp]').val('');
     $('input[name=maxTemp]').val('');
-
 }
 
 function filterDataWeather(min, max, dataMonth) {
@@ -181,7 +175,6 @@ function filterDataWeather(min, max, dataMonth) {
         }
     });
 
-
     if ((isNaN(min)) && (isNaN(max))) {
         showErrorMessage();
         $('#errorMessage').html(`<h2>Please enter maximun and/or minimun temperatures</h2>`);
@@ -198,12 +191,10 @@ function filterDataWeather(min, max, dataMonth) {
 }
 
 function citiesMatchingCriteria(data, filteredBy) {
-    //document.getElementById("infoMessage").innerHTML = "";
 
     if (checkIfObjectEmpty(data)) {
         showErrorMessage();
         if (filteredBy == "Budget") {
-            // document.getElementById("#errorMessage").innerHTML = `We're sorry but Europe is not that cheap!`;
             $('#errorMessage').html(`<h2>We're sorry but we couldn't find any city in Europe for that daily budget</h2>`);
         }
         if (filteredBy == "Weather") {
@@ -211,9 +202,16 @@ function citiesMatchingCriteria(data, filteredBy) {
         }
     }
     else {
+        //If the website is open in a small screen display the hamburguer button
         if ($(window).width() < 768) {
             $('#hamburguerButton').removeClass('hide');
         }
+ 
+        //If the website is open in a screen > 767 and the the screen is resized to < 768 display the hamburguer button
+        $(window).on("resize", function(){
+            widthSize();
+        });
+        
         $('#errors').addClass('hide');
         $('#grafId').removeClass('hide').slideDown(1000);
         $('#sidebar-collapse').removeClass('hide').show(1000);
@@ -229,6 +227,17 @@ function citiesMatchingCriteria(data, filteredBy) {
             $('.weather').show();
         }
         createDataForGraphics(data, filteredBy);
+    }
+}
+
+function widthSize(){
+    $width = $(window).width();
+
+    //Check condition for screen width
+    if($width < 768){
+        $('#hamburguerButton').removeClass('hide');
+    }else{
+        $('#hamburguerButton').addClass('hide');
     }
 }
 
@@ -248,7 +257,6 @@ function createDataForGraphics(data, filteredBy) {
     fiterBy(ndx, "#filterByRegion");
     fiterBy(ndx, "#filterByCountry");
     fiterBy(ndx, "#filterByCity");
-    // createTable(ndx);
     countCities(ndx);
 
     //Budget graphics
@@ -273,8 +281,6 @@ function createDataForGraphics(data, filteredBy) {
         show_max_weather(ndx, 'maxTemp', "#hostel_maxtem");
         show_min_weather(ndx, 'minTemp', "#meals_mintem");
         show_avg_temp(ndx, "#drinks_avgtemp");
-        // show_avg_temp(ndx, 'maxTemp', 'minTemp', "#drinks_avgtemp");
-
         show_max_weather(ndx, 'precipitation', "#transport_maxpreci");
         show_min_weather(ndx, 'precipitation', "#attractions_minpreci");
         cityTemp(ndx);
