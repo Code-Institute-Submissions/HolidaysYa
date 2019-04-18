@@ -200,6 +200,12 @@ html, body {
     font-weight: 400;
 }
 
+@media (min-width: 1200px) {
+    .sidebar h4 {
+        font-size: 0.8em;
+    }
+}
+
 .sidebar ul.nav li a {
     height: 100%;
 }
@@ -230,6 +236,7 @@ html, body {
 .sidebar .btn-success {
     background-color: #0e9e8d;
     border-color: #0e9e8d;
+    padding: 4px;
 }
 
 .buttonsSide {
@@ -344,7 +351,14 @@ html, body {
     font-size: 1.2em;
     font-weight: 600;
     width: 65%;
+}
+
+#monthId .titleInput, #budgetId .titleInput {
     margin-top: 20px;
+}
+
+#weatherId .titleInput {
+    margin-top: -10px;
 }
 
 @media (min-width: 768px) {
@@ -413,12 +427,11 @@ html, body {
 
 .wrapper-text {
     background-color: rgba(0, 0, 0, 0.6);
-   }
+}
 
 .wrapper-text-budget {
     background-color: rgba(0, 0, 0, 0.1);
 }
-
 
 #monthId p, #budgetId p {
     color: white;
@@ -436,11 +449,11 @@ html, body {
 }
 
 @media (min-width: 768px) {
-    .wrapper-text,.wrapper-text-budget {
+    .wrapper-text, .wrapper-text-budget {
         width: 60%;
         margin-top: 5px;
     }
-    #monthId p,  #budgetId p {
+    #monthId p, #budgetId p {
         font-size: 1em;
         margin: 20px;
     }

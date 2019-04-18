@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
 	<meta charset="utf-8">
@@ -16,8 +16,8 @@
 		rel="stylesheet">
 
 	<!-- emailJS -->
-	<script type="text/javascript" src="https://cdn.emailjs.com/sdk/2.3.2/email.min.js"></script>
-	<script type="text/javascript">
+	<script src="https://cdn.emailjs.com/sdk/2.3.2/email.min.js"></script>
+	<script>
 		(function () {
 			emailjs.init("user_50CQdKQtjaK7mvIZbRmht");
 		})();
@@ -34,7 +34,7 @@
 						<a class="navbar-brand change-month" href="#"><span>Eurotrip</span>Dashboard</a>
 					</div>
 
-					<!-- --NAV from bootstrap -->
+					<!-- NAV from bootstrap -->
 
 					<div class="col-xs-6 col-sm-10">
 						<nav class="navbar navbar-default ">
@@ -58,7 +58,7 @@
 										Change Budget
 									</li>
 									<li class="weather menu-item change-temperatures">
-										Change Temperatures
+										Change Temperature
 									</li>
 									<li class="menu-item contact-us">
 										<button type="button" data-toggle="modal" data-target="#myModal">
@@ -128,11 +128,13 @@
 			<li class="parent">
 				<a data-toggle="collapse" href="#sub-item-1" class="budget">
 					<h4>Change Budget</h4>
-					<em data-toggle="collapse" href="#sub-item-1" class="fa fa-filter faSide hidden-xs"></em>
+					<!-- <em data-toggle="collapse" href="#sub-item-1" class="fa fa-filter faSide hidden-xs"></em> -->
+					<em class="fa fa-filter faSide"></em>
+
 				</a>
 				<a data-toggle="collapse" href="#sub-item-2" class="weather">
-					<h4>Change Temperatures</h4>
-					<em data-toggle="collapse" href="#sub-item-2" class="fa fa-filter faSide hidden-xs"></em>
+					<h4>Change Temperature</h4>
+					<em class="fa fa-filter faSide"></em>
 				</a>
 				<ul class="children collapse" id="sub-item-1">
 					<li class="budget">
@@ -170,8 +172,6 @@
 			<li><a href="#"><em class="fa fa-facebook faSide hidden-sm hidden-md hidden-lg">&nbsp;</em></a></li>
 			<li><a href="#"><em class="fa fa-twitter faSide hidden-sm hidden-md hidden-lg">&nbsp;</em></a></li>
 			<li><a href="#"><em class="fa fa-linkedin faSide hidden-sm hidden-md hidden-lg">&nbsp;</em></a></li>
-		</ul>
-		</li>
 		</ul>
 	</div>
 	<!--/.sidebar-->
@@ -255,7 +255,7 @@
 	</section>
 	<!-- this section is hidden at the beggining -->
 
-	<section class="container-fluid hide" id="grafId" class="hide">
+	<section class="container-fluid hide" id="grafId">
 		<div class="col-lg-11 col-lg-offset-1 col-sm-10 col-sm-offset-2 main">
 
 			<!-- Should I use the infor message for title and error??? -->
@@ -504,17 +504,17 @@
 	</div>
 
 	<script src="js/jquery-3.3.1.js"></script>
-	<script type="text/javascript" src="js/d3.min.js"></script>
-	<script type="text/javascript" src="js/crossfilter.min.js"></script>
-	<script type="text/javascript" src="js/dc.min.js"></script>
-	<script type="text/javascript" src="js/queue.min.js"></script>
+	<script src="js/d3.min.js"></script>
+	<script src="js/crossfilter.min.js"></script>
+	<script src="js/dc.min.js"></script>
+	<script src="js/queue.min.js"></script>
 	<script src="js/bootstrap.min.js"></script>
 	<script src="js/custom.js"></script>
-	<script type="text/javascript" src="js/sendEmail.js"></script>
-	<script type="text/javascript" src="js/filterData.js"></script>
-	<script type="text/javascript" src="js/common.js"></script>
-	<script type="text/javascript" src="js/createChartsBudget.js"></script>
-	<script type="text/javascript" src="js/createChartsWeather.js"></script>
+	<script src="js/sendEmail.js"></script>
+	<script src="js/filterData.js"></script>
+	<script src="js/common.js"></script>
+	<script src="js/createChartsBudget.js"></script>
+	<script src="js/createChartsWeather.js"></script>
 
 
 </body>
