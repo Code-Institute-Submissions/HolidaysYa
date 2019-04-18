@@ -22,19 +22,19 @@ This website is targeting people who want to travel in Europe but are concerned 
 Below you can see the mockups that I drew using Pencil:
 
 ##### Intro page - month selection
-![intro](/mockups/month.jpg)
+![intro](/mockups/Month.png)
 
 
 ##### Budget page - maximum budget selection
-![Budget Selection](/mockups/budget.jpg)
+![Budget Selection](/mockups/Budget.png)
 
 
 ##### Weather page - temperature range selection
-![Temperature Selection](/mockups/weather.jpg)
+![Temperature Selection](/mockups/Weather.png)
 
 
 ##### Dashboard layout - same for weather or budget
-![Dashboard](/mockups/dashboard.png)
+![Dashboard](/mockups/DasboardSelection.png)
 
 * Note that the final design charts position differs from the initial design because when rendering the charts in the website I noticed some charts didn't look right with the origial design and I decided to change the layout of the dashboard.
 

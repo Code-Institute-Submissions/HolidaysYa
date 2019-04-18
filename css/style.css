@@ -298,7 +298,7 @@ html, body {
 }
 
 #errors {
-    background: url("../images/sad-mobile-red2.jpg") no-repeat center center fixed;
+    background: url("../images/sad-mobile.jpg") no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -307,7 +307,7 @@ html, body {
 
 @media (min-width: 768px) {
     #errors {
-        background: url("../images/sadred.jpg") no-repeat center center fixed;
+        background: url("../images/sad.jpg") no-repeat center center fixed;
         -webkit-background-size: cover;
         -moz-background-size: cover;
         -o-background-size: cover;
