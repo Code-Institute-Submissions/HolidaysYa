@@ -4,6 +4,7 @@ queue()
 
 function getMonth(error, data) {
     if (error) {
+        showErrorMessage();
         $('#errorMessage').html(`<h2>Error retrieving the data</h2>`);
     }
 

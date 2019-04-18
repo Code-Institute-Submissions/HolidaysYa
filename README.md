@@ -80,6 +80,7 @@ From the original template I kept the logo style but I removed all the options a
 - **Input boxes:** They allow the users to enter the minimum, maximum or both temperatures in order to find cities that have that weather.
 
 - **Error page:** This error page will display an error message when the following happens: 
+  * The Data is not retrieved.
   * The input box for the budget section or both input boxes for weather section are left empty.
   * The budget entered is too low and they are not cities found.
   * The minimum temperature is higher that the maximum temperature.
@@ -222,16 +223,13 @@ I have used GitHub Pages in order to deploy the website and it is also the remot
 
 - **HTML:** I have used https://validator.w3.org/ in order to validate the HTML code.
 - **CSS:** I have used https://jigsaw.w3.org/css-validator/ in order to validate the CSS code.
-
+- **JavaScript:** I have used https://jshint.com/ in order to check the JavaScript code.
 
 ### Features and responsiveness testing
  
 
 ### Additional testing
 I have used development tools in Google Chrome to check how the website would look in different devices. In addition to that testing I have also asked friends and family to have a look at the website to let me know if everything looks fine on their browsers and devices.
-
-
-
 
 
 ### Problems and bugs:
@@ -244,8 +242,6 @@ I have used development tools in Google Chrome to check how the website would lo
 - **Total number of cities:** The total number of cities matching the with the search options was not correct. After asking the Tutors they told me that the syntax seems right but they suggested to change the format of the number from .formatNumber(d3.format(".1s")) to .formatNumber(d3.format("d")) and that fixed the issue.
 
 - **emailjs not sending the emails**
-
-- **when data is not loaded** error screen is not appearing.
 
 - **Composite line charts were not aligned with the labels in the x axis** I searched on the Internet and found the solution in the following link (https://github.com/dc-js/dc.js/issues/662). 
     
