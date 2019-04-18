@@ -29,6 +29,7 @@ function createTotalDailyBudget(ndx) {
         .height(300)
         .useViewBoxResizing(true) // allows chart to be responsive        
         .margins({ top: 15, right: 10, bottom: 55, left: 35 })
+        .renderHorizontalGridLines(true)
         .dimension(cityDim)
         .group(hostel, "hostel")
         .stack(meals, "meals")
@@ -46,7 +47,6 @@ function createTotalDailyBudget(ndx) {
         .xAxisLabel('City')
         .yAxisLabel('Total daily budget')
         .yAxis().ticks(6);
-    //??????.legend(dc.legend().x(320).y(20).itemHeight(15).gap(5));
 }
 
 function createCurrencyChart(ndx) {
@@ -80,6 +80,7 @@ function createCorrelationCharts(data, ndx) {
         .height(200)
         .useViewBoxResizing(true) // allows chart to be responsive
         .x(d3.scale.linear().domain([0, maxArrivals]))
+        .renderHorizontalGridLines(true)
         .brushOn(false)
         .symbolSize(10)
         .clipPadding(10)

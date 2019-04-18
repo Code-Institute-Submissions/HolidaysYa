@@ -5,6 +5,7 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Eurotrip - Dashboard</title>
+	<link href="css/dc.css" rel="stylesheet">
 	<link href="css/bootstrap.min.css" rel="stylesheet">
 	<link href="css/font-awesome.min.css" rel="stylesheet">
 	<link href="css/styles.css" rel="stylesheet">
@@ -150,9 +151,9 @@
 				<ul class="children collapse" id="sub-item-2">
 					<li class="weather">
 						<div class="form-group">
-							<label for="minTemp2">Min. temperature</label>
+							<label for="minTemp2">Min. temperature (°C)</label>
 							<input type="number" class="form-control" id="minTemp2" name="minTemp2" />
-							<label for="maxTemp2">Max. temperature</label>
+							<label for="maxTemp2">Max. temperature (°C)</label>
 							<input type="number" class="form-control" id="maxTemp2" name="maxTemp2" />
 							<div class="buttonsSide">
 								<button class="btn btn-success" id="filterSideWeather">show cities</button>
@@ -230,12 +231,12 @@
 	<section id="weatherId" class="hide">
 		<div class="overlay">
 			<div class="inputBlock">
-				<label for="minTemp" class="titleInput">Minimun temperature</label>
+				<label for="minTemp" class="titleInput">Minimun temperature (°C)</label>
 				<input type="number" id="minTemp" name="minTemp" />
 			</div>
 			<div class="inputBlock">
 
-				<label for="maxTemp" class="titleInput">Maximun temperature</label>
+				<label for="maxTemp" class="titleInput">Maximun temperature (°C)</label>
 				<input type="number" id="maxTemp" name="maxTemp" />
 			</div>
 
@@ -311,7 +312,7 @@
 									class="weather fa fa-xl fa fa-thermometer color-red"></em>
 								<div class="large" id="hostel_maxtem"></div>
 								<div class="text-muted budget">Hostel</div>
-								<div class="text-muted weather">Max. Temp</div>
+								<div class="text-muted weather">Max. Temp (°C)</div>
 							</div>
 						</div>
 					</div>
@@ -321,7 +322,7 @@
 									class="weather fa fa-xl fa fa-thermometer-0 color-blue"></em>
 								<div class="large" id="meals_mintem"></div>
 								<div class="text-muted budget">Meals</div>
-								<div class="text-muted weather">Min. Temp</div>
+								<div class="text-muted weather">Min. Temp (°C)</div>
 							</div>
 						</div>
 					</div>
@@ -331,7 +332,7 @@
 									class="weather fa fa-xl fa fa-thermometer-2 color-yellow"></em>
 								<div class="large" id="drinks_avgtemp"></div>
 								<div class="text-muted budget">Drinks</div>
-								<div class="text-muted weather">Avg. Temp</div>
+								<div class="text-muted weather">Avg. Temp (°C)</div>
 							</div>
 						</div>
 					</div>
@@ -341,7 +342,7 @@
 									class="weather fa fa-xl fa fa-umbrella color-green"></em>
 								<div class="large" id="transport_maxpreci"></div>
 								<div class="text-muted budget">Transport</div>
-								<div class="text-muted weather">Max. Precipitation</div>
+								<div class="text-muted weather">Max. Precipitation<br><span class="text-lowercase">(mm)</span></div>
 							</div>
 						</div>
 					</div>
@@ -351,7 +352,7 @@
 									class="weather fa fa-xl fa fa-umbrella color-orange"></em>
 								<div class="large" id="attractions_minpreci"></div>
 								<div class="text-muted budget">Attractions</div>
-								<div class="text-muted weather">Min. Precipitation</div>
+								<div class="text-muted weather">Min. Precipitation<br><span class="text-lowercase">(mm)</span></div>
 							</div>
 						</div>
 					</div>

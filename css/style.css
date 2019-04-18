@@ -250,7 +250,7 @@ html, body {
 }
 
 .filterSideBar {
-    margin: 20px 0px;
+    margin: 10px 0px;
 }
 
 .faSide {
@@ -589,6 +589,7 @@ html, body {
 .panel-toggle {
     border: none;
     color: #30a5ff;
+    background: transparent;
 }
 
 .panel-toggle:hover {
@@ -614,6 +615,10 @@ path.domain {
 
 #rowChart .axis, #correlation .axis {
     font-size: 0.6em;
+}
+
+.dc-chart g.row text {
+    fill: #000;
 }
 
 /*composite line chart - max and min temperature*/
@@ -772,3 +777,8 @@ td {
 .hide {
     display: none;
 }
+
+div.dc-chart {
+    float: none;
+}
+
