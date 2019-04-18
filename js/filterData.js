@@ -22,36 +22,25 @@ function getMonth(error, data) {
         $('#errors').addClass('hide');
         $('#grafId').addClass('hide');
         $('#hamburguerButton').addClass('hide');
-        $('#navbar-collapse-1').addClass('hide');
+        $('#navbar-collapse-1').hide();
         $('#sidebar-collapse').addClass('hide');
     });
 
     $(".change-budget").click(function () {
         $('#budgetId').removeClass('hide').fadeIn(1000);
-        $('#monthId').addClass('hide');
         $('#weatherId').addClass('hide');
-        $('#errors').addClass('hide');
-        $('#grafId').addClass('hide');
-        $('#hamburguerButton').addClass('hide');
-        $('#navbar-collapse-1').addClass('hide');
-        $('#sidebar-collapse').addClass('hide');
-
+        showSecondFilterScreen();
+        
     });
 
     $(".change-temperatures").click(function () {
         $('#weatherId').removeClass('hide').fadeIn(1000);
-        $('#monthId').addClass('hide');
         $('#budgetId').addClass('hide');
-        $('#errors').addClass('hide');
-        $('#grafId').addClass('hide');
-        $('#hamburguerButton').addClass('hide');
-        $('#navbar-collapse-1').addClass('hide');
-        $('#sidebar-collapse').addClass('hide');
-
+        showSecondFilterScreen();
     });
 
     $("#hamburguerButton").click(function () {
-        $('#navbar-collapse-1').removeClass('hide');
+        $('#navbar-collapse-1').slideToggle(1500);
     });
 
     //When choose budget button is pressed, hide month selection page and show budget selection page
@@ -73,6 +62,24 @@ function getMonth(error, data) {
     $("#filterSideBudget").click(onClickFilterByBudget);
     $("#filterSideWeather").click(onClickFilterByWeather);
 }
+
+function showErrorMessage() {
+    $('#errors').removeClass('hide');
+    $('#budgetId').addClass('hide');
+    $('#weatherId').addClass('hide');
+    $('#monthId').addClass('hide');
+    $('#grafId').addClass('hide');
+}
+
+function showSecondFilterScreen() {
+    $('#monthId').addClass('hide');
+    $('#errors').addClass('hide');
+    $('#grafId').addClass('hide');
+    $('#hamburguerButton').addClass('hide');
+    $('#navbar-collapse-1').hide();
+    $('#sidebar-collapse').addClass('hide');
+}
+
 
 function filterData(monthSelected) {
     // 'data' is the key
@@ -308,14 +315,6 @@ function fiterBy(ndx, element) {
         .dimension(dim)
         .title(function (d) { return d.key; })
         .group(group);
-}
-
-function showErrorMessage() {
-    $('#errors').removeClass('hide');
-    $('#budgetId').addClass('hide');
-    $('#weatherId').addClass('hide');
-    $('#monthId').addClass('hide');
-    $('#grafId').addClass('hide');
 }
 
 function dataParser(data) {

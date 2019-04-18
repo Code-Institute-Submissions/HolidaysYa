@@ -1,4 +1,4 @@
-# Eurotrip dashboard – Second milestone project
+# HolidaysYa! – Second milestone project
 
 This is a website that will be used for people who are not sure where to go on holidays but they have a limited budget or they are looking for a specific weather.
 
@@ -50,7 +50,7 @@ Below you can see the mockups that I drew using Pencil:
 - As a user who has decided what city to visit but is not sure when is the best time to go, I want check how is the temperature and precipitation for each month to find out when is the best time in the year to go.
 - As a user, after analysing the dashboard charts, I want to find out more about a specific city.
 - As a user, after analysing the dashboard charts, I have some doubs and I want to contact the website to clarify some information.
-- As a user I want to follow "Eurotrip dashboard" on social media to know about new city additions or data updates.
+- As a user I want to follow "HolidaysYa!" on social media to know about new city additions or data updates.
 
 ## Features
 
@@ -65,7 +65,7 @@ From the original template I kept the logo style but I removed all the options a
 
 - **FontAwesome:** The FontAwesome icons are used to add extra meaning in several areas (i.e. social media buttons, icons in the side-bar and icons for the number displays in the dashboard section).
 
-- **Social media links:** They appear on the right side of the navigation bar for screens wider than 767px and allows the user to follow the "Eurotrip Dashboard" on social media so they can be up to date with new additions to the website or if there are data changes.  For screens smaller than 768px the social media links will be accesible from the hamburguer button on the dashboard section.
+- **Social media links:** They appear on the right side of the navigation bar for screens wider than 767px and allows the user to follow the "HolidaysYa!" on social media so they can be up to date with new additions to the website or if there are data changes.  For screens smaller than 768px the social media links will be accesible from the hamburguer button on the dashboard section.
 
 ### Month selection screen
 
@@ -92,7 +92,7 @@ From the original template I kept the logo style but I removed all the options a
     * **Change Month:** to go back to the main screen and choose another month.
     * **Change Budget / Change Temperatures:** To update the original filter value
     * **Contact Us:** To ask for more information about a city or anything regarding to the website.
-    * **Follow Us!:** to follow "Eurotrip Dashboard" on social media.
+    * **Follow Us!:** to follow "HolidaysYa!" on social media.
       * Facebook
       * Twitter
       * Linkedin
