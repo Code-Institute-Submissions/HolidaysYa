@@ -813,3 +813,7 @@ td {
 div.dc-chart {
     float: none;
 }
+
+.footer a{
+    text-decoration: none;
+}
