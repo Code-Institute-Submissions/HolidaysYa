@@ -15,23 +15,12 @@ html, body {
     padding: 0px;
 }
 
-/* HEADER */
-
+/* ************************  HEADER************************** */
 .navbar {
     margin: 0px;
 }
 
-.navbar-default {
-    background-color: transparent;
-    border-color: transparent;
-}
-
-.navbar-default ul {
-    color: white;
-}
-
 /* logo */
-
 .navbar-header .navbar-brand {
     font-size: 1.8em;
     text-transform: capitalize;
@@ -39,8 +28,12 @@ html, body {
     margin-left: 15px;
 }
 
-/* humburuer button */
+.navbar-default {
+    background-color: transparent;
+    border-color: transparent;
+}
 
+/* humburguer button */
 .navbar-default .navbar-toggle {
     border-color: transparent;
     background: transparent;
@@ -59,20 +52,14 @@ html, body {
     border-radius: 5px;
 }
 
-.navbar-collapse .visible-xs {
-    background-color: #222222;
-    margin-top: 0px;
-}
-
-.navbar-fixed-bottom .navbar-collapse, .navbar-fixed-top .navbar-collapse {
+#navbar-collapse-1{
     max-height: 100%;
 }
 
-.navbar-collapse .nav>li, .navbar-collapse .nav>li>a {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+#navbar-collapse-1 .visible-xs {
+    background-color: #222222;
+    color: white;
+    margin-top: 0px;
 }
 
 .navbar-collapse .nav>.menu-item {
@@ -82,15 +69,19 @@ html, body {
     border-bottom: 1px solid white;
 }
 
-.visible-xs .dropdown {
-    margin: 0px;
-    padding: 0px;
+#navbar-collapse-1 .nav>li, .navbar-collapse .nav>li>a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 .navbar-collapse .nav>.dropdown {
     background-color: rgb(7, 125, 204);
     padding-top: 1.2em;
+    margin: 0px;
     font-size: 0.8em;
+    border-radius: 0;
 }
 
 .caret {
@@ -103,8 +94,8 @@ html, body {
 }
 
 .navbar-collapse .nav>.dropdown>.dropdown-menu>li {
-    padding-top: 0.7em;
-    padding-bottom: 0.7em;
+    padding-top: 5px;
+    padding-bottom: 5px;
     padding-right: 15px;
     border-top: 0.1px solid white;
 }
@@ -114,6 +105,7 @@ html, body {
     font-size: 0.8em;
 }
 
+/* contact US button */
 .navbar-collapse .nav>.menu-item button {
     width: 100%;
     height: 100%;
@@ -123,6 +115,7 @@ html, body {
     outline: none;
 }
 
+/* hamburguer button - social media links*/
 .navbar-default .navbar-nav>.open>a, .navbar-default .navbar-nav>.open>a:focus, .navbar-default .navbar-nav>.open>a:hover, .navbar-default .navbar-nav>.open>a, .navbar-default .navbar-nav>.open>a:focus, .navbar-default .navbar-nav>.open>a:hover {
     color: white;
     background-color: transparent;
@@ -137,8 +130,7 @@ html, body {
     text-align: center;
 }
 
-/* social media icons */
-
+/* social media icons  - desktop screens*/
 .navbar-collapse .navbar-right {
     margin-right: 25px;
     background-color: transparent;
@@ -171,107 +163,9 @@ html, body {
     padding-left: 5px;
 }
 
-/************************************** sidebar */
+/* *******************  month, budget and weather selection sections ******************** */
 
-.sidebar li {
-    text-align: center;
-}
-
-.sidebar ul.nav a:hover, .sidebar ul.nav li.parent ul li a:hover {
-    background-color: transparent;
-}
-
-.sidebar {
-    overflow: visible;
-    box-shadow: 1px 1px 7px #dedede;
-}
-
-.sidebar ul {
-    margin: 0px;
-}
-
-.sidebar ul li {
-    padding-bottom: 15px;
-}
-
-.sidebar h4 {
-    padding-bottom: 8px;
-    font-size: 0.9em;
-    font-weight: 400;
-}
-
-@media (min-width: 1200px) {
-    .sidebar h4 {
-        font-size: 0.8em;
-    }
-}
-
-.sidebar ul.nav li a {
-    height: 100%;
-}
-
-.sidebar ul.nav ul.children {
-    background: transparent;
-}
-
-.sidebar ul.nav ul.children .budget, .sidebar ul.nav ul.children .weather {
-    padding-top: 10px;
-    margin: 0px 5px;
-    background: #ededed;
-}
-
-.sidebar .form-group {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 0px;
-}
-
-.sidebar label {
-    padding-top: 10px;
-    font-size: 0.8em;
-    font-weight: 800;
-}
-
-.sidebar .btn-success {
-    background-color: #0e9e8d;
-    border-color: #0e9e8d;
-    padding: 4px;
-}
-
-.buttonsSide {
-    margin-top: 15px;
-}
-
-.sidebar input {
-    width: 70px;
-    height: 25px;
-}
-
-.filterSideBar {
-    margin: 10px 0px;
-}
-
-.faSide {
-    font-size: 36px;
-    color: grey;
-    transition: all .5s ease-in-out;
-    -webkit-transition: all .5s ease-in-out;
-    -moz-transition: all .5s ease-in-out;
-    -o-transition: all .5s ease-in-out;
-}
-
-.faSide:hover {
-    color: #52a9ec;
-}
-
-.btn-group-lg>.btn, .btn-lg {
-    padding: 0px;
-}
-
-/* background section month selection, budget selection and weather selection */
-
+/* background section month selection, budget selection and weather selection and error screen */
 #monthId, #budgetId, #weatherId, #errors {
     height: 100vh;
     width: 100vw;
@@ -281,6 +175,7 @@ html, body {
     justify-content: center;
 }
 
+/* image for the month selection section */
 #monthId {
     background: url("../images/amsterdam.jpg") no-repeat center center fixed;
     -webkit-background-size: cover;
@@ -289,6 +184,7 @@ html, body {
     background-size: cover;
 }
 
+/* image for the budget selection section */
 #budgetId {
     background: url("../images/budget.jpg") no-repeat center center fixed;
     -webkit-background-size: cover;
@@ -297,6 +193,7 @@ html, body {
     background-size: cover;
 }
 
+/* image for the weather selection section */
 #weatherId {
     background: url("../images/weather.jpg") no-repeat center center fixed;
     -webkit-background-size: cover;
@@ -305,6 +202,7 @@ html, body {
     background-size: cover;
 }
 
+/* image for the error screen - mobile*/
 #errors {
     background: url("../images/sad-mobile.jpg") no-repeat center center fixed;
     -webkit-background-size: cover;
@@ -313,6 +211,7 @@ html, body {
     background-size: cover;
 }
 
+/* image for the error screen - desktop*/
 @media (min-width: 768px) {
     #errors {
         background: url("../images/sad.jpg") no-repeat center center fixed;
@@ -323,25 +222,25 @@ html, body {
     }
 }
 
-/*common to the three sections*/
-
-/* I added an overlay to make the text more readeble */
-
+/* I added an overlay on top of the images to make the text easier to read */
 .overlay1, .overlay {
     width: 100%;
     height: 100%;
-    /* background-image: linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0)); */
 }
 
-.overlay {
-    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0));
-}
-
+/* darker overlay for the month selection section */
 .overlay1 {
     background-image: linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
 }
 
+/* overlay for the budget and weather selection sections */
+.overlay {
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0));
+}
+
+/* to wrap the content in month, budget and weather selection screens*/
 .wrapper-section {
+    /* this marging of 80px will stop the content hiding under the navigation bar */
     margin-top: 80px;
     display: flex;
     align-items: center;
@@ -350,6 +249,7 @@ html, body {
     text-align: center;
 }
 
+/* the weather section needs more top margin */
 #weatherId .wrapper-section {
     margin-top: 200px;
 }
@@ -362,14 +262,6 @@ html, body {
     width: 65%;
 }
 
-#monthId .titleInput, #budgetId .titleInput {
-    margin-top: 20px;
-}
-
-#weatherId .titleInput {
-    margin-top: -10px;
-}
-
 @media (min-width: 768px) {
     .titleInput {
         margin-bottom: 20px;
@@ -378,16 +270,24 @@ html, body {
     }
 }
 
-/* input fields */
+#monthId .titleInput, #budgetId .titleInput {
+    margin-top: 20px;
+}
 
+#weatherId .titleInput {
+    margin-top: -10px;
+}
+
+/* input fields */
 #monthSelector, #maxBudget, #maxTemp, #minTemp {
-    font-size: 12px;
+    font-size: 15px;
     height: 30px;
     border: none;
 }
 
 @media (min-width: 768px) {
     #monthSelector, #maxBudget, #maxTemp, #minTemp {
+        font-size: 18px;
         height: 40px;
     }
 }
@@ -400,30 +300,7 @@ html, body {
     width: 80px;
 }
 
-.button {
-    border-radius: 25px;
-    width: 15em;
-    height: 4em;
-    font-size: 0.9em;
-    font-weight: 800;
-    margin: 20px 30px 0px 30px;
-    box-sizing: border-box;
-    outline: none;
-}
-
-.btn-info.focus, .btn-info:focus, .btn-info:active:focus {
-    border-color: transparent;
-    outline: none;
-}
-
-@media (min-width: 768px) {
-    .button {
-        font-size: 1.1em;
-    }
-}
-
-/* month section */
-
+/* month selection section */
 #monthId h1 {
     color: white;
     font-weight: 400;
@@ -437,11 +314,9 @@ html, body {
     }
 }
 
+/* month selection section and budget selection text wrapper */
 .wrapper-text, .wrapper-text-budget {
     width: 80%;
-    background-color: rgba(0, 0, 0, 0.6);
-    padding: 5px;
-    box-sizing: border-box;
     padding: 15px;
     box-sizing: border-box;
 }
@@ -487,8 +362,7 @@ html, body {
     }
 }
 
-/* weather section */
-
+/* weather section input*/
 .inputBlock {
     display: inline-block;
     width: 60%;
@@ -501,28 +375,147 @@ html, body {
     }
 }
 
-/* charts section */
+/* ************************************** buttons *******************************  */
+/* all */
+.btn-info.focus, .btn-info:focus, .btn-info:active:focus, .btn-success.focus, .btn-success:focus, .btn-success:active:focus  {
+    border-color: transparent;
+    outline: none;
+    box-shadow: none;
+}
+.button {
+    border-radius: 25px;
+    width: 15em;
+    height: 4em;
+    font-size: 0.9em;
+    font-weight: 800;
+    margin: 20px 30px 0px 30px;
+    box-sizing: border-box;
+    outline: none;
+}
+@media (min-width: 768px) {
+    .button {
+        font-size: 1.1em;
+    }
+}
+
+/*reset button */
+.reset {
+    text-align: right;
+    margin-top: 20px;
+}
+.reset .btn-info {
+    margin-right: 15px;
+}
+
+/* sidebar buttons */
+.sidebar .btn-success {
+    background-color: #0e9e8d;
+    border-color: #0e9e8d;
+    padding: 4px;
+    margin: 15px 0px 10px 0px;
+}
+
+.btn-primary {
+    background-color: transparent;
+    border: none;
+    color: grey;
+}
+
+.btn-primary.active.focus, .btn-primary:focus, .btn-primary.focus, .btn-primary:active.focus, .btn-primary:active:focus, .btn-primary:focus, .btn-primary:active, .btn-primary, .btn-primary:hover {
+    outline: none;
+    background-color: transparent;
+    text-decoration: none;
+    border-color: transparent;
+    box-shadow: none;
+}
+
+/* ******************* sidebar for dashboards - only visible in desktop ************* */
+.sidebar {
+    overflow: visible;
+    box-shadow: 1px 1px 7px #dedede;
+}
+
+.sidebar ul {
+    margin: 0px;
+}
+
+.sidebar li {
+    text-align: center;
+    padding-bottom: 15px;
+}
+
+.sidebar ul.nav a:hover, .sidebar ul.nav li.parent ul li a:hover {
+    background-color: transparent;
+}
+
+.sidebar h4 {
+    padding-bottom: 8px;
+    font-size: 0.9em;
+    font-weight: 400;
+}
+
+@media (min-width: 1200px) {
+    .sidebar h4 {
+        font-size: 0.8em;
+    }
+}
+
+.sidebar ul.nav li a {
+    height: 100%;
+}
+
+.sidebar ul.nav ul.children {
+    background: transparent;
+}
+
+.sidebar ul.nav ul.children .budget, .sidebar ul.nav ul.children .weather {
+    padding-top: 10px;
+    margin: 0px 5px;
+    background: #ededed;
+}
+
+.sidebar .form-group {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 0px;
+}
+
+.sidebar label {
+    padding-top: 10px;
+    font-size: 0.8em;
+    font-weight: 800;
+}
+
+.sidebar input {
+    width: 70px;
+    height: 25px;
+}
+
+.faSide {
+    font-size: 36px;
+    color: grey;
+    transition: all .5s ease-in-out;
+    -webkit-transition: all .5s ease-in-out;
+    -moz-transition: all .5s ease-in-out;
+    -o-transition: all .5s ease-in-out;
+}
+
+.faSide:hover {
+    color: #52a9ec;
+}
+
+/* ******************************* Dashboard section *************************** */
 
 #grafId {
-    /* so it doesnt hide under the navBar */
+    /* so it doesn't hide under the navbar */
     margin-top: 60px;
     height: 100vh;
     width: 100vw;
 }
 
-/* title and reset button */
-
-.reset {
-    text-align: right;
-    margin-top: 20px;
-}
-
-.reset .btn-info {
-    margin-right: 15px;
-}
-
-/* filters */
-
+/* dc select menus - filter by region, country and city */
 .dc-select-menu {
     width: 90%;
     border: none;
@@ -545,7 +538,6 @@ html, body {
 }
 
 /* numberDisplays */
-
 .NumberDisplays {
     background-color: transparent;
     margin-bottom: 0px;
@@ -560,6 +552,7 @@ html, body {
     margin-top: 0px;
 }
 
+/* colors number displays icons */
 .color-lightblue {
     color: #30a5ff;
 }
@@ -588,6 +581,7 @@ html, body {
     color: rgb(131, 27, 150)
 }
 
+/* text color */
 .text-muted {
     color: #a7a1a1;
 }
@@ -597,7 +591,6 @@ html, body {
 }
 
 /*chart panels*/
-
 .panel-widget {
     padding: 0px;
 }
@@ -610,7 +603,6 @@ html, body {
     height: 100%;
     font-size: 1.1em;
     line-height: 20px;
-    /* display: flex; */
     margin: 0px;
 }
 
@@ -629,54 +621,31 @@ html, body {
     color: #52a9ec;
 }
 
-/*CHARTS*/
+/* Charts */
+div.dc-chart {
+    float: none;
+}
 
 /* legends */
-
 .dc-legend-item {
     font-size: 0.8em;
 }
 
 /*charts axis style*/
-
-path.domain {
-    stroke: rgb(0, 0, 0);
-    fill: none;
-    stroke-width: 0.8;
+.dc-chart .axis path, .dc-chart .axis line {
+    stroke-width: 0.5px;
 }
 
-#rowChart .axis, #correlation .axis {
-    font-size: 0.6em;
-}
-
+/* rowChart text color updated */
 .dc-chart g.row text {
-    fill: #000;
-}
-
-/*composite line chart - max and min temperature*/
-
-#dailyBudget_Temp path {
-    fill: none;
-}
-
-.stack-list .line {
-    stroke-width: 1.5;
-    stroke-linecap: round;
+    fill: rgb(0, 0, 0);
 }
 
 /* axis charts max and min temperature & total budget */
-
-#dailyBudget_Temp .axis {
-    font-size: 0.5em;
-}
-
-/* how to rotate the labels so they fit well in the screen
-https://github.com/dc-js/dc.js/issues/731
-*/
-
-#dailyBudget_Temp .x.axis text, #rowChart .x.axis text {
+#dailyBudget_Temp .x.axis text{
     text-anchor: end !important;
     transform: rotate(-45deg);
+    font: 7px sans-serif;
 }
 
 .x-axis-label, .y-axis-label {
@@ -685,23 +654,16 @@ https://github.com/dc-js/dc.js/issues/731
 }
 
 @media (min-width: 768px) {
-    #dailyBudget_Temp .axis {
-        font-size: 0.8em;
-    }
-    .dc-legend-item {
-        font-size: 0.8em;
+    #dailyBudget_Temp .x.axis text{
+        font: 10px sans-serif;
     }
     .x-axis-label, .y-axis-label {
         font-weight: bold;
         font-size: 0.9em;
     }
-    #rowChart .axis, #correlation .axis {
-        font-size: 0.8em;
-    }
 }
 
 /* table */
-
 .table {
     position: relative;
     table-layout: fixed;
@@ -726,52 +688,29 @@ tr {
     height: 2em;
 }
 
-td {
+tr td {
     padding-left: 10px;
     padding-right: 10px;
     font-size: 8px;
 }
 
 @media (min-width: 768px) {
-    .table {
-        text-align: center;
-    }
-    thead {
-        background-color: #e6e6e6;
-    }
     th {
         font-size: 12px;
         font-weight: 700;
         height: 5em;
         padding-left: 10px;
-        width: 10%;
         padding-right: 10px
     }
     tr {
         height: 3em;
     }
     tr td {
-        padding-left: 10px;
-        padding-right: 10px;
         font-size: 12px;
     }
 }
 
-.email-button {
-    background-color: transparent;
-    border: none;
-    color: grey;
-}
-
-.email-button.active.focus, .email-button:focus, .email-button.focus, .email-button:active.focus, .email-button:active:focus, .email-button:focus, .email-button:active, .email-button, .email-button:hover {
-    outline: none;
-    background-color: transparent;
-    text-decoration: none;
-    border-color: transparent;
-    box-shadow: none;
-}
-
-/* error messages page*/
+/* ******************* error messages page ******************** */
 
 #errorMessage {
     width: 70%;
@@ -802,18 +741,15 @@ td {
     }
 }
 
-/*jquery classes*/
+/* link to template in the footer */
+.footer a{
+    text-decoration: none;
+}
 
-/*weather, budget and graphics sections are hiden at the beggining*/
+/*class used with jQuery*/
 
+/*the hide class is used with jQuery to hide/show the sections in the website*/
 .hide {
     display: none;
 }
 
-div.dc-chart {
-    float: none;
-}
-
-.footer a{
-    text-decoration: none;
-}

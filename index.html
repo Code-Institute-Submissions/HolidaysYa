@@ -146,7 +146,7 @@
 						<option value="November">November</option>
 						<option value="December">December</option>
 					</select>
-					<div class="buttons">
+					<div>
 						<button id="chooseWeather" class="btn btn-info button">Choose by temperature</button>
 						<button id="chooseBudget" class="btn btn-info button">Choose by budget</button>
 					</div>
@@ -179,7 +179,7 @@
 					</div>
 					<label for="maxBudget" class="titleInput">What is your maximun budget(€) per day?</label>
 					<input type="number" id="maxBudget" name="maxBudget" required />
-					<div class="buttons">
+					<div>
 						<button class="btn btn-info button" id="resultsBudget" onclick="showTitle('Budget')">show
 							cities</button>
 					</div>
@@ -199,7 +199,7 @@
 						<label for="maxTemp" class="titleInput">Maximun temperature(°C)</label>
 						<input type="number" id="maxTemp" name="maxTemp" />
 					</div>
-					<div class="buttons">
+					<div>
 						<button class="btn btn-info button" id="resultsWeather" onclick="showTitle('Weather')">show
 							cities</button>
 					</div>
@@ -210,7 +210,7 @@
 		<!-- error screen, this section is hidden at the beggining -->
 		<section id="errors" class="hide">
 			<div id="errorMessage"></div>
-			<div class="buttons">
+			<div>
 				<button class="btn btn-info button change-month">Start again!</button>
 			</div>
 		</section>
@@ -241,8 +241,8 @@
 							<div class="form-group">
 								<label for="maxBudget2">New budget</label>
 								<input type="number" class="form-control" id="maxBudget2" name="maxBudget2" required />
-								<div class="buttons">
-									<button class="btn btn-success filterSideBar" id="filterSideBudget">show cities</button>
+								<div>
+									<button class="btn btn-success" id="filterSideBudget">show cities</button>
 								</div>
 							</div>
 						</li>
@@ -254,9 +254,7 @@
 								<input type="number" class="form-control" id="minTemp2" name="minTemp2" />
 								<label for="maxTemp2">Max. temperature (°C)</label>
 								<input type="number" class="form-control" id="maxTemp2" name="maxTemp2" />
-								<div class="buttonsSide">
-									<button class="btn btn-success" id="filterSideWeather">show cities</button>
-								</div>
+								<button class="btn btn-success" id="filterSideWeather">show cities</button>
 							</div>
 						</li>
 
@@ -264,7 +262,7 @@
 				</li>
 				<li>
 					<h4>Contact Us!</h4>
-					<button type="button" class="btn btn-primary btn-lg email-button" data-toggle="modal"
+					<button type="button" class="btn btn-primary btn-lg" data-toggle="modal"
 						data-target="#myModal">
 						<em class="fa fa-envelope faSide hidden-xs">&nbsp;</em>
 					</button>
@@ -288,7 +286,7 @@
 				</div>
 				<hr>
 				<!-- SelectCharts -->
-				<div class="row filters">
+				<div class="row">
 					<div class="col-sm-4 no-padding text-center filters">
 						<h3 class="filterTitles">Filter by Region</h3>
 						<div id="filterByRegion"></div>
