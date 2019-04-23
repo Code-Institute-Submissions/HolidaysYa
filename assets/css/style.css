@@ -185,7 +185,7 @@ html, body {
 /* image for the month selection section */
 
 #monthId {
-    background: url("../images/amsterdam.jpg") no-repeat center center fixed;
+    background: url("../../images/amsterdam.jpg") no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -195,7 +195,7 @@ html, body {
 /* image for the budget selection section */
 
 #budgetId {
-    background: url("../images/budget.jpg") no-repeat center center fixed;
+    background: url("../../images/budget.jpg") no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -205,7 +205,7 @@ html, body {
 /* image for the weather selection section */
 
 #weatherId {
-    background: url("../images/weather.jpg") no-repeat center center fixed;
+    background: url("../../images/weather.jpg") no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -215,7 +215,7 @@ html, body {
 /* image for the info-message screen - mobile*/
 
 .sad {
-    background: url("../images/sad-mobile.jpg") no-repeat center center fixed;
+    background: url("../../images/sad-mobile.jpg") no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -223,7 +223,7 @@ html, body {
 }
 
 .happy {
-    background: url("../images/happy-mobile.jpg") no-repeat center center fixed;
+    background: url("../../images/happy-mobile.jpg") no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -234,14 +234,14 @@ html, body {
 
 @media (min-width: 768px) {
     .sad {
-        background: url("../images/sad.jpg") no-repeat center center fixed;
+        background: url("../../images/sad.jpg") no-repeat center center fixed;
         -webkit-background-size: cover;
         -moz-background-size: cover;
         -o-background-size: cover;
         background-size: cover;
     }
     .happy {
-        background: url("../images/happy.jpg") no-repeat center center fixed;
+        background: url("../../images/happy.jpg") no-repeat center center fixed;
         -webkit-background-size: cover;
         -moz-background-size: cover;
         -o-background-size: cover;
