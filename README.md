@@ -149,7 +149,7 @@ The dashboard for the weather will display the following elements:
   * **Max. Precipitation:** Display the maximun precipiation amongst all the   cities filtered.
   * **Min. Precipitation:** Display the minimum precipiation amongst all the cities filtered.
 
-**Row Chart - Precipitation per month (mm):** Displays the average precipitation for that month for the cities filtered in descending order. Hovering over the row for each city you can see the exact mm. By cliking on one of the bars the rest of the data in the dashboard will be filtered.
+- **Row Chart - Precipitation per month (mm):** Displays the average precipitation for that month for the cities filtered in descending order. Hovering over the row for each city you can see the exact mm. By cliking on one of the bars the rest of the data in the dashboard will be filtered.
 
 - **Composite line chart - Maximum and Minimum temperatures (°C):** Displays two line charts. One line chart represents the maximun temperatures for each city and the other line chart represents the minimun temperatures for each city. Hovering over the line chart points the user can see the exact temperature for each city.
 

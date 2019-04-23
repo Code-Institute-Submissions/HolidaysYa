@@ -1,20 +1,15 @@
 
+/*function to calculte the maximum temperature and precipitation
+from the cities filtered and show them in a number display*/
 function show_max_weather(ndx, column, element) {
-    // in order to calculate the maximum temperature I used Stackoverflow for help and they suggest to use the following code
+    /* In order to calculate the maximum temperature (from all the maximum temperatures
+        for the cities filtered) I used Stackoverflow for help and they suggest to use the 
+        following code. Then I replicated the code to calculate the minimun temperature*/
+
     var maxDim = ndx.dimension(dc.pluck(column));
 
     dc.numberDisplay(element)
         .group(dim_max_groupAll(maxDim, column))
-        .valueAccessor(x => x)
-        .formatNumber(d3.format('.0f'))
-        .render();
-}
-
-function show_min_weather(ndx, column, element) {
-    var minDim = ndx.dimension(dc.pluck(column));
-
-    dc.numberDisplay(element)
-        .group(dim_min_groupAll(minDim, column))
         .valueAccessor(x => x)
         .formatNumber(d3.format('.0f'))
         .render();
@@ -28,6 +23,18 @@ function dim_max_groupAll(maxDim, column) {
     };
 }
 
+/*function to calculte the minimum temperature and precipitation
+from the cities filtered and show them in a number display*/
+function show_min_weather(ndx, column, element) {
+    var minDim = ndx.dimension(dc.pluck(column));
+
+    dc.numberDisplay(element)
+        .group(dim_min_groupAll(minDim, column))
+        .valueAccessor(x => x)
+        .formatNumber(d3.format('.0f'))
+        .render();
+}
+
 function dim_min_groupAll(minDim, column) {
     return {
         value: function () {
@@ -36,6 +43,8 @@ function dim_min_groupAll(minDim, column) {
     };
 }
 
+/*function to calculate the average temperature for the 
+cities filtered and show it in a number display*/
 function show_avg_temp(ndx, element) {
     var average_temp = ndx.groupAll().reduce(
         //function adder
@@ -66,7 +75,7 @@ function show_avg_temp(ndx, element) {
         },
         //Initialise
         function () {
-            return { count: 0, totalmax: 0, totalmin: 0, totalavg: 0, averageTemp: 0 };
+            return { count: 0, totalmax: 0, totalmin: 0, totalavg: 0, averageTemp: 0};
         }
     );
 
@@ -85,14 +94,14 @@ function show_avg_temp(ndx, element) {
         .group(average_temp);
 }
 
+// function to display the row chart with the average precipitation for the cities filtered
 function createRowChartWeather(ndx) {
     var dimCity = ndx.dimension(dc.pluck('city'));
     var precipitationGroup = dimCity.group().reduceSum(dc.pluck('precipitation'));
 
     dc.rowChart("#rowChart")
         .height(600)
-        .useViewBoxResizing(true)
-        .x(d3.scale.linear().domain([0, 200]))
+        .useViewBoxResizing(true) // to make the chart responsive
         .elasticX(true)
         .title(function(d){
             return "The average precipitation (mm) for " + d.key + " is: " + d.value + "mm";
@@ -103,6 +112,7 @@ function createRowChartWeather(ndx) {
         .group(precipitationGroup);
 }
 
+//function to display the composite line chart with the max. and min. temperatures
 function cityTemp(ndx) {
     var dim = ndx.dimension(dc.pluck('city')),
         grp1 = dim.group().reduceSum(dc.pluck('maxTemp')),
@@ -111,11 +121,15 @@ function cityTemp(ndx) {
     var composite = dc.compositeChart("#dailyBudget_Temp");
     composite
         .height(250)
-        .useViewBoxResizing(true) // allows chart to be responsive
+        .useViewBoxResizing(true) // to make the chart responsive
         .margins({ top: 60, right: 20, bottom: 55, left: 35 })
         .x(d3.scale.ordinal())
         .xUnits(dc.units.ordinal)
         .dimension(dim)
+        /* in a composite chart .group shouldn't be included in
+        this part of the code, only in the composite sub-charts code
+        but it seems that the ordinal scale and composite charts don't display
+        properly unless you add the .group in this part of the code as well */
         .group(grp1, "max. Temperature (°C)")
         .yAxisLabel("Temperature (°C)")
         .xAxisLabel("City")
@@ -128,15 +142,11 @@ function cityTemp(ndx) {
         ._rangeBandPadding(1)
         .compose([
             dc.lineChart(composite)
-                .dimension(dim)
-                 .group(grp1, "max. Temperature (°C)")
-                .clipPadding(10)
+                .group(grp1, "max. Temperature (°C)")
                 .colors('#E86443')
                 .dashStyle([3, 3]),
             dc.lineChart(composite)
-                .dimension(dim)
                 .group(grp2, "min. Temperature (°C)")
-                .clipPadding(10)
                 .colors('#006B99')
                 .dashStyle([8, 3])
         ])
@@ -144,6 +154,8 @@ function cityTemp(ndx) {
         .transitionDuration(1500);
 }
 
+/*function to display the composite scatter plot chart with the average temperature
+and average precipitation and their correlation with the number of visits per year*/
 function createCorrelationTemp(data, ndx) {
     var maxArrivals = d3.max(data, function (d) { return d.visitorsCity; });
 
@@ -161,36 +173,30 @@ function createCorrelationTemp(data, ndx) {
     var composite = dc.compositeChart("#correlation");
     composite
         .height(250)
-        .useViewBoxResizing(true) // allows chart to be responsive
+        .useViewBoxResizing(true) // to make the chart responsive
         .margins({ top: 55, right: 50, bottom: 40, left: 30 })
         .legend(dc.legend().x(40).y(0).itemHeight(13).gap(5))
         .x(d3.scale.linear().domain([0, maxArrivals]))
-        .xAxisLabel('Number of country visitors (2017 or 2018)')
+        .xAxisLabel('Number of country visitors per year')
         .yAxisLabel("Avg. Temperature (°C)")
         .rightYAxisLabel("Avg. Precipitation (mm)")
         .clipPadding(10)
-        .shareTitle(false)
-        .dimension(dimTemp)
-        .group(temperatureGroup, "Temperature (°C)")
+        .shareTitle(false) //false so I can use different title for temperature and precipitation
         .renderHorizontalGridLines(true)
         .brushOn(false)
         .compose([
             dc.scatterPlot(composite)
                 .dimension(dimTemp)
-                // .renderHorizontalGridLines(true)
                 .symbolSize(7)
                 .colors('#F2C44F')
-                .clipPadding(10)
                 .title(function (d) {
                     return d.key[2] + " the average temperature (°C) is " + d.key[1] + " degrees\nand there was " + d.key[0] + " millions visits in 2017";
                 })
                 .group(temperatureGroup, "temperature (°C)"),
             dc.scatterPlot(composite)
                 .dimension(dimPreci)
-                // .renderHorizontalGridLines(true)
                 .symbolSize(7)
                 .colors('#0E9E8D')
-                .clipPadding(10)
                 .title(function (d) {
                     return d.key[2] + " the average precipitation (mm) is " + d.key[1] + " mm\nand there was " + d.key[0] + " millions visits in 2017";
                 })
@@ -200,7 +206,7 @@ function createCorrelationTemp(data, ndx) {
 }
 
 
-
+// function to display a pie chart with the chances of precipitation
 function createPrecipitationChart(ndx) {
     var dimPrecipitation = ndx.dimension(function (d) {
         if (d.precipitation >= 85) {
@@ -220,7 +226,7 @@ function createPrecipitationChart(ndx) {
         .height(250)
         .innerRadius(40)
         .legend(dc.legend().x(0).y(0).itemHeight(13).gap(5))
-        .useViewBoxResizing(true) // allows chart to be responsive
+        .useViewBoxResizing(true) // to make the chart responsive
         .externalRadiusPadding(20)
         .dimension(dimPrecipitation)
         .group(groupPrecipitation)
@@ -229,6 +235,7 @@ function createPrecipitationChart(ndx) {
         .transitionDuration(1500);
 }
 
+// this function creates the table
 function createTableWeather(ndx) {
     var allDimension = ndx.dimension(function (d) {
         return (d);
@@ -238,7 +245,7 @@ function createTableWeather(ndx) {
     tableChart
         .height(300)
         .width(400)
-        .useViewBoxResizing(true) // allows chart to be responsive
+        .useViewBoxResizing(true) // to make the chart responsive
         .dimension(allDimension)
         .group(function (data) {
             return (data);

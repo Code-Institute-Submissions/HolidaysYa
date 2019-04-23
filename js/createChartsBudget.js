@@ -1,3 +1,4 @@
+// function to create the row chart by total budget needed per day
 function createRowChart(ndx) {
     var dimCity = ndx.dimension(dc.pluck('city'));
     var budgetGroup = dimCity.group().reduceSum(function (d) {
@@ -7,8 +8,7 @@ function createRowChart(ndx) {
 
     dc.rowChart("#rowChart")
         .height(600)
-        .useViewBoxResizing(true)
-        .x(d3.scale.linear().domain([0, 200]))
+        .useViewBoxResizing(true) //to make the chart responsive
         .title(function (d) { return "Minimun daily budget in " + d.key + ": " + d.value + "€"; })
         .elasticX(true)
         .transitionDuration(1500)
@@ -17,6 +17,7 @@ function createRowChart(ndx) {
         .group(budgetGroup);
 }
 
+// function to create stacked chart with the 5 categories
 function createTotalDailyBudget(ndx) {
     var cityDim = ndx.dimension(dc.pluck('city'));
     var hostel = cityDim.group().reduceSum(dc.pluck('hostelNight'));
@@ -27,7 +28,7 @@ function createTotalDailyBudget(ndx) {
 
     dc.barChart('#dailyBudget_Temp')
         .height(300)
-        .useViewBoxResizing(true) // allows chart to be responsive        
+        .useViewBoxResizing(true) //to make the chart responsive
         .margins({ top: 15, right: 10, bottom: 55, left: 35 })
         .renderHorizontalGridLines(true)
         .dimension(cityDim)
@@ -49,6 +50,7 @@ function createTotalDailyBudget(ndx) {
         .yAxis().ticks(6);
 }
 
+//function to create pie chart with the currencies
 function createCurrencyChart(ndx) {
     var dimCurrency = ndx.dimension(dc.pluck('currencyCode'));
     var groupCurrency = dimCurrency.group();
@@ -57,15 +59,17 @@ function createCurrencyChart(ndx) {
         .height(200)
         .innerRadius(25)
         .legend(dc.legend().x(0).y(10).itemHeight(13).gap(5))
-        .useViewBoxResizing(true) // allows chart to be responsive
+        .useViewBoxResizing(true) //to make the chart responsive
         .externalRadiusPadding(40)
         .dimension(dimCurrency)
         .group(groupCurrency)
-        .renderLabel(false)
+        .renderLabel(false)//we use the legend instead
         .ordinalColors(["#006B99", "#4593B4", "#0E9E8D", "#65C1B6", "#F2C44F", "#F0D590", "#F4994E", "#F8BE8E", "#E86443"])
         .transitionDuration(1500);
 }
 
+/* This function creates a scatter plot chart displaying the showing the correlation
+between daily budget needed and number of visits a year*/
 function createCorrelationCharts(data, ndx) {
     var maxArrivals = d3.max(data, function (d) { return d.visitorsCity; });
 
@@ -78,13 +82,13 @@ function createCorrelationCharts(data, ndx) {
 
     dc.scatterPlot("#correlation")
         .height(200)
-        .useViewBoxResizing(true) // allows chart to be responsive
+        .useViewBoxResizing(true) //to make the chart responsive
         .x(d3.scale.linear().domain([0, maxArrivals]))
         .renderHorizontalGridLines(true)
-        .brushOn(false)
+        .brushOn(true)//you can filter using the brush
         .symbolSize(10)
         .clipPadding(10)
-        .xAxisLabel('Number of country visitors (2017 or 2018)')
+        .xAxisLabel('Number of country visitors per year')
         .yAxisLabel("Budget")
         .transitionDuration(1500)
         .colors('#E76F51')
@@ -95,6 +99,7 @@ function createCorrelationCharts(data, ndx) {
         .group(budgetGroup);
 }
 
+// this function calculate the number displays for hostel, meals, drinks, attractions and transport
 function show_avg(ndx, product, element) {
     var average_cost = ndx.groupAll().reduce(
         //function adder
@@ -194,7 +199,9 @@ function show_avg(ndx, product, element) {
         .group(average_cost);
 }
 
+// this function creates the table
 function createTableBudget(ndx) {
+    // variable to calculate the daily budget
     var total = 0;
     var allDimension = ndx.dimension(function (d) {
         return (d);
@@ -203,7 +210,7 @@ function createTableBudget(ndx) {
     tableChart
         .height(300)
         .width(400)
-        .useViewBoxResizing(true) // allows chart to be responsive
+        .useViewBoxResizing(true) //to make the chart responsive
         .dimension(allDimension)
         .group(function (data) {
             return (data);

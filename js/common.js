@@ -1,6 +1,30 @@
-function showTitle(option) {
-    document.getElementById("title").innerHTML = `<h2>Results By ${option}</h2>`;
+// this file has the JavaScript code that is common for both dashboards: filters, function to update titles and count of number of cities filtered
 
+// function to create the filters
+function fiterBy(ndx, element) {
+    var dim;
+    if (element == "#filterByRegion") {
+        dim = ndx.dimension(dc.pluck('region'));
+    }
+    else if (element == "#filterByCountry") {
+        dim = ndx.dimension(dc.pluck('country'));
+    }
+    else if (element == "#filterByCity") {
+        dim = ndx.dimension(dc.pluck('city'));
+    }
+    var group = dim.group();
+
+    dc.selectMenu(element)
+        .multiple(true)
+        .dimension(dim)
+        //I use "d.key" for the title so only the name appears but not the count
+        .title(function (d) { return d.key; })
+        .group(group);
+}
+
+// this function will update the text in the titles depending on what dashboard we want to see
+function updateTextTitles(option) {
+    document.getElementById("title").innerHTML = `<h2>Results By ${option}</h2>`;
      if(option==="Budget"){
          document.getElementById("titleRowChart").innerHTML = "Budget needed per day (€)";
          document.getElementById("stackedComposite").innerHTML = "Budget distribution (€)";
@@ -15,23 +39,20 @@ function showTitle(option) {
     }
 }
 
+// this function will count the number of rows filtered and it will be display using a numberDisplay
 function countCities(ndx) {
     var total = ndx.groupAll().reduce(
-        //Add a data entry
-        //p and v by convention, p will keep track of the changes and v will be input values from the actual values from the dataset that will affect the values of p
-
-        //inline function adder
+        //p keeps track of the changes, v will be input values from the dataset
+        //function adder
         function (p, v) {
             p.count++;
             return p;
         },
-        //inline function remover
-        // Remove the data entry
+        //function remover
         function (p, v) {
             p.count--;          
             return p;
         },
-        //inline function initialiser
         //Initialise the Reducer
         function () {
             return { count: 0 };

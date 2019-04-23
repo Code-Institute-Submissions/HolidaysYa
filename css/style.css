@@ -165,8 +165,8 @@ html, body {
 
 /* *******************  month, budget and weather selection sections ******************** */
 
-/* background section month selection, budget selection and weather selection and error screen */
-#monthId, #budgetId, #weatherId, #errors {
+/* background section month selection, budget selection and weather selection and info-message screen */
+#monthId, #budgetId, #weatherId, #messages {
     height: 100vh;
     width: 100vw;
     display: flex;
@@ -202,8 +202,8 @@ html, body {
     background-size: cover;
 }
 
-/* image for the error screen - mobile*/
-#errors {
+/* image for the info-message screen - mobile*/
+.sad{
     background: url("../images/sad-mobile.jpg") no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -211,10 +211,25 @@ html, body {
     background-size: cover;
 }
 
-/* image for the error screen - desktop*/
+.happy{
+    background: url("../images/happy-mobile.jpg") no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+/* image for the info-message screen - desktop*/
 @media (min-width: 768px) {
-    #errors {
+    .sad{
         background: url("../images/sad.jpg") no-repeat center center fixed;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+    }
+    .happy{
+        background: url("../images/happy.jpg") no-repeat center center fixed;
         -webkit-background-size: cover;
         -moz-background-size: cover;
         -o-background-size: cover;
@@ -710,16 +725,15 @@ tr td {
     }
 }
 
-/* ******************* error messages page ******************** */
+/* ******************* info-message page ******************** */
 
-#errorMessage {
+#infoMessage {
     width: 70%;
     text-align: center;
 }
 
-#errorMessage h2 {
+#infoMessage h2 {
     text-align: center;
-    color: #f33809;
     font-weight: 700;
     line-height: 40px;
     font-size: 1.4em;
@@ -730,10 +744,10 @@ tr td {
 }
 
 @media (min-width: 768px) {
-    #errorMessage {
+    #infoMessage {
         width: 50%;
     }
-    #errorMessage h2 {
+    #infoMessage h2 {
         font-size: 2.2em;
     }
     .errorsButtons {
