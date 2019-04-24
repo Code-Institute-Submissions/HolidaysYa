@@ -3,13 +3,13 @@
 // function to create the filters
 function fiterBy(ndx, element) {
     var dim;
-    if (element == "#filterByRegion") {
+    if (element === "#filterByRegion") {
         dim = ndx.dimension(dc.pluck('region'));
     }
-    else if (element == "#filterByCountry") {
+    else if (element === "#filterByCountry") {
         dim = ndx.dimension(dc.pluck('country'));
     }
-    else if (element == "#filterByCity") {
+    else if (element === "#filterByCity") {
         dim = ndx.dimension(dc.pluck('city'));
     }
     var group = dim.group();

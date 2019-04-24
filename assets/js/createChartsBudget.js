@@ -105,19 +105,19 @@ function show_avg(ndx, product, element) {
         //function adder
         function (p, v) {
             p.count++;
-            p.totaldrinks += +v.drinks;
+            p.totaldrinks += v.drinks;
             p.averagedrinks = p.totaldrinks / p.count;
 
-            p.totalmeals += +v.meals;
+            p.totalmeals += v.meals;
             p.averagemeals = p.totalmeals / p.count;
 
-            p.totalattractions += +v.attractions;
+            p.totalattractions += v.attractions;
             p.averageattractions = p.totalattractions / p.count;
 
-            p.totaltransport += +v.transport;
+            p.totaltransport += v.transport;
             p.averagetransport = p.totaltransport / p.count;
 
-            p.totalhostel += +v.hostelNight;
+            p.totalhostel += v.hostelNight;
             p.averagehostel = p.totalhostel / p.count;
 
             return p;
@@ -125,7 +125,7 @@ function show_avg(ndx, product, element) {
         //function remover
         function (p, v) {
             p.count--;
-            if (p.count == 0) {
+            if (p.count === 0) {
                 p.totaldrinks = 0;
                 p.averagedrinks = 0;
 
@@ -142,19 +142,19 @@ function show_avg(ndx, product, element) {
                 p.averagehostel = 0;
             }
             else {
-                p.totaldrinks -= +v.drinks;
+                p.totaldrinks -= v.drinks;
                 p.averagedrinks = p.totaldrinks / p.count;
 
-                p.totalmeals -= +v.meals;
+                p.totalmeals -= v.meals;
                 p.averagemeals = p.totalmeals / p.count;
 
-                p.totalattractions -= +v.attractions;
+                p.totalattractions -= v.attractions;
                 p.averageattractions = p.totalattractions / p.count;
 
-                p.totaltransport -= +v.transport;
+                p.totaltransport -= v.transport;
                 p.averagetransport = p.totaltransport / p.count;
 
-                p.totalhostel -= +v.hostelNight;
+                p.totalhostel -= v.hostelNight;
                 p.averagehostel = p.totalhostel / p.count;
             }
             return p;
@@ -167,7 +167,7 @@ function show_avg(ndx, product, element) {
 
     dc.numberDisplay(element)
         .formatNumber(function (d) {
-            if (product != "transport") {
+            if (product !== "transport") {
                 return d3.format(".2s")(d) + "€";
             }
             else {
@@ -175,23 +175,23 @@ function show_avg(ndx, product, element) {
             }
         })
         .valueAccessor(function (d) {
-            if (d.count == 0) {
+            if (d.count === 0) {
                 return 0;
             }
             else {
-                if (product == "hostel") {
+                if (product === "hostel") {
                     return d.averagehostel;
                 }
-                else if (product == "meals") {
+                else if (product === "meals") {
                     return d.averagemeals;
                 }
-                else if (product == "drinks") {
+                else if (product === "drinks") {
                     return d.averagedrinks;
                 }
                 else if (product == "transport") {
                     return d.averagetransport;
                 }
-                else if (product == "attractions") {
+                else if (product === "attractions") {
                     return d.averageattractions;
                 }
             }
@@ -223,7 +223,7 @@ function createTableBudget(ndx) {
             },
             {
                 label: "Country",
-                format: function (d) { return d.country;}
+                format: function (d) { return d.country; }
             },
             {
                 label: "Daily budget",

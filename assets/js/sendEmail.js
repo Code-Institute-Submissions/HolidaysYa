@@ -6,14 +6,12 @@ function sendMail(contactForm) {
     })
         .then(
             function (response) {
-                console.log("SUCCESS", response);
                 showInfoMessageSuccess();
                 $('#infoMessage').html(`<h2>Email succesfully sent</h2>`);
                 //this code is used to hide the modal after the submit button is pressed
                 $('#myModal').modal('hide');
             },
             function (error) {
-                console.log("FAILED", error);
                 showInfoMessageError();
                 $('#infoMessage').html(`<h2>Email not sent, please try again!</h2>`);
             }

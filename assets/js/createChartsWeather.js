@@ -75,13 +75,13 @@ function show_avg_temp(ndx, element) {
         },
         //Initialise
         function () {
-            return { count: 0, totalmax: 0, totalmin: 0, totalavg: 0, averageTemp: 0};
+            return { count: 0, totalmax: 0, totalmin: 0, totalavg: 0, averageTemp: 0 };
         }
     );
 
     dc.numberDisplay(element)
         .formatNumber(function (d) {
-              return d3.format(".1f")(d);
+            return d3.format(".1f")(d);
         })
         .valueAccessor(function (d) {
             if (d.count == 0) {
@@ -103,7 +103,7 @@ function createRowChartWeather(ndx) {
         .height(600)
         .useViewBoxResizing(true) // to make the chart responsive
         .elasticX(true)
-        .title(function(d){
+        .title(function (d) {
             return "The average precipitation (mm) for " + d.key + " is: " + d.value + "mm";
         })
         .transitionDuration(1500)
@@ -133,7 +133,7 @@ function cityTemp(ndx) {
         .group(grp1, "max. Temperature (°C)")
         .yAxisLabel("Temperature (°C)")
         .xAxisLabel("City")
-        .title(function(d){
+        .title(function (d) {
             return d.key + ": " + d.value + "°C";
         })
         .clipPadding(10)
@@ -205,7 +205,6 @@ function createCorrelationTemp(data, ndx) {
         ]);
 }
 
-
 // function to display a pie chart with the chances of precipitation
 function createPrecipitationChart(ndx) {
     var dimPrecipitation = ndx.dimension(function (d) {
@@ -270,7 +269,7 @@ function createTableWeather(ndx) {
             },
             {
                 label: "avg.Temp(°C)",
-                format: function (d) { return (d.maxTemp + d.minTemp) / 2;}
+                format: function (d) { return (d.maxTemp + d.minTemp) / 2; }
             },
             {
                 label: "Precipitation",
@@ -290,6 +289,5 @@ function createTableWeather(ndx) {
         })
         .order(d3.descending)
         .showGroups(false);// this will remove the [object][object] at the top of the rows
-        
 }
 

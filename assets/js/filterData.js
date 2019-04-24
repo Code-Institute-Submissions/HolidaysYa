@@ -71,7 +71,7 @@ function getMonth(error, data) {
 
 // sections that need to be hidden/displayed when the info-message screen is displayed
 
-function showInfoMessage(){
+function showInfoMessage() {
     $('#messages').removeClass('hide');
     $('#budgetId').addClass('hide');
     $('#weatherId').addClass('hide');
@@ -83,7 +83,7 @@ function showInfoMessageError() {
     showInfoMessage()
     $('#messages').removeClass('happy');
     $('#messages').addClass('sad');
-    }
+}
 
 function showInfoMessageSuccess() {
     showInfoMessage()
@@ -251,12 +251,12 @@ function citiesMatchingCriteria(data, filteredBy) {
         if ($(window).width() < 768) {
             $('#hamburguerButton').removeClass('hide');
         }
- 
+
         //If the website is open in a screen > 767px and then the screen is resized to < 768px display the hamburguer button
-        $(window).on("resize", function(){
+        $(window).on("resize", function () {
             widthSize();
         });
-        
+
         $('#messages').addClass('hide');
         $('#grafId').removeClass('hide').slideDown(1000);
         $('#sidebar-collapse').removeClass('hide').show(1000);
@@ -275,12 +275,12 @@ function citiesMatchingCriteria(data, filteredBy) {
     }
 }
 
-function widthSize(){
+function widthSize() {
     $width = $(window).width();
     //Depending on the screen width it will display or hide the hamburguer button
-    if($width < 768){
+    if ($width < 768) {
         $('#hamburguerButton').removeClass('hide');
-    }else{
+    } else {
         $('#hamburguerButton').addClass('hide');
     }
 }
@@ -302,7 +302,7 @@ function createDataForGraphics(data, filteredBy) {
     fiterBy(ndx, "#filterByRegion");
     fiterBy(ndx, "#filterByCountry");
     fiterBy(ndx, "#filterByCity");
-    
+
     //Number Display count cities matching the filter
     countCities(ndx);
 
@@ -340,7 +340,7 @@ function createDataForGraphics(data, filteredBy) {
         cityTemp(ndx);
         // pie chart
         createPrecipitationChart(ndx);
-         // composite scatter plot chart
+        // composite scatter plot chart
         createCorrelationTemp(data, ndx);
         // table
         createTableWeather(ndx);
