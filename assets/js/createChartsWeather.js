@@ -104,7 +104,7 @@ function createRowChartWeather(ndx) {
         .useViewBoxResizing(true) // to make the chart responsive
         .elasticX(true)
         .title(function (d) {
-            return "The average precipitation (mm) for " + d.key + " is: " + d.value + "mm";
+            return "The average precipitation for " + d.key + " is: " + d.value + "mm";
         })
         .transitionDuration(1500)
         .ordinalColors(["#006B99", "#2E85AB", "#5CA0BE", "#8BBBD0", "#B9D6E3", "#0E9E8D", "#39AFA1", "#65C1B6", "#91D2CB", "#BDE4DF", "#F2C44F", "#ECC970", "#F0D590", "#F6E6BD", "#F4994E", "#F6AB6E", "#F9C9A2", "#FAD5B7", "#E86443", "#EA7254", "#EC8065", "#F3B3A3", "#F6C6BA", "#F9D9D1"])
@@ -190,7 +190,7 @@ function createCorrelationTemp(data, ndx) {
                 .symbolSize(7)
                 .colors('#F2C44F')
                 .title(function (d) {
-                    return d.key[2] + " the average temperature (°C) is " + d.key[1] + " degrees\nand there was " + d.key[0] + " millions visits in 2017";
+                    return d.key[2] + ": Average temperature: " + d.key[1] + "°C \n" + d.key[0] + " millions visits per year";
                 })
                 .group(temperatureGroup, "temperature (°C)"),
             dc.scatterPlot(composite)
@@ -198,7 +198,7 @@ function createCorrelationTemp(data, ndx) {
                 .symbolSize(7)
                 .colors('#0E9E8D')
                 .title(function (d) {
-                    return d.key[2] + " the average precipitation (mm) is " + d.key[1] + " mm\nand there was " + d.key[0] + " millions visits in 2017";
+                    return d.key[2] + ": Average precipitation: " + d.key[1] + " mm\n" + d.key[0] + " millions visits per year";
                 })
                 .group(precipitationGroup, "precipitation (mm)")
                 .useRightYAxis(true)
@@ -229,6 +229,9 @@ function createPrecipitationChart(ndx) {
         .externalRadiusPadding(20)
         .dimension(dimPrecipitation)
         .group(groupPrecipitation)
+        .title(function (d) {
+            return "Number of cities with " + d.key + "\nchance of precipitation:  " + d.value;
+        })
         .renderLabel(false)
         .ordinalColors(["#E86443", "#F2C44F", "#0E9E8D"])
         .transitionDuration(1500);
@@ -260,15 +263,15 @@ function createTableWeather(ndx) {
                 format: function (d) { return d.country; }
             },
             {
-                label: "min.Temp(°C)",
+                label: "Min.Temp(°C)",
                 format: function (d) { return d.minTemp; }
             },
             {
-                label: "max.Temp(°C)",
+                label: "Max.Temp(°C)",
                 format: function (d) { return d.maxTemp; }
             },
             {
-                label: "avg.Temp(°C)",
+                label: "Avg.Temp(°C)",
                 format: function (d) { return (d.maxTemp + d.minTemp) / 2; }
             },
             {

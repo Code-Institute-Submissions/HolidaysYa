@@ -363,7 +363,7 @@ html, body {
         width: 70%;
         margin-top: 5px;
     }
-    #monthId p, #budgetId p {
+    #monthId p, #budgetId p, #weatherId p {
         font-size: 1em;
         margin: 20px;
     }
@@ -558,7 +558,8 @@ html, body {
 /* numberDisplays */
 .NumberDisplays {
     background-color: transparent;
-    margin-bottom: 0px;
+    margin-top: 15px;
+    margin-bottom: 15px;
     padding: 0px;
 }
 

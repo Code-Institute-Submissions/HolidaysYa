@@ -9,7 +9,7 @@ function createRowChart(ndx) {
     dc.rowChart("#rowChart")
         .height(600)
         .useViewBoxResizing(true) //to make the chart responsive
-        .title(function (d) { return "Minimun daily budget in " + d.key + ": " + d.value + "€"; })
+        .title(function (d) { return "Minimum daily budget in " + d.key + ": " + d.value + "€"; })
         .elasticX(true)
         .transitionDuration(1500)
         .ordinalColors(["#006B99", "#2E85AB", "#5CA0BE", "#8BBBD0", "#B9D6E3", "#0E9E8D", "#39AFA1", "#65C1B6", "#91D2CB", "#BDE4DF", "#F2C44F", "#ECC970", "#F0D590", "#F6E6BD", "#F4994E", "#F6AB6E", "#F9C9A2", "#FAD5B7", "#E86443", "#EA7254", "#EC8065", "#F3B3A3", "#F6C6BA", "#F9D9D1"])
@@ -63,6 +63,9 @@ function createCurrencyChart(ndx) {
         .externalRadiusPadding(40)
         .dimension(dimCurrency)
         .group(groupCurrency)
+        .title(function (d) {
+            return "Number of cities with " + d.key + "\nas currency is: " + d.value;
+        })
         .renderLabel(false)//we use the legend instead
         .ordinalColors(["#006B99", "#4593B4", "#0E9E8D", "#65C1B6", "#F2C44F", "#F0D590", "#F4994E", "#F8BE8E", "#E86443"])
         .transitionDuration(1500);
@@ -85,7 +88,7 @@ function createCorrelationCharts(data, ndx) {
         .useViewBoxResizing(true) //to make the chart responsive
         .x(d3.scale.linear().domain([0, maxArrivals]))
         .renderHorizontalGridLines(true)
-        .brushOn(true)//you can filter using the brush
+        .brushOn(false)
         .symbolSize(10)
         .clipPadding(10)
         .xAxisLabel('Number of country visitors per year')
@@ -93,7 +96,7 @@ function createCorrelationCharts(data, ndx) {
         .transitionDuration(1500)
         .colors('#E76F51')
         .title(function (d) {
-            return "In " + d.key[2] + " you will need a daily bugget of " + d.key[1] + " \nand there was " + d.key[0] + " millions visits in 2017";
+            return "In " + d.key[2] + " you will need a daily bugget of " + d.key[1] + " \nand there was " + d.key[0] + " millions visits per year";
         })
         .dimension(dimBudget)
         .group(budgetGroup);
@@ -167,12 +170,7 @@ function show_avg(ndx, product, element) {
 
     dc.numberDisplay(element)
         .formatNumber(function (d) {
-            if (product !== "transport") {
-                return d3.format(".2s")(d) + "€";
-            }
-            else {
-                return d3.format(".0s")(d) + "€";
-            }
+            return d3.format(".2s")(d) + "€";
         })
         .valueAccessor(function (d) {
             if (d.count === 0) {

@@ -7,7 +7,7 @@ function sendMail(contactForm) {
         .then(
             function (response) {
                 showInfoMessageSuccess();
-                $('#infoMessage').html(`<h2>Email succesfully sent</h2>`);
+                $('#infoMessage').html(`<h2>Email successfully sent</h2>`);
                 //this code is used to hide the modal after the submit button is pressed
                 $('#myModal').modal('hide');
             },
