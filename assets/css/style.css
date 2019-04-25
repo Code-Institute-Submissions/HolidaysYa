@@ -16,11 +16,13 @@ html, body {
 }
 
 /* ************************  HEADER************************** */
+
 .navbar {
     margin: 0px;
 }
 
 /* logo */
+
 .navbar-header .navbar-brand {
     font-size: 1.8em;
     text-transform: capitalize;
@@ -34,6 +36,7 @@ html, body {
 }
 
 /* humburguer button */
+
 .navbar-default .navbar-toggle {
     border-color: transparent;
     background: transparent;
@@ -106,6 +109,7 @@ html, body {
 }
 
 /* contact US button */
+
 .navbar-collapse .nav>.menu-item button {
     width: 100%;
     height: 100%;
@@ -116,6 +120,7 @@ html, body {
 }
 
 /* hamburguer button - social media links*/
+
 .navbar-default .navbar-nav>.open>a, .navbar-default .navbar-nav>.open>a:focus, .navbar-default .navbar-nav>.open>a:hover, .navbar-default .navbar-nav>.open>a, .navbar-default .navbar-nav>.open>a:focus, .navbar-default .navbar-nav>.open>a:hover {
     color: white;
     background-color: transparent;
@@ -131,6 +136,7 @@ html, body {
 }
 
 /* social media icons  - desktop screens*/
+
 .navbar-collapse .navbar-right {
     margin-right: 25px;
     background-color: transparent;
@@ -166,9 +172,10 @@ html, body {
 /* *******************  month, budget and weather selection sections ******************** */
 
 /* background section month selection, budget selection and weather selection and info-message screen */
+
 #monthId, #budgetId, #weatherId, #messages {
     height: 100vh;
-    width: 100vw;
+    width: 100vw; 
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -176,6 +183,7 @@ html, body {
 }
 
 /* image for the month selection section */
+
 #monthId {
     background: url("../../images/amsterdam.jpg") no-repeat center center fixed;
     -webkit-background-size: cover;
@@ -185,6 +193,7 @@ html, body {
 }
 
 /* image for the budget selection section */
+
 #budgetId {
     background: url("../../images/budget.jpg") no-repeat center center fixed;
     -webkit-background-size: cover;
@@ -194,6 +203,7 @@ html, body {
 }
 
 /* image for the weather selection section */
+
 #weatherId {
     background: url("../../images/weather.jpg") no-repeat center center fixed;
     -webkit-background-size: cover;
@@ -203,6 +213,7 @@ html, body {
 }
 
 /* image for the info-message screen - mobile*/
+
 .sad {
     background: url("../../images/sad-mobile.jpg") no-repeat center center fixed;
     -webkit-background-size: cover;
@@ -210,6 +221,7 @@ html, body {
     -o-background-size: cover;
     background-size: cover;
 }
+
 .happy {
     background: url("../../images/happy-mobile.jpg") no-repeat center center fixed;
     -webkit-background-size: cover;
@@ -219,6 +231,7 @@ html, body {
 }
 
 /* image for the info-message screen - desktop*/
+
 @media (min-width: 768px) {
     .sad {
         background: url("../../images/sad.jpg") no-repeat center center fixed;
@@ -237,22 +250,26 @@ html, body {
 }
 
 /* I added an overlay on top of the images to make the text easier to read */
+
 .overlay1, .overlay {
     width: 100%;
     height: 100%;
 }
 
 /* darker overlay for the month selection section */
+
 .overlay1 {
     background-image: linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
 }
 
 /* overlay for the budget and weather selection sections */
+
 .overlay {
     background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0));
 }
 
 /* to wrap the content in month, budget and weather selection screens*/
+
 .wrapper-section {
     /* this marging of 80px will stop the content hiding under the navigation bar */
     margin-top: 100px;
@@ -264,6 +281,7 @@ html, body {
 }
 
 /* the weather section needs more top margin */
+
 /* #weatherId .wrapper-section {
     margin-top: 120px;
 } */
@@ -277,7 +295,7 @@ html, body {
     margin-top: 20px;
 }
 
-@media (min-width: 768px){
+@media (min-width: 768px) {
     .titleInput {
         margin-bottom: 20px;
         font-size: 1.6em;
@@ -289,6 +307,7 @@ html, body {
 }
 
 /* input fields */
+
 #monthSelector, #maxBudget, #maxTemp, #minTemp {
     font-size: 15px;
     height: 30px;
@@ -311,6 +330,7 @@ html, body {
 }
 
 /* month selection section */
+
 #monthId h1 {
     color: white;
     font-weight: 400;
@@ -325,6 +345,7 @@ html, body {
 }
 
 /* month selection section and budget selection text wrapper */
+
 .wrapper-text, .wrapper-text-budget-weather {
     width: 80%;
     padding: 15px;
@@ -373,10 +394,11 @@ html, body {
 }
 
 /* weather section input*/
+
 .inputBlock {
     display: inline-block;
     width: 50%;
-    padding-bottom: 25px;
+    padding-bottom: 15px;
 }
 
 @media (min-width: 1200px) {
@@ -386,7 +408,9 @@ html, body {
 }
 
 /* ************************************** buttons *******************************  */
+
 /* all */
+
 .btn-info.focus, .btn-info:focus, .btn-info:active:focus, .btn-success.focus, .btn-success:focus, .btn-success:active:focus {
     border-color: transparent;
     outline: none;
@@ -411,6 +435,7 @@ html, body {
 }
 
 /*reset button */
+
 .reset {
     text-align: right;
     margin-top: 20px;
@@ -421,6 +446,7 @@ html, body {
 }
 
 /* sidebar buttons */
+
 .sidebar .btn-success {
     background-color: #0e9e8d;
     border-color: #0e9e8d;
@@ -443,6 +469,7 @@ html, body {
 }
 
 /* ******************* sidebar for dashboards - only visible in desktop ************* */
+
 .sidebar {
     overflow: visible;
     box-shadow: 1px 1px 7px #dedede;
@@ -520,6 +547,7 @@ html, body {
 }
 
 /* ******************************* Dashboard section *************************** */
+
 #grafId {
     /* so it doesn't hide under the navbar */
     margin-top: 60px;
@@ -528,6 +556,7 @@ html, body {
 }
 
 /* dc select menus - filter by region, country and city */
+
 .dc-select-menu {
     width: 90%;
     border: none;
@@ -556,6 +585,7 @@ html, body {
 }
 
 /* numberDisplays */
+
 .NumberDisplays {
     background-color: transparent;
     margin-top: 15px;
@@ -602,6 +632,7 @@ html, body {
 }
 
 /* text color */
+
 .text-muted {
     color: #a7a1a1;
 }
@@ -611,6 +642,7 @@ html, body {
 }
 
 /*chart panels*/
+
 .panel-widget {
     padding: 0px;
 }
@@ -648,26 +680,31 @@ html, body {
 }
 
 /* Charts */
+
 div.dc-chart {
     float: none;
 }
 
 /* legends */
+
 .dc-legend-item {
     font-size: 0.8em;
 }
 
 /*charts axis style*/
+
 .dc-chart .axis path, .dc-chart .axis line {
     stroke-width: 0.5px;
 }
 
 /* rowChart text color updated */
+
 .dc-chart g.row text {
     fill: rgb(0, 0, 0);
 }
 
 /* axis charts max and min temperature & total budget */
+
 #dailyBudget_Temp .x.axis text {
     text-anchor: end !important;
     transform: rotate(-45deg);
@@ -690,6 +727,7 @@ div.dc-chart {
 }
 
 /* table */
+
 .table {
     position: relative;
     table-layout: fixed;
@@ -737,6 +775,7 @@ tr td {
 }
 
 /* ******************* info-message page ******************** */
+
 #infoMessage {
     width: 70%;
     text-align: center;
@@ -766,12 +805,15 @@ tr td {
 }
 
 /* link to template in the footer */
+
 .footer a {
     text-decoration: none;
 }
 
 /*class used with jQuery*/
+
 /*the hide class is used with jQuery to hide/show the sections in the website*/
+
 .hide {
     display: none;
 }

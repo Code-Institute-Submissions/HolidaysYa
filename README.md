@@ -4,7 +4,7 @@ This is a website that will be used for people who are not sure where to go on h
 
 In the intro screen they will select the month when they are planning to travel and then they can decide if they want to search based on budget or based on weather.
 
-Once they select budget or weather they will be able to type their maximun budget or the temperatures that they are looking for. Based on the values entered the data will be filtered and a dashboard with some number displays, charts and a summary table will be displayed with the information from the cities that match the user selection.
+Once they select budget or weather they will be able to type their maximum budget or the temperatures that they are looking for. Based on the values entered the data will be filtered and a dashboard with some number displays, charts and a summary table will be displayed with the information from the cities that match the user selection.
 
 The dashboard should help the users to decide which city is the best option for the holiday.
 They will be able to find out more information about the cities that they are interested in by following the links to wikipedia or by sending an email asking for more information.
@@ -36,7 +36,7 @@ Below you can see the mockups that I drew using Pencil:
 ##### Dashboard layout - same for weather or budget
 ![Dashboard](/mockups/DasboardSelection.png)
 
-* Note that the final design charts position differs from the initial design because when rendering the charts in the website I noticed some charts didn't look right with the origial design and I decided to change the layout of the dashboard.
+* Note that the position for the charts in final design differs from the initial design because when rendering the charts in the website I noticed some charts didn't look right with the origial design and I decided to change the layout of the dashboard.
 
 
 ### User stories:
@@ -126,14 +126,14 @@ The dashboard for the budget will display the following elements:
   * **Meal:** Number display that shows the avarage price for three "budget meals" for the cities filtered.
   * **Drinks:** Number display that shows the average price for 3 local beers for the cities filtered.
   * **Attractions:** Number display that shows the average price for visiting one famous attraction for the cities filtered.
-  * **Transport:** Number display that shows the average price for 2 rides in public transport.
+  * **Transport:** Number display that shows the average price for 2 rides on public transport.
 
 
 - **Row Chart - Budget needed per day (€):** Displays the total budget needed per city in descending order. Hovering over the row for each city you can see how much exactly. By clicking on one of the bars the rest of the data in the dashboard will be filtered.
 
 - **Stacked bar chart - Budget distribution (€):** Displays the total budget and how is it distributed among hostel, meals, drinks, attranctions and transport. Each category has a diferent color that match with the categories in the number displays. Also on hover over the bars it will tell the user how much (in euros) is the cost for each category. By clicking on one of the bars the rest of the data in the dashboard will be filtered.
 
-- **Pie chart - Currency:** Displays the proportion for each currency for the cities selected. By clicking on the preferred currency the user can filter the rest of the charts.
+- **Pie chart - Currency:** Displays the proportion for each currency for the cities selected. By clicking on the preferred currency the user can filter the rest of the charts. If the user hovers over the arcs the number of cities for each currency will be displayed.
 
 - **Scatter plot chart - Correlation between cost of visiting and number of visitor per year:** This chart displays the correlation or lack of correlation between the cost of visiting a city (total daily budget) and the number of visitors per year that visit that city. On hover over the dots it will tell the user how much (in euros) is the total budget needed per day for that city and the number of visitors per year.
 
@@ -143,15 +143,15 @@ The dashboard for the budget will display the following elements:
 The dashboard for the weather will display the following elements:
 
 - **Number displays:** The number displays appear at the top of the charts. 
-  * **Max. Temp:** Display the maximun temperature amongst all the maximum temperatures for the cities filtered.
-  * **Min. Temp:** Display the minimun temperature amongst all the minimum temperatures for the cities filtered.
+  * **Max. Temp:** Display the maximum temperature amongst all the maximum temperatures for the cities filtered.
+  * **Min. Temp:** Display the minimum temperature amongst all the minimum temperatures for the cities filtered.
   * **Avg. Temp:** Display the avarage temperature amongst all the cities filtered.
-  * **Max. Precipitation:** Display the maximun precipiation amongst all the   cities filtered.
+  * **Max. Precipitation:** Display the maximum precipiation amongst all the   cities filtered.
   * **Min. Precipitation:** Display the minimum precipiation amongst all the cities filtered.
 
 - **Row Chart - Precipitation per month (mm):** Displays the average precipitation for that month for the cities filtered in descending order. Hovering over the row for each city you can see the exact mm. By cliking on one of the bars the rest of the data in the dashboard will be filtered.
 
-- **Composite line chart - Maximum and Minimum temperatures (°C):** Displays two line charts. One line chart represents the maximun temperatures for each city and the other line chart represents the minimun temperatures for each city. Hovering over the line chart points the user can see the exact temperature for each city.
+- **Composite line chart - Maximum and Minimum temperatures (°C):** Displays two line charts. One line chart represents the maximum temperatures for each city and the other line chart represents the minimum temperatures for each city. Hovering over the line chart points the user can see the exact temperature for each city.
 
 - **Pie chart - Chances of precipitation:** This pie chart can be used to filter the charts based on the chances of precipitation.
 
@@ -167,11 +167,11 @@ The dashboard for the weather will display the following elements:
 
 #### Email API:
 
--**[emailjs](http://www.emailjs.com/):** When the Form inside the Modal is submited the API "mailjs" will send the email to my personal gmail account. NOT WORKING AT THE MOMENT!!!!!
+-**[emailjs](http://www.emailjs.com/):** When the Form inside the Modal is submited the API "mailjs" will send the email to my personal gmail account.
 
 #### Mockup tool:
 
-- **[Pencil:](https://pencil.evolus.vn/ 'https://pencil.evolus.vn/)** I have used Pencil to create the initial mockups for the website.
+- **[Pencil:](https://pencil.evolus.vn/ 'https://pencil.evolus.vn/)** I have used Pencil to create the mockups for the website.
 
 #### Graphic Desing software:
 
@@ -227,6 +227,9 @@ I have used GitHub Pages in order to deploy the website and it is also the remot
 
 ### Features and responsiveness testing
  
+I have created the following check list to test the feautures and responsiveness:
+/mockups/checkList.docx
+
 
 ### Additional testing
 I have used development tools in Google Chrome to check how the website would look in different devices. In addition to that testing I have also asked friends and family to have a look at the website to let me know if everything looks fine on their browsers and devices.
@@ -235,13 +238,11 @@ I have used development tools in Google Chrome to check how the website would lo
 ### Problems and bugs:
 - **Horizontal grid lines not being rendered:** I could't see the horizontal grid lines rendered from the charts but the js code was correct. In the end I realised that at some point I had commented out the "dc.css" file so when I uncommented it out I could see the horizontal grid lines. 
 
-- **Hamburguer button second time that is opened**
-
 - **Composite Line charts not being rendered:** I couldn't display the composite line charts when using an ordinal scale. I asked for help in Slack and I was told that I should add the dimension and group in the main section of the code as well as in the composite sections. Doing that I was able to display the chart.
 
 - **Total number of cities:** The total number of cities matching the with the search options was not correct. After asking the Tutors they told me that the syntax seems right but they suggested to change the format of the number from .formatNumber(d3.format(".1s")) to .formatNumber(d3.format("d")) and that fixed the issue.
 
-- **emailjs not sending the emails**
+- **emailjs not sending the emails** After clicking the submit button I was seeing a error message and I could fixing by adding the following to the sendMail function: `return false;  // To block from loading a new page`
 
 - **Composite line charts were not aligned with the labels in the x axis** I searched on the Internet and found the solution in the following link (https://github.com/dc-js/dc.js/issues/662). 
     
@@ -263,7 +264,7 @@ https://github.com/elenasacristan/HolidaysYa.git
 
 4. I have run the commit command with the first commit
 
-    `git commit -m “initial commit`
+    `git commit -m “initial commit"`
 
 5. I have copied from GitHub the following path and I have run it in the Git Bash terminal in order to indicate where is my remote repository:
 
@@ -326,6 +327,10 @@ https://pixnio.com/nature-landscapes/sunset/seashore-sea-sand-sunset-water-sun-b
 
 https://pixabay.com/illustrations/sad-face-eyes-eyebrows-mouth-blue-1428080/
 
+##### background image with the sucess message after sending the email 
+- The image for the success screen been created using an image from Google images using the Advance Search and selecting “free to use, share or modify, even commercially” and then creating a new design based on the original picture using Adobe Fireworks.
+
+https://commons.wikimedia.org/wiki/File:Happy_smiley_face.png
 
 
 ## Acknowledgements
