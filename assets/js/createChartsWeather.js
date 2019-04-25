@@ -142,11 +142,11 @@ function cityTemp(ndx) {
         ._rangeBandPadding(1)
         .compose([
             dc.lineChart(composite)
-                .group(grp1, "max. Temperature (°C)")
+                .group(grp1, "Max. Temperature (°C)")
                 .colors('#E86443')
                 .dashStyle([3, 3]),
             dc.lineChart(composite)
-                .group(grp2, "min. Temperature (°C)")
+                .group(grp2, "Min. Temperature (°C)")
                 .colors('#006B99')
                 .dashStyle([8, 3])
         ])
@@ -192,7 +192,7 @@ function createCorrelationTemp(data, ndx) {
                 .title(function (d) {
                     return d.key[2] + ": Average temperature: " + d.key[1] + "°C \n" + d.key[0] + " millions visits per year";
                 })
-                .group(temperatureGroup, "temperature (°C)"),
+                .group(temperatureGroup, "Temperature (°C)"),
             dc.scatterPlot(composite)
                 .dimension(dimPreci)
                 .symbolSize(7)
@@ -200,7 +200,7 @@ function createCorrelationTemp(data, ndx) {
                 .title(function (d) {
                     return d.key[2] + ": Average precipitation: " + d.key[1] + " mm\n" + d.key[0] + " millions visits per year";
                 })
-                .group(precipitationGroup, "precipitation (mm)")
+                .group(precipitationGroup, "Precipitation (mm)")
                 .useRightYAxis(true)
         ]);
 }
@@ -209,7 +209,7 @@ function createCorrelationTemp(data, ndx) {
 function createPrecipitationChart(ndx) {
     var dimPrecipitation = ndx.dimension(function (d) {
         if (d.precipitation >= 85) {
-            return "Hight";
+            return "High";
         }
         if (d.precipitation < 85 && d.precipitation >= 40) {
             return "Medium";
