@@ -227,8 +227,7 @@ I have used GitHub Pages in order to deploy the website and it is also the remot
 
 ### Features and responsiveness testing
  
-I have created the following check list to test the feautures and responsiveness:
-/mockups/checkList.docx
+Click [here](https://github.com/elenasacristan/HolidaysYa/tree/master/Documents/checkList.docx) to see the check-list that I have used to test all the features in all the screen sizes.
 
 
 ### Additional testing
