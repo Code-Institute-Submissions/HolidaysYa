@@ -167,7 +167,7 @@ The dashboard for the weather will display the following elements:
 
 #### Email API:
 
--**[emailjs](http://www.emailjs.com/):** When the Form inside the Modal is submited the API "mailjs" will send the email to my personal gmail account.
+- **[emailjs](http://www.emailjs.com/):** When the Form inside the Modal is submited the API "mailjs" will send the email to my personal gmail account.
 
 #### Mockup tool:
 
