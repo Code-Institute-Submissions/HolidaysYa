@@ -125,10 +125,14 @@
 					<p>We have gathered data from the most visited cities in Europe to help you decide which is the
 						best
 						place
-						for your next trip in Europe.</p>
-					<p class="small">The data has been collected from <a href="https://www.priceoftravel.com"
-							target="blank">https://www.priceoftravel.com</a> and
-						<a href="https://es.climate-data.org" target="blank">https://es.climate-data.org</a></p>
+						for your next trip in Europe.
+					</p>
+					<p>
+						<small> data has been collected from <a href="https://www.priceoftravel.com"
+								target="blank">https://www.priceoftravel.com</a> and
+							<a href="https://es.climate-data.org" target="blank">https://es.climate-data.org</a>
+						</small>
+					</p>
 				</div>
 				<!-- <hr> -->
 				<h3 class="titleInput">Please select the month that you want to travel</h3>
@@ -162,19 +166,20 @@
 					<p>
 						As a guidance think how much would you pay for:
 					</p>
-					<ul>
+					<ul class="text-left">
 						<li>One night in a hostel (bunk bed)</li>
 						<li>Three "budget" meals</li>
 						<li>Three local beers</li>
-						<li>2 rides on public transport</li>
+						<li>Two rides on public transport</li>
 						<li>Visit to one famous attraction</li>
 					</ul>
 					<p>
-						*If you are not sure about the budget we recommend you to enter "91" (that is the
-						maximum
-						budget
-						in
-						our records) so you can see all the cities and then decide.
+						<small>*If you are not sure about the budget we recommend you to enter "91" (that is the
+							maximum
+							budget
+							in
+							our records) so you can see all the cities and then decide.
+						</small>
 					</p>
 				</div>
 				<label for="maxBudget" class="titleInput">What is your maximum budget(€) per day?</label>
@@ -191,11 +196,16 @@
 	<section id="weatherId" class="hide">
 		<div class="overlay">
 			<div class="wrapper-section">
-					<div class="wrapper-text-budget-weather">
-						<p>You can select the minimum temperature, the maximum or both. To see more options use only one of the input boxes.<br>
-							<small>*If you want to see all the cities in database enter 40 in the max. Temperature box"</small>
-						</p>
-					</div>
+				<div class="wrapper-text-budget-weather">
+					<p>You can select the minimum temperature, the maximum or both. To see more options use only one of
+						the input boxes.<br>
+					</p>
+					<p>
+						<small>*If you want to see all the cities in database enter 40 in the max. Temperature
+							box"
+						</small>
+					</p>
+				</div>
 				<div class="inputBlock">
 					<label for="minTemp" class="titleInput">Minimum temperature(°C)</label>
 					<input type="number" id="minTemp" name="minTemp" />
@@ -498,7 +508,9 @@
 							<input type="email" name="email" class="form-control" id="InputEmail"
 								placeholder="Enter your email" required>
 						</div>
-						<textarea class="form-control" rows="3" name="info" placeholder="Type here what additional information you need and for what city" required></textarea>
+						<textarea class="form-control" rows="3" name="info"
+							placeholder="Type here what additional information you need and for what city"
+							required></textarea>
 						<div class="modal-footer">
 							<button type="button" class="btn btn-default btn-reset" data-dismiss="modal">Cancel</button>
 							<button type="submit" id="emailSent" class="btn btn-signin">Submit</button>
