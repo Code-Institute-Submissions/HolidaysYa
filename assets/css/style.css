@@ -165,10 +165,54 @@ html, body {
 
 /* *******************  month, budget and weather selection sections ******************** */
 /* background section month selection, budget selection and weather selection and info-message screen */
-#monthId, #budgetId, #weatherId, #messages{
-    height: 100vh;
-    width: 100vw;
-    display: flex;
+
+/* I'm using the css tricks from the link below in order to display properly the website in landscape mode*/
+/* https://css-tricks.com/snippets/css/media-queries-for-standard-devices/ */
+
+/* ----------- using this min and max device-width seems to work fine for most devices ----------- */
+@media only screen 
+  and (min-device-width: 100px) 
+  and (max-device-width: 767px)
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (orientation: landscape) {
+    #monthId, #budgetId, #weatherId, #messages{
+        display: flex;
+    }
+    .wrapper-section {
+        margin-top:0px;
+        padding-top:80px;
+        padding-bottom:80px;
+    }
+}
+
+@media only screen 
+  and (min-device-width: 100px) 
+  and (max-device-width: 767px)
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (orientation: portrait) {
+    #monthId, #budgetId, #weatherId, #messages{
+        height: 100vh;
+        width: 100vw;
+        display: flex;
+    }
+    .wrapper-section {
+        height: 80%;
+        margin-top:100px;
+        padding-bottom:40px;
+    }
+}
+
+@media (min-width: 768px)  {
+    #monthId, #budgetId, #weatherId, #messages{
+        height: 100vh;
+        width: 100vw;
+        display: flex;
+    }
+    .wrapper-section {
+        height: 80%;
+        margin-top:80px;
+        padding-bottom:40px;
+    }
 }
 
 /* image for the month selection section */
@@ -224,6 +268,8 @@ html, body {
 /* image for the info-message screen - desktop*/
 @media (min-width: 768px) {
     .sad {
+        height: 100vh;
+        width: 100vw;
         background: url("../../images/sad.jpg") no-repeat center center fixed;
         -webkit-background-size: cover;
         -moz-background-size: cover;
@@ -231,6 +277,8 @@ html, body {
         background-size: cover;
     }
     .happy {
+        height: 100vh;
+        width: 100vw;
         background: url("../../images/happy.jpg") no-repeat center center fixed;
         -webkit-background-size: cover;
         -moz-background-size: cover;
@@ -255,13 +303,11 @@ html, body {
 
 /* to wrap the content in month, budget and weather selection screens*/
 .wrapper-section {
-    margin-top: 80px;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
     text-align: center;
-    height: 80%;
 }
 
 .titleInput {
@@ -270,6 +316,8 @@ html, body {
     color: white;
     font-size: 1em;
     font-weight: 600;
+    text-shadow: 1px 1px #000000;
+
 }
 
 #monthId .titleInput, #budgetId .titleInput{
@@ -303,6 +351,7 @@ html, body {
     font-weight: 400;
     width: 100%;
     font-size: 1.5em;
+    text-shadow: 1px 1px #000000;
 }
 
 /* month, budget and weather selection sections - text wrapper - added to make text easier to read*/
@@ -518,8 +567,8 @@ small {
 }
 
 .sidebar input {
-    width: 70px;
-    height: 25px;
+    width: 80px;
+    height: 33px;
 }
 
 .faSide {
@@ -693,6 +742,7 @@ div.dc-chart {
     font-weight: bold;
     font-size: 0.7em;
 }
+
 
 @media (min-width: 768px) {
     #dailyBudget_Temp .x.axis text {
