@@ -231,7 +231,7 @@ Click [here](https://github.com/elenasacristan/HolidaysYa/tree/master/assets/Doc
 ### Additional testing
 I have used development tools in Google Chrome to check how the website would look in different devices (portrait and landscape mode). In addition to that testing I have also asked friends and family to have a look at the website to let me know if everything looks fine on their browsers and devices.
 
-After the tests I can see that the website displays properly in Chrome, Firefox and Microsoft Edge but there are some issues with Internet Explorer and Safari (explained below).
+After the tests I can see that the website displays properly in Chrome, Firefox, Microsoft Edge and Safari but in Internet Explorer the formating of the charts doesn't look very good.
 
 ### Problems and bugs:
 - **Horizontal grid lines not being rendered:** I couldn't see the horizontal grid lines rendered from the charts but the js code was correct. In the end I realised that at some point I had commented out the "dc.css" file so when I uncommented it out I could see the horizontal grid lines. 
@@ -244,7 +244,7 @@ After the tests I can see that the website displays properly in Chrome, Firefox 
 
 - **Composite line charts were not aligned with the labels in the x axis** I searched on the Internet and found the solution in the following link (https://github.com/dc-js/dc.js/issues/662). 
     
-- **Website doesn't doesn't work in Safari and Internet Explorer** In Internet Explorer it doesn't work properly because I'm using template literals in the JavaScript code and in Safari it works but the charts are not rendered properly in the weather dashboard.
+- **Website didn't work in Internet Explorer** In Internet Explorer it didn't work properly because I was using template literals in the JavaScript code and I was also having issues with an anonymous function. My mentor helped me with this issue and after updating the code for the anonymous function and removing the template literals the website was working fine.
 
 - **Background not covering the whole screen for landscape mode for widths bigger than 767px in some devices** - I have managed to display the website properly in most screen sizes (landscape and portrait mode) but in some devices if the screen width is bigger than 767px the screen won't cover the whole height.
 
