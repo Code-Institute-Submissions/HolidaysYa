@@ -6,7 +6,7 @@ queue()
 function getMonth(error, data) {
     if (error) {
         showInfoMessageError();
-        $('#infoMessage').html(`<h2>Error retrieving the data</h2>`);
+        $('#infoMessage').html('<h2>Error retrieving the data</h2>');
     }
 
     //convert to number the number fields
@@ -193,7 +193,7 @@ function filterDataBudget(maxBudget, dataMonth) {
 
     if (isNaN(maxBudget)) {
         showInfoMessageError();
-        $('#infoMessage').html(`<h2>You need to enter a value</h2>`);
+        $('#infoMessage').html('<h2>You need to enter a value</h2>');
     }
     else {
         //If there is one or more cities matching the criteria it will call 
@@ -221,12 +221,12 @@ function filterDataWeather(min, max, dataMonth) {
 
     if ((isNaN(min)) && (isNaN(max))) {
         showInfoMessageError();
-        $('#infoMessage').html(`<h2>Please enter maximum and/or minimum temperatures</h2>`);
+        $('#infoMessage').html('<h2>Please enter maximum and/or minimum temperatures</h2>');
         return 0;
     }
     else if ((!(isNaN(min))) && (!(isNaN(max))) && max < min) {
         showInfoMessageError();
-        $('#infoMessage').html(`<h2>The minimum temperature can't be higher that the maximum temperature</h2>`);
+        $('#infoMessage').html('<h2>The minimum temperature can't be higher that the maximum temperature</h2>');
         return 0;
     }
     else {
@@ -240,10 +240,10 @@ function citiesMatchingCriteria(data, filteredBy) {
     if (checkIfObjectEmpty(data)) {
         showInfoMessageError();
         if (filteredBy == "Budget") {
-            $('#infoMessage').html(`<h2>We're sorry but we couldn't find any city in Europe for that daily budget</h2>`);
+            $('#infoMessage').html('<h2>We're sorry but we couldn't find any city in Europe for that daily budget</h2>');
         }
         if (filteredBy == "Weather") {
-            $('#infoMessage').html(`<h2>We're sorry but we couldn't find cities for the selected temperatures</h2>`);
+            $('#infoMessage').html('<h2>We're sorry but we couldn't find cities for the selected temperatures</h2>');
         }
     }
     else {
