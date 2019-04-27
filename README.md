@@ -22,19 +22,19 @@ This website is targeting people who want to travel in Europe but are concerned 
 Below you can see the mock-ups that I drew using Pencil:
 
 ##### Intro page - month selection
-![intro](/mockups/Month.png)
+![intro](/assets/mockups/Month.png)
 
 
 ##### Budget page - maximum budget selection
-![Budget Selection](/mockups/Budget.png)
+![Budget Selection](/assets/mockups/Budget.png)
 
 
 ##### Weather page - temperature range selection
-![Temperature Selection](/mockups/Weather.png)
+![Temperature Selection](/assets/mockups/Weather.png)
 
 
 ##### Dashboard layout - same for weather or budget
-![Dashboard](/mockups/DasboardSelection.png)
+![Dashboard](/assets/mockups/DasboardSelection.png)
 
 * Note that the position for the charts in final design differs from the initial design because when rendering the charts in the website I noticed some charts didn't look right with the original design and I decided to change the layout of the dashboard.
 
@@ -226,7 +226,7 @@ I have used GitHub Pages in order to deploy the website and it is also the remot
 
 ### Features and responsiveness testing
  
-Click [here](https://github.com/elenasacristan/HolidaysYa/tree/master/Documents/checkList.pdf) to see the check-list that I have used to test all the features in all the screen sizes.
+Click [here](https://github.com/elenasacristan/HolidaysYa/tree/master/assets/Documents/checkList.pdf) to see the check-list that I have used to test all the features in all the screen sizes.
 
 ### Additional testing
 I have used development tools in Google Chrome to check how the website would look in different devices (portrait and landscape mode). In addition to that testing I have also asked friends and family to have a look at the website to let me know if everything looks fine on their browsers and devices.

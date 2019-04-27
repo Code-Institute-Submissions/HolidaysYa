@@ -1,6 +1,6 @@
 // queue is used to wait for the data to be loaded before the code is run
 queue()
-    .defer(d3.csv, "data/Data.csv")
+    .defer(d3.csv, "assets/data/Data.csv")
     .await(getMonth);
 
 function getMonth(error, data) {

@@ -217,7 +217,7 @@ html, body {
 
 /* image for the month selection section */
 #monthId {
-    background: url("../../images/amsterdam.jpg") no-repeat center center fixed;
+    background: url("../../assets/images/amsterdam.jpg") no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -226,7 +226,7 @@ html, body {
 
 /* image for the budget selection section */
 #budgetId {
-    background: url("../../images/budget.jpg") no-repeat center center fixed;
+    background: url("../../assets/images/budget.jpg") no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -235,7 +235,7 @@ html, body {
 
 /* image for the weather selection section */
 #weatherId {
-    background: url("../../images/weather.jpg") no-repeat center center fixed;
+    background: url("../../assets/images/weather.jpg") no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -250,7 +250,7 @@ html, body {
 }
 
 .sad {
-    background: url("../../images/sad-mobile.jpg") no-repeat center center fixed;
+    background: url("../../assets/images/sad-mobile.jpg") no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -270,7 +270,7 @@ html, body {
     .sad {
         height: 100vh;
         width: 100vw;
-        background: url("../../images/sad.jpg") no-repeat center center fixed;
+        background: url("../../assets/images/sad.jpg") no-repeat center center fixed;
         -webkit-background-size: cover;
         -moz-background-size: cover;
         -o-background-size: cover;
@@ -279,7 +279,7 @@ html, body {
     .happy {
         height: 100vh;
         width: 100vw;
-        background: url("../../images/happy.jpg") no-repeat center center fixed;
+        background: url("../../assets/images/happy.jpg") no-repeat center center fixed;
         -webkit-background-size: cover;
         -moz-background-size: cover;
         -o-background-size: cover;
