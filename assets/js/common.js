@@ -24,10 +24,10 @@ function fiterBy(ndx, element) {
 
 // this function will update the text in the titles depending on what dashboard we want to see
 function updateTextTitles(option) {
-    document.getElementById("title").innerHTML = `<h2>Results By ${option}</h2>`;
+    document.getElementById("title").innerHTML = '<h2>Results By ' + option + '</h2>';
      if(option==="Budget"){
          document.getElementById("titleRowChart").innerHTML = "Budget needed per day (€)";
-         document.getElementById("stackedComposite").innerHTML = "Budget distribution (€)";
+         document.getElementById("stackedComposite").inerHTML = "Budget distribution (€)";
          document.getElementById("pieChart").innerHTML = "Currency";
          document.getElementById("scatterChart").innerHTML = "Correlation between cost of visiting and number of visitor per year";  
         }
