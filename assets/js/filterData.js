@@ -51,13 +51,18 @@ function getMonth(error, data) {
     //When "choose budget" button is pressed, hide month selection screen and show budget selection screen
     $('#chooseBudget').click(function () {
         $('#monthId').slideUp(1000);
-        $('#budgetId').removeClass('hide').slideDown(1000);
+        $('#budgetId').removeClass('hide').slideDown(1000); 
+        //add a default value in the input box to show all the cities to the user by default
+        $('input[name=maxBudget]').val('91');
     });
 
     //When "choose weather" button is pressed, hide month selection screen and show weather selection screen
     $('#chooseWeather').click(function () {
         $('#monthId').slideUp(1000);
         $('#weatherId').removeClass('hide').slideDown(1000);
+        //add a default value in the input boxes to show all the cities to the user by default
+        $('input[name=minTemp]').val('-15');
+        $('input[name=maxTemp]').val('40');
     });
 
     //buttons on intro screen (screen with month selection)
