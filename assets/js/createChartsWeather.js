@@ -10,7 +10,7 @@ function show_max_weather(ndx, column, element) {
 
     dc.numberDisplay(element)
         .group(dim_max_groupAll(maxDim, column))
-        .valueAccessor(x)
+        .valueAccessor(function (x) { return x;})
         .formatNumber(d3.format('.0f'))
         .render();
 }
@@ -30,7 +30,7 @@ function show_min_weather(ndx, column, element) {
 
     dc.numberDisplay(element)
         .group(dim_min_groupAll(minDim, column))
-        .valueAccessor(x)
+        .valueAccessor(function (x) { return x;})
         .formatNumber(d3.format('.0f'))
         .render();
 }
