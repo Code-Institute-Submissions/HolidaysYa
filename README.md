@@ -171,7 +171,7 @@ The dashboard for the weather will display the following elements:
 
 #### Mockup tool:
 
-- **[Pencil:](https://pencil.evolus.vn/ 'https://pencil.evolus.vn/)** I have used Pencil to create the mockups for the website.
+- **[Pencil:](https://pencil.evolus.vn/'https://pencil.evolus.vn/)** I have used Pencil to create the mockups for the website.
 
 #### Graphic Desing software:
 
@@ -231,8 +231,9 @@ Click [here](https://github.com/elenasacristan/HolidaysYa/tree/master/Documents/
 
 
 ### Additional testing
-I have used development tools in Google Chrome to check how the website would look in different devices. In addition to that testing I have also asked friends and family to have a look at the website to let me know if everything looks fine on their browsers and devices.
+I have used development tools in Google Chrome to check how the website would look in different devices (portrait and landscape mode). In addition to that testing I have also asked friends and family to have a look at the website to let me know if everything looks fine on their browsers and devices.
 
+After the tests I can see that the website displays properly in Chrome, Firefox and Microsoft Edge but there are some issues with Internet Explorer and Safari (explained below).
 
 ### Problems and bugs:
 - **Horizontal grid lines not being rendered:** I could't see the horizontal grid lines rendered from the charts but the js code was correct. In the end I realised that at some point I had commented out the "dc.css" file so when I uncommented it out I could see the horizontal grid lines. 
@@ -245,7 +246,7 @@ I have used development tools in Google Chrome to check how the website would lo
 
 - **Composite line charts were not aligned with the labels in the x axis** I searched on the Internet and found the solution in the following link (https://github.com/dc-js/dc.js/issues/662). 
     
-
+- **Website doesn't doesn't work in Safari and Internet Explorer** In Internet Explorer it doens't work properly because I'm using template literals in the JavaScript code and in Safari it works but the charts are not rendered properly in the weather dashboard.
 
 ## Deployment
 I have used GitHub Pages to deploy the website. In order to do that I have followed the steps below:
