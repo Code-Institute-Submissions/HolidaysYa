@@ -226,7 +226,7 @@ function filterDataWeather(min, max, dataMonth) {
     }
     else if ((!(isNaN(min))) && (!(isNaN(max))) && max < min) {
         showInfoMessageError();
-        $('#infoMessage').html('<h2>The minimum temperature can't be higher that the maximum temperature</h2>');
+        $('#infoMessage').html('<h2>The minimum temperature can\'t be higher that the maximum temperature</h2>');
         return 0;
     }
     else {
