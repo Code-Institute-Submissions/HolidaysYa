@@ -36,7 +36,7 @@ Below you can see the mock-ups that I drew using Pencil:
 ##### Dashboard layout - same for weather or budget
 ![Dashboard](/assets/mockups/DasboardSelection.png)
 
-* Note that the position of the charts in thefinal design differs from the initial design because when rendering the charts in the website I noticed some charts didn't look right with the original design and I decided to change the layout of the dashboard.
+* Note that the position of the charts in the final design differs from the initial design because when rendering the charts in the website I noticed some charts didn't look right with the original design and I decided to change the layout of the dashboard.
 
 
 ### User stories
@@ -88,7 +88,7 @@ From the original template I kept the logo style but I removed all the options a
 
 ### Elements common to both dashboards
 
-- **Hamburger button:** This feature is taken from bootstrap and it appears when the screen is smaller than 768px. It will only appear in the dashboard page and it will have the following options:
+- **Hamburger button:** This feature is taken from Bootstrap and it appears when the screen is smaller than 768px. It will only appear in the dashboard page and it will have the following options:
     * **Change Month:** To go back to the main screen and choose another month.
     * **Change Budget / Change Temperatures:** To update the original filter value.
     * **Contact Us:** To ask for more information about a city or anything regarding to the website.
@@ -107,9 +107,9 @@ From the original template I kept the logo style but I removed all the options a
 
 - **Sidebar - Contact Us:** By clicking the envelope icon the user can send me an email to ask for additional information.
  
-- **Modal:** Is taken from bootstrap and it will be displayed if any of the "Contact Us!" options are clicked.
+- **Modal:** Is taken from Bootstrap and it will be displayed if any of the "Contact Us!" options are clicked.
 
-- **Form:** Is taken from bootstrap and then it has been updated to only display the name, email and information fields. The form is placed inside the Modal element.
+- **Form:** Is taken from Bootstrap and then it has been updated to only display the name, email and information fields. The form is placed inside the Modal element.
 
 - **Reset button:** If the users have filtered the charts by clicking on them then they can reset them to the default values by clicking the "Reset" button.
 
@@ -214,7 +214,7 @@ I have used GitHub Pages in order to deploy the website and it is also the remot
 - **[Ample Bootstrap Admin Lite:](https://wrappixel.com/demos/admin-templates/ampleadmin/ample-admin-lite/dashboard.html)**
 
   I have used this template to help me with the charts positioning in the dashboard.
-  This template includes FontAwesome and it is created with Bootstrap 3 so I have also been able to used Bootstrap and FontAwesome to modify the template to fit my needs.
+  This template includes FontAwesome and it is created with Bootstrap 3 so I have also been able to use Bootstrap and FontAwesome to modify the template to fit my needs.
   
 ## Testing
 
@@ -334,7 +334,7 @@ https://commons.wikimedia.org/wiki/File:Happy_smiley_face.png
 
 
 ## Acknowledgements
-- I received inspiration from the bootstrap template [Ample Bootstrap Admin Lite](https://wrappixel.com/demos/admin-templates/ampleadmin/ample-admin-lite/dashboard.html) which I used to help me speed up the process of designing the dashboard.
+- I received inspiration from the Bootstrap template [Ample Bootstrap Admin Lite](https://wrappixel.com/demos/admin-templates/ampleadmin/ample-admin-lite/dashboard.html) which I used to help me speed up the process of designing the dashboard.
 - The slack community and tutors where really helpful with some issues with the website.
 - Thanks to Guido Cecilio García Bernal for helping me to solve issues that were giving me a lot of problems like the incompatibility with browsers (Safari and Internet explorer), specifically the suggestions to add default values in the input boxes, and his help with the some issues I was having with the event handlers in JavaScript.
  
